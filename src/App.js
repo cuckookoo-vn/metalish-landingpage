@@ -1,4 +1,6 @@
 import * as React from 'react';
+import { useState } from 'react';
+import { useEffect } from 'react';
 import CoreSkills from './layout/body/core-skills/core-skills';
 import Explore from './layout/body/explore/explore';
 import Feedback from './layout/body/feedback/feedback';
@@ -7,26 +9,34 @@ import OurMethods from './layout/body/our-methods/our-methods';
 import Overview from './layout/body/overview/overview';
 import VideoProposal from './layout/body/video-proposal/video-proposal';
 import Header from './layout/header/header';
-
-// const Item = styled(Paper)(({ theme }) => ({
-//   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-//   ...theme.typography.body2,
-//   padding: theme.spacing(1),
-//   textAlign: 'center',
-//   color: theme.palette.text.secondary,
-// }));
+import { getWindowDimensions } from './mixins/window-dimensions';
 
 export default function App() {
+  const [windowDimensions, setWindowDimensions] = useState(
+    getWindowDimensions()
+  );
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowDimensions(getWindowDimensions());
+    }
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <>
       <Header />
+      <br />
       <VideoProposal />
-      <Overview />
-      <KeyFeatures />
+      <br />
+      <Overview windowDimensions={windowDimensions} />
+      {/* <KeyFeatures />
       <CoreSkills />
       <OurMethods />
       <Feedback />
-      <Explore />
+      <Explore /> */}
     </>
   );
 }
