@@ -1,12 +1,12 @@
 @import 'src/styles/variables';
 
-.key-features {
+.core-skills {
   z-index: 1;
   position: relative;
   background-position: left;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 850px;
+  height: 800px;
   color: #ffffff;
   @media #{$info-tablet-1399} {
     height: 680px;
@@ -34,12 +34,36 @@
   }
 
   .content-wrapper {
-    position: absolute;
+    position: relative;
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
     left: 5%;
     right: 5%;
-    text-align: center;
-    .content {
-      width: 40%;
+    width: 90%;
+    height: 100%;
+    margin: 0;
+    @media #{$info-tablet-1399} {
+      width: 145px;
+      height: 57px;
+      margin: 5px 0 0 0;
+    }
+    @media #{$info-phone} {
+      display: none;
+    }
+    span {
+      font-size: 0.85rem;
+      position: absolute;
+      left: 36%;
+      top: 50%;
+      font-weight: 600;
+      color: #000000;
+      text-align: center;
+      width: max-content;
+      transform: translate(-50%, -55%);
+      @media #{$info-tablet-1399} {
+        font-size: 12px;
+      }
     }
   }
 }

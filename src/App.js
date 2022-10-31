@@ -33,8 +33,8 @@ export default function App() {
       <VideoProposal />
       <Overview windowDimensions={windowDimensions} />
       <KeyFeatures windowDimensions={windowDimensions} />
-      {/*  <CoreSkills />
-      <OurMethods />
+      <CoreSkills />
+      {/*<OurMethods />
       <Feedback />
       <Explore /> */}
     </>

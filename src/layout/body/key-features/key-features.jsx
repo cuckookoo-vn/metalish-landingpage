@@ -35,19 +35,19 @@ const KeyFeatures = ({ windowDimensions }) => {
                 alt='studying-english'
                 src={images.studingEnglishIcon}
               />
-              {/* <KeyFeaturesItem alt='graphics' src={images.graphics} />
+              <KeyFeaturesItem alt='graphics' src={images.graphics} />
               <KeyFeaturesItem alt='connect' src={images.connect} />
               <KeyFeaturesItem
                 alt='customized-classroom'
                 src={images.customizedClassroom}
                 last
-              /> */}
+              />
             </div>
 
             <br />
             <br />
 
-            {/* <div>
+            <div>
               <KeyFeaturesItem
                 alt='practical-english'
                 src={images.practicalEnglish}
@@ -68,7 +68,7 @@ const KeyFeatures = ({ windowDimensions }) => {
               <KeyFeaturesItem alt='rewards' src={images.rewards} />
               <KeyFeaturesItem alt='best-choice' src={images.bestChoice} />
               <KeyFeaturesItem alt='review' src={images.review} last />
-            </div> */}
+            </div>
           </div>
         </>
       </div>
