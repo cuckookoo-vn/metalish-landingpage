@@ -10,6 +10,7 @@ import Overview from './layout/body/overview/overview';
 import VideoProposal from './layout/body/video-proposal/video-proposal';
 import Header from './layout/header/header';
 import { getWindowDimensions } from './mixins/window-dimensions';
+import './styles/index.scss';
 
 export default function App() {
   const [windowDimensions, setWindowDimensions] = useState(
@@ -30,10 +31,9 @@ export default function App() {
       <Header />
       <br />
       <VideoProposal />
-      <br />
       <Overview windowDimensions={windowDimensions} />
-      {/* <KeyFeatures />
-      <CoreSkills />
+      <KeyFeatures windowDimensions={windowDimensions} />
+      {/*  <CoreSkills />
       <OurMethods />
       <Feedback />
       <Explore /> */}

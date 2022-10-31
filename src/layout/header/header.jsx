@@ -62,7 +62,7 @@ const Header = () => {
           <div
             className='download'
             onClick={() => setShowModal()}
-            // style={{ backgroundImage: `url(${images.downloadButton}` }}
+            style={{ backgroundImage: `url(${images.downloadButton}` }}
           >
             <span>{t('header_download.btn')}</span>
           </div>

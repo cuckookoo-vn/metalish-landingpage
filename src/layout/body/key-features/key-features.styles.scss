@@ -1,6 +1,6 @@
 @import 'src/styles/variables';
 
-.overview {
+.key-features {
   z-index: 1;
   position: relative;
   background-position: left;
@@ -35,50 +35,11 @@
 
   .content-wrapper {
     position: absolute;
-    // width: 90%;
     left: 5%;
     right: 5%;
+    text-align: center;
     .content {
       width: 40%;
-    }
-
-    .image-wrapper {
-      position: relative;
-      float: right;
-      background-position: left;
-      background-size: contain;
-      background-repeat: no-repeat;
-      width: 55%;
-      margin: 0;
-      @media #{$info-tablet-1399} {
-        width: 145px;
-        height: 57px;
-        margin: 5px 0 0 0;
-      }
-      @media #{$info-phone} {
-        display: none;
-      }
-      span {
-        font-size: 0.85rem;
-        position: absolute;
-        left: 36%;
-        top: 50%;
-        font-weight: 600;
-        color: #000000;
-        text-align: center;
-        width: max-content;
-        transform: translate(-50%, -55%);
-        @media #{$info-tablet-1399} {
-          font-size: 12px;
-        }
-      }
-      .img {
-        width: 100%;
-      }
-
-      .btn {
-        position: relative;
-      }
     }
   }
 }
