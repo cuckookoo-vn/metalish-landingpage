@@ -35,11 +35,11 @@ const Overview = ({ windowDimensions }) => {
 
             {/* Content */}
             <div className='content'>
-              <p>{t('overview_content_1.txt')}</p>
-              <p>{t('overview_content_2.txt')}</p>
-              <p>{t('overview_content_3.txt')}</p>
-              <p>{t('overview_content_4.txt')}</p>
-              <p>{t('overview_content_5.txt')}</p>
+              <p>{t('overview.content_1.txt')}</p>
+              <p>{t('overview.content_2.txt')}</p>
+              <p>{t('overview.content_3.txt')}</p>
+              <p>{t('overview.content_4.txt')}</p>
+              <p>{t('overview.content_5.txt')}</p>
             </div>
             {/* Content */}
           </div>

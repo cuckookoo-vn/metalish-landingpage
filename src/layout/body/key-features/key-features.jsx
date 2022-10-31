@@ -26,7 +26,7 @@ const KeyFeatures = ({ windowDimensions }) => {
     <>
       <div className='key-features'>
         <span className='title-main' data-aos='fade-up'>
-          {t('key-features_title.lbl')}
+          {t('key-features.title.lbl')}
         </span>
         <>
           <div className='content-wrapper'>

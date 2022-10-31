@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 const Header = () => {
   const images = {
     logoHeader: process.env.PUBLIC_URL + '/images/header/logo-ckk-header.png',
-    downloadButton : process.env.PUBLIC_URL + "/images/header/download.png",
+    downloadButton: process.env.PUBLIC_URL + '/images/header/download.png',
     iconSelect:
       process.env.PUBLIC_URL + '/images/header/icon-select-header.png',
     flagEngland: process.env.PUBLIC_URL + '/images/header/england-flag.jpg',
@@ -37,7 +37,7 @@ const Header = () => {
 
   const changeLang = (name) => {
     i18n.changeLanguage(name);
-    let lang = t(`header_option_${name}.lbl`);
+    let lang = t(`header.option_${name}.lbl`);
     setTextLang(lang);
     if (name === 'ko') {
       setFlag(images.flagKorean);
@@ -64,7 +64,7 @@ const Header = () => {
             onClick={() => setShowModal()}
             style={{ backgroundImage: `url(${images.downloadButton}` }}
           >
-            <span>{t('header_download.btn')}</span>
+            <span>{t('header.download.btn')}</span>
           </div>
           {/* Download */}
 
@@ -98,7 +98,7 @@ const Header = () => {
                   src={images.flagEngland}
                   alt='flag-english'
                 />
-                {t('header_option_en.lbl')}
+                {t('header.option_en.lbl')}
               </button>
               <button
                 onClick={() => changeLang('ko')}
@@ -109,7 +109,7 @@ const Header = () => {
                   src={images.flagKorean}
                   alt='flag-korean'
                 />
-                {t('header_option_ko.lbl')}
+                {t('header.option_ko.lbl')}
               </button>
               <button
                 onClick={() => changeLang('vi')}
@@ -120,7 +120,7 @@ const Header = () => {
                   src={images.flagVietnam}
                   alt='flag-vietnam'
                 />
-                {t('header_option_vi.lbl')}
+                {t('header.option_vi.lbl')}
               </button>
             </div>
           </div>
