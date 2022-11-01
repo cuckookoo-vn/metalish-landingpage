@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 
 const Overview = ({ windowDimensions }) => {
   const { t } = useTranslation();
+  
   const images = {
     bgKeyFeatures: process.env.PUBLIC_URL + '/images/overview/bg-overview.jpg',
     viewButton: process.env.PUBLIC_URL + '/images/overview/fish-eye-button.png',
@@ -22,8 +23,7 @@ const Overview = ({ windowDimensions }) => {
             {/* Image */}
             <div className='image-wrapper'>
               <img
-                className='img'
-                alt='overview-image'
+                alt='overview'
                 src={`${process.env.PUBLIC_URL}/images/explore/tour/1.png`}
               />
               <div

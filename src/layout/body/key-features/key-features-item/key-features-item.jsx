@@ -12,8 +12,14 @@ const KeyFeaturesItem = ({ src, alt, last, title, content }) => {
   return (
     <>
       <div className={!last ? 'key-features-item' : 'key-features-item-last'}>
-        <img className='icon' alt={alt} src={src} data-aos='zoom-in-up' />
+        <img className='icon' alt={alt} src={src} />
         <span>{title}</span>
+        <div
+          className='overlay'
+          style={{ backgroundImage: `url(${images.frame})` }}
+        >
+          <div class='content'>{content}</div>
+        </div>
       </div>
 
       {/* <span>j</span> */}

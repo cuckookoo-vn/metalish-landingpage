@@ -4,7 +4,7 @@ import { useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation } from 'swiper';
 
-const CoreSkills = ({ windowDimensions }) => {
+const OurMethods = ({ windowDimensions }) => {
   const { t } = useTranslation();
   const images = {
     classType: process.env.PUBLIC_URL + '/images/our-methods/2-class-type.png',
@@ -77,4 +77,4 @@ const CoreSkills = ({ windowDimensions }) => {
   );
 };
 
-export default CoreSkills;
+export default OurMethods;

@@ -98,7 +98,7 @@ const KeyFeatures = ({ windowDimensions }) => {
       alt: 'review',
       src: images.review,
       content: `${t('key-features.review_content.txt')}`,
-      last: false,
+      last: true,
     },
   ];
 
@@ -109,8 +109,8 @@ const KeyFeatures = ({ windowDimensions }) => {
           {t('key-features.title.lbl')}
         </span>
         <>
-          <div className='content-wrapper'>
-            {/* <div>
+          <div className='content-wrapper'  data-aos='zoom-in-up'>
+            <div>
               {keyFeatures.map((element, index) => (
                 <>
                   <KeyFeaturesItem
@@ -121,16 +121,22 @@ const KeyFeatures = ({ windowDimensions }) => {
                     content={element.content}
                     last={element.last}
                   />
-                  {element.last ? <br/>: null}
+                  {element.last ? (
+                    <>
+                      <br />
+                      <br />
+                    </>
+                  ) : null}
                 </>
               ))}
-            </div> */}
-
+            </div>
+            {/* 
             <div data-aos='fade-up'>
               <KeyFeaturesItem
                 alt='studying-english'
                 src={images.studyingEnglishIcon}
                 title={t('key-features.studying-english_title.lbl')}
+                content={t('key-features.studying-english_content.txt')}
               />
               <KeyFeaturesItem
                 alt='graphics'
@@ -197,7 +203,7 @@ const KeyFeatures = ({ windowDimensions }) => {
                 title={t('key-features.review_title.lbl')}
                 last
               />
-            </div>
+            </div> */}
           </div>
         </>
       </div>

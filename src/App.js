@@ -36,7 +36,6 @@ export default function App() {
       <CoreSkills windowDimensions={windowDimensions} />
       <OurMethods windowDimensions={windowDimensions} />
       <Feedback windowDimensions={windowDimensions} />
-      {/*<Explore /> */}
     </>
   );
 }
