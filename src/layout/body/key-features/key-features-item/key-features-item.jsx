@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import './key-features-item.styles.scss';
 
-const KeyFeaturesItem = ({ src, alt, last }) => {
+const KeyFeaturesItem = ({ src, alt, last, title, content }) => {
   const { t } = useTranslation();
 
   const images = {
@@ -10,12 +10,14 @@ const KeyFeaturesItem = ({ src, alt, last }) => {
   };
 
   return (
-    <img
-      className={!last ? 'key-features-icon' : 'key-features-icon-last'}
-      alt={alt}
-      src={src}
-      data-aos='zoom-in-up'
-    />
+    <>
+      <div className={!last ? 'key-features-item' : 'key-features-item-last'}>
+        <img className='icon' alt={alt} src={src} data-aos='zoom-in-up' />
+        <span>{title}</span>
+      </div>
+
+      {/* <span>j</span> */}
+    </>
   );
 };
 

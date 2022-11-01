@@ -16,10 +16,26 @@ const CoreSkills = ({ windowDimensions }) => {
         style={{ backgroundImage: `url(${images.bgKeyFeatures})` }}
       >
         <span className='title-main' data-aos='fade-up'>
-          CORE SKILLS
+          {t('core-skills.title.lbl')}
         </span>
         <>
-          <div className='content-wrapper' style={{ backgroundImage: `url(${images.frame})` }}></div>
+          <div className='content-wrapper'>
+            <div
+              className='background'
+              style={{ backgroundImage: `url(${images.frame})` }}
+            >
+              <span>{t('core-skills.listening.lbl')}</span>
+              <span style={{ marginLeft: '24%' }}>
+                {t('core-skills.speaking.lbl')}
+              </span>
+              <span style={{ marginLeft: '47%' }}>
+                {t('core-skills.vocabulary.lbl')}
+              </span>
+              <span style={{ marginLeft: '71%' }}>
+                {t('core-skills.mouth-shape.lbl')}
+              </span>
+            </div>
+          </div>
         </>
       </div>
     </>

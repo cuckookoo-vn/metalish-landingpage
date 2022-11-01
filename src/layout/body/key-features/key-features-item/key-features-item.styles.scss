@@ -1,14 +1,30 @@
-.key-features-icon {
+.key-features-item {
   position: relative;
+  width: 10%;
   display: inline-block;
   margin-right: 15%;
-  width: 10%;
-  //   width: 100%;
+  .icon {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+  }
+  span {
+    position: relative;
+  }
+  &:hover {
+    position: relative;
+    background-color: aqua;
+    opacity: 5;
+  }
 }
 
-.key-features-icon-last {
+.key-features-item-last {
   position: relative;
-  display: inline-block;
   width: 10%;
-  //   width: 100%;
+  display: inline-block;
+  .icon {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+  }
 }

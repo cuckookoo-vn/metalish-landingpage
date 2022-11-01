@@ -1,6 +1,6 @@
 @import 'src/styles/variables';
 
-.core-skills {
+.our-methods {
   z-index: 1;
   position: relative;
   background-position: left;
@@ -34,17 +34,40 @@
   }
   .content-wrapper {
     position: absolute;
-    left: 5%;
-    text-align: center;
-    .background {
-      position: relative;
-      background-size: contain;
-      background-repeat: no-repeat;
-      left: 5%;
-      width: 1500px;
-      height: 500px;
+    left: 30%;
+    .content {
+      text-align: center;
+      position: absolute;
       margin: 0;
       text-align: center;
+      .background {
+        background-size: contain;
+        position: relative;
+        display: inline-block;
+        width: 800px;
+        height: 500px;
+      }
+      .button-right {
+        position: absolute;
+        background-size: contain;
+        background-repeat: no-repeat;
+        right: -35%;
+        top: 40%;
+        width: 100px;
+        height: 100px;
+        display: inline-block;
+      }
+      .button-left {
+        position: absolute;
+        background-size: contain;
+        background-repeat: no-repeat;
+        left: -35%;
+        top: 40%;
+        width: 100px;
+        height: 100px;
+        transform: scaleX(-1);
+        display: inline-block;
+      }
       @media #{$info-tablet-1399} {
         width: 145px;
         height: 57px;
@@ -53,17 +76,25 @@
       @media #{$info-phone} {
         display: none;
       }
-      span {
-        font-size: 3rem;
+      h3 {
         position: absolute;
-        left: 15%;
-        top: 50%;
+        // text-align: center;
+        left: 17%;
+        top: 20%;
         margin-right: 15%;
+        display: inline-block;
+        width: max-content;
+      }
+      span {
+        font-size: 0.85rem;
+        position: absolute;
+        // text-align: center;
+        left: 5%;
+        top: 40%;
         display: inline-block;
         font-weight: 600;
         text-align: center;
-        width: max-content;
-        transform: translate(-50%, -55%);
+        width: 40%;
       }
     }
   }
