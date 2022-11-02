@@ -1,6 +1,7 @@
+import { useRef } from 'react';
 import './our-methods.styles.scss';
 import { useTranslation } from 'react-i18next';
-import { useRef } from 'react';
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation } from 'swiper';
 
@@ -33,47 +34,80 @@ const OurMethods = ({ windowDimensions }) => {
   const nextRef = useRef(null);
 
   return (
-    <>
-      <div className='our-methods'>
-        <span className='title-main' data-aos='fade-up'>
-          {t('our-methods.title.lbl')}
-        </span>
-        <>
-          <div className='content-wrapper' data-aos='fade-up'>
-            <div className='content'>
-              <div
-                className='button-right'
-                style={{ backgroundImage: `url(${images.button})` }}
-              ></div>
-              <div
-                className='button-left'
-                style={{ backgroundImage: `url(${images.button})` }}
-              ></div>
+    <div className='our-methods'>
+      <span className='title-main' data-aos='fade-up'>
+        {t('our-methods.title.lbl')}
+      </span>
 
-              {/*         
-              {/* Slide */}
-              {/* <SwiperSlide> */}
-              <div
-                className='background'
-                style={{ backgroundImage: `url(${images.classType})` }}
-              >
-                <h3>{t('our-methods.private-room_title.lbl')}</h3>
+      <>
+        <div data-aos='fade-up' className='box-slide'>
+          <Swiper
+            // slidesPerView={1}
+            slidesPerView={1}
+            spaceBetween={windowDimensions.width > 767 ? 30 : 5}
+            slidesPerGroup={windowDimensions.width > 767 ? 4 : 3}
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            }}
+            loop={true}
+            loopFillGroupWithBlank={false}
+            pagination={{
+              clickable: true,
+              dynamicBullets: true,
+            }}
+            modules={[Pagination, Navigation]}
+            className='mySwiper'
+            onInit={(swiper) => {
+              swiper.params.navigation.prevEl = prevRef.current;
+              swiper.params.navigation.nextEl = nextRef.current;
+              swiper.navigation.init();
+              swiper.navigation.update();
+            }}
+          >
+            <div className='box-member'>
+              {methods.map((element, index) => (
+                <SwiperSlide key={index}>
+                  {/* <img
+                    style={{ width: '550px', height: '550px' }}
+                    alt={element.title}
+                    src={element.frame}
+                  /> */}
+                  <div
+                    className='background'
+                    style={{ backgroundImage: `url(${element.frame})` }}
+                  >
+                  {/* <h3>{t('our-methods.private-room_title.lbl')}</h3>
                 <span>{t('our-methods.private-room_content.txt')}</span>
                 <h3 style={{ marginLeft: '47%' }}>
                   {t('our-methods.talking-room_title.lbl')}
                 </h3>
                 <span style={{ marginLeft: '47%' }}>
                   {t('our-methods.talking-room_content.txt')}
-                </span>
-              </div>
-
-              {/* </SwiperSlide> */}
-              {/* Slide */}
+                </span> */}
+                  </div>
+                </SwiperSlide>
+              ))}
             </div>
-          </div>
-        </>
-      </div>
-    </>
+            <div
+              data-aos='fade-right'
+              ref={prevRef}
+              className='icon-slide icon-next hidden-mobile'
+            >
+              <img className='prev' src={images.button} alt='pre' />
+            </div>
+            <div
+              data-aos='fade-left'
+              ref={nextRef}
+              className='icon-slide icon-pre hidden-mobile'
+            >
+              <img className='next' src={images.button} alt='next' />
+            </div>
+          </Swiper>
+        </div>
+      </>
+    </div>
   );
 };
 

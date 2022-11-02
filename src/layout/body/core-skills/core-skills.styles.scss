@@ -41,8 +41,8 @@
       background-size: contain;
       background-repeat: no-repeat;
       left: 5%;
-      min-width: 1200px;
-      max-width: 1500px;
+      width: 77vw;
+      // width:1500px;
       height: 500px;
       margin: 0;
       text-align: center;
@@ -65,6 +65,10 @@
         text-align: center;
         width: max-content;
         transform: translate(-50%, -55%);
+
+        @media #{$info-phone} {
+          font-size: 0.85rem;
+        }
       }
     }
   }

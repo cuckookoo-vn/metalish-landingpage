@@ -10,7 +10,7 @@
   }
   .overlay {
     position: absolute;
-    top: -15%;
+    top: -5vh;
     left: -50%;
     height: 32vh;
     min-width: 350px;
@@ -22,9 +22,9 @@
     .content {
       color: white;
       position: absolute;
-      top: 50%;
-      left: 40%;
-      width: 50%;
+      top: 16vh;
+      left: 9vw;
+      width: 10vw;
       -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
@@ -52,7 +52,7 @@
   }
   .overlay {
     position: absolute;
-    top: -15%;
+    top: -5vh;
     left: -50%;
     height: 32vh;
     min-width: 350px;
@@ -64,9 +64,9 @@
     .content {
       color: #fff;
       position: absolute;
-      top: 50%;
-      left: 40%;
-      width: 50%;
+      top: 16vh;
+      left: 9vw;
+      width: 10vw;
       -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);

@@ -151,7 +151,8 @@
       margin: 5px 0 0 0;
     }
     @media #{$info-phone} {
-      display: none;
+      height: 55px;
+      width: 155px;
     }
     span {
       font-size: 0.85rem;
@@ -165,6 +166,11 @@
       transform: translate(-50%, -55%);
       @media #{$info-tablet-1399} {
         font-size: 12px;
+      }
+
+      @media #{$info-phone} {
+        left: 30%;
+        top: 50%;
       }
     }
   }

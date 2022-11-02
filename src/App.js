@@ -11,8 +11,17 @@ import VideoProposal from './layout/body/video-proposal/video-proposal';
 import Header from './layout/header/header';
 import { getWindowDimensions } from './mixins/window-dimensions';
 import './styles/index.scss';
+import SwiperCore, { Navigation, Pagination, Autoplay, Virtual } from 'swiper';
+
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/bundle';
+import 'swiper/css/scrollbar';
 
 export default function App() {
+  SwiperCore.use([Navigation, Pagination, Autoplay, Virtual]);
+
   const [windowDimensions, setWindowDimensions] = useState(
     getWindowDimensions()
   );

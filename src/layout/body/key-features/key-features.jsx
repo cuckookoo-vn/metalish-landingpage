@@ -1,6 +1,8 @@
 import './key-features.styles.scss';
 import { useTranslation } from 'react-i18next';
 import KeyFeaturesItem from './key-features-item/key-features-item';
+import { useEffect } from 'react';
+import { useState } from 'react';
 
 const KeyFeatures = ({ windowDimensions }) => {
   const { t } = useTranslation();
@@ -20,6 +22,7 @@ const KeyFeatures = ({ windowDimensions }) => {
     rewards: process.env.PUBLIC_URL + '/images/key-features/rewards.png',
     bestChoice: process.env.PUBLIC_URL + '/images/key-features/best-choice.png',
     review: process.env.PUBLIC_URL + '/images/key-features/review.png',
+    frame: process.env.PUBLIC_URL + '/images/key-features/frame.png',
   };
 
   const keyFeatures = [
@@ -102,6 +105,8 @@ const KeyFeatures = ({ windowDimensions }) => {
     },
   ];
 
+  const [content, setContent] = useState('');
+
   return (
     <>
       <div className='key-features'>
@@ -109,101 +114,49 @@ const KeyFeatures = ({ windowDimensions }) => {
           {t('key-features.title.lbl')}
         </span>
         <>
-          <div className='content-wrapper'  data-aos='zoom-in-up'>
-            <div>
-              {keyFeatures.map((element, index) => (
-                <>
-                  <KeyFeaturesItem
-                    key={index}
-                    alt={element.alt}
-                    src={element.src}
-                    title={element.title}
-                    content={element.content}
-                    last={element.last}
-                  />
-                  {element.last ? (
-                    <>
-                      <br />
-                      <br />
-                    </>
-                  ) : null}
-                </>
-              ))}
-            </div>
-            {/* 
-            <div data-aos='fade-up'>
-              <KeyFeaturesItem
-                alt='studying-english'
-                src={images.studyingEnglishIcon}
-                title={t('key-features.studying-english_title.lbl')}
-                content={t('key-features.studying-english_content.txt')}
-              />
-              <KeyFeaturesItem
-                alt='graphics'
-                src={images.graphics}
-                title={t('key-features.graphics_title.lbl')}
-              />
-              <KeyFeaturesItem
-                alt='connect'
-                src={images.connect}
-                title={t('key-features.connect_title.lbl')}
-              />
-              <KeyFeaturesItem
-                alt='customized-classroom'
-                src={images.customizedClassroom}
-                title={t('key-features.customized-classroom_title.lbl')}
-                last
-              />
-            </div>
-
-            <br />
-            <br />
-
-            <div data-aos='fade-up'>
-              <KeyFeaturesItem
-                alt='practical-english'
-                src={images.practicalEnglish}
-                title={t('key-features.practical-english_title.lbl')}
-              />
-              <KeyFeaturesItem
-                alt='ai-technology'
-                src={images.ai}
-                title={t('key-features.ai-technology_title.lbl')}
-              />
-              <KeyFeaturesItem
-                alt='ai-in-advertising'
-                src={images.aiInAdvertising}
-                title={t('key-features.ai-in-advertising_title.lbl')}
-                last
-              />
-            </div>
-
-            <br />
-            <br />
-
-            <div data-aos='fade-up'>
-              <KeyFeaturesItem
-                alt='mini-games'
-                src={images.miniGames}
-                title={t('key-features.mini-games_title.lbl')}
-              />
-              <KeyFeaturesItem
-                alt='rewards'
-                src={images.rewards}
-                title={t('key-features.rewards_title.lbl')}
-              />
-              <KeyFeaturesItem
-                alt='best-choice'
-                src={images.bestChoice}
-                title={t('key-features.best-choice_title.lbl')}
-              />
-              <KeyFeaturesItem
-                alt='review'
-                src={images.review}
-                title={t('key-features.review_title.lbl')}
-                last
-              />
-            </div> */}
+          <div className='content-wrapper' data-aos='zoom-in-up'>
+            {windowDimensions.width > 767.5 ? (
+              <div>
+                {keyFeatures.map((element, index) => (
+                  <>
+                    <KeyFeaturesItem
+                      key={index}
+                      alt={element.alt}
+                      src={element.src}
+                      title={element.title}
+                      content={element.content}
+                      last={element.last}
+                    />
+                    {element.last ? (
+                      <>
+                        <br />
+                        <br />
+                      </>
+                    ) : null}
+                  </>
+                ))}
+              </div>
+            ) : (
+              <ul class='circle-container'>
+                {keyFeatures.map((element, index) => (
+                  <>
+                    <li
+                      key={index}
+                      onMouseEnter={() => setContent(element.content)}
+                    >
+                      <img alt={element.alt} src={element.src} />
+                      <span>{element.title}</span>
+                    </li>
+                  </>
+                ))}
+                <div
+                  className='overlay'
+                  style={{ backgroundImage: `url(${images.frame})` }}
+                >
+                  <div className='content'>{content}</div>
+                </div>
+              </ul>
+            )}
           </div>
         </>
       </div>
