@@ -69,23 +69,12 @@ const OurMethods = ({ windowDimensions }) => {
             <div className='box-member'>
               {methods.map((element, index) => (
                 <SwiperSlide key={index}>
-                  {/* <img
-                    style={{ width: '550px', height: '550px' }}
-                    alt={element.title}
-                    src={element.frame}
-                  /> */}
-                  <div
-                    className='background'
-                    style={{ backgroundImage: `url(${element.frame})` }}
-                  >
-                  {/* <h3>{t('our-methods.private-room_title.lbl')}</h3>
-                <span>{t('our-methods.private-room_content.txt')}</span>
-                <h3 style={{ marginLeft: '47%' }}>
-                  {t('our-methods.talking-room_title.lbl')}
-                </h3>
-                <span style={{ marginLeft: '47%' }}>
-                  {t('our-methods.talking-room_content.txt')}
-                </span> */}
+                  <div style={{ textAlign: 'center' }}>
+                    <img
+                      style={{ width: '1500px', height: '650px' }}
+                      alt={element.title}
+                      src={element.frame}
+                    />
                   </div>
                 </SwiperSlide>
               ))}
