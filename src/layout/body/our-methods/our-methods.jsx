@@ -1,19 +1,20 @@
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './our-methods.styles.scss';
+import { Container } from 'react-bootstrap';
+import DevelopmentTeamMember from '../../../components/development-team-member/development-team-member';
 import { useTranslation } from 'react-i18next';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation } from 'swiper';
-import { Container } from 'react-bootstrap';
+import OurMethodsItem from './our-methods-item/our-methods-item';
 
 const OurMethods = ({ windowDimensions }) => {
-  const { t } = useTranslation();
   const images = {
+    next: process.env.PUBLIC_URL + '/images/our-methods/right-button.png',
+    pre: process.env.PUBLIC_URL + '/images/our-methods/left-button.png',
     classType: process.env.PUBLIC_URL + '/images/our-methods/2-class-type.png',
     cooperation: process.env.PUBLIC_URL + '/images/our-methods/cooperation.png',
     curriculum: process.env.PUBLIC_URL + '/images/our-methods/curriculum.png',
-    button:
-      process.env.PUBLIC_URL + '/images/our-methods/left-right-button.png',
   };
 
   const methods = [
@@ -31,28 +32,31 @@ const OurMethods = ({ windowDimensions }) => {
     },
   ];
 
+  useEffect(() => {
+  }, []);
+
+  // translation
+  const { t } = useTranslation();
+
+  // button slide
   const prevRef = useRef(null);
   const nextRef = useRef(null);
 
   return (
     <div className='our-methods'>
-      <span className='title-main' data-aos='fade-up'>
-        {t('our-methods.title.lbl')}
-      </span>
+      <span className='title-main'>{t('our-methods.title.lbl')}</span>
 
       <Container>
-        <div data-aos='fade-up' className='box-slide'>
+        <div className='box-slide'>
           <Swiper
-            // slidesPerView={3}
             slidesPerView={1}
             slidesPerGroup={1}
-            // spaceBetween={windowDimensions.width > 767 ? 30 : 5}
-            // slidesPerGroup={windowDimensions.width > 767 ? 4 : 3}
-            autoplay={{
-              delay: 3000,
-              disableOnInteraction: false,
-              pauseOnMouseEnter: true,
-            }}
+            // autoplay={{
+            //   delay: 6000,
+            //   disableOnInteraction: false,
+            //   pauseOnMouseEnter: true
+            // }}
+            preventClicks={true}
             loop={true}
             loopFillGroupWithBlank={false}
             pagination={{
@@ -68,46 +72,18 @@ const OurMethods = ({ windowDimensions }) => {
               swiper.navigation.update();
             }}
           >
-            {methods.map((element, index) => (
-              <SwiperSlide key={index}>
-                {/* <img style={{height: '650px'}} alt={element.title} src={element.frame} /> */}
-                <div
-                  className='box'
-                  style={{ backgroundImage: `url(${element.frame})` }}
-                >
-                  {element.title === 'class-type' ? (
-                    <></>
-                  ) : (
-                    // <div className='class-type'>
-                    //   <div className='type-1'>
-                    //     <h3>{t('our-methods.private-room_title.lbl')}</h3>
-                    //     <span>hhdhdh</span>
-                    //   </div>
-                    //   <div className='type-2'>
-                    //     <h3>{t('our-methods.talking-room_title.lbl')}</h3>
-                    //     <span>
-                    //       {t('our-methods.talking-room_content.txt')}
-                    //     </span>
-                    //   </div>
-                    // </div>
-                    <span>SPAN</span>
-                  )}
-                </div>
-              </SwiperSlide>
-            ))}
-            <div
-              data-aos='fade-right'
-              ref={prevRef}
-              className='icon-slide icon-next hidden-mobile'
-            >
-              <img className='prev icon-next' src={images.button} alt='pre' />
+            <div className='box-member'>
+              {methods.map((element, index) => (
+                <SwiperSlide key={index}>
+                  <OurMethodsItem image={element.frame} />
+                </SwiperSlide>
+              ))}
             </div>
-            <div
-              data-aos='fade-left'
-              ref={nextRef}
-              className='icon-slide icon-pre hidden-mobile'
-            >
-              <img className='next' src={images.button} alt='next' />
+            <div ref={prevRef} className='icon-slide icon-next hidden-mobile'>
+              <img className='icon-next' src={images.pre} alt='pre' />
+            </div>
+            <div ref={nextRef} className='icon-slide icon-pre hidden-mobile'>
+              <img src={images.next} alt='next' />
             </div>
           </Swiper>
         </div>

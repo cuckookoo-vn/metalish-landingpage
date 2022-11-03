@@ -1,32 +1,18 @@
 @import 'src/styles/variables';
 .our-methods {
+  //overflow: hidden;
   width: 100%;
-  height: 1050px;
   background-color: rgba(0, 0, 0, 0);
   @media #{$info-phone} {
     padding-bottom: 25px;
-    height: 800px;
   }
-
-  @media #{$info-tablet-1399} {
-    height: 800px;
-  }
-
-  .title-main {
-    margin: 5.5vw 0 3vw 0;
-    @media #{$info-tablet-horizontal} {
-      margin: 7vw 0 5vw 0;
-    }
-    @media #{$info-phone} {
-      margin: 40px 0 20px 0;
-    }
-  }
-
   .box-slide {
     position: relative;
     padding: 0 70px;
+    margin-top: 150px;
     @media #{$info-tablet-1399} {
       padding: 0 50px;
+      margin-top: 10vw;
     }
     @media #{$info-phone} {
       padding: 0;
@@ -41,25 +27,11 @@
 
     .icon-slide {
       position: absolute;
-      top: 35%;
+      top: 32%;
       z-index: 2;
       cursor: pointer;
-      .prev {
-        width: 70px;
-        z-index: 2;
-        opacity: 0.4;
-        transition: opacity 0.4s;
-        transform: scaleX(-1);
-        &:hover {
-          opacity: 1;
-        }
-        @media #{$info-tablet-1399} {
-          width: 50px;
-        }
-      }
-
-      .next {
-        width: 70px;
+      img {
+        width: 60px;
         z-index: 2;
         opacity: 0.4;
         transition: opacity 0.4s;
@@ -71,17 +43,15 @@
         }
       }
       &.icon-next {
-        left: 5%;
-        top: 45%;
-        @media #{$info-phone} {
-          left: 20px;
+        left: -40px;
+        @media #{$info-tablet-1399} {
+          left: -20px;
         }
       }
       &.icon-pre {
-        right: 5%;
-        top: 45%;
-        @media #{$info-phone} {
-          right: 20px;
+        right: -40px;
+        @media #{$info-tablet-1399} {
+          right: -20px;
         }
       }
     }
@@ -92,30 +62,8 @@
   .our-methods {
     .swiper {
       position: initial;
-      text-align: center;
       .swiper-pagination-bullet {
         background: #00ffd1;
-      }
-
-      img {
-        @media #{$info-phone} {
-          height: 563px;
-          width: 85vw;
-        }
-      }
-
-      .box {
-        position: relative;
-        background-position: left;
-        background-repeat: no-repeat;
-        background-size: contain;
-        height: 650px;
-        left: 20%;
-
-        @media #{$info-tablet-1399} {
-          height: 500px;
-          left: 5%;
-        }
       }
       .swiper-horizontal
         > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
@@ -124,6 +72,69 @@
           bottom: -15px;
         }
       }
+
+      .development-team-member {
+        width: fit-content;
+        margin: auto;
+
+        .development-team-member-box {
+          position: relative;
+          background-position: left;
+          background-size: contain;
+          background-repeat: no-repeat;
+          margin: auto;
+          width: 250px;
+          min-width: 250px;
+          height: 294px;
+          @media #{$info-phone-576} {
+            width: 38vw;
+            min-width: 38vw;
+            height: 43vw;
+          }
+
+          .image-member {
+            position: absolute;
+            width: 77%;
+            top: 34px;
+            left: 50%;
+            transform: translate(-50%, 0);
+            @media #{$info-phone-576} {
+              top: 4vw;
+            }
+          }
+
+          .name-member {
+            width: max-content;
+            position: absolute;
+            color: $color-title-main;
+            left: 50%;
+            transform: translate(-50%, 0);
+            font-size: 1rem;
+            bottom: 19px;
+            @media #{$info-phone-576} {
+              font-size: 2.9vw;
+              bottom: 2.3vw;
+            }
+          }
+        }
+        .position-member {
+          color: $color-title-main;
+          width: 100%;
+          text-align: center;
+          display: block;
+          @media #{$info-phone-576} {
+            font-size: 2.9vw;
+          }
+        }
+      }
+    }
+  }
+  .swiper-slide {
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+    @media #{$info-tablet-1399} {
+      margin-left: 7.5px !important;
+      margin-right: 7.5px !important;
     }
   }
 }
