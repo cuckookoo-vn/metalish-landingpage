@@ -46,10 +46,11 @@
       margin: 0;
       text-align: center;
       @media #{$info-tablet-1399} {
-        width: 145px;
-        height: 57px;
+        width: 77vw;
+        height: 500px;
         margin: 5px 0 0 0;
       }
+
       @media #{$info-phone} {
         display: none;
       }
@@ -67,6 +68,12 @@
 
         @media #{$info-phone} {
           font-size: 0.85rem;
+        }
+
+        @media #{$info-tablet-1399} {
+          font-size: 2rem;
+          left: 15%;
+          top: 35%;
         }
       }
     }

@@ -1,8 +1,8 @@
 @import 'src/styles/variables';
-.core-team-member {
+.feedback-item {
   width: fit-content;
 
-  .core-team-member-box {
+  .feedback-item-box {
     position: relative;
     background-position: left;
     background-size: contain;
@@ -20,7 +20,9 @@
       width: 28.3vw;
       height: 32.5vw;
     }
-
+    @media #{$info-tablet-1399} {
+      width: 500px;
+    }
     .avatar {
       position: relative;
       background-size: contain;
@@ -33,7 +35,7 @@
       text-align: center;
     }
 
-    .image-member {
+    .user-avatar {
       position: absolute;
       width: 21%;
       top: 11%;
@@ -122,6 +124,10 @@
       @media #{$info-nexus4} {
         bottom: 1.8vw;
         font-size: 0.5rem;
+      }
+      @media #{$info-phone-330} {
+        bottom: 1.5vw;
+        font-size: 0.35rem;
       }
       @media #{$info-phone-330} {
         bottom: 1.5vw;

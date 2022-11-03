@@ -8,6 +8,10 @@
     height: 800px;
   }
 
+  @media #{$info-tablet-1399} {
+    height: 800px;
+  }
+
   .title-main {
     margin: 5.5vw 0 3vw 0;
     @media #{$info-tablet-horizontal} {
@@ -108,6 +112,10 @@
         height: 650px;
         left: 20%;
 
+        @media #{$info-tablet-1399} {
+          height: 500px;
+          left: 5%;
+        }
       }
       .swiper-horizontal
         > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic,

@@ -1,3 +1,5 @@
+@import 'src/styles/variables';
+
 .key-features-item {
   position: relative;
   width: 10%;
@@ -19,6 +21,12 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: left;
+
+    @media #{$info-tablet-1399} {
+      top: -135%;
+      min-width: 280px;
+    }
+
     .content {
       color: white;
       position: absolute;
@@ -29,6 +37,12 @@
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
       text-align: center;
+
+      @media #{$info-tablet-1399} {
+        top: 16vh;
+        left: 10vw;
+        width: 210px;
+      }
     }
   }
   span {
@@ -61,6 +75,11 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: left;
+    @media #{$info-tablet-1399} {
+      top: -135%;
+      min-width: 280px;
+    }
+
     .content {
       color: #fff;
       position: absolute;
@@ -71,6 +90,12 @@
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
       text-align: center;
+
+      @media #{$info-tablet-1399} {
+        top: 16vh;
+        left: 10vw;
+        width: 210px;
+      }
     }
     span {
       position: relative;

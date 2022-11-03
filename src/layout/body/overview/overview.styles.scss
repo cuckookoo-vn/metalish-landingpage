@@ -59,8 +59,8 @@
       width: 55%;
       margin: 0;
       @media #{$info-tablet-1399} {
-        width: 145px;
-        height: 57px;
+        width: 55%;
+        // height: 257px;
         margin: 5px 0 0 0;
       }
       @media #{$info-phone} {
