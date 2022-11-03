@@ -1,5 +1,6 @@
 import './overview.styles.scss';
 import { useTranslation } from 'react-i18next';
+import { Container } from 'react-bootstrap';
 
 const Overview = ({ windowDimensions }) => {
   const { t } = useTranslation();
@@ -18,7 +19,7 @@ const Overview = ({ windowDimensions }) => {
         <span className='title-main' data-aos='fade-up'>
           METALISH
         </span>
-        <>
+        <Container>
           {windowDimensions.width > 767.5 ? (
             <div className='content-wrapper' data-aos='fade-up'>
               {/* Image */}
@@ -69,7 +70,7 @@ const Overview = ({ windowDimensions }) => {
               {/* Image */}
             </div>
           )}
-        </>
+        </Container>
       </div>
     </>
   );

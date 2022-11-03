@@ -18,7 +18,7 @@ const KeyFeaturesItem = ({ src, alt, last, title, content }) => {
           className='overlay'
           style={{ backgroundImage: `url(${images.frame})` }}
         >
-          <div class='content'>{content}</div>
+          <div className='content'>{content}</div>
         </div>
       </div>
 

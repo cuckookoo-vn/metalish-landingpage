@@ -1,10 +1,11 @@
 @import 'src/styles/variables';
 .our-methods {
   width: 100%;
-  height: 700px;
+  height: 1050px;
   background-color: rgba(0, 0, 0, 0);
   @media #{$info-phone} {
     padding-bottom: 25px;
+    height: 800px;
   }
 
   .title-main {
@@ -32,69 +33,6 @@
       width: 100%;
       overflow-x: auto;
       flex-wrap: nowrap;
-
-      .core-team-member-box {
-        position: relative;
-        background-position: left;
-        background-size: cover;
-        background-repeat: no-repeat;
-        margin: auto;
-        width: 250px;
-        min-width: 250px;
-        height: 294px;
-        @media #{$info-tablet-horizontal} {
-          width: 20.2vw;
-          min-width: 20.2vw;
-          height: 23.5vw;
-        }
-        @media #{$info-phone} {
-          width: 28.3vw;
-          height: 32.5vw;
-        }
-
-        .image-member {
-          position: absolute;
-          width: 84%;
-          top: 27px;
-          left: 50%;
-          transform: translate(-50%, 0);
-          @media #{$info-tablet-horizontal} {
-            width: 17.1vw;
-            left: 50%;
-            top: 1.9vw;
-          }
-          @media #{$info-phone} {
-            width: 24.2vw;
-            left: 50%;
-            top: 2.4vw;
-          }
-        }
-
-        .name-member {
-          position: absolute;
-          color: $color-title-main;
-          left: 50%;
-          transform: translate(-50%, 0);
-          font-size: 17px;
-          bottom: 19px;
-          @media #{$info-tablet-horizontal} {
-            bottom: 1.4vw;
-            font-size: 1.2vw;
-          }
-          @media #{$info-phone} {
-            bottom: 1.8vw;
-            font-size: 0.52rem;
-          }
-          @media #{$info-nexus4} {
-            bottom: 1.8vw;
-            font-size: 0.5rem;
-          }
-          @media #{$info-phone-330} {
-            bottom: 1.5vw;
-            font-size: 0.35rem;
-          }
-        }
-      }
     }
 
     .icon-slide {
@@ -129,14 +67,16 @@
         }
       }
       &.icon-next {
-        left: 40px;
-        @media #{$info-tablet-1399} {
+        left: 5%;
+        top: 45%;
+        @media #{$info-phone} {
           left: 20px;
         }
       }
       &.icon-pre {
-        right: 40px;
-        @media #{$info-tablet-1399} {
+        right: 5%;
+        top: 45%;
+        @media #{$info-phone} {
           right: 20px;
         }
       }
@@ -148,8 +88,26 @@
   .our-methods {
     .swiper {
       position: initial;
+      text-align: center;
       .swiper-pagination-bullet {
         background: #00ffd1;
+      }
+
+      img {
+        @media #{$info-phone} {
+          height: 563px;
+          width: 85vw;
+        }
+      }
+
+      .box {
+        position: relative;
+        background-position: left;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 650px;
+        left: 20%;
+
       }
       .swiper-horizontal
         > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic,

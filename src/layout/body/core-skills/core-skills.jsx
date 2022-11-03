@@ -1,5 +1,6 @@
 import './core-skills.styles.scss';
 import { useTranslation } from 'react-i18next';
+import { Container } from 'react-bootstrap';
 
 const CoreSkills = ({ windowDimensions }) => {
   const { t } = useTranslation();
@@ -18,7 +19,7 @@ const CoreSkills = ({ windowDimensions }) => {
         <span className='title-main' data-aos='fade-up'>
           {t('core-skills.title.lbl')}
         </span>
-        <>
+        <Container>
           <div className='content-wrapper'>
             <div
               className='background'
@@ -36,7 +37,7 @@ const CoreSkills = ({ windowDimensions }) => {
               </span>
             </div>
           </div>
-        </>
+        </Container>
       </div>
     </>
   );

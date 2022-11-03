@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import KeyFeaturesItem from './key-features-item/key-features-item';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import { Container } from 'react-bootstrap';
 
 const KeyFeatures = ({ windowDimensions }) => {
   const { t } = useTranslation();
@@ -113,7 +114,7 @@ const KeyFeatures = ({ windowDimensions }) => {
         <span className='title-main' data-aos='fade-up'>
           {t('key-features.title.lbl')}
         </span>
-        <>
+        <Container>
           <div className='content-wrapper' data-aos='zoom-in-up'>
             {windowDimensions.width > 767.5 ? (
               <div>
@@ -137,7 +138,7 @@ const KeyFeatures = ({ windowDimensions }) => {
                 ))}
               </div>
             ) : (
-              <ul class='circle-container'>
+              <ul className='circle-container'>
                 {keyFeatures.map((element, index) => (
                   <>
                     <li
@@ -158,7 +159,7 @@ const KeyFeatures = ({ windowDimensions }) => {
               </ul>
             )}
           </div>
-        </>
+        </Container>
       </div>
     </>
   );

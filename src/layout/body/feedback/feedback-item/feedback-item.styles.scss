@@ -1,0 +1,175 @@
+@import 'src/styles/variables';
+.core-team-member {
+  width: fit-content;
+
+  .core-team-member-box {
+    position: relative;
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: auto;
+    width: 500px;
+    min-width: 250px;
+    height: 400px;
+    @media #{$info-tablet-horizontal} {
+      width: 20.2vw;
+      min-width: 20.2vw;
+      height: 23.5vw;
+    }
+    @media #{$info-phone} {
+      width: 28.3vw;
+      height: 32.5vw;
+    }
+
+    .avatar {
+      position: relative;
+      background-size: contain;
+      display: inline-block;
+      background-repeat: no-repeat;
+      top: 8%;
+      left: -25%;
+      width: 35%;
+      height: 35%;
+      text-align: center;
+    }
+
+    .image-member {
+      position: absolute;
+      width: 21%;
+      top: 11%;
+      left: 22%;
+      transform: translate(-50%, 0);
+      @media #{$info-tablet-horizontal} {
+        width: 17.1vw;
+        left: 50%;
+        top: 1.9vw;
+      }
+      @media #{$info-phone} {
+        width: 24.2vw;
+        left: 50%;
+        top: 2.4vw;
+      }
+    }
+
+    .user-grade {
+      position: absolute;
+      color: #fff;
+      left: 56%;
+      top: 25%;
+      transform: translate(-50%, 0);
+      font-size: 17px;
+      bottom: 19px;
+      @media #{$info-tablet-horizontal} {
+        bottom: 1.4vw;
+        font-size: 1.2vw;
+      }
+      @media #{$info-phone} {
+        bottom: 1.8vw;
+        font-size: 0.52rem;
+      }
+      @media #{$info-nexus4} {
+        bottom: 1.8vw;
+        font-size: 0.5rem;
+      }
+      @media #{$info-phone-330} {
+        bottom: 1.5vw;
+        font-size: 0.35rem;
+      }
+    }
+
+    .user-name {
+      position: relative;
+      color: #fff;
+      left: 55%;
+      top: -27%;
+      transform: translate(-50%, 0);
+      font-size: 17px;
+      bottom: 19px;
+      @media #{$info-tablet-horizontal} {
+        bottom: 1.4vw;
+        font-size: 1.2vw;
+      }
+      @media #{$info-phone} {
+        bottom: 1.8vw;
+        font-size: 0.52rem;
+      }
+      @media #{$info-nexus4} {
+        bottom: 1.8vw;
+        font-size: 0.5rem;
+      }
+      @media #{$info-phone-330} {
+        bottom: 1.5vw;
+        font-size: 0.35rem;
+      }
+    }
+
+    .user-summary-title {
+      position: relative;
+      color: #ffee54;
+      left: 43%;
+      top: -5%;
+      transform: translate(-50%, 0);
+      // font-size: 17px;
+      bottom: 19px;
+      @media #{$info-tablet-horizontal} {
+        bottom: 1.4vw;
+        font-size: 1.2vw;
+      }
+      @media #{$info-phone} {
+        bottom: 1.8vw;
+        font-size: 0.52rem;
+      }
+      @media #{$info-nexus4} {
+        bottom: 1.8vw;
+        font-size: 0.5rem;
+      }
+      @media #{$info-phone-330} {
+        bottom: 1.5vw;
+        font-size: 0.35rem;
+      }
+    }
+
+    .user-comment {
+      position: relative;
+      color: #fff;
+      left: 44%;
+      top: 0;
+      width: 350px;
+      transform: translate(-50%, 0);
+      bottom: 19px;
+      @media #{$info-tablet-horizontal} {
+        bottom: 1.4vw;
+        font-size: 1.2vw;
+      }
+      @media #{$info-phone} {
+        bottom: 1.8vw;
+        font-size: 0.52rem;
+      }
+      @media #{$info-nexus4} {
+        bottom: 1.8vw;
+        font-size: 0.5rem;
+      }
+      @media #{$info-phone-330} {
+        bottom: 1.5vw;
+        font-size: 0.35rem;
+      }
+    }
+  }
+  .position-member {
+    color: $color-title-main;
+    width: 100%;
+    text-align: center;
+    display: block;
+    font-size: 14px;
+    @media #{$info-tablet-horizontal} {
+      font-size: 1vw;
+      bottom: -1.5vw;
+    }
+    @media #{$info-phone} {
+      font-size: 0.42rem;
+    }
+    @media #{$info-nexus4} {
+      font-size: 0.4rem;
+    }
+  }
+}

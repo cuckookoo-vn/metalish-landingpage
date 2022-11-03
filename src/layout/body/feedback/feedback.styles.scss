@@ -6,7 +6,7 @@
   background-position: left;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 700px;
+  height: 800px;
   color: #ffffff;
   @media #{$info-tablet-1399} {
     height: 680px;
@@ -150,6 +150,71 @@
       }
     }
   }
+
+  .box-slide {
+    position: relative;
+    padding: 0 70px;
+    @media #{$info-tablet-1399} {
+      padding: 0 50px;
+    }
+    @media #{$info-phone} {
+      padding: 0;
+    }
+
+    .box-member {
+      display: flex;
+      width: 100%;
+      overflow-x: auto;
+      flex-wrap: nowrap;
+    }
+
+    .icon-slide {
+      position: absolute;
+      top: 35%;
+      z-index: 2;
+      cursor: pointer;
+      .prev {
+        width: 70px;
+        z-index: 2;
+        opacity: 0.4;
+        transition: opacity 0.4s;
+        transform: scaleX(-1);
+        &:hover {
+          opacity: 1;
+        }
+        @media #{$info-tablet-1399} {
+          width: 50px;
+        }
+      }
+
+      .next {
+        width: 70px;
+        z-index: 2;
+        opacity: 0.4;
+        transition: opacity 0.4s;
+        &:hover {
+          opacity: 1;
+        }
+        @media #{$info-tablet-1399} {
+          width: 50px;
+        }
+      }
+      &.icon-next {
+        left: 5%;
+        top: 45%;
+        @media #{$info-phone} {
+          left: 20px;
+        }
+      }
+      &.icon-pre {
+        right: 5%;
+        top: 45%;
+        @media #{$info-phone} {
+          right: 20px;
+        }
+      }
+    }
+  }
 }
 
 @keyframes animateStar {
@@ -181,18 +246,94 @@
 }
 
 #root {
-  .key-features {
+  .feedback {
     .swiper {
       position: initial;
+      text-align: center;
       .swiper-pagination-bullet {
         background: #00ffd1;
       }
+
+      img {
+        @media #{$info-phone} {
+          height: 563px;
+          width: 85vw;
+        }
+      }
+
+      .box {
+        position: relative;
+        background-position: left;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 650px;
+        left: 20%;
+      }
+
+      .comment-box {
+        background-size: contain;
+        position: relative;
+        display: inline-block;
+        background-repeat: no-repeat;
+        width: 400px;
+        height: 400px;
+
+        .avatar {
+          position: relative;
+          background-size: contain;
+          display: inline-block;
+          background-repeat: no-repeat;
+          top: 8%;
+          left: -25%;
+          width: 35%;
+          height: 35%;
+          text-align: center;
+
+          img {
+            position: relative;
+            top: 10%;
+            width: 75%;
+            width: 75%;
+          }
+
+          .user-name {
+            position: relative;
+            top: -70%;
+            left: 120%;
+            color: #ffffff;
+            width: max-content;
+          }
+
+          .user-grade {
+            position: relative;
+            color: #ffffff;
+            top: -50%;
+            left: 100%;
+            // width: max-content;
+          }
+
+          .user-summary-title {
+            position: relative;
+            color: #ffee54;
+            width: max-content;
+            top: -50%;
+            left: 80%;
+          }
+
+          .user-full-comment {
+            position: relative;
+            color: #ffffff;
+            width: 350px;
+            top: -50%;
+          }
+        }
+      }
+
       .swiper-horizontal
         > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
       .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
-        bottom: -30px;
         @media #{$info-phone} {
-          bottom: -3px;
+          bottom: -15px;
         }
       }
     }
