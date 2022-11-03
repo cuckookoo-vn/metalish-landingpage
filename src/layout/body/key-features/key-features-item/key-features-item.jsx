@@ -21,7 +21,7 @@ const KeyFeaturesItem = ({ src, alt, last }) => {
           />
         </div>
         <div
-          class='flip-card-back'
+          className='flip-card-back'
           style={{ backgroundImage: `url(${images.frame}` }}
         >
           <p>{t(`key-features_${alt}.txt`)}</p>
