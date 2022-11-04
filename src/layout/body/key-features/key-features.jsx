@@ -1,7 +1,6 @@
 import './key-features.styles.scss';
 import { useTranslation } from 'react-i18next';
 import KeyFeaturesItem from './key-features-item/key-features-item';
-import { useEffect } from 'react';
 import { useState } from 'react';
 import { Container } from 'react-bootstrap';
 
@@ -109,59 +108,59 @@ const KeyFeatures = ({ windowDimensions }) => {
   const [content, setContent] = useState('');
 
   return (
-    <>
-      <div className='key-features'>
-        <span className='title-main' data-aos='fade-up'>
-          {t('key-features.title.lbl')}
-        </span>
-        <Container>
-          <div className='content-wrapper' data-aos='zoom-in-up'>
-            {windowDimensions.width > 767.5 ? (
-              <div>
-                {keyFeatures.map((element, index) => (
-                  <>
-                    <KeyFeaturesItem
-                      key={index}
-                      alt={element.alt}
-                      src={element.src}
-                      title={element.title}
-                      content={element.content}
-                      last={element.last}
-                    />
-                    {element.last ? (
-                      <>
-                        <br />
-                        <br />
-                      </>
-                    ) : null}
-                  </>
-                ))}
+    <div className='key-features'>
+      <span className='title-main' data-aos='fade-up'>
+        {t('key-features.title.lbl')}
+      </span>
+      <Container>
+        <div className='content-wrapper' data-aos='zoom-in-up'>
+          {windowDimensions.width > 767.5 ? (
+            <div>
+              {keyFeatures.map((element, index) => (
+                <>
+                  <KeyFeaturesItem
+                    key={index}
+                    alt={element.alt}
+                    src={element.src}
+                    title={element.title}
+                    content={element.content}
+                    last={element.last}
+                  />
+                  {element.last ? (
+                    <>
+                      <br />
+                      <br />
+                      <br />
+                      <br />
+                    </>
+                  ) : null}
+                </>
+              ))}
+            </div>
+          ) : (
+            <ul className='circle-container'>
+              {keyFeatures.map((element, index) => (
+                <>
+                  <li
+                    key={index}
+                    onMouseEnter={() => setContent(element.content)}
+                  >
+                    <img alt={element.alt} src={element.src} />
+                    <span>{element.title}</span>
+                  </li>
+                </>
+              ))}
+              <div
+                className='overlay'
+                style={{ backgroundImage: `url(${images.frame})` }}
+              >
+                <div className='content'>{content}</div>
               </div>
-            ) : (
-              <ul className='circle-container'>
-                {keyFeatures.map((element, index) => (
-                  <>
-                    <li
-                      key={index}
-                      onMouseEnter={() => setContent(element.content)}
-                    >
-                      <img alt={element.alt} src={element.src} />
-                      <span>{element.title}</span>
-                    </li>
-                  </>
-                ))}
-                <div
-                  className='overlay'
-                  style={{ backgroundImage: `url(${images.frame})` }}
-                >
-                  <div className='content'>{content}</div>
-                </div>
-              </ul>
-            )}
-          </div>
-        </Container>
-      </div>
-    </>
+            </ul>
+          )}
+        </div>
+      </Container>
+    </div>
   );
 };
 

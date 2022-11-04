@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import './our-methods.styles.scss';
 import { Container } from 'react-bootstrap';
-import DevelopmentTeamMember from '../../../components/development-team-member/development-team-member';
 import { useTranslation } from 'react-i18next';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -19,21 +18,20 @@ const OurMethods = ({ windowDimensions }) => {
 
   const methods = [
     {
-      title: 'class-type',
+      type: 'class-type',
       frame: images.classType,
     },
     {
-      title: 'cooperation',
+      type: 'cooperation',
       frame: images.cooperation,
     },
     {
-      title: 'curriculum',
+      type: 'curriculum',
       frame: images.curriculum,
     },
   ];
 
-  useEffect(() => {
-  }, []);
+  useEffect(() => {}, []);
 
   // translation
   const { t } = useTranslation();
@@ -75,7 +73,7 @@ const OurMethods = ({ windowDimensions }) => {
             <div className='box-member'>
               {methods.map((element, index) => (
                 <SwiperSlide key={index}>
-                  <OurMethodsItem image={element.frame} />
+                  <OurMethodsItem image={element.frame} type={element.type} />
                 </SwiperSlide>
               ))}
             </div>

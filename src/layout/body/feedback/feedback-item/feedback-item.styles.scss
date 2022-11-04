@@ -1,6 +1,7 @@
 @import 'src/styles/variables';
 .feedback-item {
   width: fit-content;
+  margin: auto;
 
   .feedback-item-box {
     position: relative;
@@ -8,28 +9,27 @@
     background-size: contain;
     background-repeat: no-repeat;
     margin: auto;
-    width: 500px;
-    min-width: 250px;
-    height: 400px;
-    @media #{$info-tablet-horizontal} {
-      width: 20.2vw;
-      min-width: 20.2vw;
-      height: 23.5vw;
+    width: 450px;
+    min-width: 450px;
+    height: 500px;
+    left: -10%;
+    @media #{$info-phone-576} {
+      width: 38vw;
+      min-width: 38vw;
+      height: 43vw;
     }
-    @media #{$info-phone} {
-      width: 28.3vw;
-      height: 32.5vw;
-    }
+
     @media #{$info-tablet-1399} {
-      width: 500px;
+      left: 1%;
     }
+
     .avatar {
       position: relative;
       background-size: contain;
       display: inline-block;
       background-repeat: no-repeat;
-      top: 8%;
-      left: -25%;
+      top: 14%;
+      left: 6%;
       width: 35%;
       height: 35%;
       text-align: center;
@@ -37,9 +37,9 @@
 
     .user-avatar {
       position: absolute;
-      width: 21%;
-      top: 11%;
-      left: 22%;
+      width: 25%;
+      top: 18%;
+      left: 23%;
       transform: translate(-50%, 0);
       @media #{$info-tablet-horizontal} {
         width: 17.1vw;
@@ -56,10 +56,11 @@
     .user-grade {
       position: absolute;
       color: #fff;
-      left: 56%;
-      top: 25%;
+      left: 67%;
+      top: 28%;
       transform: translate(-50%, 0);
-      font-size: 17px;
+      font-size: 18px;
+      width: max-content;
       bottom: 19px;
       @media #{$info-tablet-horizontal} {
         bottom: 1.4vw;
@@ -82,10 +83,10 @@
     .user-name {
       position: relative;
       color: #fff;
-      left: 55%;
-      top: -27%;
+      left: 100%;
+      top: -15%;
       transform: translate(-50%, 0);
-      font-size: 17px;
+      font-size: 30x;
       bottom: 19px;
       @media #{$info-tablet-horizontal} {
         bottom: 1.4vw;
@@ -108,10 +109,11 @@
     .user-summary-title {
       position: relative;
       color: #ffee54;
-      left: 43%;
-      top: -5%;
+      left: 51%;
+      top: 5%;
       transform: translate(-50%, 0);
-      // font-size: 17px;
+      width: max-content;
+      font-size: 30px;
       bottom: 19px;
       @media #{$info-tablet-horizontal} {
         bottom: 1.4vw;
@@ -138,9 +140,9 @@
     .user-comment {
       position: relative;
       color: #fff;
-      left: 44%;
-      top: 0;
-      width: 350px;
+      left: 55%;
+      top: 10%;
+      width: 450px;
       transform: translate(-50%, 0);
       bottom: 19px;
       @media #{$info-tablet-horizontal} {
@@ -160,22 +162,39 @@
         font-size: 0.35rem;
       }
     }
+
+    .image-member {
+      position: absolute;
+      width: 77%;
+      top: 34px;
+      left: 50%;
+      transform: translate(-50%, 0);
+      @media #{$info-phone-576} {
+        top: 4vw;
+      }
+    }
+
+    .name-member {
+      width: max-content;
+      position: absolute;
+      color: $color-title-main;
+      left: 50%;
+      transform: translate(-50%, 0);
+      font-size: 1rem;
+      bottom: 19px;
+      @media #{$info-phone-576} {
+        font-size: 2.9vw;
+        bottom: 2.3vw;
+      }
+    }
   }
   .position-member {
     color: $color-title-main;
     width: 100%;
     text-align: center;
     display: block;
-    font-size: 14px;
-    @media #{$info-tablet-horizontal} {
-      font-size: 1vw;
-      bottom: -1.5vw;
-    }
-    @media #{$info-phone} {
-      font-size: 0.42rem;
-    }
-    @media #{$info-nexus4} {
-      font-size: 0.4rem;
+    @media #{$info-phone-576} {
+      font-size: 2.9vw;
     }
   }
 }

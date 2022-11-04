@@ -1,341 +1,84 @@
-@import 'src/styles/variables';
-
-.feedback {
-  z-index: 1;
-  position: relative;
-  background-position: left;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 800px;
-  color: #ffffff;
-  @media #{$info-tablet-1399} {
-    height: 680px;
-  }
-  @media #{$info-tablet-horizontal} {
-    height: 56vw;
-  }
-  @media #{$info-tablet-991} {
-    height: 450px;
-  }
+@import "src/styles/variables";
+.feedback{
+  //overflow: hidden;
+  width: 100%;
+  background-color: rgba(0,0,0,0);
   @media #{$info-phone} {
-    height: 80vw;
+    padding-bottom: 25px;
   }
-  .title-main {
-    margin: 62px 0 40px 0;
-    @media #{$info-tablet-1399} {
-      margin: 62px 0 40px 0;
-    }
-    @media #{$info-tablet-horizontal} {
-      margin: 2.7vw 0 1.4vw 0;
-    }
-    @media #{$info-phone} {
-      margin: 20px 0 0 0;
-    }
-  }
-  .content-wrapper {
-    position: absolute;
-    left: 23%;
-    .content {
-      text-align: center;
-      position: relative;
-      margin: 0;
-      width: 1000px;
-      display: inline-block;
-      .comment-box {
-        background-size: contain;
-        position: relative;
-        display: inline-block;
-        background-repeat: no-repeat;
-        width: 400px;
-        height: 400px;
-
-        .avatar {
-          position: relative;
-          background-size: contain;
-          display: inline-block;
-          background-repeat: no-repeat;
-          top: 8%;
-          left: -25%;
-          width: 35%;
-          height: 35%;
-          text-align: center;
-
-          img {
-            position: relative;
-            top: 10%;
-            width: 75%;
-            width: 75%;
-          }
-
-          .user-name {
-            position: relative;
-            top: -70%;
-            left: 120%;
-            color: #ffffff;
-            width: max-content;
-          }
-
-          .user-grade {
-            position: relative;
-            color: #ffffff;
-            top: -80%;
-            left: 110%;
-            width: max-content;
-          }
-
-          .user-summary-title {
-            position: relative;
-            color: #ffee54;
-            width: max-content;
-            top: -50%;
-            left: 80%;
-          }
-
-          .user-full-comment {
-            position: relative;
-            color: #ffffff;
-            width: 350px;
-            top: -50%;
-          }
-        }
-      }
-      .button-right {
-        position: absolute;
-        background-size: contain;
-        background-repeat: no-repeat;
-        right: -35%;
-        top: 40%;
-        width: 100px;
-        height: 100px;
-        display: inline-block;
-      }
-      .button-left {
-        position: absolute;
-        background-size: contain;
-        background-repeat: no-repeat;
-        left: -35%;
-        top: 40%;
-        width: 100px;
-        height: 100px;
-        transform: scaleX(-1);
-        display: inline-block;
-      }
-      @media #{$info-tablet-1399} {
-        width: 145px;
-        height: 57px;
-        margin: 5px 0 0 0;
-      }
-      @media #{$info-phone} {
-        display: none;
-      }
-      h3 {
-        position: absolute;
-        // text-align: center;
-        left: 17%;
-        top: 20%;
-        margin-right: 15%;
-        display: inline-block;
-        width: max-content;
-      }
-      span {
-        font-size: 0.85rem;
-        position: absolute;
-        // text-align: center;
-        left: 5%;
-        top: 40%;
-        display: inline-block;
-        font-weight: 600;
-        text-align: center;
-        width: 40%;
-      }
-    }
-  }
-
-  .box-slide {
+  .box-slide{
     position: relative;
     padding: 0 70px;
+    margin-top: 150px;
     @media #{$info-tablet-1399} {
       padding: 0 50px;
+      margin-top: 10vw;
     }
     @media #{$info-phone} {
       padding: 0;
     }
 
-    .box-member {
+    .box-feedback{
       display: flex;
       width: 100%;
       overflow-x: auto;
       flex-wrap: nowrap;
     }
 
-    .icon-slide {
+    .icon-slide{
       position: absolute;
-      top: 35%;
+      top: 45%;
       z-index: 2;
       cursor: pointer;
-      .prev {
-        width: 70px;
+      img{
+        width: 60px;
         z-index: 2;
         opacity: 0.4;
         transition: opacity 0.4s;
-        transform: scaleX(-1);
-        &:hover {
+        &:hover{
           opacity: 1;
         }
         @media #{$info-tablet-1399} {
           width: 50px;
         }
       }
-
-      .next {
-        width: 70px;
-        z-index: 2;
-        opacity: 0.4;
-        transition: opacity 0.4s;
-        &:hover {
-          opacity: 1;
-        }
+      &.icon-next{
+        left: -40px;
         @media #{$info-tablet-1399} {
-          width: 50px;
+          left: -20px;
         }
       }
-      &.icon-next {
-        left: 5%;
-        top: 45%;
-        @media #{$info-phone} {
-          left: 20px;
-        }
-      }
-      &.icon-pre {
-        right: 5%;
-        top: 45%;
-        @media #{$info-phone} {
-          right: 20px;
+      &.icon-pre{
+        right: -40px;
+        @media #{$info-tablet-1399} {
+          right: -20px;
         }
       }
     }
   }
 }
 
-@keyframes animateStar {
-  0% {
-    transform: rotate(581deg) translateX(0);
-    opacity: 1;
-  }
-  80% {
-    opacity: 1;
-  }
-  100% {
-    transform: rotate(581deg) translateX(-90vw);
-    opacity: 0;
-  }
-}
-
-@keyframes animateStarMobile {
-  0% {
-    transform: rotate(581deg) translateX(0);
-    opacity: 1;
-  }
-  80% {
-    opacity: 1;
-  }
-  100% {
-    transform: rotate(581deg) translateX(-150vw);
-    opacity: 0;
-  }
-}
-
-#root {
-  .feedback {
-    .swiper {
+#root{
+  .feedback{
+    .swiper{
       position: initial;
-      text-align: center;
-      .swiper-pagination-bullet {
-        background: #00ffd1;
+      .swiper-pagination-bullet{
+        background: #00FFD1;
       }
-
-      img {
-        @media #{$info-phone} {
-          height: 563px;
-          width: 85vw;
-        }
-      }
-
-      .box {
-        position: relative;
-        background-position: left;
-        background-repeat: no-repeat;
-        background-size: contain;
-        height: 650px;
-        left: 20%;
-      }
-
-      .comment-box {
-        background-size: contain;
-        position: relative;
-        display: inline-block;
-        background-repeat: no-repeat;
-        width: 400px;
-        height: 400px;
-
-        .avatar {
-          position: relative;
-          background-size: contain;
-          display: inline-block;
-          background-repeat: no-repeat;
-          top: 8%;
-          left: -25%;
-          width: 35%;
-          height: 35%;
-          text-align: center;
-
-          img {
-            position: relative;
-            top: 10%;
-            width: 75%;
-            width: 75%;
-          }
-
-          .user-name {
-            position: relative;
-            top: -70%;
-            left: 120%;
-            color: #ffffff;
-            width: max-content;
-          }
-
-          .user-grade {
-            position: relative;
-            color: #ffffff;
-            top: -50%;
-            left: 100%;
-            // width: max-content;
-          }
-
-          .user-summary-title {
-            position: relative;
-            color: #ffee54;
-            width: max-content;
-            top: -50%;
-            left: 80%;
-          }
-
-          .user-full-comment {
-            position: relative;
-            color: #ffffff;
-            width: 350px;
-            top: -50%;
-          }
-        }
-      }
-
-      .swiper-horizontal
-        > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
-      .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
+      .swiper-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
+      .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic{
         @media #{$info-phone} {
           bottom: -15px;
         }
       }
+    }
+  }
+  .swiper-slide{
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+    @media #{$info-tablet-1399} {
+      margin-left: 7.5px !important;
+      margin-right: 7.5px !important;
     }
   }
 }

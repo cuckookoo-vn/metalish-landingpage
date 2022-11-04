@@ -35,7 +35,7 @@ const DevelopmentTeam = ({ windowDimensions }) => {
     },
     {
       name: 'Julie Tran',
-      position: 'Business Analyst',
+      position: 'Content Advisor Leader',
       image: urlImage + '4.png',
     },
     {

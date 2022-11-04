@@ -81,6 +81,9 @@ const translationEN = {
       'Pay small extra fee to take customized and personalized classes with AI or the teachers you like.\n' +
       'Unlimited topics\n' +
       'Invite your friends to join your world!',
+      'cooperation_content.txt': 'Exprienced content advisor team, including foreign English teachers and local English teachers.',
+      'curriculum_content.txt': 'The curriculum is completely based on the curriculum in user’s country.'
+
   },
   feedback: {
     'title.lbl': 'WHAT USERS SAY ABOUT METALISH',

@@ -11,35 +11,30 @@ const CoreSkills = ({ windowDimensions }) => {
   };
 
   return (
-    <>
-      <div
-        className='core-skills'
-        style={{ backgroundImage: `url(${images.bgKeyFeatures})` }}
-      >
-        <span className='title-main' data-aos='fade-up'>
-          {t('core-skills.title.lbl')}
+    <div
+      className='core-skills'
+      style={{ backgroundImage: `url(${images.bgKeyFeatures})` }}
+    >
+      <span className='title-main' data-aos='fade-up'>
+        {t('core-skills.title.lbl')}
+      </span>
+      <Container>
+        <div
+          className='background'
+          style={{ backgroundImage: `url(${images.frame})` }}
+        ></div>
+        <span className='content'>{t('core-skills.listening.lbl')}</span>
+        <span className='content' style={{ marginLeft: '-4%' }}>
+          {t('core-skills.speaking.lbl')}
         </span>
-        <Container>
-          <div className='content-wrapper'>
-            <div
-              className='background'
-              style={{ backgroundImage: `url(${images.frame})` }}
-            >
-              <span>{t('core-skills.listening.lbl')}</span>
-              <span style={{ marginLeft: '24%' }}>
-                {t('core-skills.speaking.lbl')}
-              </span>
-              <span style={{ marginLeft: '47%' }}>
-                {t('core-skills.vocabulary.lbl')}
-              </span>
-              <span style={{ marginLeft: '71%' }}>
-                {t('core-skills.mouth-shape.lbl')}
-              </span>
-            </div>
-          </div>
-        </Container>
-      </div>
-    </>
+        <span className='content' style={{ marginLeft: '-4%' }}>
+          {t('core-skills.vocabulary.lbl')}
+        </span>
+        <span className='content' style={{ marginLeft: '-6%', marginRight: 0 }}>
+          {t('core-skills.mouth-shape.lbl')}
+        </span>
+      </Container>
+    </div>
   );
 };
 

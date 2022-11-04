@@ -11,68 +11,53 @@ const Overview = ({ windowDimensions }) => {
   };
 
   return (
-    <>
-      <div
-        className='overview'
-        style={{ backgroundImage: `url(${images.bgKeyFeatures})` }}
-      >
+    <div
+      className='overview'
+      style={{ backgroundImage: `url(${images.bgKeyFeatures})` }}
+    >
+      <Container>
         <span className='title-main' data-aos='fade-up'>
           METALISH
         </span>
-        <Container>
-          {windowDimensions.width > 767.5 ? (
-            <div className='content-wrapper' data-aos='fade-up'>
-              {/* Image */}
-              <div className='image-wrapper'>
-                <img
-                  alt='overview'
-                  src={`${process.env.PUBLIC_URL}/images/explore/tour/1.png`}
-                />
-                <div
-                  className='btn'
-                  style={{ backgroundImage: `url(${images.viewButton}` }}
-                ></div>
-              </div>
-              {/* Image */}
-
-              {/* Content */}
-              <div className='content'>
-                <p>{t('overview.content_1.txt')}</p>
-                <p>{t('overview.content_2.txt')}</p>
-                <p>{t('overview.content_3.txt')}</p>
-                <p>{t('overview.content_4.txt')}</p>
-                <p>{t('overview.content_5.txt')}</p>
-              </div>
-              {/* Content */}
+        {windowDimensions.width > 767.5 ? (
+          <>
+            <div className='content'>
+              <p>{t('overview.content_1.txt')}</p>
+              <p>{t('overview.content_2.txt')}</p>
+              <p>{t('overview.content_3.txt')}</p>
+              <p>{t('overview.content_4.txt')}</p>
+              <p>{t('overview.content_5.txt')}</p>
             </div>
-          ) : (
-            <div className='content-wrapper' data-aos='fade-up'>
-              {/* Content */}
-              <div className='content'>
-                <p>{t('overview.content_1.txt')}</p>
-                <p>{t('overview.content_2.txt')}</p>
-                <p>{t('overview.content_3.txt')}</p>
-                <p>{t('overview.content_4.txt')}</p>
-                <p>{t('overview.content_5.txt')}</p>
-              </div>
-              {/* Content */}
-              {/* Image */}
-              <div className='image-wrapper'>
-                <img
-                  alt='overview'
-                  src={`${process.env.PUBLIC_URL}/images/explore/tour/1.png`}
-                />
-                <div
-                  className='btn'
-                  style={{ backgroundImage: `url(${images.viewButton}` }}
-                ></div>
-              </div>
-              {/* Image */}
+            <img
+              alt='overview'
+              src={`${process.env.PUBLIC_URL}/images/explore/tour/1.png`}
+            />
+            <div
+              className='btn'
+              style={{ backgroundImage: `url(${images.viewButton}` }}
+            ></div>
+          </>
+        ) : (
+          <>
+            <div className='content'>
+              <p>{t('overview.content_1.txt')}</p>
+              <p>{t('overview.content_2.txt')}</p>
+              <p>{t('overview.content_3.txt')}</p>
+              <p>{t('overview.content_4.txt')}</p>
+              <p>{t('overview.content_5.txt')}</p>
             </div>
-          )}
-        </Container>
-      </div>
-    </>
+            <img
+              alt='overview'
+              src={`${process.env.PUBLIC_URL}/images/explore/tour/1.png`}
+            />
+            <div
+              className='btn'
+              style={{ backgroundImage: `url(${images.viewButton}` }}
+            ></div>
+          </>
+        )}
+      </Container>
+    </div>
   );
 };
 

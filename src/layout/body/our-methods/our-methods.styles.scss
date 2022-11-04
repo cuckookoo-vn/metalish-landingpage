@@ -1,8 +1,6 @@
 @import 'src/styles/variables';
 .our-methods {
-  //overflow: hidden;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0);
   @media #{$info-phone} {
     padding-bottom: 25px;
   }
@@ -27,7 +25,7 @@
 
     .icon-slide {
       position: absolute;
-      top: 32%;
+      top: 45%;
       z-index: 2;
       cursor: pointer;
       img {
