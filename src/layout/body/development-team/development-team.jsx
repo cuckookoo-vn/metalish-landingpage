@@ -148,11 +148,11 @@ const DevelopmentTeam = ({windowDimensions}) => {
                 slidesPerView={slideData.slidesPerView}
                 spaceBetween={slideData.spaceBetween}
                 slidesPerGroup={slideData.slidesPerGroup}
-                // autoplay={{
-                //   delay: 6000,
-                //   disableOnInteraction: false,
-                //   pauseOnMouseEnter: true
-                // }}
+                autoplay={{
+                  delay: 6000,
+                  disableOnInteraction: false,
+                  pauseOnMouseEnter: true
+                }}
                 preventClicks={true}
                 loop={true}
                 loopFillGroupWithBlank={false}

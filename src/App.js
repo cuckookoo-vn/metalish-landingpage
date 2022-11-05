@@ -27,6 +27,7 @@ import Explore from "./layout/body/explore/explore";
 import MiniGames from "./layout/body/explore/mini-games/mini-games";
 import Advertising from "./layout/body/explore/advertising/advertising";
 import OrderService from "./layout/body/explore/order-service/order-service";
+import Tour from "./layout/body/explore/tour/tour";
 
 export default function App() {
 
@@ -64,6 +65,7 @@ export default function App() {
         {
             statusExplore ?
             <>
+                <Tour windowDimensions={windowDimensions}/>
                 <MiniGames windowDimensions={windowDimensions}/>
                 <Advertising windowDimensions={windowDimensions}/>
                 <OrderService windowDimensions={windowDimensions}/>
