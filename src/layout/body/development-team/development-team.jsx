@@ -1,16 +1,15 @@
-import { useEffect, useRef, useState } from 'react';
-import './development-team.scss';
-import { Container } from 'react-bootstrap';
-import DevelopmentTeamMember from '../../../components/development-team-member/development-team-member';
-import { useTranslation } from 'react-i18next';
+import {useEffect, useRef, useState} from "react";
+import "./development-team.scss";
+import {Container} from "react-bootstrap";
+import DevelopmentTeamMember from "../../../components/development-team-member/development-team-member";
+import {useTranslation} from "react-i18next";
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Navigation } from 'swiper';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Navigation } from "swiper";
 
-const DevelopmentTeam = ({ windowDimensions }) => {
+const DevelopmentTeam = ({windowDimensions}) => {
   // data development team
-  const urlImage =
-    'https://aroundtheworld.s3.ap-southeast-1.amazonaws.com/imgs/landingpage/lp-core-member/lp-core-member-';
+  const urlImage = "https://aroundtheworld.s3.ap-southeast-1.amazonaws.com/imgs/landingpage/lp-core-member/lp-core-member-";
 
   const images = {
     next: process.env.PUBLIC_URL + '/images/development-team/right-button.png',
@@ -101,22 +100,22 @@ const DevelopmentTeam = ({ windowDimensions }) => {
   ];
 
   // check width set data slide
-  const checkWidthWindowSetSlideData = () => {
+  const checkWidthWindowSetSlideData = () =>{
     let slideDataTemp = {
       slidesPerView: 4,
       spaceBetween: 30,
       slidesPerGroup: 4,
     };
 
-    if (windowDimensions.width > 1399.5) {
+    if(windowDimensions.width > 1399.5){
       slideDataTemp.slidesPerView = 4;
       slideDataTemp.spaceBetween = 30;
       slideDataTemp.slidesPerGroup = 4;
-    } else if (windowDimensions.width > 991.5) {
+    }else if(windowDimensions.width > 991.5){
       slideDataTemp.slidesPerView = 3;
       slideDataTemp.spaceBetween = 15;
       slideDataTemp.slidesPerGroup = 3;
-    } else {
+    }else{
       slideDataTemp.slidesPerView = 2;
       slideDataTemp.spaceBetween = 15;
       slideDataTemp.slidesPerGroup = 2;
@@ -124,72 +123,76 @@ const DevelopmentTeam = ({ windowDimensions }) => {
     return slideDataTemp;
   };
 
-  const [slideData, setSlideData] = useState(checkWidthWindowSetSlideData);
+  const [slideData, setSlideData] = useState(checkWidthWindowSetSlideData)
 
-  useEffect(() => {
-    setSlideData(checkWidthWindowSetSlideData);
-  }, [windowDimensions.width]);
+  useEffect(()=>{
+    setSlideData(checkWidthWindowSetSlideData)
+  },[windowDimensions.width])
 
   // translation
-  const { t } = useTranslation();
+  const {t} = useTranslation();
 
   // button slide
   const prevRef = useRef(null);
   const nextRef = useRef(null);
 
-  return (
-    <div className='development-team'>
-      <span className='title-main'>DEVELOPMENT TEAM</span>
+  return(
+      <div className="development-team">
+            <span className="title-main">
+               {t('developmentTeam.titleMain')}
+            </span>
 
-      <Container>
-        <div className='box-slide'>
-          <Swiper
-            slidesPerView={slideData.slidesPerView}
-            spaceBetween={slideData.spaceBetween}
-            slidesPerGroup={slideData.slidesPerGroup}
-            // autoplay={{
-            //   delay: 6000,
-            //   disableOnInteraction: false,
-            //   pauseOnMouseEnter: true
-            // }}
-            preventClicks={true}
-            loop={true}
-            loopFillGroupWithBlank={false}
-            pagination={{
-              clickable: true,
-              dynamicBullets: true,
-            }}
-            modules={[Pagination, Navigation]}
-            className='mySwiper'
-            onInit={(swiper) => {
-              swiper.params.navigation.prevEl = prevRef.current;
-              swiper.params.navigation.nextEl = nextRef.current;
-              swiper.navigation.init();
-              swiper.navigation.update();
-            }}
-          >
-            <div className='box-member'>
-              {memberTeam.map((element, index) => (
-                <SwiperSlide key={index}>
-                  <DevelopmentTeamMember
-                    image={element.image}
-                    name={element.name}
-                    position={element.position}
-                  />
-                </SwiperSlide>
-              ))}
-            </div>
-            <div ref={prevRef} className='icon-slide icon-next hidden-mobile'>
-              <img className='icon-next' src={images.pre} alt='pre' />
-            </div>
-            <div ref={nextRef} className='icon-slide icon-pre hidden-mobile'>
-              <img src={images.next} alt='next' />
-            </div>
-          </Swiper>
-        </div>
-      </Container>
-    </div>
-  );
+        <Container>
+          <div className="box-slide">
+            <Swiper
+                slidesPerView={slideData.slidesPerView}
+                spaceBetween={slideData.spaceBetween}
+                slidesPerGroup={slideData.slidesPerGroup}
+                autoplay={{
+                  delay: 6000,
+                  disableOnInteraction: false,
+                  pauseOnMouseEnter: true
+                }}
+                preventClicks={true}
+                loop={true}
+                loopFillGroupWithBlank={false}
+                pagination={{
+                  clickable: true,
+                  dynamicBullets: true,
+                }}
+                modules={[Pagination, Navigation]}
+                className="mySwiper"
+                onInit={(swiper) => {
+                  swiper.params.navigation.prevEl = prevRef.current;
+                  swiper.params.navigation.nextEl = nextRef.current;
+                  swiper.navigation.init();
+                  swiper.navigation.update();
+                }}
+            >
+              <div className="box-member">
+                {memberTeam.map((element, index) =>
+                    <SwiperSlide key={index}>
+                      <DevelopmentTeamMember
+                          image={element.image}
+                          name={element.name}
+                          position={element.position}
+                      />
+                    </SwiperSlide>
+                )}
+              </div>
+              <div ref={prevRef}
+                   className="icon-slide icon-next hidden-mobile">
+                <img className="icon-next" src={images.pre} alt="pre"/>
+              </div>
+              <div ref={nextRef}
+                   className="icon-slide icon-pre hidden-mobile">
+                <img src={images.next} alt="next"/>
+              </div>
+            </Swiper>
+          </div>
+        </Container>
+      </div>
+  )
 };
 
 export default DevelopmentTeam;
