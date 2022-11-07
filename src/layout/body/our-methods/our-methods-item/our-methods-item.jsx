@@ -1,41 +1,28 @@
-import { useTranslation } from 'react-i18next';
 import './our-methods-item.styles.scss';
 
-const OurMethodsItem = ({ image, type, position }) => {
-  const { t } = useTranslation();
-
+const OurMethodsItem = ({ src, type }) => {
+  const images = {
+    commentBox: process.env.PUBLIC_URL + '/images/feedback/comment-box.png',
+    commentAvatar:
+      process.env.PUBLIC_URL + '/images/feedback/comment-avatar.png',
+  };
   return (
     <div className='our-methods-item'>
       <div
         className='our-methods-item-box'
-        style={{ backgroundImage: `url(${image})` }}
+        style={{ backgroundImage: `url(${src})` }}
       >
-        {type === 'class-type' ? (
-          <>
-            <div className='class-type-title'>
-              <span className='private-room'>
-                {t('our-methods.private-room_title.lbl')}
-              </span>
-              <span className='talking-room'>
-                {t('our-methods.talking-room_title.lbl')}
-              </span>
-            </div>
-            <div className='class-type-content'>
-              <span className='private-room'>
-                {t('our-methods.private-room_content.txt')}
-              </span>
-              <span className='talking-room'>
-                {t('our-methods.talking-room_content.txt')}
-              </span>
-            </div>
-          </>
-        ) : (
-          <>
-            <div className='content'>
-              {t(`our-methods.${type}_content.txt`)}
-            </div>
-          </>
-        )}
+        {/* <div
+          className='avatar'
+          style={{
+            backgroundImage: `url(${images.commentAvatar})`,
+          }}
+        ></div>
+        <img className='user-avatar' src={src} alt='comment-avatar' />
+        <h4 className='user-name'>{name}</h4>
+        <span className='user-grade'>{grade}</span>
+        <h2 className='user-summary-title'>{summary}</h2>
+         <div className='user-comment'>{comment}</div> */}
       </div>
     </div>
   );

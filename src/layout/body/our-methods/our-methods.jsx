@@ -34,8 +34,8 @@ const OurMethods = ({ windowDimensions }) => {
     },
   ];
 
-   // check width set data slide
-   const checkWidthWindowSetSlideData = () => {
+  // check width set data slide
+  const checkWidthWindowSetSlideData = () => {
     let slideDataTemp = {
       slidesPerView: 1,
       spaceBetween: 15,
@@ -63,7 +63,6 @@ const OurMethods = ({ windowDimensions }) => {
   useEffect(() => {
     setSlideData(checkWidthWindowSetSlideData);
   }, [windowDimensions.width]);
-
 
   // button slide
   const prevRef = useRef(null);
@@ -95,10 +94,10 @@ const OurMethods = ({ windowDimensions }) => {
               swiper.navigation.update();
             }}
           >
-            <div className='box-member'>
+            <div className='box-our-methods'>
               {methods.map((element, index) => (
                 <SwiperSlide key={index}>
-                  <OurMethodsItem image={element.frame} type={element.type} />
+                  <OurMethodsItem src={element.frame} />
                 </SwiperSlide>
               ))}
             </div>

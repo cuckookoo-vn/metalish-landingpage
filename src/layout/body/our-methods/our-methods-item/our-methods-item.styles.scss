@@ -9,16 +9,10 @@
     background-size: contain;
     background-repeat: no-repeat;
     margin: auto;
-    width: 1100px;
-    min-width: 1100px;
-    height: 600px;
-
-    @media #{$info-phone} {
-      display: none;
-      // width: 70vw;
-      // min-width: 70vw;
-      // height: 700vh;
-    }
+    width: 1000px;
+    min-width: 1000px;
+    height: 550px;
+    // left: 5%;
 
     @media #{$info-phone-576} {
       width: 38vw;
@@ -26,159 +20,73 @@
       height: 43vw;
     }
 
-    .content {
-      position: relative;
-      color: #fff;
-      top: 40%;
-      left: 45%;
-      transform: translate(-50%, 0);
-      font-size: 30px;
-      font-weight: 400;
-      width: 80%;
-      text-align: center;
-
-      @media #{$info-phone} {
-        bottom: 1.8vw;
-        left: 50%;
-        top: 45%;
-        font-size: 20px;
-      }
-    }
-
-    .class-type-title {
-      position: absolute;
-      color: #fff;
-      top: 28%;
-      left: 35%;
-      transform: translate(-50%, 0);
-      font-weight: 800;
-      bottom: 19px;
-
-      .private-room {
-        font-size: 30px;
-        position: relative;
-
-        @media #{$info-phone} {
-          font-size: 2vw;
-          top: 7vw;
-          left: -7vw;
-          // display: none;
-        }
-      }
-
-      .talking-room {
-        font-size: 30px;
-        position: relative;
-        right: -45%;
-
-        @media #{$info-phone} {
-          display: none;
-        }
-      }
-
-      @media #{$info-tablet-horizontal} {
-        bottom: 1.4vw;
-        font-size: 1.2vw;
-      }
-      @media #{$info-phone} {
-        bottom: 1.8vw;
-        font-size: 0.52rem;
-      }
-      @media #{$info-nexus4} {
-        bottom: 1.8vw;
-        font-size: 0.5rem;
-      }
-      @media #{$info-phone-330} {
-        bottom: 1.5vw;
-        font-size: 0.35rem;
-      }
-    }
-
-    .class-type-content {
-      position: relative;
-      color: #fff;
-      top: 45%;
-      left: 25%;
-      // text-align: center;
-      transform: translate(-50%, 0);
-      // font-size: 36px;
-      font-weight: 400;
-      width: 38%;
-      // bottom: 19px;
-
-      .private-room {
-        font-size: 20px;
-        position: relative;
-        @media #{$info-phone} {
-          display: none;
-        }
-      }
-
-      .talking-room {
-        position: absolute;
-        font-size: 20px;
-        top: 0;
-        left: 105%;
-        width: 100%;
-        @media #{$info-phone} {
-          display: none;
-        }
-      }
-
-      @media #{$info-tablet-horizontal} {
-        bottom: 1.4vw;
-        font-size: 1.2vw;
-      }
-      @media #{$info-phone} {
-        bottom: 1.8vw;
-        font-size: 0.52rem;
-      }
-      @media #{$info-nexus4} {
-        bottom: 1.8vw;
-        font-size: 0.5rem;
-      }
-      @media #{$info-phone-330} {
-        bottom: 1.5vw;
-        font-size: 0.35rem;
-      }
-    }
-
     @media #{$info-tablet-1399} {
-      height: 600px;
+      left: 1%;
+      width: 51vw;
+      min-width: 51vw;
+      // height: 500px;
     }
 
-    .image-member {
+    .avatar {
+      position: relative;
+      background-size: contain;
+      display: inline-block;
+      background-repeat: no-repeat;
+      top: 14%;
+      left: 6%;
+      width: 35%;
+      height: 35%;
+      text-align: center;
+    }
+
+    .user-avatar {
       position: absolute;
-      width: 77%;
-      top: 34px;
-      left: 50%;
+      width: 25%;
+      top: 18%;
+      left: 23%;
       transform: translate(-50%, 0);
-      @media #{$info-phone-576} {
-        top: 4vw;
-      }
     }
 
-    .name-member {
+    .user-grade {
+      position: absolute;
+      color: #fff;
+      left: 67%;
+      top: 28%;
+      transform: translate(-50%, 0);
+      font-size: 18px;
       width: max-content;
-      position: absolute;
-      color: $color-title-main;
-      left: 50%;
-      transform: translate(-50%, 0);
-      font-size: 1rem;
       bottom: 19px;
-      @media #{$info-phone-576} {
-        font-size: 2.9vw;
-        bottom: 2.3vw;
-      }
     }
-  }
-  .position-member {
-    color: $color-title-main;
-    width: 100%;
-    text-align: center;
-    display: block;
-    @media #{$info-phone-576} {
-      font-size: 2.9vw;
+
+    .user-name {
+      position: relative;
+      color: #fff;
+      left: 100%;
+      top: -15%;
+      transform: translate(-50%, 0);
+      font-size: 30x;
+      bottom: 19px;
+    }
+
+    .user-summary-title {
+      position: relative;
+      color: #ffee54;
+      left: 51%;
+      top: 5%;
+      transform: translate(-50%, 0);
+      width: max-content;
+      font-size: 30px;
+      bottom: 19px;
+    }
+
+    .user-comment {
+      position: relative;
+      color: #fff;
+      left: 55%;
+      top: 10%;
+      width: 450px;
+      transform: translate(-50%, 0);
+      bottom: 19px;
     }
   }
 }

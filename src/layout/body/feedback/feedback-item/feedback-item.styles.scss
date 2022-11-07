@@ -15,13 +15,9 @@
     left: -10%;
 
     @media #{$info-phone} {
-      display: none;
-    }
-
-    @media #{$info-phone-576} {
-      width: 38vw;
-      min-width: 38vw;
-      height: 43vw;
+      width: 50vw;
+      min-width: 50vw;
+      height: 50vw;
     }
 
     @media #{$info-tablet-1399} {
@@ -29,7 +25,7 @@
     }
 
     .avatar {
-      position: relative;
+      position: absolute;
       background-size: contain;
       display: inline-block;
       background-repeat: no-repeat;
@@ -46,15 +42,20 @@
       top: 18%;
       left: 23%;
       transform: translate(-50%, 0);
-      @media #{$info-tablet-horizontal} {
-        width: 17.1vw;
-        left: 50%;
-        top: 1.9vw;
-      }
+    }
+
+    .user-name {
+      position: absolute;
+      color: #fff;
+      left: 65%;
+      top: 15%;
+      width: max-content;
+      transform: translate(-50%, 0);
+      font-size: 30x;
+      bottom: 19px;
+
       @media #{$info-phone} {
-        width: 24.2vw;
-        left: 50%;
-        top: 2.4vw;
+        font-size: 2vw;
       }
     }
 
@@ -62,144 +63,46 @@
       position: absolute;
       color: #fff;
       left: 67%;
-      top: 28%;
+      top: 25%;
       transform: translate(-50%, 0);
       font-size: 18px;
       width: max-content;
       bottom: 19px;
-      @media #{$info-tablet-horizontal} {
-        bottom: 1.4vw;
-        font-size: 1.2vw;
-      }
-      @media #{$info-phone} {
-        bottom: 1.8vw;
-        font-size: 0.52rem;
-      }
-      @media #{$info-nexus4} {
-        bottom: 1.8vw;
-        font-size: 0.5rem;
-      }
-      @media #{$info-phone-330} {
-        bottom: 1.5vw;
-        font-size: 0.35rem;
-      }
-    }
 
-    .user-name {
-      position: relative;
-      color: #fff;
-      left: 100%;
-      top: -15%;
-      transform: translate(-50%, 0);
-      font-size: 30x;
-      bottom: 19px;
-      @media #{$info-tablet-horizontal} {
-        bottom: 1.4vw;
-        font-size: 1.2vw;
-      }
       @media #{$info-phone} {
-        bottom: 1.8vw;
-        font-size: 0.52rem;
-      }
-      @media #{$info-nexus4} {
-        bottom: 1.8vw;
-        font-size: 0.5rem;
-      }
-      @media #{$info-phone-330} {
-        bottom: 1.5vw;
-        font-size: 0.35rem;
+        font-size: 2vw;
       }
     }
 
     .user-summary-title {
       position: relative;
       color: #ffee54;
-      left: 51%;
-      top: 5%;
+      left: 50%;
+      top: 50%;
       transform: translate(-50%, 0);
       width: max-content;
       font-size: 30px;
       bottom: 19px;
-      @media #{$info-tablet-horizontal} {
-        bottom: 1.4vw;
-        font-size: 1.2vw;
-      }
+
       @media #{$info-phone} {
-        bottom: 1.8vw;
-        font-size: 0.52rem;
-      }
-      @media #{$info-nexus4} {
-        bottom: 1.8vw;
-        font-size: 0.5rem;
-      }
-      @media #{$info-phone-330} {
-        bottom: 1.5vw;
-        font-size: 0.35rem;
-      }
-      @media #{$info-phone-330} {
-        bottom: 1.5vw;
-        font-size: 0.35rem;
+        font-size: 2vw;
       }
     }
 
     .user-comment {
-      position: relative;
+      position: absolute;
       color: #fff;
       left: 55%;
-      top: 10%;
+      top: 60%;
       width: 450px;
       transform: translate(-50%, 0);
       bottom: 19px;
-      @media #{$info-tablet-horizontal} {
-        bottom: 1.4vw;
-        font-size: 1.2vw;
-      }
+
       @media #{$info-phone} {
-        bottom: 1.8vw;
-        font-size: 0.52rem;
+        font-size: 2vw;
+        width: 44vw;
+        left: 53%;
       }
-      @media #{$info-nexus4} {
-        bottom: 1.8vw;
-        font-size: 0.5rem;
-      }
-      @media #{$info-phone-330} {
-        bottom: 1.5vw;
-        font-size: 0.35rem;
-      }
-    }
-
-    .image-member {
-      position: absolute;
-      width: 77%;
-      top: 34px;
-      left: 50%;
-      transform: translate(-50%, 0);
-      @media #{$info-phone-576} {
-        top: 4vw;
-      }
-    }
-
-    .name-member {
-      width: max-content;
-      position: absolute;
-      color: $color-title-main;
-      left: 50%;
-      transform: translate(-50%, 0);
-      font-size: 1rem;
-      bottom: 19px;
-      @media #{$info-phone-576} {
-        font-size: 2.9vw;
-        bottom: 2.3vw;
-      }
-    }
-  }
-  .position-member {
-    color: $color-title-main;
-    width: 100%;
-    text-align: center;
-    display: block;
-    @media #{$info-phone-576} {
-      font-size: 2.9vw;
     }
   }
 }
