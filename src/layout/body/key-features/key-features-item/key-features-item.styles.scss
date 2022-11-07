@@ -1,59 +1,125 @@
-.key-features-icon {
+@import 'src/styles/variables';
+
+.key-features-item {
   position: relative;
+  width: 150px;
   display: inline-block;
-  margin-right: 10%;
-  width: 100%;
-  perspective: 1000px;
+  margin-right: 12%;
+  .icon {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+  }
+  .overlay {
+    position: absolute;
+    top: -5vh;
+    left: -50%;
+    height: 32vh;
+    min-width: 350px;
+    opacity: 0;
+    transition: 0.5s ease;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left;
+    color: #fff;
+    @media #{$info-tablet-1399} {
+      top: -135%;
+      min-width: 280px;
+    }
+
+    .title {
+      position: relative;
+      top: 20%;
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+    .content {
+      // color: white;
+      position: absolute;
+      // top: 55%;
+      top: 47%;
+      left: 50%;
+      width: 75%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      text-align: center;
+
+      @media #{$info-tablet-1399} {
+        top: 16vh;
+        left: 10vw;
+        width: 210px;
+      }
+    }
+  }
+  span {
+    position: relative;
+    white-space: nowrap;
+  }
 }
 
-.key-features-icon-last {
+.key-features-item:hover .overlay {
+  opacity: 1;
+}
+
+.key-features-item-last {
   position: relative;
+  width: 150px;
   display: inline-block;
-  width: 15%;
+  .icon {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+  }
+  .overlay {
+    position: absolute;
+    top: -5vh;
+    left: -50%;
+    height: 32vh;
+    min-width: 350px;
+    opacity: 0;
+    transition: 0.5s ease;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left;
+    @media #{$info-tablet-1399} {
+      top: -135%;
+      min-width: 280px;
+    }
+
+    .title {
+      position: relative;
+      top: 20%;
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+    .content {
+      color: #fff;
+      position: absolute;
+      top: 47%;
+      left: 50%;
+      width: 75%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      text-align: center;
+
+      @media #{$info-tablet-1399} {
+        top: 16vh;
+        left: 10vw;
+        width: 210px;
+      }
+    }
+    span {
+      position: absolute;
+      left: 0;
+      white-space: nowrap;
+    }
+  }
 }
 
-.flip-card {
-  position: relative;
-  display: inline-block;
-  margin-right: 10%;
-  width: 15%;
-  perspective: 1000px;
-}
-
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-.flip-card-front,
-.flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.flip-card-front {
-  //   background-color: #bbb;
-  color: black;
-}
-
-.flip-card-back {
-  position: relative;
-  //   background-color: #2980b9;
-  //   background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-  color: white;
-  transform: rotateY(180deg);
+.key-features-item-last:hover .overlay {
+  opacity: 1;
 }

@@ -13,91 +13,91 @@ const DevelopmentTeam = ({windowDimensions}) => {
 
   const images = {
     next: process.env.PUBLIC_URL + '/images/development-team/right-button.png',
-    pre: process.env.PUBLIC_URL + '/images/development-team/left-button.png'
-  }
+    pre: process.env.PUBLIC_URL + '/images/development-team/left-button.png',
+  };
 
   const memberTeam = [
     {
       name: 'Paul Pham',
       position: 'Product Owner',
-      image: urlImage+ "1.png"
+      image: urlImage + '1.png',
     },
     {
       name: 'Felix Nguyen',
       position: 'Executive',
-      image: urlImage+ "2.png"
+      image: urlImage + '2.png',
     },
     {
       name: 'Tony Quach',
       position: 'Executive',
-      image: urlImage+ "3.png"
+      image: urlImage + '3.png',
     },
     {
       name: 'Julie Tran',
-      position: 'Business Analyst',
-      image: urlImage+ "4.png"
+      position: 'Content Advisor Leader',
+      image: urlImage + '4.png',
     },
     {
       name: 'Joy Le',
       position: 'Artist Manager',
-      image: urlImage+ "5.png"
+      image: urlImage + '5.png',
     },
     {
       name: 'Henry Ho',
       position: 'Solution Architect',
-      image: urlImage+ "6.png"
+      image: urlImage + '6.png',
     },
     {
       name: 'Johnny Le',
       position: 'Developer Leader',
-      image: urlImage+ "7.png"
+      image: urlImage + '7.png',
     },
     {
       name: 'Mr.Kan',
       position: 'AI Leader',
-      image: urlImage+ "8.png"
+      image: urlImage + '8.png',
     },
     {
       name: 'Mr.Thinh',
       position: 'Blockchain Leader',
-      image: urlImage+ "9.png"
+      image: urlImage + '9.png',
     },
     {
       name: 'GiGi Le',
       position: 'Translator',
-      image: urlImage+ "10.png"
+      image: urlImage + '10.png',
     },
     {
       name: 'Ivy Pham',
       position: 'Quality Control Leader',
-      image: urlImage+ "11.png"
+      image: urlImage + '11.png',
     },
     {
       name: 'Leon Nguyen',
       position: 'Senior Artist',
-      image: urlImage+ "12.png"
+      image: urlImage + '12.png',
     },
     {
       name: 'Leo Dinh',
       position: 'Developer',
-      image: urlImage+ "13.png"
+      image: urlImage + '13.png',
     },
     {
       name: 'Finn Le',
       position: 'Developer',
-      image: urlImage+ "14.png"
+      image: urlImage + '14.png',
     },
     {
       name: 'Link Ho',
       position: 'Developer',
-      image: urlImage+ "15.png"
+      image: urlImage + '15.png',
     },
     {
       name: 'Keng Nguyen',
       position: 'Developer',
-      image: urlImage+ "16.png"
+      image: urlImage + '16.png',
     },
-  ]
+  ];
 
   // check width set data slide
   const checkWidthWindowSetSlideData = () =>{
@@ -121,7 +121,7 @@ const DevelopmentTeam = ({windowDimensions}) => {
       slideDataTemp.slidesPerGroup = 2;
     }
     return slideDataTemp;
-  }
+  };
 
   const [slideData, setSlideData] = useState(checkWidthWindowSetSlideData)
 

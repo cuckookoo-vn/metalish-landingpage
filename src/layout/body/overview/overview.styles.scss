@@ -18,7 +18,7 @@
     height: 450px;
   }
   @media #{$info-phone} {
-    height: 80vw;
+    height: 800px;
   }
   .title-main {
     margin: 62px 0 40px 0;
@@ -33,52 +33,30 @@
     }
   }
 
-  .content-wrapper {
+  .content {
     position: absolute;
-    // width: 90%;
-    left: 5%;
-    right: 5%;
-    .content {
-      width: 40%;
+    width: 35%;
+    text-align: center;
+    left: 10%;
+
+    @media #{$info-phone} {
+      position: absolute;
+      left: 2%;
+      width: 95%;
     }
+  }
 
-    .image-wrapper {
-      position: relative;
-      float: right;
-      background-position: left;
-      background-size: contain;
-      background-repeat: no-repeat;
-      width: 55%;
-      margin: 0;
-      @media #{$info-tablet-1399} {
-        width: 145px;
-        height: 57px;
-        margin: 5px 0 0 0;
-      }
-      @media #{$info-phone} {
-        display: none;
-      }
-      span {
-        font-size: 0.85rem;
-        position: absolute;
-        left: 36%;
-        top: 50%;
-        font-weight: 600;
-        color: #000000;
-        text-align: center;
-        width: max-content;
-        transform: translate(-50%, -55%);
-        @media #{$info-tablet-1399} {
-          font-size: 12px;
-        }
-      }
-      .img {
-        width: 100%;
-      }
+  img {
+    position: relative;
+    float: right;
+    width: 60%;
+    left: 10%;
 
-      .btn {
-        position: relative;
-      }
+    @media #{$info-phone} {
+      position: absolute;
+      top: 50%;
+      left: 2%;
+      width: 95%;
     }
   }
 }

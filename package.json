@@ -12,6 +12,7 @@
     "@testing-library/user-event": "^13.5.0",
     "aos": "^2.3.4",
     "bootstrap": "^5.2.2",
+    "env-cmd": "^10.1.0",
     "i18next": "^22.0.4",
     "node-sass": "^7.0.3",
     "react": "^18.2.0",
@@ -23,7 +24,11 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "set PORT=3006 && react-scripts start",
+    "start": "PORT=80 react-scripts start",
+    "start:development": "env-cmd -f .env.development react-scripts start",
+    "start:prod": "env-cmd -f .env.prod react-scripts start",
+    "start:qc": "env-cmd -f .env.qc react-scripts start",
+    "start:uat": "env-cmd -f .env.uat react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
