@@ -139,7 +139,7 @@ const DevelopmentTeam = ({windowDimensions}) => {
   return(
       <div className="development-team">
             <span className="title-main">
-                DEVELOPMENT TEAM
+               {t('developmentTeam.titleMain')}
             </span>
 
         <Container>
