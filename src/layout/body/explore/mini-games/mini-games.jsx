@@ -1,5 +1,6 @@
 import {Container} from "react-bootstrap";
 import './mini-games.scss';
+import {useTranslation} from "react-i18next";
 
 const MiniGames = ({windowDimensions}) => {
 
@@ -9,22 +10,32 @@ const MiniGames = ({windowDimensions}) => {
     fillBlank: process.env.PUBLIC_URL + '/images/explore/mini-games/fill-blank.png'
   }
 
+  const {t} = useTranslation();
+
   return(
       <div className="mini-games">
-        <span className="title-main">MINI GAMES</span>
+        <span className="title-main"
+              data-aos="fade-up">{t("miniGames.titleMain")}</span>
+
         <Container>
-          <div className="mini-games-box">
-            <div className="mini-games-item">
+          <div className="mini-games-box"
+               data-aos={windowDimensions.width > 576.5 ? "fade-up" : ""}>
+            <div className="mini-games-item"
+                 data-aos={windowDimensions.width > 576.5 ? "" : "fade-up"}>
               <img src={images.fillBlank} alt="fillBlank"/>
-              <span className="title">Fill in blank</span>
+              <span className="title">{t("miniGames.blank")}</span>
             </div>
-            <div className="mini-games-item center">
+
+            <div className="mini-games-item center"
+                 data-aos={windowDimensions.width > 576.5 ? "" : "fade-up"}>
               <img src={images.mutichoice} alt="mutichoice"/>
-              <span className="title">Multiple choice</span>
+              <span className="title">{t("miniGames.choice")}</span>
             </div>
-            <div className="mini-games-item">
+
+            <div className="mini-games-item"
+                 data-aos={windowDimensions.width > 576.5 ? "" : "fade-up"}>
               <img src={images.dice} alt="dice"/>
-              <span className="title">Arrange word</span>
+              <span className="title">{t("miniGames.word")}</span>
             </div>
           </div>
         </Container>

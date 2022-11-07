@@ -1,6 +1,8 @@
 @import "src/styles/variables";
 .tour{
   width: 100%;
+  overflow: hidden;
+  padding-bottom: 50px;
   .slider-box{
     margin: 150px auto 20px auto;
     position: relative;
@@ -100,8 +102,7 @@
     .button-slide{
       cursor: pointer;
       position: absolute;
-      top: 50%;
-      transform: translate(0, -50%);
+      top: 42%;
       width: 50px;
       @media #{$info-tablet-1399} {
         width: 4vw;

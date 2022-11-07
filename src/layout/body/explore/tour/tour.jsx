@@ -2,6 +2,7 @@ import './tour.scss';
 import {useEffect} from "react";
 import Carousel5Enum from "../../../../enum/carousel-slide-animation/carousel5.enum";
 import Carousel7Enum from "../../../../enum/carousel-slide-animation/carousel7.enum";
+import {useTranslation} from "react-i18next";
 
 const Tour = ({windowDimensions}) => {
   const images = [
@@ -18,6 +19,8 @@ const Tour = ({windowDimensions}) => {
     bgSlide: process.env.PUBLIC_URL + '/images/explore/tour/mockup.png',
   }
 
+  const {t} = useTranslation();
+
   const slideCase = images.length === 5 ? Carousel5Enum : Carousel7Enum;
   let currentSlide = 0;
   let timeInterval = 6000;
@@ -30,14 +33,17 @@ const Tour = ({windowDimensions}) => {
           btnNext = elementTour.querySelector('.next');
 
     let timeout = 400;
+    let statusTouchSlide = true;
 
     // disabled button
     const disabledButton = () =>{
       btnPrev.classList.add("disabled");
       btnNext.classList.add("disabled");
+      statusTouchSlide = false;
       setTimeout(() =>{
         btnNext.classList.remove("disabled");
         btnPrev.classList.remove("disabled");
+        statusTouchSlide = true;
       },timeout);
     }
 
@@ -128,9 +134,7 @@ const Tour = ({windowDimensions}) => {
     // move mouse slide
     const slideClickMove = () =>{
       const items = document.getElementById('slider-tour'),
-            slideBox = document.getElementById('slider-box-tour'),
-            tourSlideLeft = document.getElementById('tour-slide-left'),
-            tourSlideRight = document.getElementById('tour-slide-right');
+            slideBox = document.getElementById('slider-box-tour');
       let posInitial,
           posFinal;
 
@@ -154,14 +158,16 @@ const Tour = ({windowDimensions}) => {
       }
 
       function dragStart (e) {
-        e = e || window.event;
-        e.preventDefault();
-        if(e.clientX){
-          posInitial = e.clientX;
-        }else {
-          posInitial = e.touches[0].clientX;
+        if(statusTouchSlide){
+          e = e || window.event;
+          e.preventDefault();
+          if(e.clientX){
+            posInitial = e.clientX;
+          }else {
+            posInitial = e.touches[0].clientX;
+          }
+          items.onmouseup = dragEnd;
         }
-        items.onmouseup = dragEnd;
       }
 
       function dragEnd (e) {
@@ -183,6 +189,9 @@ const Tour = ({windowDimensions}) => {
             clickNext();
           }
         }
+
+        disabledButton();
+
         document.onmouseup = null;
         document.onmousemove = null;
       }
@@ -198,8 +207,12 @@ const Tour = ({windowDimensions}) => {
 
   return (
       <div className="tour" id="tour">
-        <div className="title-main">METALISH’S TOUR</div>
-        <div className="slider-box" id="slider-box-tour">
+        <div data-aos="fade-up"
+             className="title-main">{t("tour.titleMain")}</div>
+
+        <div data-aos="fade-up"
+             className="slider-box"
+             id="slider-box-tour">
           <div className="slider" id="slider-tour">
             {images.map((elements,index) =>
                 <div className="slide" key={index}>
@@ -208,9 +221,19 @@ const Tour = ({windowDimensions}) => {
             )}
             <img className="bg-phone" src={imageFrames.bgSlide} alt="bg-phone"/>
           </div>
+
           <div className="pagination" id="pagination"></div>
-          <img id="tour-slide-left" className="prev button-slide" src={imageFrames.pre} alt="pre"/>
-          <img id="tour-slide-right" className="next button-slide" src={imageFrames.next} alt="next"/>
+
+          <img id="tour-slide-left" data-aos="fade-right"
+               className="prev button-slide"
+               src={imageFrames.pre}
+               alt="pre"/>
+
+          <img data-aos="fade-left"
+               id="tour-slide-right"
+               className="next button-slide"
+               src={imageFrames.next}
+               alt="next"/>
         </div>
       </div>
   );

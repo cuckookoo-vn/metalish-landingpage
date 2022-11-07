@@ -1,5 +1,4 @@
 import './order-service.scss';
-import {Container} from "react-bootstrap";
 
 const OrderService = ({windowDimensions}) => {
 
@@ -14,30 +13,43 @@ const OrderService = ({windowDimensions}) => {
 
   return(
       <div className="order-service">
-        <span className="title-main">ORDER SERVICE</span>
-        <span className="description">Interact with the advertisement to make a real order</span>
-          <div className="order-service-box">
-            <div className="item-service book"
-                 style={{backgroundImage:`url(${images.frame})`}}>
-              <img src={images.book} alt="book"/>
-            </div>
-            <div className="item-service drink"
-                 style={{backgroundImage:`url(${images.frame})`}}>
-              <img src={images.drink} alt="drink"/>
-            </div>
-            <div className="item-service food-1"
-                 style={{backgroundImage:`url(${images.frame})`}}>
-              <img src={images.food1} alt="food1"/>
-            </div>
-            <div className="item-service food-2"
-                 style={{backgroundImage:`url(${images.frame})`}}>
-              <img src={images.food2} alt="food2"/>
-            </div>
-            <div className="item-service food-3"
-                 style={{backgroundImage:`url(${images.frame})`}}>
-              <img src={images.food3} alt="food3"/>
-            </div>
+        <span className="title-main"
+              data-aos="fade-up">ORDER SERVICE</span>
+
+        <span className="description"
+              data-aos="fade-up">Interact with the advertisement to make a real order</span>
+
+        <div className="order-service-box">
+          <div className="item-service book"
+               data-aos="fade-right"
+               style={{backgroundImage:`url(${images.frame})`}}>
+            <img src={images.book} alt="book"/>
           </div>
+
+          <div className="item-service drink"
+               data-aos="fade-up-right"
+               style={{backgroundImage:`url(${images.frame})`}}>
+            <img src={images.drink} alt="drink"/>
+          </div>
+
+          <div className="item-service food-1"
+               data-aos="fade-left"
+               style={{backgroundImage:`url(${images.frame})`}}>
+            <img src={images.food1} alt="food1"/>
+          </div>
+
+          <div className="item-service food-2"
+               data-aos="fade-up-left"
+               style={{backgroundImage:`url(${images.frame})`}}>
+            <img src={images.food2} alt="food2"/>
+          </div>
+
+          <div className="item-service food-3"
+               data-aos="fade-up"
+               style={{backgroundImage:`url(${images.frame})`}}>
+            <img src={images.food3} alt="food3"/>
+          </div>
+        </div>
       </div>
   );
 };

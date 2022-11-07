@@ -138,12 +138,12 @@ const DevelopmentTeam = ({windowDimensions}) => {
 
   return(
       <div className="development-team">
-            <span className="title-main">
+            <span data-aos="fade-up" className="title-main">
                {t('developmentTeam.titleMain')}
             </span>
 
         <Container>
-          <div className="box-slide">
+          <div className="box-slide" data-aos="fade-up">
             <Swiper
                 slidesPerView={slideData.slidesPerView}
                 spaceBetween={slideData.spaceBetween}
@@ -180,11 +180,15 @@ const DevelopmentTeam = ({windowDimensions}) => {
                     </SwiperSlide>
                 )}
               </div>
+
               <div ref={prevRef}
+                   data-aos="fade-right"
                    className="icon-slide icon-next hidden-mobile">
                 <img className="icon-next" src={images.pre} alt="pre"/>
               </div>
+
               <div ref={nextRef}
+                   data-aos="fade-left"
                    className="icon-slide icon-pre hidden-mobile">
                 <img src={images.next} alt="next"/>
               </div>
