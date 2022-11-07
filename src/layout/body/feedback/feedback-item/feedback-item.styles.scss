@@ -13,6 +13,11 @@
     min-width: 450px;
     height: 500px;
     left: -10%;
+
+    @media #{$info-phone} {
+      display: none;
+    }
+
     @media #{$info-phone-576} {
       width: 38vw;
       min-width: 38vw;

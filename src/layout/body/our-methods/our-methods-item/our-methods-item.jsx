@@ -10,8 +10,6 @@ const OurMethodsItem = ({ image, type, position }) => {
         className='our-methods-item-box'
         style={{ backgroundImage: `url(${image})` }}
       >
-        {/* <img className='image-member' src={image} alt='member' />
-        <span className='name-member'>{name}</span> */}
         {type === 'class-type' ? (
           <>
             <div className='class-type-title'>
@@ -39,9 +37,6 @@ const OurMethodsItem = ({ image, type, position }) => {
           </>
         )}
       </div>
-
-      {/* <span className='user-grade'>{grade}</span> */}
-      {/* <span className='position-member'>{position}</span> */}
     </div>
   );
 };

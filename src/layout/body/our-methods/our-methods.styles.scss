@@ -4,6 +4,20 @@
   @media #{$info-phone} {
     padding-bottom: 25px;
   }
+
+  .title-main {
+    margin: 62px 0 40px 0;
+    @media #{$info-tablet-1399} {
+      margin: 62px 0 40px 0;
+    }
+    @media #{$info-tablet-horizontal} {
+      margin: 2.7vw 0 1.4vw 0;
+    }
+    @media #{$info-phone} {
+      margin: 25px 0 0 0;
+    }
+  }
+
   .box-slide {
     position: relative;
     padding: 0 70px;

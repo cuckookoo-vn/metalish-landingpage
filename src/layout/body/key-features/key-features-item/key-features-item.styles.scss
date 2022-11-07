@@ -2,60 +2,83 @@
 
 .key-features-item {
   position: relative;
-  width: 150px;
+  width: 6vw;
+  height: 6vw;
   display: inline-block;
-  margin-right: 12%;
-  .icon {
+  margin-right: 15%;
+
+  @media #{$info-tablet-1399} {
+    width: 6vw;
+    height: 6vw;
+    margin-right: 15%;
+  }
+
+  img {
     position: relative;
     display: inline-block;
     width: 100%;
   }
+
   .overlay {
     position: absolute;
-    top: -5vh;
-    left: -50%;
-    height: 32vh;
-    min-width: 350px;
+    top: 70%;
+    left: 50%;
+    min-width: 320px;
+    height: 480px;
     opacity: 0;
     transition: 0.5s ease;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: left;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     color: #fff;
+
     @media #{$info-tablet-1399} {
-      top: -135%;
-      min-width: 280px;
+      top: 65%;
+      min-width: 20vw;
     }
 
     .title {
-      position: relative;
-      top: 20%;
+      position: absolute;
+      top: 35%;
+      left: 50%;
+      width: max-content;
       font-size: 20px;
       font-weight: 500;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+
+      @media #{$info-tablet-1399} {
+        font-size: 1.2vw;
+        top: 35%;
+        left: 50%;
+      }
     }
 
     .content {
-      // color: white;
       position: absolute;
-      // top: 55%;
-      top: 47%;
+      top: 52%;
       left: 50%;
-      width: 75%;
+      width: 210px;
+      font-size: 16px;
       -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
       text-align: center;
 
       @media #{$info-tablet-1399} {
-        top: 16vh;
-        left: 10vw;
-        width: 210px;
+        width: 14vw;
+        font-size: 1vw;
       }
     }
   }
   span {
     position: relative;
     white-space: nowrap;
+    font-size: 1vw;
   }
 }
 
@@ -63,63 +86,64 @@
   opacity: 1;
 }
 
-.key-features-item-last {
-  position: relative;
-  width: 150px;
-  display: inline-block;
-  .icon {
-    position: relative;
-    display: inline-block;
-    width: 100%;
-  }
-  .overlay {
-    position: absolute;
-    top: -5vh;
-    left: -50%;
-    height: 32vh;
-    min-width: 350px;
-    opacity: 0;
-    transition: 0.5s ease;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: left;
-    @media #{$info-tablet-1399} {
-      top: -135%;
-      min-width: 280px;
-    }
+// .key-features-item-last {
+//   position: relative;
+//   width: 150px;
+//   height: 100px;
+//   display: inline-block;
+//   .icon {
+//     position: relative;
+//     display: inline-block;
+//     width: 100%;
+//   }
+//   .overlay {
+//     position: relative;
+//     top: -300%;
+//     left: -50%;
+//     height: 440px;
+//     min-width: 350px;
+//     opacity: 0;
+//     transition: 0.5s ease;
+//     background-repeat: no-repeat;
+//     background-size: contain;
+//     background-position: left;
+//     @media #{$info-tablet-1399} {
+//       top: -135%;
+//       min-width: 280px;
+//     }
 
-    .title {
-      position: relative;
-      top: 20%;
-      font-size: 20px;
-      font-weight: 500;
-    }
+//     .title {
+//       position: relative;
+//       top: 30%;
+//       font-size: 20px;
+//       font-weight: 500;
+//     }
 
-    .content {
-      color: #fff;
-      position: absolute;
-      top: 47%;
-      left: 50%;
-      width: 75%;
-      -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
-      text-align: center;
+//     .content {
+//       color: #fff;
+//       position: absolute;
+//       top: 50%;
+//       left: 50%;
+//       width: 75%;
+//       -webkit-transform: translate(-50%, -50%);
+//       -ms-transform: translate(-50%, -50%);
+//       transform: translate(-50%, -50%);
+//       text-align: center;
 
-      @media #{$info-tablet-1399} {
-        top: 16vh;
-        left: 10vw;
-        width: 210px;
-      }
-    }
-    span {
-      position: absolute;
-      left: 0;
-      white-space: nowrap;
-    }
-  }
-}
+//       @media #{$info-tablet-1399} {
+//         top: 16vh;
+//         left: 10vw;
+//         width: 210px;
+//       }
+//     }
+//     span {
+//       position: absolute;
+//       left: 0;
+//       white-space: nowrap;
+//     }
+//   }
+// }
 
-.key-features-item-last:hover .overlay {
-  opacity: 1;
-}
+// .key-features-item-last:hover .overlay {
+//   opacity: 1;
+// }

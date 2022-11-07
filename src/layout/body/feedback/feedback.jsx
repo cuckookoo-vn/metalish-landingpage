@@ -65,13 +65,13 @@ const Feedback = ({ windowDimensions }) => {
       slideDataTemp.spaceBetween = 15;
       slideDataTemp.slidesPerGroup = 2;
     } else if (windowDimensions.width > 991.5) {
-      slideDataTemp.slidesPerView = 3;
+      slideDataTemp.slidesPerView = 1;
       slideDataTemp.spaceBetween = 15;
-      slideDataTemp.slidesPerGroup = 3;
+      slideDataTemp.slidesPerGroup = 1;
     } else {
-      slideDataTemp.slidesPerView = 2;
+      slideDataTemp.slidesPerView = 1;
       slideDataTemp.spaceBetween = 15;
-      slideDataTemp.slidesPerGroup = 2;
+      slideDataTemp.slidesPerGroup = 1;
     }
     return slideDataTemp;
   };
@@ -93,12 +93,9 @@ const Feedback = ({ windowDimensions }) => {
       <Container>
         <div className='box-slide'>
           <Swiper
-            // slidesPerView={slideData.slidesPerView}
-            // spaceBetween={slideData.spaceBetween}
-            // slidesPerGroup={slideData.slidesPerGroup}
-            slidesPerView={2}
+            slidesPerView={slideData.slidesPerView}
             spaceBetween={slideData.spaceBetween}
-            slidesPerGroup={2}
+            slidesPerGroup={slideData.slidesPerGroup}
             // autoplay={{
             //   delay: 6000,
             //   disableOnInteraction: false,

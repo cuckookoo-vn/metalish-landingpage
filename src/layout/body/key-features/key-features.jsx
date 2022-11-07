@@ -112,33 +112,11 @@ const KeyFeatures = ({ windowDimensions }) => {
       <span className='title-main' data-aos='fade-up'>
         {t('key-features.title.lbl')}
       </span>
+
       <Container>
-        <div className='content-wrapper' data-aos='zoom-in-up'>
-          {windowDimensions.width > 767.5 ? (
-            <div>
-              {keyFeatures.map((element, index) => (
-                <>
-                  <KeyFeaturesItem
-                    key={index}
-                    alt={element.alt}
-                    src={element.src}
-                    title={element.title}
-                    content={element.content}
-                    last={element.last}
-                  />
-                  {element.last ? (
-                    <>
-                      <br />
-                      <br />
-                      <br />
-                      <br />
-                    </>
-                  ) : null}
-                </>
-              ))}
-            </div>
-          ) : (
-            <ul className='circle-container'>
+        <div className='key-features-box'>
+          {windowDimensions.width < 767.5 ? (
+            <ul className='circle-container' data-aos='zoom-in-up'>
               {keyFeatures.map((element, index) => (
                 <>
                   <li
@@ -157,6 +135,31 @@ const KeyFeatures = ({ windowDimensions }) => {
                 <div className='content'>{content}</div>
               </div>
             </ul>
+          ) : (
+            <>
+              <div className='content-wrapper'>
+                {keyFeatures.map((element, index) => (
+                  <div key={index} className='content'>
+                    <KeyFeaturesItem
+                      key={index}
+                      alt={element.alt}
+                      src={element.src}
+                      title={element.title}
+                      content={element.content}
+                      last={element.last}
+                    />
+                    {element.last ? (
+                      <>
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                      </>
+                    ) : null}
+                  </div>
+                ))}
+              </div>
+            </>
           )}
         </div>
       </Container>
