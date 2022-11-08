@@ -106,6 +106,12 @@ const KeyFeatures = ({ windowDimensions }) => {
   ];
 
   const [content, setContent] = useState('');
+  const [title, setTitle] = useState('');
+
+  const handleHover = (title, content) => {
+    setTitle(title);
+    setContent(content);
+  };
 
   return (
     <div className='key-features'>
@@ -113,56 +119,85 @@ const KeyFeatures = ({ windowDimensions }) => {
         {t('key-features.title.lbl')}
       </span>
 
-      <Container>
-        <div className='key-features-box'>
-          {windowDimensions.width < 767.5 ? (
-            <ul className='circle-container' data-aos='zoom-in-up'>
-              {keyFeatures.map((element, index) => (
-                <>
-                  <li
-                    key={index}
-                    onMouseEnter={() => setContent(element.content)}
-                  >
-                    <img alt={element.alt} src={element.src} />
-                    <span>{element.title}</span>
-                  </li>
-                </>
-              ))}
-              <div
-                className='overlay'
-                style={{ backgroundImage: `url(${images.frame})` }}
-              >
-                <div className='content'>{content}</div>
-              </div>
-            </ul>
-          ) : (
-            <>
-              <div className='content-wrapper'>
+      <div className='key-features-box'>
+        {windowDimensions.width < 767.5 ? (
+          <ul className='circle-container' data-aos='zoom-in-up'>
+            {keyFeatures.map((element, index) => (
+              <>
+                <li
+                  key={index}
+                  onMouseEnter={() =>
+                    handleHover(element.title, element.content)
+                  }
+                >
+                  <img alt={element.alt} src={element.src} />
+                  <span>{element.title}</span>
+                </li>
+              </>
+            ))}
+            <div
+              className='overlay'
+              style={{ backgroundImage: `url(${images.frame})` }}
+            >
+              <div className='title'>{title}</div>
+              <div className='content'>{content}</div>
+            </div>
+          </ul>
+        ) : (
+          <>
+            <div className='content-wrapper'>
+              <div className='content1'>
                 {keyFeatures.map((element, index) => (
-                  <div key={index} className='content'>
-                    <KeyFeaturesItem
-                      key={index}
-                      alt={element.alt}
-                      src={element.src}
-                      title={element.title}
-                      content={element.content}
-                      last={element.last}
-                    />
-                    {element.last ? (
-                      <>
-                        <br />
-                        <br />
-                        <br />
-                        <br />
-                      </>
+                  <>
+                    {index < 4 ? (
+                      <KeyFeaturesItem
+                        key={index}
+                        alt={element.alt}
+                        src={element.src}
+                        title={element.title}
+                        content={element.content}
+                        last={element.last}
+                      />
                     ) : null}
-                  </div>
+                  </>
                 ))}
               </div>
-            </>
-          )}
-        </div>
-      </Container>
+              <div className='content2'>
+                {keyFeatures.map((element, index) => (
+                  <>
+                    {index < 7 && index >= 4 ? (
+                      <KeyFeaturesItem
+                        key={index}
+                        alt={element.alt}
+                        src={element.src}
+                        title={element.title}
+                        content={element.content}
+                        last={element.last}
+                      />
+                    ) : null}
+                  </>
+                ))}
+              </div>
+              <div className='content3'>
+                {keyFeatures.map((element, index) => (
+                  <>
+                    {index >= 7 && index < 11 ? (
+                      <KeyFeaturesItem
+                        key={index}
+                        alt={element.alt}
+                        src={element.src}
+                        title={element.title}
+                        content={element.content}
+                        last={element.last}
+                      />
+                    ) : null}
+                  </>
+                ))}
+              </div>
+            </div>
+          </>
+        )}
+      </div>
     </div>
   );
 };

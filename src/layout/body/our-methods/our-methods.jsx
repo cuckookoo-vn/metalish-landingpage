@@ -14,7 +14,7 @@ const OurMethods = ({ windowDimensions }) => {
   const images = {
     next: process.env.PUBLIC_URL + '/images/our-methods/right-button.png',
     pre: process.env.PUBLIC_URL + '/images/our-methods/left-button.png',
-    classType: process.env.PUBLIC_URL + '/images/our-methods/2-class-type.png',
+    classType: process.env.PUBLIC_URL + '/images/our-methods/2-type.png',
     cooperation: process.env.PUBLIC_URL + '/images/our-methods/cooperation.png',
     curriculum: process.env.PUBLIC_URL + '/images/our-methods/curriculum.png',
   };
@@ -97,7 +97,7 @@ const OurMethods = ({ windowDimensions }) => {
             <div className='box-our-methods'>
               {methods.map((element, index) => (
                 <SwiperSlide key={index}>
-                  <OurMethodsItem src={element.frame} />
+                  <OurMethodsItem src={element.frame} type={element.type} />
                 </SwiperSlide>
               ))}
             </div>

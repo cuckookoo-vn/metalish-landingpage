@@ -19,43 +19,23 @@ const Overview = ({ windowDimensions }) => {
         <span className='title-main' data-aos='fade-up'>
           METALISH
         </span>
-        {windowDimensions.width > 767.5 ? (
-          <>
-            <div className='content'>
-              <p>{t('overview.content_1.txt')}</p>
-              <p>{t('overview.content_2.txt')}</p>
-              <p>{t('overview.content_3.txt')}</p>
-              <p>{t('overview.content_4.txt')}</p>
-              <p>{t('overview.content_5.txt')}</p>
-            </div>
-            <img
-              alt='overview'
-              src={`${process.env.PUBLIC_URL}/images/explore/tour/1.png`}
-            />
-            <div
-              className='btn'
-              style={{ backgroundImage: `url(${images.viewButton}` }}
-            ></div>
-          </>
-        ) : (
-          <>
-            <div className='content'>
-              <p>{t('overview.content_1.txt')}</p>
-              <p>{t('overview.content_2.txt')}</p>
-              <p>{t('overview.content_3.txt')}</p>
-              <p>{t('overview.content_4.txt')}</p>
-              <p>{t('overview.content_5.txt')}</p>
-            </div>
-            <img
-              alt='overview'
-              src={`${process.env.PUBLIC_URL}/images/explore/tour/1.png`}
-            />
-            <div
-              className='btn'
-              style={{ backgroundImage: `url(${images.viewButton}` }}
-            ></div>
-          </>
-        )}
+        <>
+          <div className='content'>
+            <p>{t('overview.content_1.txt')}</p>
+            <p>{t('overview.content_2.txt')}</p>
+            <p>{t('overview.content_3.txt')}</p>
+            <p>{t('overview.content_4.txt')}</p>
+            <p>{t('overview.content_5.txt')}</p>
+          </div>
+          <img
+            alt='overview'
+            src={`${process.env.PUBLIC_URL}/images/explore/tour/1.png`}
+          />
+          <div
+            className='btn'
+            style={{ backgroundImage: `url(${images.viewButton}` }}
+          ></div>
+        </>
       </Container>
     </div>
   );

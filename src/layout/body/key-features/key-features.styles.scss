@@ -35,7 +35,8 @@
 .key-features {
   color: #ffffff;
   width: 100%;
-  height: 70vw;
+  height: 950px;
+
   @media #{$info-phone} {
     height: fit-content;
   }
@@ -55,25 +56,46 @@
 
   .key-features-box {
     position: relative;
-    width: 100%;
+    width: 1320px;
     height: 45vw;
-    left: 6%;
-    margin-top: 100px;
+    margin: 100px auto 100px auto;
+
     @media #{$info-tablet-1399} {
+      margin: 100px auto 100px auto;
+      width: 80%;
       margin-top: 8vw;
-      left: 6%;
     }
 
     @media #{$info-phone} {
-      left: 0;
       height: 100vw;
+      width: 100%;
     }
 
     .content-wrapper {
       position: relative;
       text-align: center;
-      .content {
-        display: inline;
+
+      .content1 {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+      }
+
+      .content2 {
+        display: flex;
+        justify-content: space-around;
+        padding: 100px 170px;
+        flex-direction: row;
+
+        @media #{$info-tablet-1399} {
+          padding: 5vw 10vw;
+        }
+      }
+
+      .content3 {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
       }
     }
 
@@ -92,7 +114,7 @@
       .overlay {
         position: absolute;
         opacity: 0;
-        width: 70vw;
+        width: 45vw;
         height: 55%;
         top: 36%;
         left: -24%;
@@ -104,14 +126,29 @@
           color: #fff;
           position: absolute;
           top: 50%;
-          left: 34%;
-          width: 50%;
+          left: 50%;
+          width: 70%;
           -webkit-transform: translate(-50%, -50%);
           -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
           text-align: center;
           font-size: 2vw;
         }
+
+        .title {
+          color: #fff;
+          position: absolute;
+          top: 25%;
+          left: 50%;
+          width: 70%;
+          font-weight: 500;
+          -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          text-align: center;
+          font-size: 2.5vw;
+        }
+
         span {
           position: relative;
           left: 0;

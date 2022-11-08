@@ -139,7 +139,8 @@ const DevelopmentTeam = ({windowDimensions}) => {
   return(
       <div className="development-team">
             <span className="title-main">
-               {t('developmentTeam.titleMain')}
+               {/* {t('developmentTeam.titleMain')} */}
+               DEVELOPMENT TEAM
             </span>
 
         <Container>

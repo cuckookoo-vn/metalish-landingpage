@@ -5,21 +5,17 @@
   background-position: left;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 40vw;
-  // width: 100%;
+  min-height: 650px;
+
   color: #ffffff;
-  @media #{$info-tablet-1399} {
-    height: 680px;
-  }
-  @media #{$info-tablet-horizontal} {
-    height: 56vw;
-  }
-  @media #{$info-tablet-991} {
-    height: 450px;
-  }
   @media #{$info-phone} {
-    height: 800px;
+    min-height: 110vw;
   }
+
+  @media #{$info-tablet-1399} {
+    min-height: 110vw;
+  }
+
   .title-main {
     margin: 62px 0 40px 0;
     @media #{$info-tablet-1399} {
@@ -35,28 +31,49 @@
 
   .content {
     position: absolute;
-    width: 35%;
+    width: 500px;
     text-align: center;
-    left: 5%;
-    font-size: 1vw;
+    right: 58%;
+    font-size: 16px;
 
     @media #{$info-phone} {
-      position: absolute;
-      left: 2%;
-      width: 90%;
+      left: 50%;
+      top: 30%;
+      width: 80%;
+      font-size: 0.85rem;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+
+    @media #{$info-tablet-1399} {
+      left: 50%;
+      top: 35%;
+      width: 80%;
+      font-size: 0.85rem;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
     }
   }
 
   img {
     position: relative;
     float: right;
-    width: 60%;
-    left: 5%;
+    width: 750px;
+    right: -10px;
 
     @media #{$info-phone} {
       position: absolute;
       top: 50%;
-      left: 2%;
+      left: 5%;
+      width: 90%;
+    }
+
+    @media #{$info-tablet-1399} {
+      position: absolute;
+      top: 55%;
+      left: 5%;
       width: 90%;
     }
   }

@@ -2,32 +2,37 @@
 
 .key-features-item {
   position: relative;
-  width: 6vw;
-  height: 6vw;
+  width: 120px;
+  height: 120px;
   display: inline-block;
-  margin-right: 15%;
+  margin: auto;
 
   @media #{$info-tablet-1399} {
-    width: 6vw;
-    height: 6vw;
-    margin-right: 15%;
+    width: 10vw;
+    height: 9.3vw;
+    margin: auto;
   }
 
   img {
     position: relative;
     display: inline-block;
     width: 100%;
+
+    @media #{$info-tablet-1399} {
+      width: 60%;
+    }
   }
 
   .overlay {
     position: absolute;
     top: 70%;
     left: 50%;
-    min-width: 320px;
-    height: 480px;
+    width: 280px;
+    height: 440px;
     opacity: 0;
     transition: 0.5s ease;
     background-repeat: no-repeat;
+    z-index: -1;
     background-size: contain;
     background-position: left;
     -webkit-transform: translate(-50%, -50%);
@@ -36,8 +41,9 @@
     color: #fff;
 
     @media #{$info-tablet-1399} {
-      top: 65%;
+      top: 50%;
       min-width: 20vw;
+      height: 20vw;
     }
 
     .title {
@@ -45,7 +51,7 @@
       top: 35%;
       left: 50%;
       width: max-content;
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 500;
       -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
@@ -53,7 +59,7 @@
 
       @media #{$info-tablet-1399} {
         font-size: 1.2vw;
-        top: 35%;
+        top: 28%;
         left: 50%;
       }
     }
@@ -68,6 +74,7 @@
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
       text-align: center;
+      // font-size: 1vw;
 
       @media #{$info-tablet-1399} {
         width: 14vw;
@@ -76,14 +83,24 @@
     }
   }
   span {
-    position: relative;
     white-space: nowrap;
-    font-size: 1vw;
+    position: absolute;
+    font-size: 16px;
+    bottom: -30%;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    @media #{$info-tablet-1399} {
+      bottom: 0vw;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
   }
 }
 
 .key-features-item:hover .overlay {
   opacity: 1;
+  z-index: 1;
 }
 
 // .key-features-item-last {

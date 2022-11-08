@@ -1,6 +1,9 @@
+import { useTranslation } from 'react-i18next';
 import './our-methods-item.styles.scss';
 
 const OurMethodsItem = ({ src, type }) => {
+  const { t } = useTranslation();
+
   const images = {
     commentBox: process.env.PUBLIC_URL + '/images/feedback/comment-box.png',
     commentAvatar:
@@ -12,17 +15,26 @@ const OurMethodsItem = ({ src, type }) => {
         className='our-methods-item-box'
         style={{ backgroundImage: `url(${src})` }}
       >
-        {/* <div
-          className='avatar'
-          style={{
-            backgroundImage: `url(${images.commentAvatar})`,
-          }}
-        ></div>
-        <img className='user-avatar' src={src} alt='comment-avatar' />
-        <h4 className='user-name'>{name}</h4>
-        <span className='user-grade'>{grade}</span>
-        <h2 className='user-summary-title'>{summary}</h2>
-         <div className='user-comment'>{comment}</div> */}
+        {type === 'class-type' ? (
+          <>
+            <div className='private-room-title'>
+              {t('our-methods.private-room_title.lbl')}
+            </div>
+            <div className='talking-room-title'>
+              {t('our-methods.talking-room_title.lbl')}
+            </div>
+            <span className='private-room-content'>
+              {t('our-methods.private-room_content.txt')}
+            </span>
+            <span className='talking-room-content'>
+              {t('our-methods.talking-room_content.txt')}
+            </span>
+          </>
+        ) : (
+          <span className='others-content'>
+            {t(`our-methods.${type}_content.txt`)}
+          </span>
+        )}
       </div>
     </div>
   );
