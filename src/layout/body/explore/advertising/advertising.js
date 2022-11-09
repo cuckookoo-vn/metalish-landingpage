@@ -1,6 +1,8 @@
+import { useTranslation } from 'react-i18next';
 import './advertising.scss';
 
 const Advertising = ({ windowDimensions }) => {
+  const { t } = useTranslation();
   const images = {
     bgAdvertising:
       'https://aroundtheworld.s3.ap-southeast-1.amazonaws.com/imgs/artw_ckk_vali_web.png',
@@ -10,7 +12,9 @@ const Advertising = ({ windowDimensions }) => {
 
   return (
     <div className='advertising'>
-      <span className='title-main'>3D BILLBOARD ADVERTISING</span>
+      <span className='title-main'>
+        {t('explore.3d-billboard-advertising_title.lbl')}
+      </span>
 
       <div
         className='advertising-image'

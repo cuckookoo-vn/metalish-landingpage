@@ -61,7 +61,7 @@ const OurMethods = ({ windowDimensions }) => {
   const [slideData, setSlideData] = useState(checkWidthWindowSetSlideData);
 
   useEffect(() => {
-    setSlideData(checkWidthWindowSetSlideData);
+    setSlideData(checkWidthWindowSetSlideData); // eslint-disable-next-line
   }, [windowDimensions.width]);
 
   // button slide

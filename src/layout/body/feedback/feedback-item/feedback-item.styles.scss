@@ -55,7 +55,7 @@
       bottom: 19px;
 
       @media #{$info-phone} {
-        font-size: 2vw;
+        font-size: 2.2vw;
       }
     }
 
@@ -70,7 +70,7 @@
       bottom: 19px;
 
       @media #{$info-phone} {
-        font-size: 2vw;
+        font-size: 2.2vw;
       }
     }
 
@@ -85,21 +85,21 @@
       bottom: 19px;
 
       @media #{$info-phone} {
-        font-size: 2vw;
+        font-size: 2.2vw;
       }
     }
 
     .user-comment {
       position: absolute;
       color: #fff;
-      left: 55%;
+      left: 50%;
       top: 60%;
-      width: 450px;
+      width: 400px;
       transform: translate(-50%, 0);
       bottom: 19px;
 
       @media #{$info-phone} {
-        font-size: 2vw;
+        font-size: 2.2vw;
         width: 44vw;
         left: 53%;
       }

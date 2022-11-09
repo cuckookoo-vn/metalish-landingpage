@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import './feedback.styles.scss';
 import { Container } from 'react-bootstrap';
-import DevelopmentTeamMember from '../../../components/development-team-member/development-team-member';
 import { useTranslation } from 'react-i18next';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -26,29 +25,25 @@ const Feedback = ({ windowDimensions }) => {
 
   const comments = [
     {
-      name: 'Min Nguyen',
-      grade: `${t('feedback.user-description-title.txt')}`,
+      name: `${t('feedback.user-1-name.txt')}`,
+      grade: `${t('feedback.user-1-description.txt')}`,
       avatar: images.avatar1,
-      summaryComment: `${t('feedback.user-summary-comment.lbl')}`,
-      comment: `${t('feedback.user-full-comment.txt')}`,
+      summaryComment: `${t('feedback.user-1-summary-comment.lbl')}`,
+      comment: `${t('feedback.user-1-full-comment.txt')}`,
     },
     {
-      name: 'Jin Nguyen',
-      // grade: `${t('feedback.user-description-title.txt')}`,
-      grade: '12th grade student',
+      name: `${t('feedback.user-2-name.txt')}`,
+      grade: `${t('feedback.user-2-description.txt')}`,
       avatar: images.avatar2,
-      // summaryComment: `${t('feedback.user-summary-comment.lbl')}`,
-      summaryComment: 'Interesting, good experience',
-      comment:
-        'I gained the confidence to use English in my daily life. With Metalish, I can meet and interact with others who have the same interest with me.',
-      // comment: `${t('feedback.user-full-comment.txt')}`,
+      summaryComment: `${t('feedback.user-2-summary-comment.lbl')}`,
+      comment: `${t('feedback.user-2-full-comment.txt')}`,
     },
     {
       name: 'User',
-      grade: `${t('feedback.user-description-title.txt')}`,
+      grade: `${t('feedback.user-1-description.txt')}`,
       avatar: images.avatar1,
-      summaryComment: `${t('feedback.user-summary-comment.lbl')}`,
-      comment: `${t('feedback.user-full-comment.txt')}`,
+      summaryComment: `${t('feedback.user-1-summary-comment.lbl')}`,
+      comment: `${t('feedback.user-1-full-comment.txt')}`,
     },
   ];
 
@@ -79,7 +74,7 @@ const Feedback = ({ windowDimensions }) => {
   const [slideData, setSlideData] = useState(checkWidthWindowSetSlideData);
 
   useEffect(() => {
-    setSlideData(checkWidthWindowSetSlideData);
+    setSlideData(checkWidthWindowSetSlideData); // eslint-disable-next-line
   }, [windowDimensions.width]);
 
   // button slide

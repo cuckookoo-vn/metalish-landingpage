@@ -5,6 +5,7 @@ const translationEN = {
     'option_vi.lbl': 'Tiếng Việt',
     'download.btn': 'DOWNLOAD',
   },
+
   overview: {
     'title.lbl': 'METALISH',
     'content_1.txt':
@@ -63,6 +64,7 @@ const translationEN = {
     'review_content.txt':
       'Users will be received reward for each effective feedback about our app, our courses and our teaching staffs.',
   },
+
   'core-skills': {
     'title.lbl': 'CORE SKILLS',
     'listening.lbl': 'Listening',
@@ -70,6 +72,7 @@ const translationEN = {
     'vocabulary.lbl': 'Vocabulary',
     'mouth-shape.lbl': 'Mouth shape',
   },
+
   'our-methods': {
     'title.lbl': 'OUR METHODS',
     'private-room_title.lbl': 'PRIVATE ROOM',
@@ -81,16 +84,75 @@ const translationEN = {
       'Pay small extra fee to take customized and personalized classes with AI or the teachers you like.\n' +
       'Unlimited topics\n' +
       'Invite your friends to join your world!',
-      'cooperation_content.txt': 'Exprienced content advisor team, including foreign English teachers and local English teachers.',
-      'curriculum_content.txt': 'The curriculum is completely based on the curriculum in user’s country.'
-
+    'cooperation_content.txt':
+      'Exprienced content advisor team, including foreign English teachers and local English teachers.',
+    'curriculum_content.txt':
+      'The curriculum is completely based on the curriculum in user’s country.',
   },
+
   feedback: {
     'title.lbl': 'WHAT USERS SAY ABOUT METALISH',
-    'user-description-title.txt': '5th grade student',
-    'user-summary-comment.lbl': 'Convenient',
-    'user-full-comment.txt':
+    'user-1-name.txt': 'Min Nguyen',
+    'user-1-description.txt': '5th grade student',
+    'user-1-summary-comment.lbl': 'Convenient',
+    'user-1-full-comment.txt':
       'Each course was interesting and motivational. I can learn whenever it fits my schedule and mood.',
+
+    'user-2-name.txt': 'Jin Nguyen',
+    'user-2-description.txt': '12th grade student',
+    'user-2-summary-comment.lbl': 'Interesting, good experience',
+    'user-2-full-comment.txt':
+      'I gained the confidence to use English in my daily life. With Metalish, I can meet and interact with others who have the same interest with me.',
+  },
+
+  explore: {
+    'explore.btn': "Let's explore Metalish with us!",
+    'metalish-tour_title.lbl': "METALISH'S TOUR",
+    'mini-games_title.lbl': 'MINI GAMES',
+    'mini-games_fill-in-blank.lbl': 'Fill in blank',
+    'mini-games_multiple-choice.lbl': 'Multiple choice',
+    'mini-games_arrange-word.lbl': 'Arrange word',
+    '3d-billboard-advertising_title.lbl': '3D BILLBOARD ADVERTISING',
+    'order-service_title.lbl': 'ORDER SERVICE',
+    'order-service_description.lbl':
+      'Interact with the advertisement to make a real order',
+  },
+
+  roadmap: {
+    'title.lbl': 'ROADMAP',
+    'aug-2022': {
+      'item-1.txt': 'Ideas for Metalish',
+      'item-2.txt': 'Arrange resources and kick-off',
+      'item-3.txt': 'Develop Metalish phase 1',
+      'item-4.txt': 'Design art for phase 1',
+      'item-5.txt': 'Release website',
+      'item-6.txt': 'Prepare for phase 2',
+    },
+    'feb-2023': {
+      'item-1.txt': 'Release 1st version',
+      'item-2.txt': 'Design art for phase 2',
+      'item-3.txt': 'Develop Metalish phase 2 (metaverse)',
+      'item-4.txt': 'Upgrade server (10M+ users)',
+      'item-5.txt': 'Call for capital investment',
+      'item-6.txt': 'Run advertising in app',
+      'item-7.txt': 'Prepare for phase 3',
+    },
+
+    'aug-2023': {
+      'item-1.txt': 'Release 2nd version',
+      'item-2.txt': 'Design art for phase 3',
+      'item-3.txt': 'Develop Metalish phase 3',
+      'item-4.txt': 'Upgrade AI and UI',
+    },
+
+    'feb-2024': {
+      'item-1.txt': 'Release 3rd version',
+      'item-2.txt': 'Go-live app (metaverse)',
+    },
+  },
+
+  'development-team': {
+    'title.lbl': 'DEVELOPMENT TEAM',
   },
 };
 

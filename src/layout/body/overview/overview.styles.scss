@@ -8,12 +8,13 @@
   min-height: 650px;
 
   color: #ffffff;
-  @media #{$info-phone} {
-    min-height: 110vw;
-  }
 
   @media #{$info-tablet-1399} {
-    min-height: 110vw;
+    min-height: 120vw;
+  }
+
+  @media #{$info-phone} {
+    min-height: 120vw;
   }
 
   .title-main {
@@ -36,21 +37,22 @@
     right: 58%;
     font-size: 16px;
 
-    @media #{$info-phone} {
+    @media #{$info-tablet-1399} {
       left: 50%;
-      top: 30%;
+      top: 25%;
       width: 80%;
-      font-size: 0.85rem;
+      font-size: 1.8vw;
       -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
     }
 
-    @media #{$info-tablet-1399} {
+    @media #{$info-phone} {
+      position: relative;
       left: 50%;
-      top: 35%;
-      width: 80%;
-      font-size: 0.85rem;
+      top: 30vw;
+      width: 90vw;
+      font-size: 2vw;
       -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
@@ -63,16 +65,38 @@
     width: 750px;
     right: -10px;
 
-    @media #{$info-phone} {
+    @media #{$info-tablet-1399} {
       position: absolute;
-      top: 50%;
+      top: 45%;
       left: 5%;
       width: 90%;
     }
 
+    @media #{$info-phone} {
+      position: absolute;
+      top: 60%;
+      left: 5%;
+      width: 90%;
+    }
+  }
+
+  
+  .model {
+    position: relative;
+    float: right;
+    width: 750px;
+    right: -10px;
+
     @media #{$info-tablet-1399} {
       position: absolute;
-      top: 55%;
+      top: 45%;
+      left: 5%;
+      width: 90%;
+    }
+
+    @media #{$info-phone} {
+      position: absolute;
+      top: 60%;
       left: 5%;
       width: 90%;
     }

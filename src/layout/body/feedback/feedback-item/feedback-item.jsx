@@ -22,7 +22,7 @@ const FeedbackItem = ({ src, grade, name, summary, comment }) => {
         <h4 className='user-name'>{name}</h4>
         <span className='user-grade'>{grade}</span>
         <h2 className='user-summary-title'>{summary}</h2>
-        <div className='user-comment'>{comment}</div>
+        <span className='user-comment'>{comment}</span>
       </div>
     </div>
   );

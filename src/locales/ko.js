@@ -5,92 +5,154 @@ const translationKO = {
     'option_vi.lbl': 'Tiếng Việt',
     'download.btn': 'DOWNLOAD',
   },
+
   overview: {
     'title.lbl': 'METALISH',
     'content_1.txt':
-      'Metalish is an English learning application based on the curriculum of the Ministry of Education & Training and focus on main English skills: listening, speaking, vocabulary, mouth shape. Our aim is to develop an environment for users to use English fluently in daily life.',
+      'Metalish는 교육부에서 제공하는 커리큘럼을 기반으로 사용자의 영어 향상을 돕는 애플리케이션이며 어휘, 말하기, 듣기, 발음 등의 영어실력 개선에 중점을 둡니다. 저희 목표는 사용자들이 일상생활에서 영어를 유창하게 사용할 수 있는 환경을 개발하는 것입니다.',
     'content_2.txt':
-      'Metalish give users real experience when studying English, provide diverse learning methods, personalized learning path. Lessons mostly consist of interactive minigames.',
+      'Metalish는 사용자에게 영어를 학습할 때 실제적인 체험, 다양한 학습 방법, 개인화된 학습 경로 등을 제공합니다. 수업은 대부분 인터렉티브  미니게임으로 구성됩니다.',
     'content_3.txt':
-      'Besides, Metalish always listen to user feedback to improve the quality of teaching. Effective feedback also help users reflect on their learning so they can make better adjustment in their study progress.',
+      '게다가, Metalish는 교육의 질을 향상시키기 위해 항상 사용자 피드백을 듣습니다. 효과적인 피드백들을 통해서 사용자가 본인의 학습에 대해서 반영하게 되기도 하고 더 효율적인 학습 프로섹을 조절할 수 있기도 합니다.',
     'content_4.txt':
-      'Moreover, Metalish hope to create a familiar space for all users. Users can design their classroom and invite friends to join with them. We want to bring the best user experience.',
-    'content_5.txt': 'Let’s start exploring your own English world!',
+      '또한, Metalish는 사용자와 친한공간을 만드는 사명을 띱니다. 사용자가 본인의 교실을 꾸밀 수 있을 뿐먼 아니라 친구들에게 나의 방에 참가하려 초대할 수도 있습니다. 가장 좋은 사용감을 제공할 수 있는 것을 기대합니다.',
+    'content_5.txt': '본인의 영어 세계를 탐험하기 시작합시다!',
   },
   'key-features': {
-    'title.lbl': 'KEY FEATURES',
-    'studying-english_title.lbl': 'Studying English',
+    'title.lbl': '주요 기능',
+    'studying-english_title.lbl': '영어 학습',
     'studying-english_content.txt':
-      'Metalish is an application that helps users to improve their English. Follow curriculum given by Ministry of Education.',
+      'Metalish는 교육부에서 제공하는 커리큘럼을 기반으로 사용자의 영어 향상을 돕는 애플리케이션입니다.',
 
-    'graphics_title.lbl': 'Graphics',
+    'graphics_title.lbl': '그래픽',
     'graphics_content.txt':
-      'Impress users with 3D graphics, User-friendly interface, easy to use.',
+      '3D 그래픽과 유저 친화적인 인터페이스로 사용자에게 깊은 인상을 남깁니다.',
 
-    'connect_title.lbl': 'Connect',
+    'connect_title.lbl': '연결',
     'connect_content.txt':
-      'Make friends and connect with teachers to understand lessons clearly.',
+      '친구를 사귀고 강사와 연결하여 수업을 명확하게 이해할 수 있습니다.',
 
-    'customized-classroom_title.lbl': 'Customized classroom',
+    'customized-classroom_title.lbl': '맞춤형 교실',
     'customized-classroom_content.txt':
-      'Users can freely customize the classroom layout according to user preferences.',
+      '유저의 취향에 따라 룸 레이아웃을 자유롭게 꾸밀 수 있습니다.',
 
-    'practical-english_title.lbl': 'Practical English',
+    'practical-english_title.lbl': '영어 연습',
     'practical-english_content.txt':
-      'Help user practice English by providing real-world conversation. ',
+      '실제 대화를 제공하여 사용자가 영어를 연습할 수 있도록 도와줍니다.',
 
-    'ai-technology_title.lbl': 'AI technology',
+    'ai-technology_title.lbl': 'AI 기술',
     'ai-technology_content.txt':
-      'Use AI technology to interact with users and correct pronunciation.',
+      'AI 기술을 사용하여 사용자와 상호 작용하면서 발음을 수정합니다.',
 
-    'ai-in-advertising_title.lbl': 'AI in advertising',
+    'ai-in-advertising_title.lbl': '광고용 디스플레이에 AI',
     'ai-in-advertising_content.txt':
-      'Provide personalized ads and support purchasing through advertisement.',
+      '개인화 광고를 제공하며 광고를 통한 구매를 지원합니다.',
 
-    'mini-games_title.lbl': 'Mini games',
+    'mini-games_title.lbl': '미니 게임',
     'mini-games_content.txt':
-      'Practice English by playing mini games: check vocabulary, pronunciation, etc.',
+      '빈칸 채우기, 객관식 등의 미니 게임을 통해 영어 연습합니다.',
 
-    'rewards_title.lbl': 'Rewards',
+    'rewards_title.lbl': '보상',
     'rewards_content.txt':
-      'Get vouchers, discounts on purchasing new courses or coupon books/things being advertised in app.',
+      '새로운 코스를 구매 시 할인, 상품권을 증정 또는 앱에서 광고되는책/물건을 구매 시 쿠폰을 증정합니다.',
 
-    'best-choice_title.lbl': 'Best choice for students',
+    'best-choice_title.lbl': '학생을 위한 최고의 선택',
     'best-choice_content.txt':
-      'Focus on students from grade 1 to grade 12. Suitable for countries where English is not their mother tongue, especially Southeast Asia.',
+      '초~고등학생을 대상입니다.\n영어가 모국어가 아닌 국가, 특히 동남아시아에 적합합니다.',
 
-    'review_title.lbl': 'Review',
+    'review_title.lbl': '피드백',
     'review_content.txt':
-      'Users will be received reward for each effective feedback about our app, our courses and our teaching staffs.',
+      '사용자는 앱, 코스 및 강사에 대한 효과적인 피드백을 남기면 보상을 받게 될겁니다.',
   },
-  'core-skills': {
-    'title.lbl': 'CORE SKILLS',
-    'listening.lbl': 'Listening',
-    'speaking.lbl': 'Speaking',
-    'vocabulary.lbl': 'Vocabulary',
-    'mouth-shape.lbl': 'Mouth shape',
-  },
-  'our-methods': {
-    'title.lbl': 'OUR METHODS',
-    'private-room_title.lbl': 'PRIVATE ROOM',
-    'talking-room_title.lbl': 'TALKING ROOM',
-    'private-room_content.txt':
-      'Provide self-study class with videos recorded by our qualified English teachers.\n' +
-      'Improve English skills: Reading, Listening, Speaking, Mouth shape.',
-    'talking-room_content.txt':
-      'Pay small extra fee to take customized and personalized classes with AI or the teachers you like.\n' +
-      'Unlimited topics\n' +
-      'Invite your friends to join your world!',
-      'cooperation_content.txt': 'Exprienced content advisor team, including foreign English teachers and local English teachers.',
-      'curriculum_content.txt': 'The curriculum is completely based on the curriculum in user’s country.'
 
+  'core-skills': {
+    'title.lbl': '핵심 스킬',
+    'listening.lbl': '듣기',
+    'speaking.lbl': '말하기',
+    'vocabulary.lbl': '어휘',
+    'mouth-shape.lbl': '발음',
   },
+
+  'our-methods': {
+    'title.lbl': '학습 방식',
+    'private-room_title.lbl': '비공개 룸',
+    'talking-room_title.lbl': '대화룸',
+    'private-room_content.txt':
+      '영어 강사들이 녹화한 비디오를 통해서 자유로운 수업을 제공합니다.\n' +
+      '듣기, 말하기, 어휘, 발음의 영어실력을 개선합니다.',
+    'talking-room_content.txt':
+      '조금만의 추가 비용을 지불하면 AI 또는 강사와의 상호작용을 가능하게 하는 맞춤형 및 개인화된 수업에 참여 가능합니다.\n' +
+      '무한한 주제\n' +
+      '친구를 초대하여 나의 세계에 합류할 수 있습니다.',
+    'cooperation_content.txt':
+      '외국인 영어강사와 현지 영어강사를 포함한 경력 많은 콘텐츠 어드바이저 팀.',
+    'curriculum_content.txt':
+      '커리큘럼은 전적으로 사용자 국가의 커리큘럼을 기반으로 합니다.',
+  },
+
   feedback: {
-    'title.lbl': 'WHAT USERS SAY ABOUT METALISH',
-    'user-description-title.txt': '5th grade student',
-    'user-summary-comment.lbl': 'Convenient',
-    'user-full-comment.txt':
-      'Each course was interesting and motivational. I can learn whenever it fits my schedule and mood.',
+    'title.lbl': ' METALISH 에 대한 유저의 평가',
+    'user-1-name.txt': 'Min Nguyen',
+    'user-1-description.txt': '5급 학습자',
+    'user-1-summary-comment.lbl': '편리함',
+    'user-1-full-comment.txt':
+      '각 코스는 흥미롭고 동기 부여가 되었습니다. 제 일정과 기분에 맞춰 언제든지 배울 수 있습니다!!!',
+
+    'user-2-name.txt': 'Jin Nguyen',
+    'user-2-description.txt': '12급 학습자',
+    'user-2-summary-comment.lbl': '재미있으며 좋은 체험',
+    'user-2-full-comment.txt':
+      '일상생활에서 영어를 사용할 수 있다는 자신감을 얻었습니다!\nMetalish를 사용해서 저와 같은 관심을 가진 사람들을 만나고 교류할 수 있으니 좋습니다!',
+  },
+
+  explore: {
+    'explore.btn': "Let's explore Metalish with us!",
+    'metalish-tour_title.lbl': 'METALISH’S 순회',
+    'mini-games_title.lbl': '미니 게임',
+    'mini-games_fill-in-blank.lbl': '빈칸 채우기',
+    'mini-games_multiple-choice.lbl': '객관식',
+    'mini-games_arrange-word.lbl': '어휘 정리',
+    '3d-billboard-advertising_title.lbl': '3D 빌보드 광고',
+    'order-service_title.lbl': '주문 서비스',
+    'order-service_description.lbl':
+      '실주문하시 위하여 광고물과 상호 작용할 수 있습니다',
+  },
+
+  roadmap: {
+    'title.lbl': '로드 맵',
+    'aug-2022': {
+      'item-1.txt': 'Metalish 구상',
+      'item-2.txt': '리소스 정리 및 킥오프',
+      'item-3.txt': 'Metalish phase 1 개발',
+      'item-4.txt': 'Phase 1의 아트 디자인',
+      'item-5.txt': '앱 출시',
+      'item-6.txt': 'Phase 2 준비',
+    },
+    'feb-2023': {
+      'item-1.txt': '1차 버전 출시',
+      'item-2.txt': 'Phase 2의 아트 디자인',
+      'item-3.txt': 'Metalish phase 2 (metaverse)개발',
+      'item-4.txt': '서버 업그레이드 (유저 수 1,000만 명)',
+      'item-5.txt': '자본 투자 유치',
+      'item-6.txt': '앱에서 광고 실행',
+      'item-7.txt': 'Phase 3 준비',
+    },
+
+    'aug-2023': {
+      'item-1.txt': '2차 버전 출시',
+      'item-2.txt': 'Phase 3의 아트 디자인',
+      'item-3.txt': 'Metalish phase 3개발',
+      'item-4.txt': 'AI 및 UI 업그레이드',
+    },
+
+    'feb-2024': {
+      'item-1.txt': '3차 버전 출시',
+      'item-2.txt': '앱 출시 ( 메타버스)',
+    },
+  },
+
+  'development-team': {
+    'title.lbl': '개발 팀',
   },
 };
 

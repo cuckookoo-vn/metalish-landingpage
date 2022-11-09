@@ -22,15 +22,12 @@ import 'swiper/css/pagination';
 import 'swiper/css/bundle';
 import 'swiper/css/scrollbar';
 
-import SwiperCore, { Navigation,
-    Pagination,
-    Autoplay,
-    Virtual } from 'swiper';
-import Explore from "./layout/body/explore/explore";
-import MiniGames from "./layout/body/explore/mini-games/mini-games";
-import Advertising from "./layout/body/explore/advertising/advertising";
-import OrderService from "./layout/body/explore/order-service/order-service";
-import Tour from "./layout/body/explore/tour/tour";
+import SwiperCore, { Navigation, Pagination, Autoplay, Virtual } from 'swiper';
+import Explore from './layout/body/explore/explore';
+import MiniGames from './layout/body/explore/mini-games/mini-games';
+import Advertising from './layout/body/explore/advertising/advertising';
+import OrderService from './layout/body/explore/order-service/order-service';
+import Tour from './layout/body/explore/tour/tour';
 
 export default function App() {
   // status show explore
@@ -68,7 +65,7 @@ export default function App() {
       <Feedback windowDimensions={windowDimensions} />
       {statusExplore ? (
         <>
-            <Tour windowDimensions={windowDimensions}/>
+          <Tour windowDimensions={windowDimensions} />
           <MiniGames windowDimensions={windowDimensions} />
           <Advertising windowDimensions={windowDimensions} />
           <OrderService windowDimensions={windowDimensions} />

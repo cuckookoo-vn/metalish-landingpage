@@ -2,10 +2,10 @@ import './key-features.styles.scss';
 import { useTranslation } from 'react-i18next';
 import KeyFeaturesItem from './key-features-item/key-features-item';
 import { useState } from 'react';
-import { Container } from 'react-bootstrap';
 
 const KeyFeatures = ({ windowDimensions }) => {
   const { t } = useTranslation();
+
   const images = {
     studyingEnglishIcon:
       process.env.PUBLIC_URL + '/images/key-features/studying-english.png',
@@ -150,14 +150,15 @@ const KeyFeatures = ({ windowDimensions }) => {
                 {keyFeatures.map((element, index) => (
                   <>
                     {index < 4 ? (
-                      <KeyFeaturesItem
-                        key={index}
-                        alt={element.alt}
-                        src={element.src}
-                        title={element.title}
-                        content={element.content}
-                        last={element.last}
-                      />
+                      <div key={index}>
+                        <KeyFeaturesItem
+                          alt={element.alt}
+                          src={element.src}
+                          title={element.title}
+                          content={element.content}
+                          last={element.last}
+                        />
+                      </div>
                     ) : null}
                   </>
                 ))}
@@ -166,14 +167,15 @@ const KeyFeatures = ({ windowDimensions }) => {
                 {keyFeatures.map((element, index) => (
                   <>
                     {index < 7 && index >= 4 ? (
-                      <KeyFeaturesItem
-                        key={index}
-                        alt={element.alt}
-                        src={element.src}
-                        title={element.title}
-                        content={element.content}
-                        last={element.last}
-                      />
+                      <div key={index}>
+                        <KeyFeaturesItem
+                          alt={element.alt}
+                          src={element.src}
+                          title={element.title}
+                          content={element.content}
+                          last={element.last}
+                        />
+                      </div>
                     ) : null}
                   </>
                 ))}
@@ -182,14 +184,15 @@ const KeyFeatures = ({ windowDimensions }) => {
                 {keyFeatures.map((element, index) => (
                   <>
                     {index >= 7 && index < 11 ? (
-                      <KeyFeaturesItem
-                        key={index}
-                        alt={element.alt}
-                        src={element.src}
-                        title={element.title}
-                        content={element.content}
-                        last={element.last}
-                      />
+                      <div key={index}>
+                        <KeyFeaturesItem
+                          alt={element.alt}
+                          src={element.src}
+                          title={element.title}
+                          content={element.content}
+                          last={element.last}
+                        />
+                      </div>
                     ) : null}
                   </>
                 ))}

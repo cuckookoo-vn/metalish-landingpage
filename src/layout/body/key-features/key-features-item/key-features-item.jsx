@@ -1,15 +1,12 @@
-import { useTranslation } from 'react-i18next';
 import './key-features-item.styles.scss';
 
-const KeyFeaturesItem = ({ src, alt, title, content }) => {
-  const { t } = useTranslation();
-
+const KeyFeaturesItem = ({ src, alt, title, content, k }) => {
   const images = {
     frame: process.env.PUBLIC_URL + '/images/key-features/frame.png',
   };
 
   return (
-    <div className='key-features-item'>
+    <div key={k} className='key-features-item'>
       <img alt={alt} src={src} />
       <span>{title}</span>
       <div

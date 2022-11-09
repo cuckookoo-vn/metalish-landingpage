@@ -1,7 +1,7 @@
 @import 'src/styles/variables';
 
 .header {
-  height: 65px;
+  height: 68px;
   width: 100%;
   position: fixed;
   z-index: 1000;
@@ -21,15 +21,15 @@
     margin-top: 21px;
     float: right;
     margin-right: 40px;
+
     @media #{$info-tablet-1399} {
       margin-top: 16px;
     }
+
     @media #{$info-phone} {
       margin-right: 0;
     }
-    @media #{$info-phone-330} {
-      margin-top: 10px;
-    }
+
     .language-btn {
       text-align: left;
       color: #ffffff;
@@ -53,15 +53,18 @@
       .flag {
         width: 25px;
         margin-right: 10px;
+
         @media #{$info-tablet-1399} {
           width: 26px;
           margin-right: 8px;
         }
+
         @media #{$info-phone} {
           width: 23px;
           margin-right: 8px;
         }
       }
+
       .icon-select-header {
         position: absolute;
         width: 13px;
@@ -90,7 +93,7 @@
         display: block;
       }
       .language-option {
-        background: rgba(0, 0, 0, 0);
+        background: #020220;
         color: #ffffff;
         text-align: left;
         font-size: 0.85rem;
@@ -139,39 +142,41 @@
     position: relative;
     float: right;
     cursor: pointer;
-    background-position: left;
+    background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    width: 155px;
-    height: 72px;
+    width: 150px;
+    height: 75px;
     margin: 0;
+
     @media #{$info-tablet-1399} {
-      width: 145px;
+      width: 100px;
       height: 57px;
       margin: 5px 0 0 0;
     }
     @media #{$info-phone} {
       height: 55px;
-      width: 155px;
+      width: 100px;
     }
+
     span {
       font-size: 0.85rem;
       position: absolute;
-      left: 36%;
+      left: 47%;
       top: 50%;
       font-weight: 600;
       color: #000000;
       text-align: center;
       width: max-content;
       transform: translate(-50%, -55%);
+
       @media #{$info-tablet-1399} {
-        font-size: 12px;
+        font-size: 0.6rem;
       }
 
       @media #{$info-phone} {
         font-size: 0.6rem;
-        left: 29%;
-        top: 50%;
+        left: 49%;
       }
     }
   }

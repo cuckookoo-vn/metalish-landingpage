@@ -1,6 +1,7 @@
 import './overview.styles.scss';
 import { useTranslation } from 'react-i18next';
 import { Container } from 'react-bootstrap';
+import OverviewModel from './model/model';
 
 const Overview = ({ windowDimensions }) => {
   const { t } = useTranslation();
@@ -27,10 +28,15 @@ const Overview = ({ windowDimensions }) => {
             <p>{t('overview.content_4.txt')}</p>
             <p>{t('overview.content_5.txt')}</p>
           </div>
-          <img
-            alt='overview'
-            src={`${process.env.PUBLIC_URL}/images/explore/tour/1.png`}
-          />
+          {/* <div className='model'> */}
+          <div>
+            {/* <OverviewModel /> */}
+            <img
+              alt='overview'
+              src={`${process.env.PUBLIC_URL}/images/explore/tour/1.png`}
+            />
+          </div>
+
           <div
             className='btn'
             style={{ backgroundImage: `url(${images.viewButton}` }}
