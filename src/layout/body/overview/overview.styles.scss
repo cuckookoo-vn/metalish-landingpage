@@ -59,38 +59,18 @@
     }
   }
 
-  img {
-    position: relative;
-    float: right;
-    width: 750px;
-    right: -10px;
-
-    @media #{$info-tablet-1399} {
-      position: absolute;
-      top: 45%;
-      left: 5%;
-      width: 90%;
-    }
-
-    @media #{$info-phone} {
-      position: absolute;
-      top: 60%;
-      left: 5%;
-      width: 90%;
-    }
-  }
-
-  
   .model {
     position: relative;
     float: right;
     width: 750px;
+    height: 450px;
     right: -10px;
 
     @media #{$info-tablet-1399} {
       position: absolute;
       top: 45%;
       left: 5%;
+      height: 40vw;
       width: 90%;
     }
 
@@ -98,6 +78,7 @@
       position: absolute;
       top: 60%;
       left: 5%;
+      height: 40vw;
       width: 90%;
     }
   }

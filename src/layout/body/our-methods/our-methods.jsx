@@ -70,10 +70,12 @@ const OurMethods = ({ windowDimensions }) => {
 
   return (
     <div className='our-methods'>
-      <span className='title-main'>{t('our-methods.title.lbl')}</span>
+      <span className='title-main' data-aos='fade-up'>
+        {t('our-methods.title.lbl')}
+      </span>
 
       <Container>
-        <div className='box-slide'>
+        <div className='box-slide' data-aos='fade-up'>
           <Swiper
             slidesPerView={slideData.slidesPerView}
             spaceBetween={slideData.spaceBetween}
@@ -101,10 +103,18 @@ const OurMethods = ({ windowDimensions }) => {
                 </SwiperSlide>
               ))}
             </div>
-            <div ref={prevRef} className='icon-slide icon-next hidden-mobile'>
+            <div
+              ref={prevRef}
+              data-aos='fade-right'
+              className='icon-slide icon-next hidden-mobile'
+            >
               <img className='icon-next' src={images.pre} alt='pre' />
             </div>
-            <div ref={nextRef} className='icon-slide icon-pre hidden-mobile'>
+            <div
+              ref={nextRef}
+              data-aos='fade-left'
+              className='icon-slide icon-pre hidden-mobile'
+            >
               <img src={images.next} alt='next' />
             </div>
           </Swiper>

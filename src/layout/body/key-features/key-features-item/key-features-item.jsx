@@ -1,12 +1,12 @@
 import './key-features-item.styles.scss';
 
-const KeyFeaturesItem = ({ src, alt, title, content, k }) => {
+const KeyFeaturesItem = ({ src, alt, title, content }) => {
   const images = {
     frame: process.env.PUBLIC_URL + '/images/key-features/frame.png',
   };
 
   return (
-    <div key={k} className='key-features-item'>
+    <div className='key-features-item'>
       <img alt={alt} src={src} />
       <span>{title}</span>
       <div

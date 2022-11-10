@@ -1,6 +1,6 @@
 import { Container } from 'react-bootstrap';
-import { useTranslation } from 'react-i18next';
 import './mini-games.scss';
+import { useTranslation } from 'react-i18next';
 
 const MiniGames = ({ windowDimensions }) => {
   const { t } = useTranslation();
@@ -15,26 +15,37 @@ const MiniGames = ({ windowDimensions }) => {
 
   return (
     <div className='mini-games'>
-      <span className='title-main'>{t('explore.mini-games_title.lbl')}</span>
+      <span className='title-main' data-aos='fade-up'>
+        {t('miniGames.titleMain')}
+      </span>
+
       <Container>
-        <div className='mini-games-box'>
-          <div className='mini-games-item'>
+        <div
+          className='mini-games-box'
+          data-aos={windowDimensions.width > 576.5 ? 'fade-up' : ''}
+        >
+          <div
+            className='mini-games-item'
+            data-aos={windowDimensions.width > 576.5 ? '' : 'fade-up'}
+          >
             <img src={images.fillBlank} alt='fillBlank' />
-            <span className='title'>
-              {t('explore.mini-games_fill-in-blank.lbl')}
-            </span>
+            <span className='title'>{t('miniGames.blank')}</span>
           </div>
-          <div className='mini-games-item center'>
+
+          <div
+            className='mini-games-item center'
+            data-aos={windowDimensions.width > 576.5 ? '' : 'fade-up'}
+          >
             <img src={images.mutichoice} alt='mutichoice' />
-            <span className='title'>
-              {t('explore.mini-games_multiple-choice.lbl')}
-            </span>
+            <span className='title'>{t('miniGames.choice')}</span>
           </div>
-          <div className='mini-games-item'>
+
+          <div
+            className='mini-games-item'
+            data-aos={windowDimensions.width > 576.5 ? '' : 'fade-up'}
+          >
             <img src={images.dice} alt='dice' />
-            <span className='title'>
-              {t('explore.mini-games_arrange-word.lbl')}
-            </span>
+            <span className='title'>{t('miniGames.word')}</span>
           </div>
         </div>
       </Container>

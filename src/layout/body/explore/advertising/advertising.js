@@ -1,5 +1,5 @@
-import { useTranslation } from 'react-i18next';
 import './advertising.scss';
+import { useTranslation } from 'react-i18next';
 
 const Advertising = ({ windowDimensions }) => {
   const { t } = useTranslation();
@@ -12,8 +12,8 @@ const Advertising = ({ windowDimensions }) => {
 
   return (
     <div className='advertising'>
-      <span className='title-main'>
-        {t('explore.3d-billboard-advertising_title.lbl')}
+      <span className='title-main' data-aos='fade-up'>
+        {t('advertising.titleMain')}
       </span>
 
       <div
@@ -26,11 +26,21 @@ const Advertising = ({ windowDimensions }) => {
           })`,
         }}
       >
-        <span className='title title-1'>
-          “This merchandise is currently available at Gmarket.co.kr...”
+        <span
+          className='title title-1'
+          data-aos-anchor-placement='bottom-bottom'
+          data-aos='zoom-in'
+        >
+          {t('advertising.title1')}
         </span>
 
-        <span className='title title-2'>“How do I purchase this valise?”</span>
+        <span
+          className='title title-2'
+          data-aos-anchor-placement='bottom-bottom'
+          data-aos='zoom-in'
+        >
+          {t('advertising.title2')}
+        </span>
       </div>
     </div>
   );

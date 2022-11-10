@@ -1,6 +1,7 @@
 @import "src/styles/variables";
 
 .order-service{
+  overflow: hidden;
   width: 100%;
   height: fit-content;
   padding-bottom: 250px;
@@ -69,16 +70,17 @@
       &.food-2{
         right: 28vw;
         top: 13vw;
-        z-index: 1;
+        z-index: 2;
         @media #{$info-phone} {
           right: 19vw;
           top: 22vw;
         }
       }
       &.food-3{
+        position: relative;
         top: 0;
-        left: 50%;
-        transform: translate(-50%,0);
+        left: 0;
+        margin: auto;
         z-index: 3;
       }
       img{

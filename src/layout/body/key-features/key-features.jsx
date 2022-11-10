@@ -145,7 +145,7 @@ const KeyFeatures = ({ windowDimensions }) => {
           </ul>
         ) : (
           <>
-            <div className='content-wrapper'>
+            <div className='content-wrapper' data-aos='zoom-in-up'>
               <div className='content1'>
                 {keyFeatures.map((element, index) => (
                   <>

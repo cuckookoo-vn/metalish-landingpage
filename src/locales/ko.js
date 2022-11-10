@@ -106,53 +106,70 @@ const translationKO = {
   },
 
   explore: {
-    'explore.btn': "Let's explore Metalish with us!",
-    'metalish-tour_title.lbl': 'METALISH’S 순회',
-    'mini-games_title.lbl': '미니 게임',
-    'mini-games_fill-in-blank.lbl': '빈칸 채우기',
-    'mini-games_multiple-choice.lbl': '객관식',
-    'mini-games_arrange-word.lbl': '어휘 정리',
-    '3d-billboard-advertising_title.lbl': '3D 빌보드 광고',
-    'order-service_title.lbl': '주문 서비스',
-    'order-service_description.lbl':
-      '실주문하시 위하여 광고물과 상호 작용할 수 있습니다',
+    titleMain: '우리와 함께 Metalish를 탐험하러 갑시다!',
   },
-
+  tour: {
+    titleMain: 'METALISH’S 순회',
+  },
+  miniGames: {
+    titleMain: '미니 게임',
+    blank: '빈칸 채우기',
+    choice: '객관식',
+    word: '어휘 정리',
+  },
+  advertising: {
+    titleMain: '3D 빌보드 광고',
+    title1: `“This merchandise is currently available at Gmarket.co.kr...”`,
+    title2: `“How do I purchase this valise?”`,
+  },
+  orderService: {
+    titleMain: '주문 서비스',
+    titleDes: '실주문하시 위하여 광고물과 상호 작용할 수 있습니다',
+  },
   roadmap: {
-    'title.lbl': '로드 맵',
-    'aug-2022': {
-      'item-1.txt': 'Metalish 구상',
-      'item-2.txt': '리소스 정리 및 킥오프',
-      'item-3.txt': 'Metalish phase 1 개발',
-      'item-4.txt': 'Phase 1의 아트 디자인',
-      'item-5.txt': '앱 출시',
-      'item-6.txt': 'Phase 2 준비',
+    titleMain: '로드 맵',
+    title2022: {
+      month: 'AUG',
+      title1: 'Metalish 구상',
+      title2: '리소스 정리 및 킥오프',
+      title3: 'Metalish phase 1 개발',
+      title4: 'Phase 1의 아트 디자인',
+      title5: '앱 출시',
+      title6: 'Phase 2 준비',
     },
-    'feb-2023': {
-      'item-1.txt': '1차 버전 출시',
-      'item-2.txt': 'Phase 2의 아트 디자인',
-      'item-3.txt': 'Metalish phase 2 (metaverse)개발',
-      'item-4.txt': '서버 업그레이드 (유저 수 1,000만 명)',
-      'item-5.txt': '자본 투자 유치',
-      'item-6.txt': '앱에서 광고 실행',
-      'item-7.txt': 'Phase 3 준비',
+    title2023: {
+      month: 'FEB',
+      title1: '1차 버전 출시',
+      title2: 'Phase 2의 아트 디자인',
+      title3: 'Metalish phase 2 (metaverse)개발',
+      title4: '서버 업그레이드 (유저 수 1,000만 명)',
+      title5: '자본 투자 유치',
+      title6: '앱에서 광고 실행',
+      title7: 'Phase 3 준비',
     },
-
-    'aug-2023': {
-      'item-1.txt': '2차 버전 출시',
-      'item-2.txt': 'Phase 3의 아트 디자인',
-      'item-3.txt': 'Metalish phase 3개발',
-      'item-4.txt': 'AI 및 UI 업그레이드',
+    title2023Second: {
+      month: 'AUG',
+      title1: '2차 버전 출시',
+      title2: 'Phase 3의 아트 디자인',
+      title3: 'Metalish phase 3개발',
+      title4: 'AI 및 UI 업그레이드',
     },
-
-    'feb-2024': {
-      'item-1.txt': '3차 버전 출시',
-      'item-2.txt': '앱 출시 ( 메타버스)',
+    title2024: {
+      month: 'FEB',
+      title1: '3차 버전 출시',
+      title2: '앱 출시 ( 메타버스)',
     },
   },
 
-  'development-team': {
-    'title.lbl': '개발 팀',
+  developmentTeam: {
+    titleMain: '개발 팀',
+  },
+  
+  footer: {
+    titleMain: 'Get In Touch',
+    address: '82, Street No.6, Ward 10, Go Vap District, Ho Chi Minh City',
+    email: 'metalish@cuckookoo.vn',
+    phone: '0336111248',
   },
 };
 

@@ -15,10 +15,8 @@ const OrderService = ({ windowDimensions }) => {
 
   return (
     <div className='order-service'>
-      <span className='title-main'>{t('explore.order-service_title.lbl')}</span>
-      <span className='description'>
-        {t('explore.order-service_description.lbl')}
-      </span>
+      <span className='title-main'>{t('orderService.titleMain')}</span>
+      <span className='description'>{t('orderService.titleDes')}</span>
       <div className='order-service-box'>
         <div
           className='item-service book'

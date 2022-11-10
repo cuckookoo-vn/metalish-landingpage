@@ -1,5 +1,4 @@
 import './core-skills.styles.scss';
-import { Container } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 
 const CoreSkills = ({ windowDimensions }) => {
@@ -15,9 +14,9 @@ const CoreSkills = ({ windowDimensions }) => {
       className='core-skills'
       style={{ backgroundImage: `url(${images.bgKeyFeatures})` }}
     >
-      <span className='title-main'>{t('core-skills.title.lbl')}</span>
+      <span className='title-main' data-aos='fade-up'>{t('core-skills.title.lbl')}</span>
 
-      <div className='core-skills-box'>
+      <div className='core-skills-box' data-aos='fade-up'>
         <div
           className='core-skills-item listening'
           style={{ backgroundImage: `url(${images.frame})` }}

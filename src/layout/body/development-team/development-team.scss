@@ -1,6 +1,7 @@
 @import "src/styles/variables";
 .development-team{
-  //overflow: hidden;
+  overflow: hidden;
+  padding-bottom: 40px;
   width: 100%;
   background-color: rgba(0,0,0,0);
   @media #{$info-phone} {
@@ -42,12 +43,14 @@
           width: 50px;
         }
       }
+
       &.icon-next{
         left: -40px;
         @media #{$info-tablet-1399} {
           left: -20px;
         }
       }
+
       &.icon-pre{
         right: -40px;
         @media #{$info-tablet-1399} {

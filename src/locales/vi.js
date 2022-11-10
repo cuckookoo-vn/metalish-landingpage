@@ -105,55 +105,70 @@ const translationVI = {
       'I gained the confidence to use English in my daily life. With Metalish, I can meet and interact with others who have the same interest with me.',
   },
 
-  explore: {
-    'explore.btn': "Let's explore Metalish with us!",
-    'metalish-tour_title.lbl': "METALISH'S TOUR",
-    'mini-games_title.lbl': 'MINI GAMES',
-    'mini-games_fill-in-blank.lbl': 'Fill in blank',
-    'mini-games_multiple-choice.lbl': 'Multiple choice',
-    'mini-games_arrange-word.lbl': 'Arrange word',
-    '3d-billboard-advertising_title.lbl': '3D BILLBOARD ADVERTISING',
-    'order-service_title.lbl': 'ORDER SERVICE',
-    'order-service_description.lbl':
-      'Interact with the advertisement to make a real order',
+  explore:{
+    titleMain: "Let's explore Metalish with us!"
   },
-
-  roadmap: {
-    'title.lbl': 'ROADMAP',
-    'aug-2022': {
-      'item-1.txt': 'Ideas for Metalish',
-      'item-2.txt': 'Arrange resources and kick-off',
-      'item-3.txt': 'Develop Metalish phase 1',
-      'item-4.txt': 'Design art for phase 1',
-      'item-5.txt': 'Release website',
-      'item-6.txt': 'Prepare for phase 2',
-    },
-    'feb-2023': {
-      'item-1.txt': 'Release 1st version',
-      'item-2.txt': 'Design art for phase 2',
-      'item-3.txt': 'Develop Metalish phase 2 (metaverse)',
-      'item-4.txt': 'Upgrade server (10M+ users)',
-      'item-5.txt': 'Call for capital investment',
-      'item-6.txt': 'Run advertising in app',
-      'item-7.txt': 'Prepare for phase 3',
-    },
-
-    'aug-2023': {
-      'item-1.txt': 'Release 2nd version',
-      'item-2.txt': 'Design art for phase 3',
-      'item-3.txt': 'Develop Metalish phase 3',
-      'item-4.txt': 'Upgrade AI and UI',
-    },
-
-    'feb-2024': {
-      'item-1.txt': 'Release 3rd version',
-      'item-2.txt': 'Go-live app (metaverse)',
-    },
+  tour: {
+    titleMain: "METALISH’S TOUR"
   },
-
-  'development-team': {
-    'title.lbl': 'DEVELOPMENT TEAM',
+  miniGames:{
+    titleMain: "MINI GAMES",
+    blank: "Fill in blank",
+    choice: "Multiple choice",
+    word: "Arrange word"
   },
+  advertising:{
+    titleMain: "3D BILLBOARD ADVERTISING",
+    title1: `“This merchandise is currently available at Gmarket.co.kr...”`,
+    title2: `“How do I purchase this valise?”`
+  },
+  orderService:{
+    titleMain: "ORDER SERVICE",
+    titleDes: "Interact with the advertisement to make a real order"
+  },
+  roadmap:{
+    titleMain:"ROADMAP",
+    title2022:{
+      month: "AUG",
+      title1: "Ideas for Metalish",
+      title2: "Arrange resources and kick-off",
+      title3: "Develop Metalish phase 1",
+      title4: "Design art for phase 1",
+      title5: "Release website",
+      title6: "Prepare for phase 2",
+    },
+    title2023:{
+      month: "FEB",
+      title1: "Release 1st version",
+      title2: "Design art for phase 2",
+      title3: "Develop Metalish phase 2 (metaverse)",
+      title4: "Upgrade server (10M+ users)",
+      title5: "Call for capital investment",
+      title6: "Run advertising in app",
+      title7: "Prepare for phase 3",
+    },
+    title2023Second:{
+      month: "AUG",
+      title1: "Release 2nd version",
+      title2: "Design art for phase 3",
+      title3: "Develop Metalish phase 3",
+      title4: "Upgrade AI and UI",
+    },
+    title2024:{
+      month: "FEB",
+      title1: "Release 3rd version",
+      title2: "Go-live app (metaverse)",
+    }
+  },
+  developmentTeam:{
+    titleMain:"DEVELOPMENT TEAM"
+  },
+  footer:{
+    titleMain: "Get In Touch",
+    address: "82, Street No.6, Ward 10, Go Vap District, Ho Chi Minh City",
+    email: "metalish@cuckookoo.vn",
+    phone: "0336111248"
+  }
 };
 
 export default translationVI;

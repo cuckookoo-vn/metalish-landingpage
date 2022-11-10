@@ -7,31 +7,37 @@ import {
   faEnvelope,
   faPhone,
 } from '@fortawesome/free-solid-svg-icons';
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
   const images = {
     chainos: process.env.PUBLIC_URL + '/images/footer/chainos.png',
     cuckookoo: process.env.PUBLIC_URL + '/images/footer/cuckookoo.png',
   };
+  const { t } = useTranslation();
 
   return (
     <div className='footer'>
       <Container>
-        <div className='logo'>
+        <div data-aos='fade-right' className='logo'>
           <div className='logo-cuckookoo'>
             <a href=''>
               <img src={images.cuckookoo} alt='logo-cuckookoo' />
             </a>
           </div>
 
-          <div className='logo-chainos'>
+          <div data-aos='fade-left' className='logo-chainos'>
             <a href=''>
               <img src={images.chainos} alt='logo-chainos' />
             </a>
           </div>
         </div>
 
-        <div className='contract'>
+        <div
+          className='contract'
+          data-aos-anchor-placement='top-bottom'
+          data-aos='fade-up'
+        >
           <span className='title-main-footer'>Get In Touch</span>
 
           <div className='title-box'>
