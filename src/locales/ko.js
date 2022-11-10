@@ -6,6 +6,10 @@ const translationKO = {
     'download.btn': 'DOWNLOAD',
   },
 
+  modalDownload: {
+    titleMain: '다운로드 디바이스를 선택하세요',
+  },
+
   overview: {
     'title.lbl': 'METALISH',
     'content_1.txt':
@@ -164,7 +168,7 @@ const translationKO = {
   developmentTeam: {
     titleMain: '개발 팀',
   },
-  
+
   footer: {
     titleMain: 'Get In Touch',
     address: '82, Street No.6, Ward 10, Go Vap District, Ho Chi Minh City',

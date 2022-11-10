@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './header.styles.scss';
 import '../../i18n';
 import { useTranslation } from 'react-i18next';
+import ModalDownload from '../../components/modal-download/modal-download';
 
 const Header = () => {
   const images = {
@@ -127,6 +128,9 @@ const Header = () => {
           {/* Dropdown */}
         </>
       </div>
+
+      <ModalDownload show={show} setShow={setShow} setStatusButton={setStatusButton}/>
+
     </>
   );
 };

@@ -6,6 +6,10 @@ const translationEN = {
     'download.btn': 'DOWNLOAD',
   },
 
+  modalDownload: {
+    titleMain: 'Select device to download',
+  },
+
   overview: {
     'title.lbl': 'METALISH',
     'content_1.txt':

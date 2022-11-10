@@ -6,6 +6,10 @@ const translationVI = {
     'download.btn': 'DOWNLOAD',
   },
 
+  modalDownload: {
+    titleMain: 'Chọn thiết bị tải về',
+  },
+
   overview: {
     'title.lbl': 'METALISH',
     'content_1.txt':
@@ -105,70 +109,70 @@ const translationVI = {
       'I gained the confidence to use English in my daily life. With Metalish, I can meet and interact with others who have the same interest with me.',
   },
 
-  explore:{
-    titleMain: "Let's explore Metalish with us!"
+  explore: {
+    titleMain: "Let's explore Metalish with us!",
   },
   tour: {
-    titleMain: "METALISH’S TOUR"
+    titleMain: 'METALISH’S TOUR',
   },
-  miniGames:{
-    titleMain: "MINI GAMES",
-    blank: "Fill in blank",
-    choice: "Multiple choice",
-    word: "Arrange word"
+  miniGames: {
+    titleMain: 'MINI GAMES',
+    blank: 'Fill in blank',
+    choice: 'Multiple choice',
+    word: 'Arrange word',
   },
-  advertising:{
-    titleMain: "3D BILLBOARD ADVERTISING",
+  advertising: {
+    titleMain: '3D BILLBOARD ADVERTISING',
     title1: `“This merchandise is currently available at Gmarket.co.kr...”`,
-    title2: `“How do I purchase this valise?”`
+    title2: `“How do I purchase this valise?”`,
   },
-  orderService:{
-    titleMain: "ORDER SERVICE",
-    titleDes: "Interact with the advertisement to make a real order"
+  orderService: {
+    titleMain: 'ORDER SERVICE',
+    titleDes: 'Interact with the advertisement to make a real order',
   },
-  roadmap:{
-    titleMain:"ROADMAP",
-    title2022:{
-      month: "AUG",
-      title1: "Ideas for Metalish",
-      title2: "Arrange resources and kick-off",
-      title3: "Develop Metalish phase 1",
-      title4: "Design art for phase 1",
-      title5: "Release website",
-      title6: "Prepare for phase 2",
+  roadmap: {
+    titleMain: 'ROADMAP',
+    title2022: {
+      month: 'AUG',
+      title1: 'Ideas for Metalish',
+      title2: 'Arrange resources and kick-off',
+      title3: 'Develop Metalish phase 1',
+      title4: 'Design art for phase 1',
+      title5: 'Release website',
+      title6: 'Prepare for phase 2',
     },
-    title2023:{
-      month: "FEB",
-      title1: "Release 1st version",
-      title2: "Design art for phase 2",
-      title3: "Develop Metalish phase 2 (metaverse)",
-      title4: "Upgrade server (10M+ users)",
-      title5: "Call for capital investment",
-      title6: "Run advertising in app",
-      title7: "Prepare for phase 3",
+    title2023: {
+      month: 'FEB',
+      title1: 'Release 1st version',
+      title2: 'Design art for phase 2',
+      title3: 'Develop Metalish phase 2 (metaverse)',
+      title4: 'Upgrade server (10M+ users)',
+      title5: 'Call for capital investment',
+      title6: 'Run advertising in app',
+      title7: 'Prepare for phase 3',
     },
-    title2023Second:{
-      month: "AUG",
-      title1: "Release 2nd version",
-      title2: "Design art for phase 3",
-      title3: "Develop Metalish phase 3",
-      title4: "Upgrade AI and UI",
+    title2023Second: {
+      month: 'AUG',
+      title1: 'Release 2nd version',
+      title2: 'Design art for phase 3',
+      title3: 'Develop Metalish phase 3',
+      title4: 'Upgrade AI and UI',
     },
-    title2024:{
-      month: "FEB",
-      title1: "Release 3rd version",
-      title2: "Go-live app (metaverse)",
-    }
+    title2024: {
+      month: 'FEB',
+      title1: 'Release 3rd version',
+      title2: 'Go-live app (metaverse)',
+    },
   },
-  developmentTeam:{
-    titleMain:"DEVELOPMENT TEAM"
+  developmentTeam: {
+    titleMain: 'DEVELOPMENT TEAM',
   },
-  footer:{
-    titleMain: "Get In Touch",
-    address: "82, Street No.6, Ward 10, Go Vap District, Ho Chi Minh City",
-    email: "metalish@cuckookoo.vn",
-    phone: "0336111248"
-  }
+  footer: {
+    titleMain: 'Get In Touch',
+    address: '82, Street No.6, Ward 10, Go Vap District, Ho Chi Minh City',
+    email: 'metalish@cuckookoo.vn',
+    phone: '0336111248',
+  },
 };
 
 export default translationVI;

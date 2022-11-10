@@ -83,7 +83,7 @@ const Feedback = ({ windowDimensions }) => {
 
   return (
     <div className='feedback'>
-      <span className='title-main'>{t('feedback.title.lbl')}</span>
+      <span className='title-main' data-aos='fade-up'>{t('feedback.title.lbl')}</span>
 
       <Container>
         <div className='box-slide' data-aos='fade-up'>
