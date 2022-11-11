@@ -29,7 +29,7 @@ const Overview = ({ windowDimensions }) => {
             <p>{t('overview.content_5.txt')}</p>
           </div>
           <div className='model' data-aos='fade-up'>
-            <OverviewModel />
+            {/* <OverviewModel /> */}
           </div>
         </>
       </Container>

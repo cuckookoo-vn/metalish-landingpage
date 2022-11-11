@@ -3,7 +3,7 @@ const translationKO = {
     'option_en.lbl': 'English',
     'option_ko.lbl': '한국어',
     'option_vi.lbl': 'Tiếng Việt',
-    'download.btn': 'DOWNLOAD',
+    'download.btn': '다운로드',
   },
 
   modalDownload: {
@@ -19,7 +19,7 @@ const translationKO = {
     'content_3.txt':
       '게다가, Metalish는 교육의 질을 향상시키기 위해 항상 사용자 피드백을 듣습니다. 효과적인 피드백들을 통해서 사용자가 본인의 학습에 대해서 반영하게 되기도 하고 더 효율적인 학습 프로섹을 조절할 수 있기도 합니다.',
     'content_4.txt':
-      '또한, Metalish는 사용자와 친한공간을 만드는 사명을 띱니다. 사용자가 본인의 교실을 꾸밀 수 있을 뿐먼 아니라 친구들에게 나의 방에 참가하려 초대할 수도 있습니다. 가장 좋은 사용감을 제공할 수 있는 것을 기대합니다.',
+      '또한, Metalish는 사용자와 친한공간을 만드는 사명을 띱니다. 사용자가 본인의 교실을 꾸밀 수 있을 뿐만 아니라 친구들에게 나의 방에 참가하려 초대할 수도 있습니다. 가장 좋은 사용감을 제공할 수 있는 것을 기대합니다.',
     'content_5.txt': '본인의 영어 세계를 탐험하기 시작합시다!',
   },
   'key-features': {
@@ -66,7 +66,7 @@ const translationKO = {
 
     'review_title.lbl': '피드백',
     'review_content.txt':
-      '사용자는 앱, 코스 및 강사에 대한 효과적인 피드백을 남기면 보상을 받게 될겁니다.',
+      '사용자는 앱, 코스 및 강사에 대한 효과적인 피드백을 남기면 보상을 받게 될 겁니다.',
   },
 
   'core-skills': {
@@ -113,7 +113,7 @@ const translationKO = {
     titleMain: '우리와 함께 Metalish를 탐험하러 갑시다!',
   },
   tour: {
-    titleMain: 'METALISH’S 순회',
+    titleMain: 'METALISH의 순화',
   },
   miniGames: {
     titleMain: '미니 게임',
@@ -128,7 +128,7 @@ const translationKO = {
   },
   orderService: {
     titleMain: '주문 서비스',
-    titleDes: '실주문하시 위하여 광고물과 상호 작용할 수 있습니다',
+    titleDes: '실주문하기 위하여 광고물과 상호 작용할 수 있습니다',
   },
   roadmap: {
     titleMain: '로드 맵',

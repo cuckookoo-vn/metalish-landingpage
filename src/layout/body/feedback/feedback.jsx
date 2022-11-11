@@ -38,13 +38,13 @@ const Feedback = ({ windowDimensions }) => {
       summaryComment: `${t('feedback.user-2-summary-comment.lbl')}`,
       comment: `${t('feedback.user-2-full-comment.txt')}`,
     },
-    {
-      name: 'User',
-      grade: `${t('feedback.user-1-description.txt')}`,
-      avatar: images.avatar1,
-      summaryComment: `${t('feedback.user-1-summary-comment.lbl')}`,
-      comment: `${t('feedback.user-1-full-comment.txt')}`,
-    },
+    // {
+    //   name: 'User',
+    //   grade: `${t('feedback.user-1-description.txt')}`,
+    //   avatar: images.avatar1,
+    //   summaryComment: `${t('feedback.user-1-summary-comment.lbl')}`,
+    //   comment: `${t('feedback.user-1-full-comment.txt')}`,
+    // },
   ];
 
   // check width set data slide
