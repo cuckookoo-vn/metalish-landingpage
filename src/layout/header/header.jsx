@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './header.styles.scss';
 import '../../i18n';
 import { useTranslation } from 'react-i18next';
+import ModalDownload from '../../components/modal-download/modal-download';
 
 const Header = () => {
   const images = {
-    logoHeader: process.env.PUBLIC_URL + '/images/header/logo-ckk-header.png',
+    logoHeader: process.env.PUBLIC_URL + '/images/header/logo.png',
     downloadButton: process.env.PUBLIC_URL + '/images/header/download.png',
     iconSelect:
       process.env.PUBLIC_URL + '/images/header/icon-select-header.png',
@@ -19,6 +20,9 @@ const Header = () => {
   const [statusButton, setStatusButton] = useState(true);
 
   const [flag, setFlag] = useState(images.flagEngland);
+
+  const [bgColor, setBgColor] = useState('');
+  const [logoDisplay, setLogoDisplay] = useState('');
 
   const [show, setShow] = useState(false);
 
@@ -49,14 +53,28 @@ const Header = () => {
     setStatusLang(false);
   };
 
+  useEffect(() => {
+    const onScroll = () => {
+      if (
+        window.pageYOffset >
+        document.getElementById('video-introduce').offsetHeight
+      ) {
+        setBgColor('#020220');
+        setLogoDisplay(`${process.env.PUBLIC_URL}/images/logo.png`);
+      } else {
+        setBgColor('');
+        setLogoDisplay('');
+      }
+    };
+    window.removeEventListener('scroll', onScroll);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
   return (
     <>
-      <div className='header'>
-        <img
-          className='logo'
-          src={`${process.env.PUBLIC_URL}/images/logo.png`}
-          alt=''
-        />
+      <div className='header' style={{ backgroundColor: bgColor }}>
+        <img className='logo' src={logoDisplay} alt='' />
         <>
           {/* Download */}
           <div
@@ -127,6 +145,12 @@ const Header = () => {
           {/* Dropdown */}
         </>
       </div>
+
+      <ModalDownload
+        show={show}
+        setShow={setShow}
+        setStatusButton={setStatusButton}
+      />
     </>
   );
 };

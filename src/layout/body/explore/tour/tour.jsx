@@ -1,138 +1,142 @@
 import './tour.scss';
-import {useEffect} from "react";
-import Carousel5Enum from "../../../../enum/carousel-slide-animation/carousel5.enum";
-import Carousel7Enum from "../../../../enum/carousel-slide-animation/carousel7.enum";
+import { useEffect } from 'react';
+import Carousel5Enum from '../../../../enum/carousel-slide-animation/carousel5.enum';
+import Carousel7Enum from '../../../../enum/carousel-slide-animation/carousel7.enum';
+import { useTranslation } from 'react-i18next';
 
-const Tour = ({windowDimensions}) => {
+const Tour = ({ windowDimensions }) => {
+  const { t } = useTranslation();
+
   const images = [
-    {slide: process.env.PUBLIC_URL + '/images/explore/tour/1.png'},
-    {slide: process.env.PUBLIC_URL + '/images/explore/tour/2.png'},
-    {slide: process.env.PUBLIC_URL + '/images/explore/tour/3.png'},
-    {slide: process.env.PUBLIC_URL + '/images/explore/tour/4.png'},
-    {slide: process.env.PUBLIC_URL + '/images/explore/tour/5.png'},
-]
+    { slide: process.env.PUBLIC_URL + '/images/explore/tour/1.png' },
+    { slide: process.env.PUBLIC_URL + '/images/explore/tour/2.png' },
+    { slide: process.env.PUBLIC_URL + '/images/explore/tour/3.png' },
+    { slide: process.env.PUBLIC_URL + '/images/explore/tour/4.png' },
+    { slide: process.env.PUBLIC_URL + '/images/explore/tour/5.png' },
+  ];
 
   const imageFrames = {
     next: process.env.PUBLIC_URL + '/images/development-team/right-button.png',
     pre: process.env.PUBLIC_URL + '/images/development-team/left-button.png',
     bgSlide: process.env.PUBLIC_URL + '/images/explore/tour/mockup.png',
-  }
+  };
 
   const slideCase = images.length === 5 ? Carousel5Enum : Carousel7Enum;
   let currentSlide = 0;
   let timeInterval = 6000;
 
-  const slider = () =>{
-    const elementTour = document.getElementById("tour");
+  const slider = () => {
+    const elementTour = document.getElementById('tour');
     const carouselSlides = elementTour.querySelectorAll('.slide'),
-          count_carouselSlides = carouselSlides.length - 1,
-          btnPrev = elementTour.querySelector('.prev'),
-          btnNext = elementTour.querySelector('.next');
+      count_carouselSlides = carouselSlides.length - 1,
+      btnPrev = elementTour.querySelector('.prev'),
+      btnNext = elementTour.querySelector('.next');
 
     let timeout = 400;
+    let statusTouchSlide = true;
 
     // disabled button
-    const disabledButton = () =>{
-      btnPrev.classList.add("disabled");
-      btnNext.classList.add("disabled");
-      setTimeout(() =>{
-        btnNext.classList.remove("disabled");
-        btnPrev.classList.remove("disabled");
-      },timeout);
-    }
+    const disabledButton = () => {
+      btnPrev.classList.add('disabled');
+      btnNext.classList.add('disabled');
+      statusTouchSlide = false;
+      setTimeout(() => {
+        btnNext.classList.remove('disabled');
+        btnPrev.classList.remove('disabled');
+        statusTouchSlide = true;
+      }, timeout);
+    };
 
     // add style animation
-    const addStyle = (element, index, slides) =>{
-      if(slideCase[slides]){
+    const addStyle = (element, index, slides) => {
+      if (slideCase[slides]) {
         element.style.transform = `scale(${slideCase[slides][index].scale}) translateX(${slideCase[slides][index].translateX}%)`;
         element.style.opacity = slideCase[slides][index].opacity;
         element.style.zIndex = slideCase[slides][index].zIndex;
       }
-    }
+    };
 
     // animation slide
-    const changeSlide = (slides, type) =>{
-        carouselSlides.forEach((element, index)=>{
-            addStyle(element, index, slides);
-        })
+    const changeSlide = (slides, type) => {
+      carouselSlides.forEach((element, index) => {
+        addStyle(element, index, slides);
+      });
 
       const carouselPagination = document.querySelectorAll('.pagination-item');
-      carouselPagination.forEach((paginationItem)=>{
-        paginationItem.classList.remove("active");
-      })
-      carouselPagination[slides].classList.add("active");
-
+      carouselPagination.forEach((paginationItem) => {
+        paginationItem.classList.remove('active');
+      });
+      carouselPagination[slides].classList.add('active');
     };
 
     // add pagination
-    const addPagination = () =>{
-      const pagination = document.getElementById("pagination");
-      let paginationItem = document.getElementsByClassName("pagination-item").length;
-      if(!paginationItem){
+    const addPagination = () => {
+      const pagination = document.getElementById('pagination');
+      let paginationItem =
+        document.getElementsByClassName('pagination-item').length;
+      if (!paginationItem) {
         for (let i = 0; i <= count_carouselSlides; i++) {
-          pagination.innerHTML+= `<div class="pagination-item"></div>`;
+          pagination.innerHTML += `<div class="pagination-item"></div>`;
         }
       }
-    }
+    };
     addPagination();
 
     // pagination click
-    const elementPagination = document.getElementsByClassName('pagination-item');
-    for(let i = 0; i < elementPagination.length; i++){
-      elementPagination[i].addEventListener('click',() =>{
+    const elementPagination =
+      document.getElementsByClassName('pagination-item');
+    for (let i = 0; i < elementPagination.length; i++) {
+      elementPagination[i].addEventListener('click', () => {
         currentSlide = i;
-        changeSlide(i, "pagiClick");
+        changeSlide(i, 'pagiClick');
       });
     }
 
     // click next
-    btnNext.addEventListener('click', () =>{
-      clickNext()
+    btnNext.addEventListener('click', () => {
+      clickNext();
     });
-    const clickNext = () =>{
+    const clickNext = () => {
       currentSlide++;
-      if(currentSlide === count_carouselSlides + 1){
+      if (currentSlide === count_carouselSlides + 1) {
         currentSlide = 0;
       }
-      changeSlide(currentSlide,'next');
+      changeSlide(currentSlide, 'next');
 
       disabledButton();
-    }
+    };
 
     // click pre
     btnPrev.addEventListener('click', () => {
       clickPrev();
     });
-    const clickPrev = () =>{
+    const clickPrev = () => {
       currentSlide--;
-      if(currentSlide === -1){
+      if (currentSlide === -1) {
         currentSlide = carouselSlides.length - 1;
       }
-      changeSlide(currentSlide,'pre');
+      changeSlide(currentSlide, 'pre');
 
       disabledButton();
-    }
-    changeSlide(currentSlide,'pre');
+    };
+    changeSlide(currentSlide, 'pre');
 
     // auto play
     let intervalID = null;
     const intervalManager = (flag) => {
-      if(flag){
-        intervalID =  setInterval(clickNext, timeInterval);
-      }else{
+      if (flag) {
+        intervalID = setInterval(clickNext, timeInterval);
+      } else {
         clearInterval(intervalID);
       }
-    }
+    };
     intervalManager(true);
 
     // move mouse slide
-    const slideClickMove = () =>{
+    const slideClickMove = () => {
       const items = document.getElementById('slider-tour'),
-            slideBox = document.getElementById('slider-box-tour'),
-            tourSlideLeft = document.getElementById('tour-slide-left'),
-            tourSlideRight = document.getElementById('tour-slide-right');
-      let posInitial,
-          posFinal;
+        slideBox = document.getElementById('slider-box-tour');
+      let posInitial, posFinal;
 
       // Mouse and Touch events
       items.onmousedown = dragStart;
@@ -153,66 +157,88 @@ const Tour = ({windowDimensions}) => {
         intervalManager(true);
       }
 
-      function dragStart (e) {
-        e = e || window.event;
-        e.preventDefault();
-        if(e.clientX){
-          posInitial = e.clientX;
-        }else {
-          posInitial = e.touches[0].clientX;
+      function dragStart(e) {
+        if (statusTouchSlide) {
+          e = e || window.event;
+          e.preventDefault();
+          if (e.clientX) {
+            posInitial = e.clientX;
+          } else {
+            posInitial = e.touches[0].clientX;
+          }
+          items.onmouseup = dragEnd;
         }
-        items.onmouseup = dragEnd;
       }
 
-      function dragEnd (e) {
-        if(e.clientX){
+      function dragEnd(e) {
+        if (e.clientX) {
           posFinal = e.clientX;
-        }else {
+        } else {
           posFinal = e.changedTouches[0].clientX;
         }
         let widthElement = items.offsetWidth;
 
-        if(posFinal >= posInitial){
-          let percent = (posFinal - posInitial)/widthElement*100;
-          if(percent > 12){
+        if (posFinal >= posInitial) {
+          let percent = ((posFinal - posInitial) / widthElement) * 100;
+          if (percent > 12) {
             clickPrev();
           }
-        }else {
-          let percent = (posInitial -posFinal)/widthElement*100;
-          if(percent > 12){
+        } else {
+          let percent = ((posInitial - posFinal) / widthElement) * 100;
+          if (percent > 12) {
             clickNext();
           }
         }
+
+        disabledButton();
+
         document.onmouseup = null;
         document.onmousemove = null;
       }
-    }
+    };
 
-    slideClickMove()
+    slideClickMove();
+  };
 
-  }
-
-  useEffect(()=>{
+  useEffect(() => {
     slider();
-  },[]);
+  }, []);
 
   return (
-      <div className="tour" id="tour">
-        <div className="title-main">METALISH’S TOUR</div>
-        <div className="slider-box" id="slider-box-tour">
-          <div className="slider" id="slider-tour">
-            {images.map((elements,index) =>
-                <div className="slide" key={index}>
-                  <img src={elements.slide} alt="Photo"/>
-                </div>
-            )}
-            <img className="bg-phone" src={imageFrames.bgSlide} alt="bg-phone"/>
-          </div>
-          <div className="pagination" id="pagination"></div>
-          <img id="tour-slide-left" className="prev button-slide" src={imageFrames.pre} alt="pre"/>
-          <img id="tour-slide-right" className="next button-slide" src={imageFrames.next} alt="next"/>
-        </div>
+    <div className='tour' id='tour'>
+      <div data-aos='fade-up' className='title-main'>
+        {t('tour.titleMain')}
       </div>
+
+      <div data-aos='fade-up' className='slider-box' id='slider-box-tour'>
+        <div className='slider' id='slider-tour'>
+          {images.map((elements, index) => (
+            <div className='slide' key={index}>
+              <img src={elements.slide} alt='Photo' />
+            </div>
+          ))}
+          <img className='bg-phone' src={imageFrames.bgSlide} alt='bg-phone' />
+        </div>
+
+        <div className='pagination' id='pagination'></div>
+
+        <img
+          id='tour-slide-left'
+          data-aos='fade-right'
+          className='prev button-slide'
+          src={imageFrames.pre}
+          alt='pre'
+        />
+
+        <img
+          data-aos='fade-left'
+          id='tour-slide-right'
+          className='next button-slide'
+          src={imageFrames.next}
+          alt='next'
+        />
+      </div>
+    </div>
   );
 };
 

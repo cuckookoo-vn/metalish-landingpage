@@ -8,10 +8,13 @@ import { Pagination, Navigation } from 'swiper';
 import OurMethodsItem from './our-methods-item/our-methods-item';
 
 const OurMethods = ({ windowDimensions }) => {
+  // translation
+  const { t } = useTranslation();
+
   const images = {
     next: process.env.PUBLIC_URL + '/images/our-methods/right-button.png',
     pre: process.env.PUBLIC_URL + '/images/our-methods/left-button.png',
-    classType: process.env.PUBLIC_URL + '/images/our-methods/2-class-type.png',
+    classType: process.env.PUBLIC_URL + '/images/our-methods/2-type.png',
     cooperation: process.env.PUBLIC_URL + '/images/our-methods/cooperation.png',
     curriculum: process.env.PUBLIC_URL + '/images/our-methods/curriculum.png',
   };
@@ -31,10 +34,35 @@ const OurMethods = ({ windowDimensions }) => {
     },
   ];
 
-  useEffect(() => {}, []);
+  // check width set data slide
+  const checkWidthWindowSetSlideData = () => {
+    let slideDataTemp = {
+      slidesPerView: 1,
+      spaceBetween: 15,
+      slidesPerGroup: 1,
+    };
 
-  // translation
-  const { t } = useTranslation();
+    if (windowDimensions.width > 1399.5) {
+      slideDataTemp.slidesPerView = 1;
+      slideDataTemp.spaceBetween = 15;
+      slideDataTemp.slidesPerGroup = 1;
+    } else if (windowDimensions.width > 991.5) {
+      slideDataTemp.slidesPerView = 1;
+      slideDataTemp.spaceBetween = 15;
+      slideDataTemp.slidesPerGroup = 1;
+    } else {
+      slideDataTemp.slidesPerView = 1;
+      slideDataTemp.spaceBetween = 15;
+      slideDataTemp.slidesPerGroup = 1;
+    }
+    return slideDataTemp;
+  };
+
+  const [slideData, setSlideData] = useState(checkWidthWindowSetSlideData);
+
+  useEffect(() => {
+    setSlideData(checkWidthWindowSetSlideData); // eslint-disable-next-line
+  }, [windowDimensions.width]);
 
   // button slide
   const prevRef = useRef(null);
@@ -42,18 +70,16 @@ const OurMethods = ({ windowDimensions }) => {
 
   return (
     <div className='our-methods'>
-      <span className='title-main'>{t('our-methods.title.lbl')}</span>
+      <span className='title-main' data-aos='fade-up'>
+        {t('our-methods.title.lbl')}
+      </span>
 
       <Container>
-        <div className='box-slide'>
+        <div className='box-slide' data-aos='fade-up'>
           <Swiper
-            slidesPerView={1}
-            slidesPerGroup={1}
-            // autoplay={{
-            //   delay: 6000,
-            //   disableOnInteraction: false,
-            //   pauseOnMouseEnter: true
-            // }}
+            slidesPerView={slideData.slidesPerView}
+            spaceBetween={slideData.spaceBetween}
+            slidesPerGroup={slideData.slidesPerGroup}
             preventClicks={true}
             loop={true}
             loopFillGroupWithBlank={false}
@@ -70,17 +96,25 @@ const OurMethods = ({ windowDimensions }) => {
               swiper.navigation.update();
             }}
           >
-            <div className='box-member'>
+            <div className='box-our-methods'>
               {methods.map((element, index) => (
                 <SwiperSlide key={index}>
-                  <OurMethodsItem image={element.frame} type={element.type} />
+                  <OurMethodsItem src={element.frame} type={element.type} />
                 </SwiperSlide>
               ))}
             </div>
-            <div ref={prevRef} className='icon-slide icon-next hidden-mobile'>
+            <div
+              ref={prevRef}
+              data-aos='fade-right'
+              className='icon-slide icon-next hidden-mobile'
+            >
               <img className='icon-next' src={images.pre} alt='pre' />
             </div>
-            <div ref={nextRef} className='icon-slide icon-pre hidden-mobile'>
+            <div
+              ref={nextRef}
+              data-aos='fade-left'
+              className='icon-slide icon-pre hidden-mobile'
+            >
               <img src={images.next} alt='next' />
             </div>
           </Swiper>
