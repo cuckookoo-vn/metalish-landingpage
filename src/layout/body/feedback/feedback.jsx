@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import './feedback.styles.scss';
 import { Container } from 'react-bootstrap';
-import DevelopmentTeamMember from '../../../components/development-team-member/development-team-member';
 import { useTranslation } from 'react-i18next';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -26,29 +25,25 @@ const Feedback = ({ windowDimensions }) => {
 
   const comments = [
     {
-      name: 'Min Nguyen',
-      grade: `${t('feedback.user-description-title.txt')}`,
+      name: `${t('feedback.user-1-name.txt')}`,
+      grade: `${t('feedback.user-1-description.txt')}`,
       avatar: images.avatar1,
-      summaryComment: `${t('feedback.user-summary-comment.lbl')}`,
-      comment: `${t('feedback.user-full-comment.txt')}`,
+      summaryComment: `${t('feedback.user-1-summary-comment.lbl')}`,
+      comment: `${t('feedback.user-1-full-comment.txt')}`,
     },
     {
-      name: 'Jin Nguyen',
-      // grade: `${t('feedback.user-description-title.txt')}`,
-      grade: '12th grade student',
+      name: `${t('feedback.user-2-name.txt')}`,
+      grade: `${t('feedback.user-2-description.txt')}`,
       avatar: images.avatar2,
-      // summaryComment: `${t('feedback.user-summary-comment.lbl')}`,
-      summaryComment: 'Interesting, good experience',
-      comment:
-        'I gained the confidence to use English in my daily life. With Metalish, I can meet and interact with others who have the same interest with me.',
-      // comment: `${t('feedback.user-full-comment.txt')}`,
+      summaryComment: `${t('feedback.user-2-summary-comment.lbl')}`,
+      comment: `${t('feedback.user-2-full-comment.txt')}`,
     },
     {
       name: 'User',
-      grade: `${t('feedback.user-description-title.txt')}`,
+      grade: `${t('feedback.user-1-description.txt')}`,
       avatar: images.avatar1,
-      summaryComment: `${t('feedback.user-summary-comment.lbl')}`,
-      comment: `${t('feedback.user-full-comment.txt')}`,
+      summaryComment: `${t('feedback.user-1-summary-comment.lbl')}`,
+      comment: `${t('feedback.user-1-full-comment.txt')}`,
     },
   ];
 
@@ -65,13 +60,13 @@ const Feedback = ({ windowDimensions }) => {
       slideDataTemp.spaceBetween = 15;
       slideDataTemp.slidesPerGroup = 2;
     } else if (windowDimensions.width > 991.5) {
-      slideDataTemp.slidesPerView = 3;
+      slideDataTemp.slidesPerView = 1;
       slideDataTemp.spaceBetween = 15;
-      slideDataTemp.slidesPerGroup = 3;
+      slideDataTemp.slidesPerGroup = 1;
     } else {
-      slideDataTemp.slidesPerView = 2;
+      slideDataTemp.slidesPerView = 1;
       slideDataTemp.spaceBetween = 15;
-      slideDataTemp.slidesPerGroup = 2;
+      slideDataTemp.slidesPerGroup = 1;
     }
     return slideDataTemp;
   };
@@ -79,7 +74,7 @@ const Feedback = ({ windowDimensions }) => {
   const [slideData, setSlideData] = useState(checkWidthWindowSetSlideData);
 
   useEffect(() => {
-    setSlideData(checkWidthWindowSetSlideData);
+    setSlideData(checkWidthWindowSetSlideData); // eslint-disable-next-line
   }, [windowDimensions.width]);
 
   // button slide
@@ -88,22 +83,14 @@ const Feedback = ({ windowDimensions }) => {
 
   return (
     <div className='feedback'>
-      <span className='title-main'>{t('feedback.title.lbl')}</span>
+      <span className='title-main' data-aos='fade-up'>{t('feedback.title.lbl')}</span>
 
       <Container>
-        <div className='box-slide'>
+        <div className='box-slide' data-aos='fade-up'>
           <Swiper
-            // slidesPerView={slideData.slidesPerView}
-            // spaceBetween={slideData.spaceBetween}
-            // slidesPerGroup={slideData.slidesPerGroup}
-            slidesPerView={2}
+            slidesPerView={slideData.slidesPerView}
             spaceBetween={slideData.spaceBetween}
-            slidesPerGroup={2}
-            // autoplay={{
-            //   delay: 6000,
-            //   disableOnInteraction: false,
-            //   pauseOnMouseEnter: true
-            // }}
+            slidesPerGroup={slideData.slidesPerGroup}
             preventClicks={true}
             loop={true}
             loopFillGroupWithBlank={false}
@@ -133,10 +120,18 @@ const Feedback = ({ windowDimensions }) => {
                 </SwiperSlide>
               ))}
             </div>
-            <div ref={prevRef} className='icon-slide icon-next hidden-mobile'>
+            <div
+              ref={prevRef}
+              data-aos='fade-right'
+              className='icon-slide icon-next hidden-mobile'
+            >
               <img className='icon-next' src={images.pre} alt='pre' />
             </div>
-            <div ref={nextRef} className='icon-slide icon-pre hidden-mobile'>
+            <div
+              ref={nextRef}
+              data-aos='fade-left'
+              className='icon-slide icon-pre hidden-mobile'
+            >
               <img src={images.next} alt='next' />
             </div>
           </Swiper>

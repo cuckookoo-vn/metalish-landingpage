@@ -1,8 +1,9 @@
-@import "src/styles/variables";
+@import 'src/styles/variables';
 
-.roadmap{
+.roadmap {
   width: 100%;
   background-position: center;
+  overflow: hidden;
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
@@ -17,13 +18,13 @@
   @media #{$info-phone} {
     height: 130vw;
   }
-  .title-main{
+  .title-main {
     margin-top: 110px;
     @media #{$info-tablet-1399} {
       margin-top: 8vw;
     }
   }
-  .roadmap-box{
+  .roadmap-box {
     margin-top: 470px;
     position: relative;
     width: 100%;
@@ -41,7 +42,7 @@
       margin-top: 8vw;
       height: 95vw;
     }
-    .box-month{
+    .box-month {
       display: block;
       position: relative;
       height: 100px;
@@ -55,14 +56,14 @@
         height: 10vw;
         width: 10vw;
       }
-      .bg-month{
+      .bg-month {
         height: 100px;
         width: 100px;
         display: block;
         border-radius: 1.9vw;
         transform: scaleX(1.6) rotate(45deg);
-        background-color:rgba(0,0,0,0);
-        color: #00C0D7;
+        background-color: rgba(0, 0, 0, 0);
+        color: #00c0d7;
         position: relative;
         z-index: 1;
         @media #{$info-tablet-1399} {
@@ -74,10 +75,10 @@
           width: 10vw;
         }
 
-        &::before{
-          content: "";
+        &::before {
+          content: '';
           border-radius: 23px;
-          background-color: #F3FAFF;
+          background-color: #f3faff;
           position: absolute;
           top: 0;
           left: 0;
@@ -92,11 +93,11 @@
           }
         }
 
-        &::after{
+        &::after {
           border-radius: 23px;
           transform: translate(8px, 8px);
           z-index: -1;
-          content: "";
+          content: '';
           position: absolute;
           display: block;
           top: 0;
@@ -112,60 +113,60 @@
           }
         }
 
-        &.green{
-          box-shadow: 40px 40px 40px 0px rgba(#2FC6DA,0.7);
+        &.green {
+          box-shadow: 40px 40px 40px 0px rgba(#2fc6da, 0.7);
           @media #{$info-tablet-1399} {
-            box-shadow: 1.8vw 1.8vw 4vw 0 rgba(#2FC6DA,0.8);
+            box-shadow: 1.8vw 1.8vw 4vw 0 rgba(#2fc6da, 0.8);
           }
           @media #{$info-phone} {
-            box-shadow: 3vw 3vw 3vw 0 rgba(#2FC6DA,0.8);
+            box-shadow: 3vw 3vw 3vw 0 rgba(#2fc6da, 0.8);
           }
-          &::after{
-            background-color: #00C5FF;
+          &::after {
+            background-color: #00c5ff;
           }
         }
 
-        &.blue{
-          box-shadow: 40px 40px 40px 0px rgba(#7778DE,0.7);
+        &.blue {
+          box-shadow: 40px 40px 40px 0px rgba(#7778de, 0.7);
           @media #{$info-tablet-1399} {
-            box-shadow: 1.8vw 1.8vw 3vw 0 rgba(#7778DE,0.8);
+            box-shadow: 1.8vw 1.8vw 3vw 0 rgba(#7778de, 0.8);
           }
           @media #{$info-phone} {
-            box-shadow: 3vw 3vw 3vw 0 rgba(#7778DE,0.8);
+            box-shadow: 3vw 3vw 3vw 0 rgba(#7778de, 0.8);
           }
-          &::after{
-            background-color: #5342FF;
+          &::after {
+            background-color: #5342ff;
           }
         }
 
-        &.yellow{
-          box-shadow: 40px 40px 40px 0px rgba(#D19760 ,0.7);
+        &.yellow {
+          box-shadow: 40px 40px 40px 0px rgba(#d19760, 0.7);
           @media #{$info-tablet-1399} {
-            box-shadow: 1.8vw 1.8vw 3vw 0 rgba(#D19760 ,0.8);
+            box-shadow: 1.8vw 1.8vw 3vw 0 rgba(#d19760, 0.8);
           }
           @media #{$info-phone} {
-            box-shadow: 3vw 3vw 3vw 0 rgba(#D19760,0.8);
+            box-shadow: 3vw 3vw 3vw 0 rgba(#d19760, 0.8);
           }
-          &::after{
-            background-color: #D27315;
+          &::after {
+            background-color: #d27315;
           }
         }
 
-        &.purple{
-          box-shadow: 40px 40px 40px 0px rgba(#955ECF,0.7);
+        &.purple {
+          box-shadow: 40px 40px 40px 0px rgba(#955ecf, 0.7);
           @media #{$info-tablet-1399} {
-            box-shadow: 1.8vw 1.8vw 3vw 0 rgba(#955ECF,0.7);
+            box-shadow: 1.8vw 1.8vw 3vw 0 rgba(#955ecf, 0.7);
           }
           @media #{$info-phone} {
-            box-shadow: 3vw 3vw 3vw 0 rgba(#955ECF,0.8);
+            box-shadow: 3vw 3vw 3vw 0 rgba(#955ecf, 0.8);
           }
-          &::after{
-            background-color: #9B28F2;
+          &::after {
+            background-color: #9b28f2;
           }
         }
       }
 
-      .text{
+      .text {
         position: absolute;
         font-size: 2rem;
         top: 48%;
@@ -179,37 +180,37 @@
         @media #{$info-phone} {
           font-size: 2.6vw;
         }
-        &.green{
-          color: #00C0D7;
+        &.green {
+          color: #00c0d7;
         }
-        &.blue{
-          color: #2000E6;
+        &.blue {
+          color: #2000e6;
         }
-        &.yellow{
-          color: #FF5C00;
+        &.yellow {
+          color: #ff5c00;
         }
-        &.purple{
+        &.purple {
           color: #430073;
         }
       }
 
-      .title-year{
+      .title-year {
         position: absolute;
         width: max-content;
         left: 50%;
-        transform: translate(-50%,0);
+        transform: translate(-50%, 0);
         font-size: 3rem;
         z-index: 10;
         font-weight: bold;
         display: block;
-        color: #FFFFFF;
+        color: #ffffff;
         @media #{$info-tablet-1399} {
           font-size: 2rem;
         }
         @media #{$info-phone} {
           font-size: 7vw;
         }
-        &.title-year-2022{
+        &.title-year-2022 {
           bottom: -125px;
           left: 50%;
           @media #{$info-tablet-1399} {
@@ -218,11 +219,11 @@
           }
           @media #{$info-phone} {
             left: -30vw;
-            bottom: .5vw;
+            bottom: 0.5vw;
             transform: none;
           }
         }
-        &.title-year-2023{
+        &.title-year-2023 {
           top: -125px;
           @media #{$info-tablet-1399} {
             top: -95px;
@@ -234,18 +235,18 @@
             transform: none;
           }
         }
-        &.title-year-2023-second{
+        &.title-year-2023-second {
           bottom: -125px;
           @media #{$info-tablet-1399} {
             bottom: -95px;
           }
           @media #{$info-phone} {
             left: -30vw;
-            bottom: .5vw;
+            bottom: 0.5vw;
             transform: none;
           }
         }
-        &.title-year-2024{
+        &.title-year-2024 {
           top: -125px;
           @media #{$info-tablet-1399} {
             top: -95px;
@@ -259,7 +260,7 @@
         }
       }
 
-      .content-year{
+      .content-year {
         position: absolute;
         width: fit-content;
         font-size: 1rem;
@@ -269,9 +270,8 @@
         }
         @media #{$info-phone} {
           font-size: 2.1vw;
-
         }
-        &.content-year-2022{
+        &.content-year-2022 {
           top: -240px;
           @media #{$info-tablet-1399} {
             top: -195px;
@@ -282,7 +282,7 @@
             top: -4vw;
           }
         }
-        &.content-year-2023{
+        &.content-year-2023 {
           bottom: -270px;
           @media #{$info-tablet-1399} {
             bottom: -220px;
@@ -295,7 +295,7 @@
             top: -9vw;
           }
         }
-        &.content-year-2023-second{
+        &.content-year-2023-second {
           top: -185px;
           @media #{$info-tablet-1399} {
             top: -140px;
@@ -306,7 +306,7 @@
             top: -2vw;
           }
         }
-        &.content-year-2024{
+        &.content-year-2024 {
           bottom: -145px;
           @media #{$info-tablet-1399} {
             bottom: -110px;
@@ -316,48 +316,52 @@
             top: 1vw;
           }
         }
-        li{
+        li {
           position: relative;
           list-style: none;
-          color: #FFFFFF;
+          color: #ffffff;
           width: 20vw;
           margin-bottom: 5px;
           @media #{$info-phone} {
             width: 30vw;
             margin-bottom: 2px;
           }
-          &::after{
+          &::after {
             border-radius: 50%;
             position: absolute;
-            content:"";
+            content: '';
             background-color: white;
             width: 4px;
             height: 4px;
             left: -15px;
             top: 50%;
-            transform: translate(0 , -50%);
+            transform: translate(0, -50%);
           }
         }
       }
     }
 
-    .vertical-light{
+    .vertical-light {
       position: absolute;
-      background: radial-gradient(50% 50% at 50% 50%, #FFFFFF 68.75%, rgba(247, 247, 247, 0) 100%);
+      background: radial-gradient(
+        50% 50% at 50% 50%,
+        #ffffff 68.75%,
+        rgba(247, 247, 247, 0) 100%
+      );
       width: 100%;
       height: 6px;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
+      top: 49%;
+      left: 0;
       @media #{$info-tablet-1399} {
         height: 0.3vw;
       }
       @media #{$info-phone} {
+        top: 0;
+        left: calc(50% - 0.25vw);
         margin: auto;
         height: 90vw;
-        width: .5vw;
+        width: 0.5vw;
       }
     }
   }
-
 }

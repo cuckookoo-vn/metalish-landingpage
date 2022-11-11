@@ -2,10 +2,10 @@ import './key-features.styles.scss';
 import { useTranslation } from 'react-i18next';
 import KeyFeaturesItem from './key-features-item/key-features-item';
 import { useState } from 'react';
-import { Container } from 'react-bootstrap';
 
 const KeyFeatures = ({ windowDimensions }) => {
   const { t } = useTranslation();
+
   const images = {
     studyingEnglishIcon:
       process.env.PUBLIC_URL + '/images/key-features/studying-english.png',
@@ -106,60 +106,101 @@ const KeyFeatures = ({ windowDimensions }) => {
   ];
 
   const [content, setContent] = useState('');
+  const [title, setTitle] = useState('');
+
+  const handleHover = (title, content) => {
+    setTitle(title);
+    setContent(content);
+  };
 
   return (
     <div className='key-features'>
       <span className='title-main' data-aos='fade-up'>
         {t('key-features.title.lbl')}
       </span>
-      <Container>
-        <div className='content-wrapper' data-aos='zoom-in-up'>
-          {windowDimensions.width > 767.5 ? (
-            <div>
-              {keyFeatures.map((element, index) => (
-                <>
-                  <KeyFeaturesItem
-                    key={index}
-                    alt={element.alt}
-                    src={element.src}
-                    title={element.title}
-                    content={element.content}
-                    last={element.last}
-                  />
-                  {element.last ? (
-                    <>
-                      <br />
-                      <br />
-                      <br />
-                      <br />
-                    </>
-                  ) : null}
-                </>
-              ))}
+
+      <div className='key-features-box'>
+        {windowDimensions.width < 767.5 ? (
+          <ul className='circle-container' data-aos='zoom-in-up'>
+            {keyFeatures.map((element, index) => (
+              <>
+                <li
+                  key={index}
+                  onMouseEnter={() =>
+                    handleHover(element.title, element.content)
+                  }
+                >
+                  <img alt={element.alt} src={element.src} />
+                  <span>{element.title}</span>
+                </li>
+              </>
+            ))}
+            <div
+              className='overlay'
+              style={{ backgroundImage: `url(${images.frame})` }}
+            >
+              <div className='title'>{title}</div>
+              <div className='content'>{content}</div>
             </div>
-          ) : (
-            <ul className='circle-container'>
-              {keyFeatures.map((element, index) => (
-                <>
-                  <li
-                    key={index}
-                    onMouseEnter={() => setContent(element.content)}
-                  >
-                    <img alt={element.alt} src={element.src} />
-                    <span>{element.title}</span>
-                  </li>
-                </>
-              ))}
-              <div
-                className='overlay'
-                style={{ backgroundImage: `url(${images.frame})` }}
-              >
-                <div className='content'>{content}</div>
+          </ul>
+        ) : (
+          <>
+            <div className='content-wrapper' data-aos='zoom-in-up'>
+              <div className='content1'>
+                {keyFeatures.map((element, index) => (
+                  <>
+                    {index < 4 ? (
+                      <div key={index}>
+                        <KeyFeaturesItem
+                          alt={element.alt}
+                          src={element.src}
+                          title={element.title}
+                          content={element.content}
+                          last={element.last}
+                        />
+                      </div>
+                    ) : null}
+                  </>
+                ))}
               </div>
-            </ul>
-          )}
-        </div>
-      </Container>
+              <div className='content2'>
+                {keyFeatures.map((element, index) => (
+                  <>
+                    {index < 7 && index >= 4 ? (
+                      <div key={index}>
+                        <KeyFeaturesItem
+                          alt={element.alt}
+                          src={element.src}
+                          title={element.title}
+                          content={element.content}
+                          last={element.last}
+                        />
+                      </div>
+                    ) : null}
+                  </>
+                ))}
+              </div>
+              <div className='content3'>
+                {keyFeatures.map((element, index) => (
+                  <>
+                    {index >= 7 && index < 11 ? (
+                      <div key={index}>
+                        <KeyFeaturesItem
+                          alt={element.alt}
+                          src={element.src}
+                          title={element.title}
+                          content={element.content}
+                          last={element.last}
+                        />
+                      </div>
+                    ) : null}
+                  </>
+                ))}
+              </div>
+            </div>
+          </>
+        )}
+      </div>
     </div>
   );
 };

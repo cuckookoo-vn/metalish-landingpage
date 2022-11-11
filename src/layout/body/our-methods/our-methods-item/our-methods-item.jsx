@@ -1,47 +1,41 @@
 import { useTranslation } from 'react-i18next';
 import './our-methods-item.styles.scss';
 
-const OurMethodsItem = ({ image, type, position }) => {
+const OurMethodsItem = ({ src, type }) => {
   const { t } = useTranslation();
 
+  const images = {
+    commentBox: process.env.PUBLIC_URL + '/images/feedback/comment-box.png',
+    commentAvatar:
+      process.env.PUBLIC_URL + '/images/feedback/comment-avatar.png',
+  };
   return (
     <div className='our-methods-item'>
       <div
         className='our-methods-item-box'
-        style={{ backgroundImage: `url(${image})` }}
+        style={{ backgroundImage: `url(${src})` }}
       >
-        {/* <img className='image-member' src={image} alt='member' />
-        <span className='name-member'>{name}</span> */}
         {type === 'class-type' ? (
           <>
-            <div className='class-type-title'>
-              <span className='private-room'>
-                {t('our-methods.private-room_title.lbl')}
-              </span>
-              <span className='talking-room'>
-                {t('our-methods.talking-room_title.lbl')}
-              </span>
+            <div className='private-room-title'>
+              {t('our-methods.private-room_title.lbl')}
             </div>
-            <div className='class-type-content'>
-              <span className='private-room'>
-                {t('our-methods.private-room_content.txt')}
-              </span>
-              <span className='talking-room'>
-                {t('our-methods.talking-room_content.txt')}
-              </span>
+            <div className='talking-room-title'>
+              {t('our-methods.talking-room_title.lbl')}
             </div>
+            <span className='private-room-content'>
+              {t('our-methods.private-room_content.txt')}
+            </span>
+            <span className='talking-room-content'>
+              {t('our-methods.talking-room_content.txt')}
+            </span>
           </>
         ) : (
-          <>
-            <div className='content'>
-              {t(`our-methods.${type}_content.txt`)}
-            </div>
-          </>
+          <span className='others-content'>
+            {t(`our-methods.${type}_content.txt`)}
+          </span>
         )}
       </div>
-
-      {/* <span className='user-grade'>{grade}</span> */}
-      {/* <span className='position-member'>{position}</span> */}
     </div>
   );
 };

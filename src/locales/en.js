@@ -5,6 +5,11 @@ const translationEN = {
     'option_vi.lbl': 'Tiếng Việt',
     'download.btn': 'DOWNLOAD',
   },
+
+  modalDownload: {
+    titleMain: 'Select device to download',
+  },
+
   overview: {
     'title.lbl': 'METALISH',
     'content_1.txt':
@@ -63,6 +68,7 @@ const translationEN = {
     'review_content.txt':
       'Users will be received reward for each effective feedback about our app, our courses and our teaching staffs.',
   },
+
   'core-skills': {
     'title.lbl': 'CORE SKILLS',
     'listening.lbl': 'Listening',
@@ -70,6 +76,7 @@ const translationEN = {
     'vocabulary.lbl': 'Vocabulary',
     'mouth-shape.lbl': 'Mouth shape',
   },
+
   'our-methods': {
     'title.lbl': 'OUR METHODS',
     'private-room_title.lbl': 'PRIVATE ROOM',
@@ -81,16 +88,90 @@ const translationEN = {
       'Pay small extra fee to take customized and personalized classes with AI or the teachers you like.\n' +
       'Unlimited topics\n' +
       'Invite your friends to join your world!',
-      'cooperation_content.txt': 'Exprienced content advisor team, including foreign English teachers and local English teachers.',
-      'curriculum_content.txt': 'The curriculum is completely based on the curriculum in user’s country.'
-
+    'cooperation_content.txt':
+      'Exprienced content advisor team, including foreign English teachers and local English teachers.',
+    'curriculum_content.txt':
+      'The curriculum is completely based on the curriculum in user’s country.',
   },
+
   feedback: {
     'title.lbl': 'WHAT USERS SAY ABOUT METALISH',
-    'user-description-title.txt': '5th grade student',
-    'user-summary-comment.lbl': 'Convenient',
-    'user-full-comment.txt':
+    'user-1-name.txt': 'Min Nguyen',
+    'user-1-description.txt': '5th grade student',
+    'user-1-summary-comment.lbl': 'Convenient',
+    'user-1-full-comment.txt':
       'Each course was interesting and motivational. I can learn whenever it fits my schedule and mood.',
+
+    'user-2-name.txt': 'Jin Nguyen',
+    'user-2-description.txt': '12th grade student',
+    'user-2-summary-comment.lbl': 'Interesting, good experience',
+    'user-2-full-comment.txt':
+      'I gained the confidence to use English in my daily life. With Metalish, I can meet and interact with others who have the same interest with me.',
+  },
+
+  explore: {
+    titleMain: "Let's explore Metalish with us!",
+  },
+  tour: {
+    titleMain: 'METALISH’S TOUR',
+  },
+  miniGames: {
+    titleMain: 'MINI GAMES',
+    blank: 'Fill in blank',
+    choice: 'Multiple choice',
+    word: 'Arrange word',
+  },
+  advertising: {
+    titleMain: '3D BILLBOARD ADVERTISING',
+    title1: `“This merchandise is currently available at Gmarket.co.kr...”`,
+    title2: `“How do I purchase this valise?”`,
+  },
+  orderService: {
+    titleMain: 'ORDER SERVICE',
+    titleDes: 'Interact with the advertisement to make a real order',
+  },
+  roadmap: {
+    titleMain: 'ROADMAP',
+    title2022: {
+      month: 'AUG',
+      title1: 'Ideas for Metalish',
+      title2: 'Arrange resources and kick-off',
+      title3: 'Develop Metalish phase 1',
+      title4: 'Design art for phase 1',
+      title5: 'Release website',
+      title6: 'Prepare for phase 2',
+    },
+    title2023: {
+      month: 'FEB',
+      title1: 'Release 1st version',
+      title2: 'Design art for phase 2',
+      title3: 'Develop Metalish phase 2 (metaverse)',
+      title4: 'Upgrade server (10M+ users)',
+      title5: 'Call for capital investment',
+      title6: 'Run advertising in app',
+      title7: 'Prepare for phase 3',
+    },
+    title2023Second: {
+      month: 'AUG',
+      title1: 'Release 2nd version',
+      title2: 'Design art for phase 3',
+      title3: 'Develop Metalish phase 3',
+      title4: 'Upgrade AI and UI',
+    },
+    title2024: {
+      month: 'FEB',
+      title1: 'Release 3rd version',
+      title2: 'Go-live app (metaverse)',
+    },
+  },
+  developmentTeam: {
+    titleMain: 'DEVELOPMENT TEAM',
+  },
+  footer: {
+    titleMain: 'Get In Touch',
+    address: '82, Street No.6, Ward 10, Go Vap District, Ho Chi Minh City',
+    email: 'metalish@cuckookoo.vn',
+    phone: '0336111248',
   },
 };
 
