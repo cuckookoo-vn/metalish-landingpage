@@ -1,6 +1,7 @@
 import React from 'react';
 import { OrbitControls, useGLTF } from '@react-three/drei';
-import { Canvas } from '@react-three/fiber';
+import { Canvas, useLoader } from '@react-three/fiber';
+import { TextureLoader } from 'three';
 
 function Model(props) {
   const { scene } = useGLTF('/model.glb');
@@ -25,3 +26,5 @@ export default function OverviewModel() {
     </Canvas>
   );
 }
+
+useGLTF.preload('/model.glb');

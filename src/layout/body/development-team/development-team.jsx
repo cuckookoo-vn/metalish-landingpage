@@ -9,8 +9,9 @@ import { Pagination, Navigation } from 'swiper';
 
 const DevelopmentTeam = ({ windowDimensions }) => {
   // data development team
+  // https://metalish.s3.ap-northeast-2.amazonaws.com/img/lp-core-member/lp-core-member-1.png
   const urlImage =
-    'https://aroundtheworld.s3.ap-southeast-1.amazonaws.com/imgs/landingpage/lp-core-member/lp-core-member-';
+    'https://metalish.s3.ap-northeast-2.amazonaws.com/img/lp-core-member/lp-core-member-';
 
   const images = {
     next: process.env.PUBLIC_URL + '/images/development-team/right-button.png',
@@ -44,28 +45,28 @@ const DevelopmentTeam = ({ windowDimensions }) => {
       image: urlImage + '5.png',
     },
     {
-      name: 'Henry Ho',
-      position: 'Solution Architect',
-      image: urlImage + '6.png',
-    },
-    {
       name: 'Johnny Le',
       position: 'Developer Leader',
-      image: urlImage + '7.png',
+      image: urlImage + '6.png',
     },
     {
       name: 'Mr.Kan',
       position: 'AI Leader',
+      image: urlImage + '7.png',
+    },
+    {
+      name: 'Irene Le',
+      position: 'Business Analyst',
       image: urlImage + '8.png',
+    },
+    {
+      name: 'Henry Ho',
+      position: 'Solution Architect',
+      image: urlImage + '9.png',
     },
     {
       name: 'Mr.Thinh',
       position: 'Blockchain Leader',
-      image: urlImage + '9.png',
-    },
-    {
-      name: 'GiGi Le',
-      position: 'Translator',
       image: urlImage + '10.png',
     },
     {
@@ -79,24 +80,34 @@ const DevelopmentTeam = ({ windowDimensions }) => {
       image: urlImage + '12.png',
     },
     {
-      name: 'Leo Dinh',
+      name: 'Finn Le',
       position: 'Developer',
       image: urlImage + '13.png',
     },
     {
-      name: 'Finn Le',
+      name: 'Leo Dinh',
       position: 'Developer',
       image: urlImage + '14.png',
     },
     {
-      name: 'Link Ho',
+      name: 'Keng Nguyen',
       position: 'Developer',
       image: urlImage + '15.png',
     },
     {
-      name: 'Keng Nguyen',
-      position: 'Developer',
+      name: 'Ms. Hagi',
+      position: 'English Teacher',
       image: urlImage + '16.png',
+    },
+    {
+      name: 'Alex Tran',
+      position: 'Developer',
+      image: urlImage + '17.png',
+    },
+    {
+      name: 'GiGi Le',
+      position: 'Translator',
+      image: urlImage + '18.png',
     },
   ];
 

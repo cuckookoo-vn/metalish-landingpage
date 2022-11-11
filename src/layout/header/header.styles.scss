@@ -5,10 +5,13 @@
   width: 100%;
   position: fixed;
   z-index: 1000;
-  background-color: #020220;
-  // background-color: transparent;
+  // background-color: #020220;
+  background-color: transparent;
 
   .logo {
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
     position: absolute;
     width: 50px;
     left: 10px;
