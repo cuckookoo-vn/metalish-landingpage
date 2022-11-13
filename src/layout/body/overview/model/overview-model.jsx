@@ -1,7 +1,6 @@
 import React from 'react';
 import { OrbitControls, useGLTF } from '@react-three/drei';
-import { Canvas, useLoader } from '@react-three/fiber';
-import { TextureLoader } from 'three';
+import { Canvas } from '@react-three/fiber';
 
 function Model(props) {
   const { scene } = useGLTF('/model.glb');
@@ -22,7 +21,7 @@ export default function OverviewModel() {
       <directionalLight intensity={0.5} />
       <rectAreaLight />
       <Model />
-      <OrbitControls />
+      <OrbitControls enableZoom={false} />
     </Canvas>
   );
 }

@@ -38,24 +38,17 @@
     font-size: 16px;
 
     @media #{$info-tablet-1399} {
-      left: 50%;
-      top: 25%;
+      left: 10%;
       width: 80%;
       font-size: 1.8vw;
-      -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
     }
 
     @media #{$info-phone} {
       position: relative;
-      left: 50%;
-      top: 30vw;
-      width: 90vw;
+      left: 1vw;
+      top: 5vw;
+      width: 100%;
       font-size: 2vw;
-      -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
     }
   }
 
