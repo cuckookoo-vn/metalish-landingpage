@@ -38,13 +38,13 @@ const Feedback = ({ windowDimensions }) => {
       summaryComment: `${t('feedback.user-2-summary-comment.lbl')}`,
       comment: `${t('feedback.user-2-full-comment.txt')}`,
     },
-    {
-      name: 'User',
-      grade: `${t('feedback.user-1-description.txt')}`,
-      avatar: images.avatar1,
-      summaryComment: `${t('feedback.user-1-summary-comment.lbl')}`,
-      comment: `${t('feedback.user-1-full-comment.txt')}`,
-    },
+    // {
+    //   name: 'User',
+    //   grade: `${t('feedback.user-1-description.txt')}`,
+    //   avatar: images.avatar1,
+    //   summaryComment: `${t('feedback.user-1-summary-comment.lbl')}`,
+    //   comment: `${t('feedback.user-1-full-comment.txt')}`,
+    // },
   ];
 
   // check width set data slide
@@ -60,9 +60,9 @@ const Feedback = ({ windowDimensions }) => {
       slideDataTemp.spaceBetween = 15;
       slideDataTemp.slidesPerGroup = 2;
     } else if (windowDimensions.width > 991.5) {
-      slideDataTemp.slidesPerView = 1;
+      slideDataTemp.slidesPerView = 2;
       slideDataTemp.spaceBetween = 15;
-      slideDataTemp.slidesPerGroup = 1;
+      slideDataTemp.slidesPerGroup = 2;
     } else {
       slideDataTemp.slidesPerView = 1;
       slideDataTemp.spaceBetween = 15;

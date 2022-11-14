@@ -84,10 +84,8 @@ const Roadmap = ({ windowDimensions }) => {
             data-aos-delay={windowDimensions.width > 767.5 ? '900' : '400'}
           >
             <div className='bg-month purple'></div>
-            <span className='text purple'>FEB</span>
-            <span className='title-year title-year-2024'>
-              {t('roadmap.title2024.month')}
-            </span>
+            <span className='text purple'>{t('roadmap.title2024.month')}</span>
+            <span className='title-year title-year-2024'>2024</span>
             <div className='content-year content-year-2024'>
               <li>{t('roadmap.title2024.title1')}</li>
               <li>{t('roadmap.title2024.title2')}</li>
