@@ -56,7 +56,6 @@ export default function App() {
   return (
     <>
       <Header />
-      {/* <br /> */}
       <VideoProposal />
       <Overview windowDimensions={windowDimensions} />
       <KeyFeatures windowDimensions={windowDimensions} />

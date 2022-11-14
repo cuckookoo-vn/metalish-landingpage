@@ -3,7 +3,7 @@ const translationKO = {
     'option_en.lbl': 'English',
     'option_ko.lbl': '한국어',
     'option_vi.lbl': 'Tiếng Việt',
-    'download.btn': 'DOWNLOAD',
+    'download.btn': '다운로드',
   },
 
   modalDownload: {
@@ -19,7 +19,7 @@ const translationKO = {
     'content_3.txt':
       '게다가, Metalish는 교육의 질을 향상시키기 위해 항상 사용자 피드백을 듣습니다. 효과적인 피드백들을 통해서 사용자가 본인의 학습에 대해서 반영하게 되기도 하고 더 효율적인 학습 프로섹을 조절할 수 있기도 합니다.',
     'content_4.txt':
-      '또한, Metalish는 사용자와 친한공간을 만드는 사명을 띱니다. 사용자가 본인의 교실을 꾸밀 수 있을 뿐먼 아니라 친구들에게 나의 방에 참가하려 초대할 수도 있습니다. 가장 좋은 사용감을 제공할 수 있는 것을 기대합니다.',
+      '또한, Metalish는 사용자와 친한공간을 만드는 사명을 띱니다. 사용자가 본인의 교실을 꾸밀 수 있을 뿐만 아니라 친구들에게 나의 방에 참가하려 초대할 수도 있습니다. 가장 좋은 사용감을 제공할 수 있는 것을 기대합니다.',
     'content_5.txt': '본인의 영어 세계를 탐험하기 시작합시다!',
   },
   'key-features': {
@@ -66,7 +66,7 @@ const translationKO = {
 
     'review_title.lbl': '피드백',
     'review_content.txt':
-      '사용자는 앱, 코스 및 강사에 대한 효과적인 피드백을 남기면 보상을 받게 될겁니다.',
+      '사용자는 앱, 코스 및 강사에 대한 효과적인 피드백을 남기면 보상을 받게 될 겁니다.',
   },
 
   'core-skills': {
@@ -89,13 +89,13 @@ const translationKO = {
       '무한한 주제\n' +
       '친구를 초대하여 나의 세계에 합류할 수 있습니다.',
     'cooperation_content.txt':
-      '외국인 영어강사와 현지 영어강사를 포함한 경력 많은 콘텐츠 어드바이저 팀.',
+      '외국인 영어 강사와 현지 영어 강사를 포함한 경력 많은 콘텐츠 어드바이저 팀.',
     'curriculum_content.txt':
       '커리큘럼은 전적으로 사용자 국가의 커리큘럼을 기반으로 합니다.',
   },
 
   feedback: {
-    'title.lbl': ' METALISH 에 대한 유저의 평가',
+    'title.lbl': ' METALISH에 대한 유저의 평가',
     'user-1-name.txt': 'Min Nguyen',
     'user-1-description.txt': '5급 학습자',
     'user-1-summary-comment.lbl': '편리함',
@@ -110,10 +110,10 @@ const translationKO = {
   },
 
   explore: {
-    titleMain: '우리와 함께 Metalish를 탐험하러 갑시다!',
+    titleMain: 'Metalish를 탐험하러 갑시다!',
   },
   tour: {
-    titleMain: 'METALISH’S 순회',
+    titleMain: 'METALISH의 순화',
   },
   miniGames: {
     titleMain: '미니 게임',
@@ -123,12 +123,12 @@ const translationKO = {
   },
   advertising: {
     titleMain: '3D 빌보드 광고',
-    title1: `“This merchandise is currently available at Gmarket.co.kr...”`,
-    title2: `“How do I purchase this valise?”`,
+    title1: `“이 상품은 Gmarket.co.kr에서 구매 가능합니다”`,
+    title2: `“이 여행가방을 어디서 구매할 수 있어요 ?”`,
   },
   orderService: {
     titleMain: '주문 서비스',
-    titleDes: '실주문하시 위하여 광고물과 상호 작용할 수 있습니다',
+    titleDes: '실주문하기 위하여 광고물과 상호 작용할 수 있습니다',
   },
   roadmap: {
     titleMain: '로드 맵',

@@ -10,7 +10,7 @@
   color: #ffffff;
 
   @media #{$info-tablet-1399} {
-    min-height: 120vw;
+    min-height: 60vw;
   }
 
   @media #{$info-phone} {
@@ -38,24 +38,21 @@
     font-size: 16px;
 
     @media #{$info-tablet-1399} {
-      left: 50%;
-      top: 25%;
-      width: 80%;
-      font-size: 1.8vw;
-      -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
+      // left: 10%;
+      width: 40%;
+      font-size: 1.2vw;
     }
 
     @media #{$info-phone} {
       position: relative;
-      left: 50%;
-      top: 30vw;
-      width: 90vw;
+      left: 1vw;
+      top: 5vw;
+      width: 100%;
       font-size: 2vw;
-      -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
+    }
+
+    p {
+      word-break: keep-all;
     }
   }
 
@@ -66,12 +63,18 @@
     height: 450px;
     right: -10px;
 
+    .overlay {
+      position: relative;
+      background-color: gray;
+      opacity: 0.5;
+    }
+
     @media #{$info-tablet-1399} {
-      position: absolute;
+      // position: absolute;
       top: 45%;
       left: 5%;
       height: 40vw;
-      width: 90%;
+      width: 60%;
     }
 
     @media #{$info-phone} {

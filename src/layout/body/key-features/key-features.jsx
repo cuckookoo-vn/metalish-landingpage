@@ -150,7 +150,7 @@ const KeyFeatures = ({ windowDimensions }) => {
                 {keyFeatures.map((element, index) => (
                   <>
                     {index < 4 ? (
-                      <div key={index}>
+                      <>
                         <KeyFeaturesItem
                           alt={element.alt}
                           src={element.src}
@@ -158,7 +158,7 @@ const KeyFeatures = ({ windowDimensions }) => {
                           content={element.content}
                           last={element.last}
                         />
-                      </div>
+                      </>
                     ) : null}
                   </>
                 ))}
@@ -167,7 +167,7 @@ const KeyFeatures = ({ windowDimensions }) => {
                 {keyFeatures.map((element, index) => (
                   <>
                     {index < 7 && index >= 4 ? (
-                      <div key={index}>
+                      <>
                         <KeyFeaturesItem
                           alt={element.alt}
                           src={element.src}
@@ -175,7 +175,7 @@ const KeyFeatures = ({ windowDimensions }) => {
                           content={element.content}
                           last={element.last}
                         />
-                      </div>
+                      </>
                     ) : null}
                   </>
                 ))}
@@ -184,7 +184,7 @@ const KeyFeatures = ({ windowDimensions }) => {
                 {keyFeatures.map((element, index) => (
                   <>
                     {index >= 7 && index < 11 ? (
-                      <div key={index}>
+                      <>
                         <KeyFeaturesItem
                           alt={element.alt}
                           src={element.src}
@@ -192,7 +192,7 @@ const KeyFeatures = ({ windowDimensions }) => {
                           content={element.content}
                           last={element.last}
                         />
-                      </div>
+                      </>
                     ) : null}
                   </>
                 ))}
