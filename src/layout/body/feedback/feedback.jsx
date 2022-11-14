@@ -60,9 +60,9 @@ const Feedback = ({ windowDimensions }) => {
       slideDataTemp.spaceBetween = 15;
       slideDataTemp.slidesPerGroup = 2;
     } else if (windowDimensions.width > 991.5) {
-      slideDataTemp.slidesPerView = 1;
+      slideDataTemp.slidesPerView = 2;
       slideDataTemp.spaceBetween = 15;
-      slideDataTemp.slidesPerGroup = 1;
+      slideDataTemp.slidesPerGroup = 2;
     } else {
       slideDataTemp.slidesPerView = 1;
       slideDataTemp.spaceBetween = 15;

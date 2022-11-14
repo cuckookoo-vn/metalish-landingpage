@@ -89,13 +89,13 @@ const translationKO = {
       '무한한 주제\n' +
       '친구를 초대하여 나의 세계에 합류할 수 있습니다.',
     'cooperation_content.txt':
-      '외국인 영어강사와 현지 영어강사를 포함한 경력 많은 콘텐츠 어드바이저 팀.',
+      '외국인 영어 강사와 현지 영어 강사를 포함한 경력 많은 콘텐츠 어드바이저 팀.',
     'curriculum_content.txt':
       '커리큘럼은 전적으로 사용자 국가의 커리큘럼을 기반으로 합니다.',
   },
 
   feedback: {
-    'title.lbl': ' METALISH 에 대한 유저의 평가',
+    'title.lbl': ' METALISH에 대한 유저의 평가',
     'user-1-name.txt': 'Min Nguyen',
     'user-1-description.txt': '5급 학습자',
     'user-1-summary-comment.lbl': '편리함',
@@ -110,7 +110,7 @@ const translationKO = {
   },
 
   explore: {
-    titleMain: '우리와 함께 Metalish를 탐험하러 갑시다!',
+    titleMain: 'Metalish를 탐험하러 갑시다!',
   },
   tour: {
     titleMain: 'METALISH의 순화',
@@ -123,8 +123,8 @@ const translationKO = {
   },
   advertising: {
     titleMain: '3D 빌보드 광고',
-    title1: `“This merchandise is currently available at Gmarket.co.kr...”`,
-    title2: `“How do I purchase this valise?”`,
+    title1: `“이 상품은 Gmarket.co.kr에서 구매 가능합니다”`,
+    title2: `“이 여행가방을 어디서 구매할 수 있어요 ?”`,
   },
   orderService: {
     titleMain: '주문 서비스',

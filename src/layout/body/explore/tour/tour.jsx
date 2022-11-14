@@ -8,11 +8,26 @@ const Tour = ({ windowDimensions }) => {
   const { t } = useTranslation();
 
   const images = [
-    { slide: process.env.PUBLIC_URL + '/images/explore/tour/1.png' },
-    { slide: process.env.PUBLIC_URL + '/images/explore/tour/2.png' },
-    { slide: process.env.PUBLIC_URL + '/images/explore/tour/3.png' },
-    { slide: process.env.PUBLIC_URL + '/images/explore/tour/4.png' },
-    { slide: process.env.PUBLIC_URL + '/images/explore/tour/5.png' },
+    {
+      slide:
+        'https://metalish.s3.ap-northeast-2.amazonaws.com/img/lp-explore-tour/basketball-court.gif',
+    },
+    {
+      slide:
+        'https://metalish.s3.ap-northeast-2.amazonaws.com/img/lp-explore-tour/football-pitch.gif',
+    },
+    {
+      slide:
+        'https://metalish.s3.ap-northeast-2.amazonaws.com/img/lp-explore-tour/school-building.gif',
+    },
+    {
+      slide:
+        'https://metalish.s3.ap-northeast-2.amazonaws.com/img/lp-explore-tour/self-study-classroom.gif',
+    },
+    {
+      slide:
+        'https://metalish.s3.ap-northeast-2.amazonaws.com/img/lp-explore-tour/swimming-pool.gif',
+    },
   ];
 
   const imageFrames = {
@@ -214,7 +229,11 @@ const Tour = ({ windowDimensions }) => {
         <div className='slider' id='slider-tour'>
           {images.map((elements, index) => (
             <div className='slide' key={index}>
-              <img src={elements.slide} alt='Photo' />
+              <img
+                style={{ width: '95%', height: '90%' }}
+                src={elements.slide}
+                alt='Photo'
+              />
             </div>
           ))}
           <img className='bg-phone' src={imageFrames.bgSlide} alt='bg-phone' />

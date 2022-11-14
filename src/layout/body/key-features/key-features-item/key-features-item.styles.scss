@@ -74,6 +74,7 @@
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
       text-align: center;
+      word-break: keep-all;
 
       @media #{$info-tablet-1399} {
         width: 14vw;
