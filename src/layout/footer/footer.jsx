@@ -38,7 +38,7 @@ const Footer = () => {
           data-aos-anchor-placement='top-bottom'
           data-aos='fade-up'
         >
-          <span className='title-main-footer'>Get In Touch</span>
+          <span className='title-main-footer'>{t('footer.titleMain')}</span>
 
           <div className='title-box'>
             <FontAwesomeIcon className='icon icon-local' icon={faLocationDot} />

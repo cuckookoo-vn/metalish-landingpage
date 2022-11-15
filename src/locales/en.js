@@ -112,7 +112,7 @@ const translationEN = {
     'user-3-description.txt': '12th grade student',
     'user-3-summary-comment.lbl': 'Professional teachers',
     'user-3-full-comment.txt':
-      'Teachers’ feedbacks are always in a timely and constructive manner.',
+      'Teachers’s feedbacks are always in a timely and constructive manner.',
 
     'user-4-name.txt': 'Tin Pham',
     'user-4-description.txt': '5th grade student',
@@ -153,9 +153,9 @@ const translationEN = {
   },
   miniGames: {
     titleMain: 'MINI GAMES',
-    blank: 'Fill in blank',
+    blank: 'Fill in the blank',
     choice: 'Multiple choice',
-    word: 'Arrange words',
+    word: 'Scrambled word',
   },
   advertising: {
     titleMain: '3D BILLBOARD ADVERTISING',

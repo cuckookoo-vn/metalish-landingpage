@@ -17,10 +17,15 @@ const Feedback = ({ windowDimensions }) => {
     commentBox: process.env.PUBLIC_URL + '/images/feedback/comment-box.png',
     commentAvatar:
       process.env.PUBLIC_URL + '/images/feedback/comment-avatar.png',
-    avatar1: process.env.PUBLIC_URL + '/images/feedback/MTP.png',
-    avatar2: process.env.PUBLIC_URL + '/images/feedback/XoaiNon.png',
-    avatar3: process.env.PUBLIC_URL + '/images/feedback/MatBiec.png',
-    avatar4: process.env.PUBLIC_URL + '/images/feedback/LanNgoc.png',
+    avatar1: process.env.PUBLIC_URL + '/images/feedback/avatar-1.png',
+    avatar2: process.env.PUBLIC_URL + '/images/feedback/avatar-2.png',
+    avatar3: process.env.PUBLIC_URL + '/images/feedback/avatar-3.png',
+    avatar4: process.env.PUBLIC_URL + '/images/feedback/avatar-4.png',
+    avatar5: process.env.PUBLIC_URL + '/images/feedback/avatar-5.png',
+    avatar6: process.env.PUBLIC_URL + '/images/feedback/avatar-6.png',
+    avatar7: process.env.PUBLIC_URL + '/images/feedback/avatar-7.png',
+    avatar8: process.env.PUBLIC_URL + '/images/feedback/avatar-8.png',
+    avatar9: process.env.PUBLIC_URL + '/images/feedback/avatar-9.png',
   };
 
   const comments = [
@@ -29,6 +34,7 @@ const Feedback = ({ windowDimensions }) => {
       grade: `${t('feedback.user-1-description.txt')}`,
       avatar: images.avatar1,
       summaryComment: `${t('feedback.user-1-summary-comment.lbl')}`,
+      rated: 5,
       comment: `${t('feedback.user-1-full-comment.txt')}`,
     },
     {
@@ -36,48 +42,55 @@ const Feedback = ({ windowDimensions }) => {
       grade: `${t('feedback.user-2-description.txt')}`,
       avatar: images.avatar2,
       summaryComment: `${t('feedback.user-2-summary-comment.lbl')}`,
+      rated: 5,
       comment: `${t('feedback.user-2-full-comment.txt')}`,
     },
     {
       name: `${t('feedback.user-3-name.txt')}`,
       grade: `${t('feedback.user-3-description.txt')}`,
-      avatar: images.avatar2,
+      avatar: images.avatar3,
       summaryComment: `${t('feedback.user-3-summary-comment.lbl')}`,
+      rated: 4,
       comment: `${t('feedback.user-3-full-comment.txt')}`,
     },
     {
       name: `${t('feedback.user-4-name.txt')}`,
       grade: `${t('feedback.user-4-description.txt')}`,
-      avatar: images.avatar1,
+      avatar: images.avatar4,
       summaryComment: `${t('feedback.user-4-summary-comment.lbl')}`,
+      rated: 5,
       comment: `${t('feedback.user-4-full-comment.txt')}`,
     },
     {
       name: `${t('feedback.user-5-name.txt')}`,
       grade: `${t('feedback.user-5-description.txt')}`,
-      avatar: images.avatar1,
+      avatar: images.avatar5,
       summaryComment: `${t('feedback.user-5-summary-comment.lbl')}`,
+      rated: 4,
       comment: `${t('feedback.user-5-full-comment.txt')}`,
     },
     {
       name: `${t('feedback.user-6-name.txt')}`,
       grade: `${t('feedback.user-6-description.txt')}`,
-      avatar: images.avatar1,
+      avatar: images.avatar6,
       summaryComment: `${t('feedback.user-6-summary-comment.lbl')}`,
+      rated: 5,
       comment: `${t('feedback.user-6-full-comment.txt')}`,
     },
     {
       name: `${t('feedback.user-7-name.txt')}`,
       grade: `${t('feedback.user-7-description.txt')}`,
-      avatar: images.avatar1,
+      avatar: images.avatar7,
       summaryComment: `${t('feedback.user-7-summary-comment.lbl')}`,
+      rated: 3,
       comment: `${t('feedback.user-7-full-comment.txt')}`,
     },
     {
       name: `${t('feedback.user-8-name.txt')}`,
       grade: `${t('feedback.user-8-description.txt')}`,
-      avatar: images.avatar1,
+      avatar: images.avatar8,
       summaryComment: `${t('feedback.user-8-summary-comment.lbl')}`,
+      rated: 4,
       comment: `${t('feedback.user-8-full-comment.txt')}`,
     },
   ];
@@ -96,11 +109,11 @@ const Feedback = ({ windowDimensions }) => {
       slideDataTemp.slidesPerGroup = 2;
     } else if (windowDimensions.width > 991.5) {
       slideDataTemp.slidesPerView = 2;
-      slideDataTemp.spaceBetween = 25;
+      slideDataTemp.spaceBetween = 15;
       slideDataTemp.slidesPerGroup = 2;
     } else {
       slideDataTemp.slidesPerView = 1;
-      slideDataTemp.spaceBetween = 30;
+      slideDataTemp.spaceBetween = 15;
       slideDataTemp.slidesPerGroup = 1;
     }
     return slideDataTemp;
@@ -152,6 +165,7 @@ const Feedback = ({ windowDimensions }) => {
                     name={element.name}
                     grade={element.grade}
                     summary={element.summaryComment}
+                    rated={element.rated}
                     comment={element.comment}
                   />
                 </SwiperSlide>
