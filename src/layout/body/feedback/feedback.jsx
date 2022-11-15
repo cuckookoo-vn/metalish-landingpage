@@ -38,34 +38,69 @@ const Feedback = ({ windowDimensions }) => {
       summaryComment: `${t('feedback.user-2-summary-comment.lbl')}`,
       comment: `${t('feedback.user-2-full-comment.txt')}`,
     },
-    // {
-    //   name: 'User',
-    //   grade: `${t('feedback.user-1-description.txt')}`,
-    //   avatar: images.avatar1,
-    //   summaryComment: `${t('feedback.user-1-summary-comment.lbl')}`,
-    //   comment: `${t('feedback.user-1-full-comment.txt')}`,
-    // },
+    {
+      name: `${t('feedback.user-3-name.txt')}`,
+      grade: `${t('feedback.user-3-description.txt')}`,
+      avatar: images.avatar2,
+      summaryComment: `${t('feedback.user-3-summary-comment.lbl')}`,
+      comment: `${t('feedback.user-3-full-comment.txt')}`,
+    },
+    {
+      name: `${t('feedback.user-4-name.txt')}`,
+      grade: `${t('feedback.user-4-description.txt')}`,
+      avatar: images.avatar1,
+      summaryComment: `${t('feedback.user-4-summary-comment.lbl')}`,
+      comment: `${t('feedback.user-4-full-comment.txt')}`,
+    },
+    {
+      name: `${t('feedback.user-5-name.txt')}`,
+      grade: `${t('feedback.user-5-description.txt')}`,
+      avatar: images.avatar1,
+      summaryComment: `${t('feedback.user-5-summary-comment.lbl')}`,
+      comment: `${t('feedback.user-5-full-comment.txt')}`,
+    },
+    {
+      name: `${t('feedback.user-6-name.txt')}`,
+      grade: `${t('feedback.user-6-description.txt')}`,
+      avatar: images.avatar1,
+      summaryComment: `${t('feedback.user-6-summary-comment.lbl')}`,
+      comment: `${t('feedback.user-6-full-comment.txt')}`,
+    },
+    {
+      name: `${t('feedback.user-7-name.txt')}`,
+      grade: `${t('feedback.user-7-description.txt')}`,
+      avatar: images.avatar1,
+      summaryComment: `${t('feedback.user-7-summary-comment.lbl')}`,
+      comment: `${t('feedback.user-7-full-comment.txt')}`,
+    },
+    {
+      name: `${t('feedback.user-8-name.txt')}`,
+      grade: `${t('feedback.user-8-description.txt')}`,
+      avatar: images.avatar1,
+      summaryComment: `${t('feedback.user-8-summary-comment.lbl')}`,
+      comment: `${t('feedback.user-8-full-comment.txt')}`,
+    },
   ];
 
   // check width set data slide
   const checkWidthWindowSetSlideData = () => {
     let slideDataTemp = {
       slidesPerView: 2,
-      spaceBetween: 15,
+      spaceBetween: 25,
       slidesPerGroup: 2,
     };
 
     if (windowDimensions.width > 1399.5) {
       slideDataTemp.slidesPerView = 2;
-      slideDataTemp.spaceBetween = 15;
+      slideDataTemp.spaceBetween = 25;
       slideDataTemp.slidesPerGroup = 2;
     } else if (windowDimensions.width > 991.5) {
       slideDataTemp.slidesPerView = 2;
-      slideDataTemp.spaceBetween = 15;
+      slideDataTemp.spaceBetween = 25;
       slideDataTemp.slidesPerGroup = 2;
     } else {
       slideDataTemp.slidesPerView = 1;
-      slideDataTemp.spaceBetween = 15;
+      slideDataTemp.spaceBetween = 30;
       slideDataTemp.slidesPerGroup = 1;
     }
     return slideDataTemp;
@@ -83,7 +118,9 @@ const Feedback = ({ windowDimensions }) => {
 
   return (
     <div className='feedback'>
-      <span className='title-main' data-aos='fade-up'>{t('feedback.title.lbl')}</span>
+      <span className='title-main' data-aos='fade-up'>
+        {t('feedback.title.lbl')}
+      </span>
 
       <Container>
         <div className='box-slide' data-aos='fade-up'>

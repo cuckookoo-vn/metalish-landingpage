@@ -31,7 +31,7 @@ export default function OverviewModel() {
         style={{ display: overlayDisplay }}
         onMouseDown={() => handleOverlay()}
       >
-        <div className='overlay'> </div>
+        <div className='overlay'></div>
         <span>Drag left or right for 3D view</span>
       </div>
       <Suspense fallback={<div>Loading...</div>}>
