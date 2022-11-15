@@ -110,7 +110,7 @@ const translationVI = {
   },
 
   explore: {
-    titleMain: "Let's explore Metalish with us!",
+    titleMain: "Let's explore Metalish!",
   },
   tour: {
     titleMain: 'METALISH’S TOUR',
@@ -119,7 +119,7 @@ const translationVI = {
     titleMain: 'MINI GAMES',
     blank: 'Fill in blank',
     choice: 'Multiple choice',
-    word: 'Arrange word',
+    word: 'Arrange words',
   },
   advertising: {
     titleMain: '3D BILLBOARD ADVERTISING',
