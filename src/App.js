@@ -28,6 +28,7 @@ import MiniGames from './layout/body/explore/mini-games/mini-games';
 import Advertising from './layout/body/explore/advertising/advertising';
 import OrderService from './layout/body/explore/order-service/order-service';
 import Tour from './layout/body/explore/tour/tour';
+import ExploreCollapse from './layout/body/explore/collapse/explore-collapse';
 
 export default function App() {
   // status show explore
@@ -64,6 +65,11 @@ export default function App() {
       <Feedback windowDimensions={windowDimensions} />
       {statusExplore ? (
         <>
+          <ExploreCollapse
+            windowDimensions={windowDimensions}
+            statusExplore={statusExplore}
+            changeStatusExplore={changeStatusExplore}
+          />
           <Tour windowDimensions={windowDimensions} />
           <MiniGames windowDimensions={windowDimensions} />
           <Advertising windowDimensions={windowDimensions} />
