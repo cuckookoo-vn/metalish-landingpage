@@ -24,30 +24,65 @@
       margin-top: 8vw;
     }
   }
+
   .roadmap-box {
     margin-top: 470px;
     position: relative;
     width: 100%;
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-between;
-    padding: 0 160px;
+    justify-content: center;
+    padding: 0 7%;
+
     @media #{$info-tablet-1399} {
-      margin-top: 27vw;
-      padding: 0 10vw;
+      margin-top: 20vw;
     }
+
     @media #{$info-phone} {
       flex-wrap: wrap;
       flex-direction: column;
       margin-top: 8vw;
-      height: 95vw;
+      height: 110vw;
     }
+
+    .box-month-wrapper {
+      position: relative;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: left;
+      height: 801px;
+      width: 330px;
+      top: -400px;
+
+      @media #{$info-tablet-1399} {
+        top: -300px;
+      }
+
+      @media #{$info-tablet-991} {
+        top: -300px;
+      }
+
+      @media #{$info-phone} {
+        background-position: center;
+        height: 19vw;
+        width: 100%;
+        top: -50px;
+      }
+    }
+
     .box-month {
       display: block;
       position: relative;
       height: 100px;
       width: 100px;
+      top: 40%;
+      left: 30%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+
       @media #{$info-tablet-1399} {
+        top: 45%;
         height: 6vw;
         width: 6vw;
       }
@@ -55,6 +90,8 @@
         margin: auto;
         height: 10vw;
         width: 10vw;
+        left: 0;
+        top: 25%;
       }
       .bg-month {
         height: 100px;
@@ -114,11 +151,13 @@
         }
 
         &.green {
+          left: 5%;
           box-shadow: 40px 40px 40px 0px rgba(#2fc6da, 0.7);
           @media #{$info-tablet-1399} {
             box-shadow: 1.8vw 1.8vw 4vw 0 rgba(#2fc6da, 0.8);
           }
           @media #{$info-phone} {
+            // left: 50%;
             box-shadow: 3vw 3vw 3vw 0 rgba(#2fc6da, 0.8);
           }
           &::after {
@@ -127,6 +166,7 @@
         }
 
         &.blue {
+          left: 5%;
           box-shadow: 40px 40px 40px 0px rgba(#7778de, 0.7);
           @media #{$info-tablet-1399} {
             box-shadow: 1.8vw 1.8vw 3vw 0 rgba(#7778de, 0.8);
@@ -140,6 +180,7 @@
         }
 
         &.yellow {
+          left: 5%;
           box-shadow: 40px 40px 40px 0px rgba(#d19760, 0.7);
           @media #{$info-tablet-1399} {
             box-shadow: 1.8vw 1.8vw 3vw 0 rgba(#d19760, 0.8);
@@ -153,6 +194,7 @@
         }
 
         &.purple {
+          left: 5%;
           box-shadow: 40px 40px 40px 0px rgba(#955ecf, 0.7);
           @media #{$info-tablet-1399} {
             box-shadow: 1.8vw 1.8vw 3vw 0 rgba(#955ecf, 0.7);
@@ -171,7 +213,7 @@
         font-size: 2rem;
         top: 48%;
         font-weight: bold;
-        left: 50%;
+        left: 55%;
         transform: translate(-50%, -50%);
         z-index: 2;
         @media #{$info-tablet-1399} {
@@ -218,7 +260,7 @@
             left: 50%;
           }
           @media #{$info-phone} {
-            left: -30vw;
+            left: -40vw;
             bottom: 0.5vw;
             transform: none;
           }
@@ -229,8 +271,7 @@
             top: -95px;
           }
           @media #{$info-phone} {
-            right: -30vw;
-            left: inherit;
+            left: 35vw;
             top: -0.5vw;
             transform: none;
           }
@@ -241,7 +282,7 @@
             bottom: -95px;
           }
           @media #{$info-phone} {
-            left: -30vw;
+            left: -40vw;
             bottom: 0.5vw;
             transform: none;
           }
@@ -252,8 +293,7 @@
             top: -95px;
           }
           @media #{$info-phone} {
-            right: -30vw;
-            left: inherit;
+            left: 35vw;
             top: -0.5vw;
             transform: none;
           }
@@ -263,56 +303,76 @@
       .content-year {
         position: absolute;
         width: fit-content;
-        font-size: 1rem;
+        font-size: 0.85rem;
+        word-break: keep-all;
         left: -18px;
         @media #{$info-tablet-1399} {
-          font-size: 0.8rem;
+          font-size: 1.1vw;
         }
         @media #{$info-phone} {
-          font-size: 2.1vw;
+          font-size: 1.5vw;
         }
         &.content-year-2022 {
-          top: -240px;
+          top: -200px;
+          left: -50%;
           @media #{$info-tablet-1399} {
-            top: -195px;
+            top: -15vw;
+            left: -40px;
           }
+
+          @media #{$info-tablet-991} {
+            top: -15vw;
+            left: -3vw;
+          }
+
           @media #{$info-phone} {
-            left: inherit;
-            right: -42vw;
-            top: -4vw;
+            left: 25vw;
+            top: -3.5vw;
           }
         }
+
         &.content-year-2023 {
-          bottom: -270px;
+          bottom: -250px;
+          left: -50%;
+
           @media #{$info-tablet-1399} {
-            bottom: -220px;
+            left: -60%;
+            bottom: -18vw;
           }
+
           @media #{$info-tablet-991} {
-            bottom: -245px;
+            left: -2.5vw;
           }
+
           @media #{$info-phone} {
-            left: -36vw;
-            top: -9vw;
+            left: -38vw;
+            top: -4.5vw;
           }
         }
         &.content-year-2023-second {
           top: -185px;
+          left: -50%;
           @media #{$info-tablet-1399} {
             top: -140px;
           }
+
+          @media #{$info-tablet-991} {
+            top: -15vw;
+          }
+
           @media #{$info-phone} {
-            left: inherit;
-            right: -42vw;
+            left: 25vw;
             top: -2vw;
           }
         }
         &.content-year-2024 {
           bottom: -145px;
+          left: -50%;
           @media #{$info-tablet-1399} {
             bottom: -110px;
           }
           @media #{$info-phone} {
-            left: -36vw;
+            left: -38vw;
             top: 1vw;
           }
         }
@@ -320,8 +380,13 @@
           position: relative;
           list-style: none;
           color: #ffffff;
-          width: 20vw;
+          width: 16.5vw;
           margin-bottom: 5px;
+
+          @media #{$info-tablet-1399} {
+            width: 16.5vw;
+            margin-bottom: 2px;
+          }
           @media #{$info-phone} {
             width: 30vw;
             margin-bottom: 2px;
@@ -341,26 +406,23 @@
       }
     }
 
-    .vertical-light {
-      position: absolute;
-      background: radial-gradient(
-        50% 50% at 50% 50%,
-        #ffffff 68.75%,
-        rgba(247, 247, 247, 0) 100%
-      );
-      width: 100%;
-      height: 6px;
-      top: 49%;
-      left: 0;
+    .roadmap-arrow {
+      position: relative;
+      height: 50px;
+      top: -50px;
+      margin: 0 1%;
+
       @media #{$info-tablet-1399} {
-        height: 0.3vw;
+        top: 8vw;
+        height: 2vw;
       }
+
       @media #{$info-phone} {
-        top: 0;
-        left: calc(50% - 0.25vw);
-        margin: auto;
-        height: 90vw;
-        width: 0.5vw;
+        height: 30px;
+        width: 30px;
+        top: -7.5vw;
+        left: 48%;
+        margin: 3% 0;
       }
     }
   }
