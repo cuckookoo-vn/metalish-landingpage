@@ -6,8 +6,17 @@
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 650px;
-
   color: #ffffff;
+  opacity: 1;
+
+  .overview-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 1;
+  }
 
   @media #{$info-tablet-1399} {
     min-height: 60vw;
@@ -31,14 +40,14 @@
   }
 
   .content {
+    opacity: 1;
     position: absolute;
     width: 500px;
-    // text-align: center;
     right: 58%;
     font-size: 16px;
+    z-index: 2;
 
     @media #{$info-tablet-1399} {
-      // left: 10%;
       width: 40%;
       font-size: 1.2vw;
     }
@@ -57,11 +66,13 @@
   }
 
   .model {
+    opacity: 1;
     position: relative;
     float: right;
     width: 750px;
     height: 450px;
     right: -10px;
+    z-index: 2;
 
     .overlay {
       position: relative;
@@ -70,7 +81,6 @@
     }
 
     @media #{$info-tablet-1399} {
-      // position: absolute;
       top: 45%;
       left: 5%;
       height: 40vw;

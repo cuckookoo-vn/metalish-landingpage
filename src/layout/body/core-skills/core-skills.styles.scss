@@ -48,11 +48,12 @@
       &.listening {
         left: 15vw;
         top: 0;
-        z-index: 1;
+        z-index: 3;
         @media #{$info-phone} {
           left: 21vw;
         }
       }
+
       &.speaking {
         left: 33vw;
         top: 0;
@@ -66,7 +67,7 @@
       &.vocabulary {
         left: 51vw;
         top: 0;
-        z-index: 2;
+        z-index: 1;
         @media #{$info-phone} {
           left: 21vw;
           top: 25vw;
@@ -74,7 +75,7 @@
       }
 
       &.mouth-shape {
-        z-index: 12;
+        z-index: 0;
         left: 69vw;
         top: 0;
         @media #{$info-phone} {
@@ -89,7 +90,7 @@
         font-weight: 700;
         left: 50%;
         top: 50%;
-        font-size: 2vw;
+        font-size: 1.7vw;
         transform: translate(-50%, -50%);
         @media #{$info-phone} {
           font-size: 3vw;
