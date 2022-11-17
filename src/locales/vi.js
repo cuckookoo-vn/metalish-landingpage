@@ -87,8 +87,8 @@ const translationVI = {
       'Cải thiện các kỹ năng tiếng Anh: nghe, nói, đọc, viết, khẩu hình miệng.',
     'talking-room_content.txt':
       'Trả thêm một khoản phí nhỏ để tham gia các lớp học cá nhân được tùy chỉnh với AI hoặc với giáo viên mà bạn thích. \n' +
-      'Những chủ đề không giới hạn\n' +
-      'Mời bạn bè cùng đi vào thế giới của mình nào!',
+      'Những chủ đề không giới hạn.\n' +
+      'Mời bạn bè cùng đi vào thế giới của mình.',
     'cooperation_content.txt':
       'Đội ngũ cố vấn nội dung giàu kinh nghiệm, bao gồm giáo viên tiếng Anh nước ngoài và giáo viên tiếng Anh bản địa.',
     'curriculum_content.txt':
@@ -160,8 +160,8 @@ const translationVI = {
   },
   advertising: {
     titleMain: 'BẢNG QUẢNG CÁO 3D',
-    title1: `“This merchandise is currently available at Gmarket.co.kr...”`,
-    title2: `“How do I purchase this valise?”`,
+    title1: `“Mẫu vali này đang được bán tại Gmarket.co.kr...”`,
+    title2: `“Tôi có thể mua vali này ở đâu?”`,
   },
   orderService: {
     titleMain: 'DỊCH VỤ ĐẶT HÀNG',
@@ -183,7 +183,7 @@ const translationVI = {
       title1: 'Ra mắt version 1',
       title2: 'Thiết kế art cho phase 2',
       title3: 'Phát triển Metalish phase 2 (metaverse)',
-      title4: 'Nâng cấp server (hơn 10.000.000 người dùng)',
+      title4: 'Nâng cấp server (hơn 10 triệu người dùng)',
       title5: 'Kêu gọi vốn đầu tư',
       title6: 'Chạy quảng cáo trong ứng dụng',
       title7: 'Chuẩn bị cho phase 3',

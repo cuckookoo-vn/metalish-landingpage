@@ -86,7 +86,7 @@ const translationKO = {
       '듣기, 말하기, 어휘, 발음의 영어실력을 개선합니다.',
     'talking-room_content.txt':
       '조금만의 추가 비용을 지불하면 AI 또는 강사와의 상호작용을 가능하게 하는 맞춤형 및 개인화된 수업에 참여 가능합니다.\n' +
-      '무한한 주제\n' +
+      '무한한 주제.\n' +
       '친구를 초대하여 나의 세계에 합류할 수 있습니다.',
     'cooperation_content.txt':
       '외국인 영어 강사와 현지 영어 강사를 포함한 경력 많은 콘텐츠 어드바이저 팀.',
@@ -182,7 +182,7 @@ const translationKO = {
       title1: '1차 버전 출시',
       title2: 'Phase 2의 아트 디자인',
       title3: 'Metalish phase 2 (metaverse)개발',
-      title4: '서버 업그레이드 (유저 수 1,000만 명)',
+      title4: '서버 업그레이드 (1,000만명 이상의 유저)',
       title5: '자본 투자 유치',
       title6: '앱에서 광고 실행',
       title7: 'Phase 3 준비',

@@ -86,8 +86,8 @@ const translationEN = {
       'Improve English skills: Reading, Listening, Speaking, Mouth shape.',
     'talking-room_content.txt':
       'Pay small extra fee to take customized and personalized classes with AI or the teachers you like.\n' +
-      'Unlimited topics\n' +
-      'Invite your friends to join your world!',
+      'Unlimited topics.\n' +
+      'Invite your friends to join your world.',
     'cooperation_content.txt':
       'Exprienced content advisor team, including foreign English teachers and local English teachers.',
     'curriculum_content.txt':
