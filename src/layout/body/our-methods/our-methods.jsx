@@ -17,20 +17,37 @@ const OurMethods = ({ windowDimensions }) => {
     classType: process.env.PUBLIC_URL + '/images/our-methods/2-type.png',
     cooperation: process.env.PUBLIC_URL + '/images/our-methods/cooperation.png',
     curriculum: process.env.PUBLIC_URL + '/images/our-methods/curriculum.png',
+
+    cooperationPic:
+      process.env.PUBLIC_URL + '/images/our-methods/cooperation-pic.png',
+    curriculumPic:
+      process.env.PUBLIC_URL + '/images/our-methods/curriculum-pic.png',
+    privateRoomPic:
+      process.env.PUBLIC_URL + '/images/our-methods/private-room-pic.png',
+    talkingRoomPic:
+      process.env.PUBLIC_URL + '/images/our-methods/talking-room-pic.png',
   };
 
   const methods = [
     {
-      type: 'class-type',
-      frame: images.classType,
+      type: 'private-room',
+      frame: images.cooperation,
+      src: images.privateRoomPic,
+    },
+    {
+      type: 'talking-room',
+      frame: images.cooperation,
+      src: images.talkingRoomPic,
     },
     {
       type: 'cooperation',
       frame: images.cooperation,
+      src: images.cooperationPic,
     },
     {
       type: 'curriculum',
       frame: images.curriculum,
+      src: images.curriculumPic,
     },
   ];
 
@@ -99,7 +116,11 @@ const OurMethods = ({ windowDimensions }) => {
             <div className='box-our-methods'>
               {methods.map((element, index) => (
                 <SwiperSlide key={index}>
-                  <OurMethodsItem src={element.frame} type={element.type} />
+                  <OurMethodsItem
+                    frame={element.frame}
+                    type={element.type}
+                    src={element.src}
+                  />
                 </SwiperSlide>
               ))}
             </div>

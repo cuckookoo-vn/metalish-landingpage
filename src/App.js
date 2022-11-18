@@ -65,7 +65,7 @@ export default function App() {
       <Feedback windowDimensions={windowDimensions} />
       {statusExplore ? (
         <>
-          <ExploreCollapse
+          <Explore
             windowDimensions={windowDimensions}
             statusExplore={statusExplore}
             changeStatusExplore={changeStatusExplore}

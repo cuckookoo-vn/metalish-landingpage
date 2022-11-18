@@ -4,6 +4,15 @@ const translationKO = {
     'option_ko.lbl': '한국어',
     'option_vi.lbl': 'Tiếng Việt',
     'download.btn': '다운로드',
+    'introduction.btn': 'Introduction',
+    'key-features.btn': 'Key features',
+    'core-skills.btn': 'Core skills',
+    'our-methods.btn': 'Our methods',
+    'reviews.btn': 'Reviews',
+    'explore.btn': 'Explore',
+    'roadmap.btn': 'Roadmap',
+    'teams.btn': 'Teams',
+    'contact.btn': 'Contact',
   },
 
   modalDownload: {

@@ -25,6 +25,33 @@ const Header = () => {
   const [logoDisplay, setLogoDisplay] = useState('');
 
   const [show, setShow] = useState(false);
+  const [listOffsetTop, setListOffsetTop] = useState([]);
+
+  const listClassSection = [
+    'overview',
+    'key-features',
+    'core-skills',
+    'our-methods',
+    'feedback',
+    'explore',
+    'explore-collapse',
+    'roadmap',
+    'development-team',
+    'footer',
+  ];
+
+  const listClass = [
+    'vertical-video',
+    'vertical-introduce',
+    'vertical-key-features',
+    'vertical-airport',
+    'vertical-character',
+    'vertical-item',
+    'vertical-mini-game',
+    'vertical-3d',
+    'vertical-roadmap',
+    'vertical-core-team',
+  ];
 
   const setShowModal = () => {
     if (statusButton) {
@@ -53,6 +80,20 @@ const Header = () => {
     setStatusLang(false);
   };
 
+  const scrollCLick = (className) => {
+    let getClass = document.getElementsByClassName(className)[0];
+    window.scrollTo(0, getClass.offsetTop);
+  };
+
+  const removeActive = () => {
+    listClass.forEach((element) => {
+      let getClass = document.getElementsByClassName(element)[0];
+      if (getClass.classList.contains('active')) {
+        getClass.classList.remove('active');
+      }
+    });
+  };
+
   useEffect(() => {
     const onScroll = () => {
       if (
@@ -70,6 +111,31 @@ const Header = () => {
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
+
+  useEffect(() => {
+    let listClassElement = [];
+    listClassSection.forEach((element) => {
+      listClassElement.push(document.getElementsByClassName(element)[0]);
+    });
+    setListOffsetTop(listClassElement);
+
+    const onScroll = () => {
+      listOffsetTop.forEach((element, index) => {
+        let getClassItem = document.getElementsByClassName(listClass[index])[0];
+        if (window.pageYOffset + element.offsetHeight / 2 > element.offsetTop) {
+          if (!getClassItem.classList.contains('active')) {
+            removeActive();
+            getClassItem.classList.add('active');
+            return;
+          }
+        }
+      });
+    };
+
+    window.removeEventListener('scroll', onScroll);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, [document.getElementsByClassName('video-introduce')[0]]);
 
   return (
     <>
@@ -89,7 +155,7 @@ const Header = () => {
           {/* Dropdown */}
           <div className='language dropdown-lang'>
             <button
-              className='language-btn language-btn-lang'
+              className='language-btn'
               onClick={() => setStatusMenu(statusLang)}
             >
               <img className='flag' src={flag} alt='flag-england' />
@@ -143,6 +209,82 @@ const Header = () => {
             </div>
           </div>
           {/* Dropdown */}
+
+          {/* Contact */}
+          <div className='menu'>
+            <button
+              className='button'
+              onClick={() => scrollCLick(listClassSection[9])}
+            >
+              {t('header.contact.btn')}
+            </button>
+          </div>
+
+          <div className='menu'>
+            <button
+              className='button'
+              onClick={() => scrollCLick(listClassSection[8])}
+            >
+              {t('header.teams.btn')}
+            </button>
+          </div>
+          <div className='menu'>
+            <button
+              className='button'
+              onClick={() => scrollCLick(listClassSection[7])}
+            >
+              {t('header.roadmap.btn')}
+            </button>
+          </div>
+          <div className='menu'>
+            <button
+              className='button'
+              onClick={() => scrollCLick(listClassSection[5])}
+            >
+              {t('header.explore.btn')}
+            </button>
+          </div>
+          <div className='menu'>
+            <button
+              className='button'
+              onClick={() => scrollCLick(listClassSection[4])}
+            >
+              {t('header.reviews.btn')}
+            </button>
+          </div>
+          <div className='menu'>
+            <button
+              className='button'
+              onClick={() => scrollCLick(listClassSection[3])}
+            >
+              {t('header.our-methods.btn')}
+            </button>
+          </div>
+          <div className='menu'>
+            <button
+              className='button'
+              onClick={() => scrollCLick(listClassSection[2])}
+            >
+              {t('header.core-skills.btn')}
+            </button>
+          </div>
+          <div className='menu'>
+            <button
+              className='button'
+              onClick={() => scrollCLick(listClassSection[1])}
+            >
+              {t('header.key-features.btn')}
+            </button>
+          </div>
+          <div className='menu'>
+            <button
+              className='button'
+              onClick={() => scrollCLick(listClassSection[0])}
+            >
+              {t('header.introduction.btn')}
+            </button>
+          </div>
+          {/* Contact */}
         </>
       </div>
 
