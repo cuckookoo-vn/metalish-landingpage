@@ -95,10 +95,10 @@ const translationKO = {
       '듣기, 말하기, 어휘, 발음의 영어실력을 개선합니다.',
     'talking-room_content.txt':
       '조금만의 추가 비용을 지불하면 AI 또는 강사와의 상호작용을 가능하게 하는 맞춤형 및 개인화된 수업에 참여 가능합니다.\n' +
-      '무한한 주제.\n' +
-      '친구를 초대하여 나의 세계에 합류할 수 있습니다.',
+      '무한한 주제입니다.\n' +
+      '친구를 초대하여 나의 세계에 방문할 수 있습니다.',
     'cooperation_content.txt':
-      '외국인 영어 강사와 현지 영어 강사를 포함한 경력 많은 콘텐츠 어드바이저 팀.',
+      '콘텐츠 어드바이저 팀은 경력 있는 외국인 강사와 현지 강사를 포함합니다.',
     'curriculum_content.txt':
       '커리큘럼은 전적으로 사용자 국가의 커리큘럼을 기반으로 합니다.',
   },
@@ -176,10 +176,10 @@ const translationKO = {
     titleDes: '실주문하기 위하여 광고물과 상호 작용할 수 있습니다',
   },
   roadmap: {
-    titleMain: '로드 맵',
+    titleMain: '로드맵',
     title2022: {
       month: 'AUG',
-      title1: 'Metalish 구상',
+      title1: 'Metalish에 대한 기획',
       title2: '리소스 정리 및 킥오프',
       title3: 'Metalish phase 1 개발',
       title4: 'Phase 1의 아트 디자인',

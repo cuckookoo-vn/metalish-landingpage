@@ -101,10 +101,10 @@ const Header = () => {
         document.getElementById('video-introduce').offsetHeight
       ) {
         setBgColor('#020220');
-        setLogoDisplay(`${process.env.PUBLIC_URL}/images/logo.png`);
+        // setLogoDisplay(`${process.env.PUBLIC_URL}/images/logo.png`);
       } else {
         setBgColor('');
-        setLogoDisplay('');
+        // setLogoDisplay('');
       }
     };
     window.removeEventListener('scroll', onScroll);
@@ -140,7 +140,7 @@ const Header = () => {
   return (
     <>
       <div className='header' style={{ backgroundColor: bgColor }}>
-        <img className='logo' src={logoDisplay} alt='' />
+        <img className='logo' src={`${process.env.PUBLIC_URL}/images/logo.png`} alt='' />
         <>
           {/* Download */}
           <div

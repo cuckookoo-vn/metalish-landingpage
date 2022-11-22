@@ -29,6 +29,7 @@ const OrderService = ({ windowDimensions }) => {
           data-aos='fade-right'
           style={{ backgroundImage: `url(${images.frame})` }}
         >
+          {/* <div className='overlay'></div> */}
           <img src={images.book} alt='book' />
         </div>
 

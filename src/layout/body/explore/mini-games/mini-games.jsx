@@ -11,6 +11,12 @@ const MiniGames = ({ windowDimensions }) => {
       process.env.PUBLIC_URL + '/images/explore/mini-games/mutichoice.png',
     fillBlank:
       process.env.PUBLIC_URL + '/images/explore/mini-games/fill-blank.png',
+    fillInBlankPic:
+      process.env.PUBLIC_URL + '/images/explore/mini-games/fill-in-blank.png',
+    scrambleWordsPic:
+      process.env.PUBLIC_URL + '/images/explore/mini-games/scramble-words.png',
+    multipleChoicePic:
+      process.env.PUBLIC_URL + '/images/explore/mini-games/multiple-choice.png',
   };
 
   return (
@@ -28,6 +34,10 @@ const MiniGames = ({ windowDimensions }) => {
             className='mini-games-item'
             data-aos={windowDimensions.width > 576.5 ? '' : 'fade-up'}
           >
+            <div
+              className='overlay'
+              style={{ backgroundImage: `url(${images.fillInBlankPic})` }}
+            ></div>
             <img src={images.fillBlank} alt='fillBlank' />
             <span className='title'>{t('miniGames.blank')}</span>
           </div>
@@ -36,6 +46,10 @@ const MiniGames = ({ windowDimensions }) => {
             className='mini-games-item center'
             data-aos={windowDimensions.width > 576.5 ? '' : 'fade-up'}
           >
+            <div
+              className='overlay'
+              style={{ backgroundImage: `url(${images.multipleChoicePic})` }}
+            ></div>
             <img src={images.mutichoice} alt='mutichoice' />
             <span className='title'>{t('miniGames.choice')}</span>
           </div>
@@ -44,6 +58,10 @@ const MiniGames = ({ windowDimensions }) => {
             className='mini-games-item'
             data-aos={windowDimensions.width > 576.5 ? '' : 'fade-up'}
           >
+            <div
+              className='overlay'
+              style={{ backgroundImage: `url(${images.scrambleWordsPic})` }}
+            ></div>
             <img src={images.dice} alt='dice' />
             <span className='title'>{t('miniGames.word')}</span>
           </div>
