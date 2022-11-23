@@ -16,13 +16,13 @@ const OurMethods = ({ windowDimensions }) => {
     pre: process.env.PUBLIC_URL + '/images/our-methods/left-button.png',
 
     cooperationPic:
-      process.env.PUBLIC_URL + '/images/our-methods/cooperation-pic.png',
+      'https://metalish.s3.ap-northeast-2.amazonaws.com/img/lp-our-methods/cooperation.png',
     curriculumPic:
-      process.env.PUBLIC_URL + '/images/our-methods/curriculum-pic.png',
+      'https://metalish.s3.ap-northeast-2.amazonaws.com/img/lp-our-methods/curriculum.png',
     privateRoomPic:
-      process.env.PUBLIC_URL + '/images/our-methods/private-room-pic.png',
+      'https://metalish.s3.ap-northeast-2.amazonaws.com/img/lp-our-methods/private-room.png',
     talkingRoomPic:
-      process.env.PUBLIC_URL + '/images/our-methods/talking-room-1.gif',
+      'https://metalish.s3.ap-northeast-2.amazonaws.com/img/lp-our-methods/talking-room.gif',
   };
 
   const methods = [

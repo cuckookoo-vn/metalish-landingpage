@@ -12,11 +12,11 @@ const MiniGames = ({ windowDimensions }) => {
     fillBlank:
       process.env.PUBLIC_URL + '/images/explore/mini-games/fill-blank.png',
     fillInBlankPic:
-      process.env.PUBLIC_URL + '/images/explore/mini-games/fill-in-blank.png',
+      'https://metalish.s3.ap-northeast-2.amazonaws.com/img/lp-explore-tour/mini-games/fill-in-blank.png',
     scrambleWordsPic:
-      process.env.PUBLIC_URL + '/images/explore/mini-games/scramble-words.png',
+      'https://metalish.s3.ap-northeast-2.amazonaws.com/img/lp-explore-tour/mini-games/scramble-words.png',
     multipleChoicePic:
-      process.env.PUBLIC_URL + '/images/explore/mini-games/multiple-choice.png',
+      'https://metalish.s3.ap-northeast-2.amazonaws.com/img/lp-explore-tour/mini-games/multiple-choice.png',
   };
 
   return (

@@ -7,10 +7,14 @@ const CoreSkills = ({ windowDimensions }) => {
   const images = {
     bgKeyFeatures: process.env.PUBLIC_URL + '/images/overview/bg-overview.jpg',
     frame: process.env.PUBLIC_URL + '/images/explore/order-service/frame.png',
-    listening: process.env.PUBLIC_URL + '/images/core-skills/listening.png',
-    speaking: process.env.PUBLIC_URL + '/images/core-skills/speaking.png',
-    vocabulary: process.env.PUBLIC_URL + '/images/core-skills/vocabulary.png',
-    mouthShape: process.env.PUBLIC_URL + '/images/core-skills/mouth-shape.png',
+    listening:
+      'https://metalish.s3.ap-northeast-2.amazonaws.com/img/lp-core-skills/listening.png',
+    speaking:
+      'https://metalish.s3.ap-northeast-2.amazonaws.com/img/lp-core-skills/speaking.png',
+    vocabulary:
+      'https://metalish.s3.ap-northeast-2.amazonaws.com/img/lp-core-skills/vocabulary.png',
+    mouthShape:
+      'https://metalish.s3.ap-northeast-2.amazonaws.com/img/lp-core-skills/mouth-shape.png',
   };
 
   return (
