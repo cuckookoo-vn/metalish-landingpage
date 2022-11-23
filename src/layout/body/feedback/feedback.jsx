@@ -17,15 +17,14 @@ const Feedback = ({ windowDimensions }) => {
     commentBox: process.env.PUBLIC_URL + '/images/feedback/comment-box.png',
     commentAvatar:
       process.env.PUBLIC_URL + '/images/feedback/comment-avatar.png',
-    avatar1: process.env.PUBLIC_URL + '/images/feedback/avatar-1.png',
-    avatar2: process.env.PUBLIC_URL + '/images/feedback/avatar-2.png',
-    avatar3: process.env.PUBLIC_URL + '/images/feedback/avatar-3.png',
-    avatar4: process.env.PUBLIC_URL + '/images/feedback/avatar-4.png',
-    avatar5: process.env.PUBLIC_URL + '/images/feedback/avatar-5.png',
-    avatar6: process.env.PUBLIC_URL + '/images/feedback/avatar-6.png',
-    avatar7: process.env.PUBLIC_URL + '/images/feedback/avatar-7.png',
-    avatar8: process.env.PUBLIC_URL + '/images/feedback/avatar-8.png',
-    avatar9: process.env.PUBLIC_URL + '/images/feedback/avatar-9.png',
+    avatar1: process.env.PUBLIC_URL + '/images/feedback/avatar-01.png',
+    avatar2: process.env.PUBLIC_URL + '/images/feedback/avatar-02.png',
+    avatar3: process.env.PUBLIC_URL + '/images/feedback/avatar-03.png',
+    avatar4: process.env.PUBLIC_URL + '/images/feedback/avatar-04.png',
+    avatar5: process.env.PUBLIC_URL + '/images/feedback/avatar-05.png',
+    avatar6: process.env.PUBLIC_URL + '/images/feedback/avatar-06.png',
+    avatar7: process.env.PUBLIC_URL + '/images/feedback/avatar-07.png',
+    avatar8: process.env.PUBLIC_URL + '/images/feedback/avatar-08.png',
   };
 
   const comments = [
@@ -146,7 +145,7 @@ const Feedback = ({ windowDimensions }) => {
             loopFillGroupWithBlank={false}
             pagination={{
               clickable: true,
-              dynamicBullets: true,
+              // dynamicBullets: true,
             }}
             modules={[Pagination, Navigation]}
             className='mySwiper'

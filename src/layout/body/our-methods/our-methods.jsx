@@ -14,9 +14,6 @@ const OurMethods = ({ windowDimensions }) => {
   const images = {
     next: process.env.PUBLIC_URL + '/images/our-methods/right-button.png',
     pre: process.env.PUBLIC_URL + '/images/our-methods/left-button.png',
-    classType: process.env.PUBLIC_URL + '/images/our-methods/2-type.png',
-    cooperation: process.env.PUBLIC_URL + '/images/our-methods/cooperation.png',
-    curriculum: process.env.PUBLIC_URL + '/images/our-methods/curriculum.png',
 
     cooperationPic:
       process.env.PUBLIC_URL + '/images/our-methods/cooperation-pic.png',
@@ -25,28 +22,28 @@ const OurMethods = ({ windowDimensions }) => {
     privateRoomPic:
       process.env.PUBLIC_URL + '/images/our-methods/private-room-pic.png',
     talkingRoomPic:
-      process.env.PUBLIC_URL + '/images/our-methods/talking-room-pic.png',
+      process.env.PUBLIC_URL + '/images/our-methods/talking-room-1.gif',
   };
 
   const methods = [
     {
       type: 'private-room',
-      frame: images.cooperation,
+      title: 'PRIVATE ROOM',
       src: images.privateRoomPic,
     },
     {
       type: 'talking-room',
-      frame: images.cooperation,
+      title: 'TALKING ROOM',
       src: images.talkingRoomPic,
     },
     {
       type: 'cooperation',
-      frame: images.cooperation,
+      title: 'COOPERATION',
       src: images.cooperationPic,
     },
     {
       type: 'curriculum',
-      frame: images.curriculum,
+      title: 'CURRICULUM',
       src: images.curriculumPic,
     },
   ];
@@ -102,7 +99,7 @@ const OurMethods = ({ windowDimensions }) => {
             loopFillGroupWithBlank={false}
             pagination={{
               clickable: true,
-              dynamicBullets: true,
+              // dynamicBullets: true,
             }}
             modules={[Pagination, Navigation]}
             className='mySwiper'
@@ -117,7 +114,7 @@ const OurMethods = ({ windowDimensions }) => {
               {methods.map((element, index) => (
                 <SwiperSlide key={index}>
                   <OurMethodsItem
-                    frame={element.frame}
+                    title={element.title}
                     type={element.type}
                     src={element.src}
                   />

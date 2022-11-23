@@ -25,6 +25,25 @@
       height: 50vw;
     }
 
+    .method-title {
+      position: absolute;
+      color: #fff;
+      font-weight: 800;
+      font-size: 18px;
+      top: 11%;
+      left: 45%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+
+
+      @media #{$info-tablet-1399} {
+        top: 8.8vw;
+        left: 50%;
+        font-size: 1.5vw;
+      }
+    }
+
     .content {
       position: relative;
       color: #fff;

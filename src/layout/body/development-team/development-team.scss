@@ -66,6 +66,7 @@
     .swiper{
       position: initial;
       .swiper-pagination-bullet{
+        // padding: auto;
         background: #00FFD1;
       }
       .swiper-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
@@ -73,6 +74,9 @@
         @media #{$info-phone} {
           bottom: -15px;
         }
+      }
+      .swiper-wrapper {
+        height: 360px;
       }
     }
   }

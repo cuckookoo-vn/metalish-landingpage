@@ -118,37 +118,37 @@ const translationVI = {
     'user-2-full-comment.txt':
       'Tôi đã có được sự tự tin khi dùng tiếng Anh trong cuộc sống hàng ngày. Với Metalish, tôi có thể gặp gỡ và tương tác với những người có cùng sở thích với mình.',
 
-    'user-3-name.txt': 'Je Loi',
+    'user-3-name.txt': 'Joy Le',
     'user-3-description.txt': 'Học sinh lớp 12',
     'user-3-summary-comment.lbl': 'Đội ngũ giảng viên chuyên nghiệp',
     'user-3-full-comment.txt':
       'Phản hồi của giảng viên luôn luôn kịp thời và mang tính xây dựng.',
 
-    'user-4-name.txt': 'Tin Pham',
+    'user-4-name.txt': 'Samuel Nguyen',
     'user-4-description.txt': 'Học sinh lớp 5',
     'user-4-summary-comment.lbl': 'Userflow tuyệt vời',
     'user-4-full-comment.txt':
       'App này dễ dùng, tôi biết mình cần click vào đâu và không click vào đâu.',
 
-    'user-5-name.txt': 'Win Ho',
+    'user-5-name.txt': 'Rift Ho',
     'user-5-description.txt': 'Học sinh lớp 12',
     'user-5-summary-comment.lbl': 'Thiết kế tuyệt đẹp',
     'user-5-full-comment.txt':
       'Giao diện nhiều màu sắc và tươi sáng, giúp tôi có thể tập trung lâu hơn vào việc học của mình.',
 
-    'user-6-name.txt': 'Lin Dao',
+    'user-6-name.txt': 'Leon Nguyen',
     'user-6-description.txt': 'Học sinh lớp 5',
     'user-6-summary-comment.lbl': 'Trải nghiệm đỉnh nhé',
     'user-6-full-comment.txt':
       'Tôi chỉ cần trả thêm một khoản phí nhỏ đã có thể tham gia những lớp học cá nhân tùy chỉnh với AI hoặc giáo viên mà mình thích.',
 
-    'user-7-name.txt': 'Pin Le',
+    'user-7-name.txt': 'Funik Nguyen',
     'user-7-description.txt': 'Học sinh lớp 12',
     'user-7-summary-comment.lbl': 'Giáo trình được chuẩn bị kỹ lưỡng',
     'user-7-full-comment.txt':
       'Những bài học được chuẩn bị kỹ lưỡng và chi tiết. Luôn có câu trả lời cho mọi câu hỏi của tôi.',
 
-    'user-8-name.txt': 'Rin Nguyen',
+    'user-8-name.txt': 'Talon Nghiem',
     'user-8-description.txt': 'Học sinh lớp 5',
     'user-8-summary-comment.lbl': 'Lớp học rất tuyệt vời',
     'user-8-full-comment.txt':

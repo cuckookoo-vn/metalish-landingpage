@@ -139,9 +139,10 @@
     float: right;
     color: #ffffff;
     top: 30%;
-    padding: 0 0;
+    padding: 0 10px;
 
     @media #{$info-tablet-1399} {
+      padding: 0 5px;
       top: 20%;
     }
 
