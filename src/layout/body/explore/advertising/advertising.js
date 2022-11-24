@@ -5,9 +5,9 @@ const Advertising = ({ windowDimensions }) => {
   const { t } = useTranslation();
   const images = {
     bgAdvertising:
-      'https://aroundtheworld.s3.ap-southeast-1.amazonaws.com/imgs/artw_ckk_vali_web.png',
+      'https://metalish.s3.ap-northeast-2.amazonaws.com/img/lp-explore-tour/advertising/billboard-advertising-web.png',
     bgAdvertisingMobile:
-      'https://aroundtheworld.s3.ap-southeast-1.amazonaws.com/imgs/artw_ckk_vali_mobile.png',
+    'https://metalish.s3.ap-northeast-2.amazonaws.com/img/lp-explore-tour/advertising/billboard-advertising-mobile.png',
   };
 
   return (

@@ -134,6 +134,35 @@
     }
   }
 
+  .menu {
+    position: relative;
+    float: right;
+    color: #ffffff;
+    top: 30%;
+    padding: 0 10px;
+
+    @media #{$info-tablet-1399} {
+      padding: 0 5px;
+      top: 20%;
+    }
+
+    .button {
+      text-align: left;
+      color: #ffffff;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      border: none;
+      padding: 5px 25px 5px 0;
+      width: fit-content;
+      height: 25px;
+      background-color: transparent;
+    }
+    @media #{$info-phone} {
+      display: none;
+    }
+  }
+
   .dropdown-lang {
     position: relative;
     text-align: right;
