@@ -170,7 +170,7 @@ const DevelopmentTeam = ({ windowDimensions }) => {
             loopFillGroupWithBlank={false}
             pagination={{
               clickable: true,
-              dynamicBullets: true,
+              // dynamicBullets: true,
             }}
             modules={[Pagination, Navigation]}
             className='mySwiper'

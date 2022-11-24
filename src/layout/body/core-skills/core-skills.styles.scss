@@ -40,17 +40,66 @@
       background-repeat: no-repeat;
       background-size: contain;
       width: 20vw;
+      display: block;
+      border-radius: 50%;
       height: 20vw;
       @media #{$info-phone} {
         width: 30vw;
         height: 30vw;
       }
+
+      .overlay {
+        position: absolute;
+        top: 50%;
+        width: 952px;
+        height: 577px;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.2s ease;
+        background-repeat: no-repeat;
+        z-index: 1000;
+        background-size: contain;
+        background-position: center;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        color: #fff;
+
+        @media #{$info-tablet-1399} {
+          width: 60vw;
+          height: 60vw;
+        }
+
+        @media #{$info-phone} {
+          width: 65vw;
+          height: 65vw;
+        }
+      }
+
       &.listening {
         left: 15vw;
         top: 0;
         z-index: 3;
+
         @media #{$info-phone} {
           left: 21vw;
+        }
+
+        &:hover {
+          z-index: 1000;
+        }
+
+        .overlay {
+          left: 186%;
+
+          @media #{$info-tablet-1399} {
+            left: 36vw;
+          }
+
+          @media #{$info-phone} {
+            top: 25vw;
+            left: 28.5vw;
+          }
         }
       }
 
@@ -62,6 +111,24 @@
           left: 48vw;
           top: 0;
         }
+
+        &:hover {
+          z-index: 1000;
+        }
+
+        .overlay {
+          // left: 345px;
+          left: 96%;
+
+          @media #{$info-tablet-1399} {
+            left: 18vw;
+          }
+
+          @media #{$info-phone} {
+            top: 25vw;
+            left: 1.5vw;
+          }
+        }
       }
 
       &.vocabulary {
@@ -69,8 +136,22 @@
         top: 0;
         z-index: 1;
         @media #{$info-phone} {
+          z-index: 3;
           left: 21vw;
           top: 25vw;
+        }
+
+        &:hover {
+          z-index: 1000;
+        }
+
+        .overlay {
+          left: 6%;
+
+          @media #{$info-phone} {
+            top: 0vw;
+            left: 28.5vw;
+          }
         }
       }
 
@@ -82,7 +163,25 @@
           left: 48vw;
           top: 25vw;
         }
+
+        &:hover {
+          z-index: 1000;
+        }
+
+        .overlay {
+          left: -84%;
+
+          @media #{$info-tablet-1399} {
+            right: -22vw;
+          }
+
+          @media #{$info-phone} {
+            top: 0vw;
+            left: 1.5vw;
+          }
+        }
       }
+
       span {
         color: #fff;
         position: absolute;
@@ -98,4 +197,14 @@
       }
     }
   }
+}
+
+// .core-skills .core-skills-box .core-skills-item:hover span {
+//   display: none;
+// }
+
+.core-skills .core-skills-box .core-skills-item:hover .overlay {
+  opacity: 1;
+  visibility: visible;
+  // z-index: -1;
 }

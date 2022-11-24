@@ -11,6 +11,8 @@ const OrderService = ({ windowDimensions }) => {
     food2: process.env.PUBLIC_URL + '/images/explore/order-service/food-2.png',
     food3: process.env.PUBLIC_URL + '/images/explore/order-service/food-3.png',
     frame: process.env.PUBLIC_URL + '/images/explore/order-service/frame.png',
+    orderFrame:
+      process.env.PUBLIC_URL + '/images/explore/order-service/order-frame.png',
   };
 
   return (
@@ -25,10 +27,18 @@ const OrderService = ({ windowDimensions }) => {
 
       <div className='order-service-box'>
         <div
+          className='overlay'
+          style={{ backgroundImage: `url(${images.orderFrame})` }}
+        ></div>
+        <div
           className='item-service book'
           data-aos='fade-right'
           style={{ backgroundImage: `url(${images.frame})` }}
         >
+          {/* <div
+            className='overlay'
+            style={{ backgroundImage: `url(${images.orderFrame})` }}
+          ></div> */}
           <img src={images.book} alt='book' />
         </div>
 
@@ -53,6 +63,10 @@ const OrderService = ({ windowDimensions }) => {
           data-aos='fade-up-left'
           style={{ backgroundImage: `url(${images.frame})` }}
         >
+          {/* <div
+          className='overlay'
+          style={{ backgroundImage: `url(${images.orderFrame})` }}
+        ></div> */}
           <img src={images.food2} alt='food2' />
         </div>
 
@@ -61,6 +75,10 @@ const OrderService = ({ windowDimensions }) => {
           data-aos='fade-up'
           style={{ backgroundImage: `url(${images.frame})` }}
         >
+          {/* <div
+          className='overlay'
+          style={{ backgroundImage: `url(${images.orderFrame})` }}
+        ></div> */}
           <img src={images.food3} alt='food3' />
         </div>
       </div>

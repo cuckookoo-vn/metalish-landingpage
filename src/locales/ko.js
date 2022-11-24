@@ -4,6 +4,15 @@ const translationKO = {
     'option_ko.lbl': '한국어',
     'option_vi.lbl': 'Tiếng Việt',
     'download.btn': '다운로드',
+    'introduction.btn': 'Introduction',
+    'key-features.btn': 'Key features',
+    'core-skills.btn': 'Core skills',
+    'our-methods.btn': 'Our methods',
+    'reviews.btn': 'Reviews',
+    'explore.btn': 'Explore',
+    'roadmap.btn': 'Roadmap',
+    'teams.btn': 'Teams',
+    'contact.btn': 'Contact',
   },
 
   modalDownload: {
@@ -86,10 +95,10 @@ const translationKO = {
       '듣기, 말하기, 어휘, 발음의 영어실력을 개선합니다.',
     'talking-room_content.txt':
       '조금만의 추가 비용을 지불하면 AI 또는 강사와의 상호작용을 가능하게 하는 맞춤형 및 개인화된 수업에 참여 가능합니다.\n' +
-      '무한한 주제.\n' +
-      '친구를 초대하여 나의 세계에 합류할 수 있습니다.',
+      '무한한 주제입니다.\n' +
+      '친구를 초대하여 나의 세계에 방문할 수 있습니다.',
     'cooperation_content.txt':
-      '외국인 영어 강사와 현지 영어 강사를 포함한 경력 많은 콘텐츠 어드바이저 팀.',
+      '콘텐츠 어드바이저 팀은 경력 있는 외국인 강사와 현지 강사를 포함합니다.',
     'curriculum_content.txt':
       '커리큘럼은 전적으로 사용자 국가의 커리큘럼을 기반으로 합니다.',
   },
@@ -108,37 +117,37 @@ const translationKO = {
     'user-2-full-comment.txt':
       '일상생활에서 영어를 사용할 수 있다는 자신감을 얻었습니다! Metalish를 사용해서 저와 같은 관심을 가진 사람들을 만나고 교류할 수 있으니 좋습니다!',
 
-    'user-3-name.txt': 'Je Loi',
+    'user-3-name.txt': 'Joy Le',
     'user-3-description.txt': '12학년 학생',
     'user-3-summary-comment.lbl': '전문 선생님 계십니다!',
     'user-3-full-comment.txt':
       '선생님들께 항상 적시에 건설적인 피드백을 주십니다.',
 
-    'user-4-name.txt': 'Tin Pham',
+    'user-4-name.txt': 'Samuel Nguyen',
     'user-4-description.txt': '5학년 학생',
     'user-4-summary-comment.lbl': '뛰어난 유저 흐름',
     'user-4-full-comment.txt':
       '이 앱은 매우 사용하기 쉬워서, 무엇을 클릭해야 하는지 알 수 있네요.',
 
-    'user-5-name.txt': 'Win Ho',
+    'user-5-name.txt': 'Rift Ho',
     'user-5-description.txt': '12학년 학생',
     'user-5-summary-comment.lbl': '멋진 디자인입니다',
     'user-5-full-comment.txt':
       '인터페이스가 매우 화려하고 밝아서 공부에 더 오래 집중할 수 있습니다.',
 
-    'user-6-name.txt': 'Lin Dao',
+    'user-6-name.txt': 'Leon Nguyen',
     'user-6-description.txt': '5학년 학생',
     'user-6-summary-comment.lbl': '최고의 경험',
     'user-6-full-comment.txt':
       ' 약간의 추가 비용만 냈지만 AI나 좋아하는 선생님들과 함께 맞춤형 수업을 들었을 수 있습니다.',
 
-    'user-7-name.txt': 'Pin Le',
+    'user-7-name.txt': 'Funik Nguyen',
     'user-7-description.txt': '12학년 학생',
     'user-7-summary-comment.lbl': '강의 요강이 잘 준비됐습니다',
     'user-7-full-comment.txt':
       '수업은 세심하게 준비되어 있고 매우 상세하네요. 제가 가진 모든 질문에는 항상 답변이 있습니다.',
 
-    'user-8-name.txt': 'Rin Nguyen',
+    'user-8-name.txt': 'Talon Nghiem',
     'user-8-description.txt': '5학년 학생',
     'user-8-summary-comment.lbl': '교실이 짱!',
     'user-8-full-comment.txt':
@@ -167,10 +176,10 @@ const translationKO = {
     titleDes: '실주문하기 위하여 광고물과 상호 작용할 수 있습니다',
   },
   roadmap: {
-    titleMain: '로드 맵',
+    titleMain: '로드맵',
     title2022: {
       month: 'AUG',
-      title1: 'Metalish 구상',
+      title1: 'Metalish에 대한 기획',
       title2: '리소스 정리 및 킥오프',
       title3: 'Metalish phase 1 개발',
       title4: 'Phase 1의 아트 디자인',

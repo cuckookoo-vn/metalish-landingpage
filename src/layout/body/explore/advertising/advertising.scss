@@ -20,7 +20,7 @@
 
     .title {
       color: #ffffff;
-      font-size: 1.1vw;
+      font-size: 1.0vw;
       position: absolute;
       @media #{$info-phone} {
         font-size: 1.7vw;
@@ -43,7 +43,7 @@
       width: 21vw;
       left: 63.6vw;
       top: 47vw;
-      font-size: 1vw;
+      // font-size: 1vw;
       word-break: keep-all;
 
       @media #{$info-phone} {

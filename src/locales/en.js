@@ -4,6 +4,15 @@ const translationEN = {
     'option_ko.lbl': '한국어',
     'option_vi.lbl': 'Tiếng Việt',
     'download.btn': 'DOWNLOAD',
+    'introduction.btn': 'Introduction',
+    'key-features.btn': 'Key features',
+    'core-skills.btn': 'Core skills',
+    'our-methods.btn': 'Our methods',
+    'reviews.btn': 'Reviews',
+    'explore.btn': 'Explore',
+    'roadmap.btn': 'Roadmap',
+    'teams.btn': 'Teams',
+    'contact.btn': 'Contact',
   },
 
   modalDownload: {
@@ -108,37 +117,37 @@ const translationEN = {
     'user-2-full-comment.txt':
       'I gained the confidence to use English in my daily life. With Metalish, I can meet and interact with others who have the same interest with me.',
 
-    'user-3-name.txt': 'Je Loi',
+    'user-3-name.txt': 'Joy Le',
     'user-3-description.txt': '12th grade student',
     'user-3-summary-comment.lbl': 'Professional teachers',
     'user-3-full-comment.txt':
       'Teachers’s feedbacks are always in a timely and constructive manner.',
 
-    'user-4-name.txt': 'Tin Pham',
+    'user-4-name.txt': 'Samuel Nguyen',
     'user-4-description.txt': '5th grade student',
     'user-4-summary-comment.lbl': 'Great userflow',
     'user-4-full-comment.txt':
       'This app is very easy to use, I know what to click and what not.',
 
-    'user-5-name.txt': 'Win Ho',
+    'user-5-name.txt': 'Rift Ho',
     'user-5-description.txt': '12th grade student',
     'user-5-summary-comment.lbl': 'Wonderful design',
     'user-5-full-comment.txt':
       'The interface is very colorful and bright, it helps me to focus longer on my study.',
 
-    'user-6-name.txt': 'Lin Dao',
+    'user-6-name.txt': 'Leon Nguyen',
     'user-6-description.txt': '5th grade student',
     'user-6-summary-comment.lbl': 'Top experience',
     'user-6-full-comment.txt':
       'I only have to pay a small extra fee to take customized and personalized classes with AI or the teachers I like.',
 
-    'user-7-name.txt': 'Pin Le',
+    'user-7-name.txt': 'Funik Nguyen',
     'user-7-description.txt': '12th grade student',
     'user-7-summary-comment.lbl': 'Well prepared syllabus',
     'user-7-full-comment.txt':
       'The lessons are carefully prepared and very detailed. There is always an answer to every question I have.',
 
-    'user-8-name.txt': 'Rin Nguyen',
+    'user-8-name.txt': 'Talon Nghiem',
     'user-8-description.txt': '5th grade student',
     'user-8-summary-comment.lbl': 'Amazing classroom',
     'user-8-full-comment.txt':
