@@ -30,6 +30,7 @@ const translationEN = {
     'content_4.txt':
       'Moreover, Metalish hopes to create a familiar space for all users. Users can design their classroom and invite friends to join with them. We want to bring the best user experience.',
     'content_5.txt': 'Let’s start exploring your own English world!',
+    'model.lbl': 'Drag left or right for 3D view',
   },
   'key-features': {
     'title.lbl': 'KEY FEATURES',

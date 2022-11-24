@@ -95,7 +95,7 @@ const DevelopmentTeam = ({ windowDimensions }) => {
       image: urlImage + '15.png',
     },
     {
-      name: 'Ms. Hagi',
+      name: 'Hagi Hoang',
       position: 'English Teacher',
       image: urlImage + '16.png',
     },
@@ -105,7 +105,7 @@ const DevelopmentTeam = ({ windowDimensions }) => {
       image: urlImage + '17.png',
     },
     {
-      name: 'GiGi Le',
+      name: 'Gigi Le',
       position: 'Translator',
       image: urlImage + '18.png',
     },
@@ -170,7 +170,6 @@ const DevelopmentTeam = ({ windowDimensions }) => {
             loopFillGroupWithBlank={false}
             pagination={{
               clickable: true,
-              // dynamicBullets: true,
             }}
             modules={[Pagination, Navigation]}
             className='mySwiper'
