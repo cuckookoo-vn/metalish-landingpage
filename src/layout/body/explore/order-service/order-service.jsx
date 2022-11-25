@@ -44,10 +44,13 @@ const OrderService = ({ windowDimensions }) => {
       </span>
 
       <div className='order-service-box'>
-        <div
-          className='overlay'
-          style={{ backgroundImage: `url(${orderFrame})` }}
-        ></div>
+        <div className='overlay-box'>
+          <div
+            className='overlay'
+            style={{ backgroundImage: `url(${orderFrame})` }}
+          ></div>
+        </div>
+
         <div
           className='item-service book'
           data-aos='fade-right'
