@@ -1,7 +1,7 @@
 import './video-proposal.styles.scss';
 
 const VideoProposal = () => {
-  const srcDefault = 'https://metalish.s3.ap-northeast-2.amazonaws.com/video/Video_Proposal.mp4';
+  const srcDefault = 'https://d2qh7rlng6g9al.cloudfront.net/video/Video_Proposal.mp4';
   // const srcError =
   //   'https://ik.imagekit.io/hngejsvtfd/AroundTheWould_Cuckookoo_VideoProposal_v6_ncs.mp4';
 

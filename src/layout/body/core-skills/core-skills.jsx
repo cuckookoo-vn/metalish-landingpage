@@ -1,5 +1,6 @@
 import './core-skills.styles.scss';
 import { useTranslation } from 'react-i18next';
+import { url } from '../../../url';
 
 const CoreSkills = ({ windowDimensions }) => {
   const { t } = useTranslation();
@@ -8,13 +9,13 @@ const CoreSkills = ({ windowDimensions }) => {
     bgKeyFeatures: process.env.PUBLIC_URL + '/images/overview/bg-overview.jpg',
     frame: process.env.PUBLIC_URL + '/images/explore/order-service/frame.png',
     listening:
-      'https://metalish.s3.ap-northeast-2.amazonaws.com/img/lp-core-skills/listening.png',
+      'https://d2qh7rlng6g9al.cloudfront.net/img/lp-core-skills/listening.png',
     speaking:
-      'https://metalish.s3.ap-northeast-2.amazonaws.com/img/lp-core-skills/speaking.png',
+      `${url}/img/lp-core-skills/speaking.png`,
     vocabulary:
-      'https://metalish.s3.ap-northeast-2.amazonaws.com/img/lp-core-skills/vocabulary.png',
+      `${url}/img/lp-core-skills/vocabulary.png`,
     mouthShape:
-      'https://metalish.s3.ap-northeast-2.amazonaws.com/img/lp-core-skills/mouth-shape.png',
+      `${url}/img/lp-core-skills/mouth-shape.png`,
   };
 
   return (
