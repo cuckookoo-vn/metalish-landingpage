@@ -42,9 +42,7 @@ const Footer = () => {
 
           <div className='title-box'>
             <FontAwesomeIcon className='icon icon-local' icon={faLocationDot} />
-            <span className='title'>
-              82, Street No.6, Ward 10, Go Vap District, Ho Chi Minh City
-            </span>
+            <span className='title'>{t('footer.address')}</span>
           </div>
 
           <div className='title-box'>

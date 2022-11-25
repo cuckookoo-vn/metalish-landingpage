@@ -1,13 +1,12 @@
 import './advertising.scss';
 import { useTranslation } from 'react-i18next';
+import { url } from '../../../../url';
 
 const Advertising = ({ windowDimensions }) => {
   const { t } = useTranslation();
   const images = {
-    bgAdvertising:
-      'https://metalish.s3.ap-northeast-2.amazonaws.com/img/lp-explore-tour/advertising/billboard-advertising-web.png',
-    bgAdvertisingMobile:
-    'https://metalish.s3.ap-northeast-2.amazonaws.com/img/lp-explore-tour/advertising/billboard-advertising-mobile.png',
+    bgAdvertising: `${url}/img/lp-explore-tour/advertising/billboard-advertising-web.png`,
+    bgAdvertisingMobile: `${url}/img/lp-explore-tour/advertising/billboard-advertising-mobile.png`,
   };
 
   return (

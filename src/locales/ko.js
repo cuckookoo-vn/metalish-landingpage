@@ -4,15 +4,15 @@ const translationKO = {
     'option_ko.lbl': '한국어',
     'option_vi.lbl': 'Tiếng Việt',
     'download.btn': '다운로드',
-    'introduction.btn': 'Introduction',
-    'key-features.btn': 'Key features',
-    'core-skills.btn': 'Core skills',
-    'our-methods.btn': 'Our methods',
-    'reviews.btn': 'Reviews',
-    'explore.btn': 'Explore',
-    'roadmap.btn': 'Roadmap',
-    'teams.btn': 'Teams',
-    'contact.btn': 'Contact',
+    'introduction.btn': '소개',
+    'key-features.btn': '주요 기능',
+    'core-skills.btn': '핵심 스킬',
+    'our-methods.btn': '학습 방식',
+    'reviews.btn': '피드백',
+    'explore.btn': '탐구',
+    'roadmap.btn': '로드맵',
+    'teams.btn': '팀원',
+    'contact.btn': '연락',
   },
 
   modalDownload: {
@@ -29,7 +29,8 @@ const translationKO = {
       '게다가, Metalish는 교육의 질을 향상시키기 위해 항상 사용자 피드백을 듣습니다. 효과적인 피드백들을 통해서 사용자가 본인의 학습에 대해서 반영하게 되기도 하고 더 효율적인 학습 프로섹을 조절할 수 있기도 합니다.',
     'content_4.txt':
       '또한, Metalish는 사용자와 친한공간을 만드는 사명을 띱니다. 사용자가 본인의 교실을 꾸밀 수 있을 뿐만 아니라 친구들에게 나의 방에 참가하려 초대할 수도 있습니다. 가장 좋은 사용감을 제공할 수 있는 것을 기대합니다.',
-    'content_5.txt': '본인의 영어 세계를 탐험하기 시작합시다!',
+    'content_5.txt': '본인의 영어 세계를 탐구하기 시작합시다!',
+    'model.lbl': '3D 보기를 위해 왼쪽 또는 오른쪽으로 드래그',
   },
   'key-features': {
     'title.lbl': '주요 기능',
@@ -155,7 +156,7 @@ const translationKO = {
   },
 
   explore: {
-    titleMain: 'Metalish를 탐험하러 갑시다!',
+    titleMain: 'Metalish를 탐구하러 갑시다!',
   },
   tour: {
     titleMain: 'METALISH의 순화',
@@ -169,7 +170,7 @@ const translationKO = {
   advertising: {
     titleMain: '3D 빌보드 광고',
     title1: `“이 상품은 Gmarket.co.kr에서 구매 가능합니다”`,
-    title2: `“이 여행가방을 어디서 구매할 수 있어요 ?”`,
+    title2: `“이 여행가방을 어디서 구매할 수 있어요?”`,
   },
   orderService: {
     titleMain: '주문 서비스',
@@ -215,8 +216,8 @@ const translationKO = {
   },
 
   footer: {
-    titleMain: 'Get In Touch',
-    address: '82, Street No.6, Ward 10, Go Vap District, Ho Chi Minh City',
+    titleMain: '연락처',
+    address: '(베트남) 호치민 시 Go Vap군 10동 82호 (Cityland Park Hills)',
     email: 'metalish@cuckookoo.vn',
     phone: '0336111248',
   },

@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation } from 'swiper';
 import OurMethodsItem from './our-methods-item/our-methods-item';
+import { url } from '../../../url';
 
 const OurMethods = ({ windowDimensions }) => {
   // translation
@@ -15,14 +16,10 @@ const OurMethods = ({ windowDimensions }) => {
     next: process.env.PUBLIC_URL + '/images/our-methods/right-button.png',
     pre: process.env.PUBLIC_URL + '/images/our-methods/left-button.png',
 
-    cooperationPic:
-      'https://metalish.s3.ap-northeast-2.amazonaws.com/img/lp-our-methods/cooperation.png',
-    curriculumPic:
-      'https://metalish.s3.ap-northeast-2.amazonaws.com/img/lp-our-methods/curriculum.png',
-    privateRoomPic:
-      'https://metalish.s3.ap-northeast-2.amazonaws.com/img/lp-our-methods/private-room.png',
-    talkingRoomPic:
-      'https://metalish.s3.ap-northeast-2.amazonaws.com/img/lp-our-methods/talking-room.gif',
+    cooperationPic: `${url}/img/lp-our-methods/cooperation.png`,
+    curriculumPic: `${url}/img/lp-our-methods/curriculum.png`,
+    privateRoomPic: `${url}/img/lp-our-methods/private-room.png`,
+    talkingRoomPic: `${url}/img/lp-our-methods/talking-room.gif`,
   };
 
   const methods = [
