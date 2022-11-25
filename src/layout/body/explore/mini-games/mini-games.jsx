@@ -1,6 +1,7 @@
 import { Container } from 'react-bootstrap';
 import './mini-games.scss';
 import { useTranslation } from 'react-i18next';
+import { url } from '../../../../url';
 
 const MiniGames = ({ windowDimensions }) => {
   const { t } = useTranslation();
@@ -11,12 +12,9 @@ const MiniGames = ({ windowDimensions }) => {
       process.env.PUBLIC_URL + '/images/explore/mini-games/mutichoice.png',
     fillBlank:
       process.env.PUBLIC_URL + '/images/explore/mini-games/fill-blank.png',
-    fillInBlankPic:
-      'https://metalish.s3.ap-northeast-2.amazonaws.com/img/lp-explore-tour/mini-games/fill-in-blank.png',
-    scrambleWordsPic:
-      'https://metalish.s3.ap-northeast-2.amazonaws.com/img/lp-explore-tour/mini-games/scramble-words.png',
-    multipleChoicePic:
-      'https://metalish.s3.ap-northeast-2.amazonaws.com/img/lp-explore-tour/mini-games/multiple-choice.png',
+    fillInBlankPic: `${url}/img/lp-explore-tour/mini-games/fill-in-blank.png`,
+    scrambleWordsPic: `${url}/img/lp-explore-tour/mini-games/scramble-words.png`,
+    multipleChoicePic: `${url}/img/lp-explore-tour/mini-games/multiple-choice.png`,
   };
 
   return (

@@ -6,12 +6,13 @@ import { useTranslation } from 'react-i18next';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation } from 'swiper';
+import { url } from '../../../url';
 
 const DevelopmentTeam = ({ windowDimensions }) => {
   // data development team
-  // https://metalish.s3.ap-northeast-2.amazonaws.com/img/lp-core-member/lp-core-member-1.png
+  // ${url}/img/lp-core-member/lp-core-member-1.png
   const urlImage =
-    'https://metalish.s3.ap-northeast-2.amazonaws.com/img/lp-core-member/lp-core-member-';
+    `${url}/img/lp-core-member/lp-core-member-`;
 
   const images = {
     next: process.env.PUBLIC_URL + '/images/development-team/right-button.png',
@@ -95,7 +96,7 @@ const DevelopmentTeam = ({ windowDimensions }) => {
       image: urlImage + '15.png',
     },
     {
-      name: 'Ms. Hagi',
+      name: 'Hagi Hoang',
       position: 'English Teacher',
       image: urlImage + '16.png',
     },
@@ -105,7 +106,7 @@ const DevelopmentTeam = ({ windowDimensions }) => {
       image: urlImage + '17.png',
     },
     {
-      name: 'GiGi Le',
+      name: 'Gigi Le',
       position: 'Translator',
       image: urlImage + '18.png',
     },
@@ -170,7 +171,6 @@ const DevelopmentTeam = ({ windowDimensions }) => {
             loopFillGroupWithBlank={false}
             pagination={{
               clickable: true,
-              // dynamicBullets: true,
             }}
             modules={[Pagination, Navigation]}
             className='mySwiper'

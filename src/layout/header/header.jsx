@@ -22,7 +22,6 @@ const Header = () => {
   const [flag, setFlag] = useState(images.flagEngland);
 
   const [bgColor, setBgColor] = useState('');
-  const [logoDisplay, setLogoDisplay] = useState('');
 
   const [show, setShow] = useState(false);
   const [listOffsetTop, setListOffsetTop] = useState([]);
@@ -101,10 +100,8 @@ const Header = () => {
         document.getElementById('video-introduce').offsetHeight
       ) {
         setBgColor('#020220');
-        // setLogoDisplay(`${process.env.PUBLIC_URL}/images/logo.png`);
       } else {
         setBgColor('');
-        // setLogoDisplay('');
       }
     };
     window.removeEventListener('scroll', onScroll);

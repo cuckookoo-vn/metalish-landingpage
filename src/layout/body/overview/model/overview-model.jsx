@@ -4,6 +4,7 @@ import { Canvas } from '@react-three/fiber';
 import * as THREE from 'three';
 import './overview-model.styles.scss';
 import { useState } from 'react';
+import { t } from 'i18next';
 
 function Model(props) {
   const { scene } = useGLTF('/model.glb');
@@ -32,7 +33,7 @@ export default function OverviewModel() {
         onMouseDown={() => handleOverlay()}
       >
         <div className='overlay'></div>
-        <span>Drag left or right for 3D view</span>
+        <span>{t('overview.model.lbl')}</span>
       </div>
       <Suspense fallback={<div>Loading...</div>}>
         <Canvas

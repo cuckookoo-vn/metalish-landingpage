@@ -3,16 +3,16 @@ const translationVI = {
     'option_en.lbl': 'English',
     'option_ko.lbl': '한국어',
     'option_vi.lbl': 'Tiếng Việt',
-    'download.btn': 'DOWNLOAD',
-    'introduction.btn': 'Introduction',
-    'key-features.btn': 'Key features',
-    'core-skills.btn': 'Core skills',
-    'our-methods.btn': 'Our methods',
-    'reviews.btn': 'Reviews',
-    'explore.btn': 'Explore',
-    'roadmap.btn': 'Roadmap',
-    'teams.btn': 'Teams',
-    'contact.btn': 'Contact',
+    'download.btn': 'TẢI VỀ',
+    'introduction.btn': 'Giới thiệu',
+    'key-features.btn': 'Tính năng',
+    'core-skills.btn': 'Kỹ năng',
+    'our-methods.btn': 'Phương pháp',
+    'reviews.btn': 'Đánh giá',
+    'explore.btn': 'Khám phá',
+    'roadmap.btn': 'Lộ trình',
+    'teams.btn': 'Đội ngũ phát triển',
+    'contact.btn': 'Liên hệ',
   },
 
   modalDownload: {
@@ -31,6 +31,7 @@ const translationVI = {
       'Hơn thế nữa, Metalish hy vọng có thể tạo ra được một không gian quen thuộc cho tất người dùng. Người dùng có thể thiết kế lớp học của họ và mời bạn bè cùng tham gia. Chúng tôi muốn mang đến trải nghiệm người dùng tốt nhất.',
     'content_5.txt':
       'Hãy cùng bắt đầu khám phá thế giới tiếng Anh của riêng bạn nào!',
+    'model.lbl': 'Kéo sang trái hoặc phải để xem không gian 3D',
   },
   'key-features': {
     'title.lbl': 'CÁC TÍNH NĂNG CHÍNH',
@@ -215,7 +216,7 @@ const translationVI = {
   },
   footer: {
     titleMain: 'Thông tin liên lạc',
-    address: '82, Street No.6, Ward 10, Go Vap District, Ho Chi Minh City',
+    address: 'Số 82 đường số 6, phường 10, quận Gò Vấp, Tp. Hồ Chí Minh',
     email: 'metalish@cuckookoo.vn',
     phone: '0336111248',
   },
