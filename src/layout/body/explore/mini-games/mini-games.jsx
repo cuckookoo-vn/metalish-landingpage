@@ -13,7 +13,7 @@ const MiniGames = ({ windowDimensions }) => {
     fillBlank:
       process.env.PUBLIC_URL + '/images/explore/mini-games/fill-blank.png',
     fillInBlankPic: `${url}/img/lp-explore-tour/mini-games/fill-in-blank.png`,
-    scrambleWordsPic: `${url}/img/lp-explore-tour/mini-games/scramble-words.png`,
+    scrambleWordPic: `${url}/img/lp-explore-tour/mini-games/scramble-word.png`,
     multipleChoicePic: `${url}/img/lp-explore-tour/mini-games/multiple-choice.png`,
   };
 
@@ -58,7 +58,7 @@ const MiniGames = ({ windowDimensions }) => {
           >
             <div
               className='overlay'
-              style={{ backgroundImage: `url(${images.scrambleWordsPic})` }}
+              style={{ backgroundImage: `url(${images.scrambleWordPic})` }}
             ></div>
             <img src={images.dice} alt='dice' />
             <span className='title'>{t('miniGames.word')}</span>
