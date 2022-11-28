@@ -8,14 +8,10 @@ const CoreSkills = ({ windowDimensions }) => {
   const images = {
     bgKeyFeatures: process.env.PUBLIC_URL + '/images/overview/bg-overview.jpg',
     frame: process.env.PUBLIC_URL + '/images/explore/order-service/frame.png',
-    listening:
-      'https://d2qh7rlng6g9al.cloudfront.net/img/lp-core-skills/listening-1.png',
-    speaking:
-      `${url}/img/lp-core-skills/speaking.png`,
-    vocabulary:
-      `${url}/img/lp-core-skills/vocabulary.png`,
-    mouthShape:
-      `${url}/img/lp-core-skills/mouth-shape.png`,
+    listening: `${url}/img/lp-core-skills/listening-1.png`,
+    speaking: `${url}/img/lp-core-skills/speaking.png`,
+    vocabulary: `${url}/img/lp-core-skills/vocabulary.png`,
+    mouthShape: `${url}/img/lp-core-skills/mouth-shape.png`,
   };
 
   return (
