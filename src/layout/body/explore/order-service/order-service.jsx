@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { url } from '../../../../url';
 import './order-service.scss';
 
 const OrderService = ({ windowDimensions }) => {
@@ -13,12 +14,9 @@ const OrderService = ({ windowDimensions }) => {
     food2: process.env.PUBLIC_URL + '/images/explore/order-service/food-2.png',
     food3: process.env.PUBLIC_URL + '/images/explore/order-service/food-3.png',
     frame: process.env.PUBLIC_URL + '/images/explore/order-service/frame.png',
-    orderEn:
-      process.env.PUBLIC_URL + '/images/explore/order-service/order-frame.png',
-    orderKo:
-      process.env.PUBLIC_URL + '/images/explore/order-service/order-frame.png',
-    orderVi:
-      process.env.PUBLIC_URL + '/images/explore/order-service/order-frame.png',
+    orderEn: `${url}/img/lp-explore-tour/order-service/order-frame-en.png`,
+    orderKo: `${url}/img/lp-explore-tour/order-service/order-frame-ko.png`,
+    orderVi: `${url}/img/lp-explore-tour/order-service/order-frame-vi.png`,
   };
 
   const [orderFrame, setOrderFrame] = useState('');
@@ -44,10 +42,13 @@ const OrderService = ({ windowDimensions }) => {
       </span>
 
       <div className='order-service-box'>
-        <div
-          className='overlay'
-          style={{ backgroundImage: `url(${orderFrame})` }}
-        ></div>
+        <div className='overlay-box'>
+          <div
+            className='overlay'
+            style={{ backgroundImage: `url(${orderFrame})` }}
+          ></div>
+        </div>
+
         <div
           className='item-service book'
           data-aos='fade-right'
