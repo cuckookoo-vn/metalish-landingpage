@@ -1,9 +1,9 @@
-@import "src/styles/variables";
-.mini-games{
+@import 'src/styles/variables';
+.mini-games {
   width: 100%;
   height: fit-content;
   overflow: hidden;
-  .mini-games-box{
+  .mini-games-box {
     margin-top: 150px;
     display: flex;
     flex-wrap: nowrap;
@@ -11,16 +11,19 @@
     @media #{$info-tablet-1399} {
       margin-top: 10vw;
     }
+
     @media #{$info-phone-576} {
       margin-top: 0;
       min-width: 100%;
       flex-direction: column;
     }
-    .mini-games-item{
+    
+    .mini-games-item {
       display: flex;
       flex-direction: column;
       min-width: 33.3%;
       margin-top: 80px;
+
       @media #{$info-tablet-1399} {
         margin-top: 4vw;
       }
@@ -28,7 +31,29 @@
         margin-top: 15vw;
       }
 
-      img{
+      .overlay {
+        position: absolute;
+        margin-top: 96px;
+        left: 50%;
+        width: 952px;
+        height: 577px;
+        opacity: 0;
+        transition: 0.5s ease;
+        background-repeat: no-repeat;
+        z-index: -1;
+        background-size: contain;
+        background-position: center;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        color: #fff;
+
+        @media #{$info-tablet-1399} {
+          width: 60%;
+        }
+      }
+
+      img {
         height: 300px;
         width: fit-content;
         margin: auto;
@@ -40,14 +65,17 @@
           height: fit-content;
         }
       }
-      .title{
+      .title {
         margin-top: 150px;
         width: 100%;
         text-align: center;
-        color: #FFFFFF;
+        color: #ffffff;
         font-size: 1.4rem;
         @media #{$info-tablet-1399} {
           margin-top: 8vw;
+        }
+        @media #{$info-phone} {
+          font-size: 1.8vw;
         }
         @media #{$info-phone-576} {
           font-size: 1.2rem;
@@ -58,12 +86,35 @@
         }
       }
     }
-    .mini-games-item.center{
+    .mini-games-item.center {
       margin-top: 0;
       @media #{$info-phone-576} {
         margin-top: 15vw;
       }
-      img{
+
+      .overlay {
+        position: absolute;
+        margin-top: 176px;
+        left: 50%;
+        width: 952px;
+        height: 577px;
+        opacity: 0;
+        transition: 0.5s ease;
+        background-repeat: no-repeat;
+        z-index: -1;
+        background-size: contain;
+        background-position: center;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        color: #fff;
+
+        @media #{$info-tablet-1399} {
+          width: 60%;
+        }
+      }
+
+      img {
         height: 360px;
         @media #{$info-tablet-1399} {
           height: 22vw;
@@ -73,7 +124,7 @@
           height: fit-content;
         }
       }
-      .title{
+      .title {
         margin-top: 172px;
         @media #{$info-tablet-1399} {
           margin-top: 10vw;
@@ -84,4 +135,16 @@
       }
     }
   }
+}
+
+.mini-games .mini-games-box .mini-games-item:hover .overlay {
+  // display: none;
+  opacity: 1;
+  z-index: 1;
+}
+
+.mini-games .mini-games-box .mini-games-item.center:hover .overlay {
+  // display: none;
+  opacity: 1;
+  z-index: 1;
 }

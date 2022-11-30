@@ -3,6 +3,7 @@
   overflow: hidden;
   width: 100%;
   background-color: rgba(0, 0, 0, 0);
+  padding: 100px 0;
   @media #{$info-phone} {
     padding-bottom: 25px;
   }
@@ -87,6 +88,13 @@
           bottom: -15px;
         }
       }
+      // .swiper-wrapper {
+      //   height: 600px;
+
+      //   @media #{$info-tablet-1399} {
+      //     height: 50vw;
+      //   }
+      // }
     }
   }
   .swiper-slide {

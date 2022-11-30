@@ -3,6 +3,14 @@
   width: 100%;
   overflow: hidden;
   padding-bottom: 50px;
+
+  .title-main{
+    margin-top: 0.9vw;
+    @media #{$info-phone} {
+      margin-bottom: 18px;
+    }
+  }
+
   .slider-box {
     margin: 150px auto 20px auto;
     position: relative;

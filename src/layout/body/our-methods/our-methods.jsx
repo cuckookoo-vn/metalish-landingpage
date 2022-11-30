@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation } from 'swiper';
 import OurMethodsItem from './our-methods-item/our-methods-item';
+import { url } from '../../../url';
 
 const OurMethods = ({ windowDimensions }) => {
   // translation
@@ -14,23 +15,33 @@ const OurMethods = ({ windowDimensions }) => {
   const images = {
     next: process.env.PUBLIC_URL + '/images/our-methods/right-button.png',
     pre: process.env.PUBLIC_URL + '/images/our-methods/left-button.png',
-    classType: process.env.PUBLIC_URL + '/images/our-methods/2-type.png',
-    cooperation: process.env.PUBLIC_URL + '/images/our-methods/cooperation.png',
-    curriculum: process.env.PUBLIC_URL + '/images/our-methods/curriculum.png',
+
+    cooperationPic: `${url}/img/lp-our-methods/cooperation.png`,
+    curriculumPic: `${url}/img/lp-our-methods/curriculum.png`,
+    privateRoomPic: `${url}/img/lp-our-methods/private-room.png`,
+    talkingRoomPic: `${url}/img/lp-our-methods/talking-room.gif`,
   };
 
   const methods = [
     {
-      type: 'class-type',
-      frame: images.classType,
+      type: 'private-room',
+      title: 'PRIVATE ROOM',
+      src: images.privateRoomPic,
+    },
+    {
+      type: 'talking-room',
+      title: 'TALKING ROOM',
+      src: images.talkingRoomPic,
     },
     {
       type: 'cooperation',
-      frame: images.cooperation,
+      title: 'COOPERATION',
+      src: images.cooperationPic,
     },
     {
       type: 'curriculum',
-      frame: images.curriculum,
+      title: 'CURRICULUM',
+      src: images.curriculumPic,
     },
   ];
 
@@ -85,7 +96,7 @@ const OurMethods = ({ windowDimensions }) => {
             loopFillGroupWithBlank={false}
             pagination={{
               clickable: true,
-              dynamicBullets: true,
+              // dynamicBullets: true,
             }}
             modules={[Pagination, Navigation]}
             className='mySwiper'
@@ -99,7 +110,11 @@ const OurMethods = ({ windowDimensions }) => {
             <div className='box-our-methods'>
               {methods.map((element, index) => (
                 <SwiperSlide key={index}>
-                  <OurMethodsItem src={element.frame} type={element.type} />
+                  <OurMethodsItem
+                    title={element.title}
+                    type={element.type}
+                    src={element.src}
+                  />
                 </SwiperSlide>
               ))}
             </div>

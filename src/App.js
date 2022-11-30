@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, lazy, Suspense, useRef } from 'react';
 import { getWindowDimensions } from './mixins/window-dimensions';
 import './styles/index.scss';
 
@@ -53,17 +53,57 @@ export default function App() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  // const KeyFeatures = lazy(() =>
+  //   import('./layout/body/key-features/key-features')
+  // );
+  // const Overview = lazy(() => import('./layout/body/overview/overview'));
+  // const VideoProposal = lazy(() =>
+  //   import('./layout/body/video-proposal/video-proposal')
+  // );
+  // const CoreSkills = lazy(() =>
+  //   import('./layout/body/core-skills/core-skills')
+  // );
+  // const OurMethods = lazy(() =>
+  //   import('./layout/body/our-methods/our-methods')
+  // );
+  // const Feedback = lazy(() => import('./layout/body/feedback/feedback'));
+  // const DevelopmentTeam = lazy(() =>
+  //   import('./layout/body/development-team/development-team')
+  // );
+  // const Footer = lazy(() => import('./layout/footer/footer'));
+  // const Roadmap = lazy(() => import('./layout/body/roadmap/roadmap'));
+
+  // const Explore = lazy(() => import('./layout/body/explore/explore'));
+  // const MiniGames = lazy(() =>
+  //   import('./layout/body/explore/mini-games/mini-games')
+  // );
+  // const Advertising = lazy(() =>
+  //   import('./layout/body/explore/advertising/advertising')
+  // );
+  // const OrderService = lazy(() =>
+  //   import('./layout/body/explore/order-service/order-service')
+  // );
+  // const Tour = lazy(() => import('./layout/body/explore/tour/tour'));
+
   return (
     <>
-      <Header />
-      <VideoProposal />
-      <Overview windowDimensions={windowDimensions} />
-      <KeyFeatures windowDimensions={windowDimensions} />
-      <CoreSkills windowDimensions={windowDimensions} />
-      <OurMethods windowDimensions={windowDimensions} />
-      <Feedback windowDimensions={windowDimensions} />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Header />
+        <VideoProposal />
+        <Overview windowDimensions={windowDimensions} />
+        <KeyFeatures windowDimensions={windowDimensions} />
+        <CoreSkills windowDimensions={windowDimensions} />
+        <OurMethods windowDimensions={windowDimensions} />
+        <Feedback windowDimensions={windowDimensions} />
+      </Suspense>
+
       {statusExplore ? (
         <>
+          <Explore
+            windowDimensions={windowDimensions}
+            statusExplore={statusExplore}
+            changeStatusExplore={changeStatusExplore}
+          />
           <Tour windowDimensions={windowDimensions} />
           <MiniGames windowDimensions={windowDimensions} />
           <Advertising windowDimensions={windowDimensions} />
@@ -77,9 +117,11 @@ export default function App() {
         />
       )}
 
-      <Roadmap windowDimensions={windowDimensions} />
-      <DevelopmentTeam windowDimensions={windowDimensions} />
-      <Footer windowDimensions={windowDimensions} />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Roadmap windowDimensions={windowDimensions} />
+        <DevelopmentTeam windowDimensions={windowDimensions} />
+        <Footer windowDimensions={windowDimensions} />
+      </Suspense>
     </>
   );
 }

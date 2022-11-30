@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import Carousel5Enum from '../../../../enum/carousel-slide-animation/carousel5.enum';
 import Carousel7Enum from '../../../../enum/carousel-slide-animation/carousel7.enum';
 import { useTranslation } from 'react-i18next';
+import { url } from '../../../../url';
 
 const Tour = ({ windowDimensions }) => {
   const { t } = useTranslation();
@@ -10,23 +11,23 @@ const Tour = ({ windowDimensions }) => {
   const images = [
     {
       slide:
-        'https://metalish.s3.ap-northeast-2.amazonaws.com/img/lp-explore-tour/basketball-court.gif',
+        `${url}/img/lp-explore-tour/basketball-court.gif`,
     },
     {
       slide:
-        'https://metalish.s3.ap-northeast-2.amazonaws.com/img/lp-explore-tour/football-pitch.gif',
+        `${url}/img/lp-explore-tour/football-pitch.gif`,
     },
     {
       slide:
-        'https://metalish.s3.ap-northeast-2.amazonaws.com/img/lp-explore-tour/school-building.gif',
+        '${url}/img/lp-explore-tour/school-building.gif',
     },
     {
       slide:
-        'https://metalish.s3.ap-northeast-2.amazonaws.com/img/lp-explore-tour/self-study-classroom.gif',
+        `${url}/img/lp-explore-tour/self-study-classroom.gif`,
     },
     {
       slide:
-        'https://metalish.s3.ap-northeast-2.amazonaws.com/img/lp-explore-tour/swimming-pool.gif',
+        `${url}/img/lp-explore-tour/swimming-pool.gif`,
     },
   ];
 

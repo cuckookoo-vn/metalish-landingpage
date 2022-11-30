@@ -4,6 +4,15 @@ const translationKO = {
     'option_ko.lbl': '한국어',
     'option_vi.lbl': 'Tiếng Việt',
     'download.btn': '다운로드',
+    'introduction.btn': '소개',
+    'key-features.btn': '주요 기능',
+    'core-skills.btn': '핵심 스킬',
+    'our-methods.btn': '학습 방식',
+    'reviews.btn': '피드백',
+    'explore.btn': '탐구',
+    'roadmap.btn': '로드맵',
+    'teams.btn': '팀원',
+    'contact.btn': '연락',
   },
 
   modalDownload: {
@@ -20,7 +29,8 @@ const translationKO = {
       '게다가, Metalish는 교육의 질을 향상시키기 위해 항상 사용자 피드백을 듣습니다. 효과적인 피드백들을 통해서 사용자가 본인의 학습에 대해서 반영하게 되기도 하고 더 효율적인 학습 프로섹을 조절할 수 있기도 합니다.',
     'content_4.txt':
       '또한, Metalish는 사용자와 친한공간을 만드는 사명을 띱니다. 사용자가 본인의 교실을 꾸밀 수 있을 뿐만 아니라 친구들에게 나의 방에 참가하려 초대할 수도 있습니다. 가장 좋은 사용감을 제공할 수 있는 것을 기대합니다.',
-    'content_5.txt': '본인의 영어 세계를 탐험하기 시작합시다!',
+    'content_5.txt': '본인의 영어 세계를 탐구하기 시작합시다!',
+    'model.lbl': '3D 보기를 위해 왼쪽 또는 오른쪽으로 드래그',
   },
   'key-features': {
     'title.lbl': '주요 기능',
@@ -86,10 +96,10 @@ const translationKO = {
       '듣기, 말하기, 어휘, 발음의 영어실력을 개선합니다.',
     'talking-room_content.txt':
       '조금만의 추가 비용을 지불하면 AI 또는 강사와의 상호작용을 가능하게 하는 맞춤형 및 개인화된 수업에 참여 가능합니다.\n' +
-      '무한한 주제\n' +
-      '친구를 초대하여 나의 세계에 합류할 수 있습니다.',
+      '무한한 주제입니다.\n' +
+      '친구를 초대하여 나의 세계에 방문할 수 있습니다.',
     'cooperation_content.txt':
-      '외국인 영어 강사와 현지 영어 강사를 포함한 경력 많은 콘텐츠 어드바이저 팀.',
+      '콘텐츠 어드바이저 팀은 경력 있는 외국인 강사와 현지 강사를 포함합니다.',
     'curriculum_content.txt':
       '커리큘럼은 전적으로 사용자 국가의 커리큘럼을 기반으로 합니다.',
   },
@@ -97,20 +107,56 @@ const translationKO = {
   feedback: {
     'title.lbl': ' METALISH에 대한 유저의 평가',
     'user-1-name.txt': 'Min Nguyen',
-    'user-1-description.txt': '5급 학습자',
+    'user-1-description.txt': '5학년 학생',
     'user-1-summary-comment.lbl': '편리함',
     'user-1-full-comment.txt':
       '각 코스는 흥미롭고 동기 부여가 되었습니다. 제 일정과 기분에 맞춰 언제든지 배울 수 있습니다!!!',
 
     'user-2-name.txt': 'Jin Nguyen',
-    'user-2-description.txt': '12급 학습자',
-    'user-2-summary-comment.lbl': '재미있으며 좋은 체험',
+    'user-2-description.txt': '12학년 학생',
+    'user-2-summary-comment.lbl': '재미있고 좋은 체험',
     'user-2-full-comment.txt':
-      '일상생활에서 영어를 사용할 수 있다는 자신감을 얻었습니다!\nMetalish를 사용해서 저와 같은 관심을 가진 사람들을 만나고 교류할 수 있으니 좋습니다!',
+      '일상생활에서 영어를 사용할 수 있다는 자신감을 얻었습니다! Metalish를 사용해서 저와 같은 관심을 가진 사람들을 만나고 교류할 수 있으니 좋습니다!',
+
+    'user-3-name.txt': 'Joy Le',
+    'user-3-description.txt': '12학년 학생',
+    'user-3-summary-comment.lbl': '전문 선생님 계십니다!',
+    'user-3-full-comment.txt':
+      '선생님들께 항상 적시에 건설적인 피드백을 주십니다.',
+
+    'user-4-name.txt': 'Samuel Nguyen',
+    'user-4-description.txt': '5학년 학생',
+    'user-4-summary-comment.lbl': '뛰어난 유저 흐름',
+    'user-4-full-comment.txt':
+      '이 앱은 매우 사용하기 쉬워서, 무엇을 클릭해야 하는지 알 수 있네요.',
+
+    'user-5-name.txt': 'Rift Ho',
+    'user-5-description.txt': '12학년 학생',
+    'user-5-summary-comment.lbl': '멋진 디자인입니다',
+    'user-5-full-comment.txt':
+      '인터페이스가 매우 화려하고 밝아서 공부에 더 오래 집중할 수 있습니다.',
+
+    'user-6-name.txt': 'Leon Nguyen',
+    'user-6-description.txt': '5학년 학생',
+    'user-6-summary-comment.lbl': '최고의 경험',
+    'user-6-full-comment.txt':
+      ' 약간의 추가 비용만 냈지만 AI나 좋아하는 선생님들과 함께 맞춤형 수업을 들었을 수 있습니다.',
+
+    'user-7-name.txt': 'Funik Nguyen',
+    'user-7-description.txt': '12학년 학생',
+    'user-7-summary-comment.lbl': '강의 요강이 잘 준비됐습니다',
+    'user-7-full-comment.txt':
+      '수업은 세심하게 준비되어 있고 매우 상세하네요. 제가 가진 모든 질문에는 항상 답변이 있습니다.',
+
+    'user-8-name.txt': 'Talon Nghiem',
+    'user-8-description.txt': '5학년 학생',
+    'user-8-summary-comment.lbl': '교실이 짱!',
+    'user-8-full-comment.txt':
+      '교실에는 두 가지 종류가 있어 가지고 개인실은 제가 가장 좋아하는 방이고 영어 선생님들이 녹음한 영상을 통해서 정말 자유롭게 공부할 수 있어요.',
   },
 
   explore: {
-    titleMain: 'Metalish를 탐험하러 갑시다!',
+    titleMain: 'Metalish를 탐구하러 갑시다!',
   },
   tour: {
     titleMain: 'METALISH의 순화',
@@ -124,17 +170,17 @@ const translationKO = {
   advertising: {
     titleMain: '3D 빌보드 광고',
     title1: `“이 상품은 Gmarket.co.kr에서 구매 가능합니다”`,
-    title2: `“이 여행가방을 어디서 구매할 수 있어요 ?”`,
+    title2: `“이 여행가방을 어디서 구매할 수 있어요?”`,
   },
   orderService: {
     titleMain: '주문 서비스',
     titleDes: '실주문하기 위하여 광고물과 상호 작용할 수 있습니다',
   },
   roadmap: {
-    titleMain: '로드 맵',
+    titleMain: '로드맵',
     title2022: {
       month: 'AUG',
-      title1: 'Metalish 구상',
+      title1: 'Metalish에 대한 기획',
       title2: '리소스 정리 및 킥오프',
       title3: 'Metalish phase 1 개발',
       title4: 'Phase 1의 아트 디자인',
@@ -146,7 +192,7 @@ const translationKO = {
       title1: '1차 버전 출시',
       title2: 'Phase 2의 아트 디자인',
       title3: 'Metalish phase 2 (metaverse)개발',
-      title4: '서버 업그레이드 (유저 수 1,000만 명)',
+      title4: '서버 업그레이드 (1,000만명 이상의 유저)',
       title5: '자본 투자 유치',
       title6: '앱에서 광고 실행',
       title7: 'Phase 3 준비',
@@ -170,8 +216,8 @@ const translationKO = {
   },
 
   footer: {
-    titleMain: 'Get In Touch',
-    address: '82, Street No.6, Ward 10, Go Vap District, Ho Chi Minh City',
+    titleMain: '연락처',
+    address: '(베트남) 호치민 시 Go Vap군 10동 82호 (Cityland Park Hills)',
     email: 'metalish@cuckookoo.vn',
     phone: '0336111248',
   },

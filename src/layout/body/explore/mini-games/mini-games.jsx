@@ -1,6 +1,7 @@
 import { Container } from 'react-bootstrap';
 import './mini-games.scss';
 import { useTranslation } from 'react-i18next';
+import { url } from '../../../../url';
 
 const MiniGames = ({ windowDimensions }) => {
   const { t } = useTranslation();
@@ -11,6 +12,9 @@ const MiniGames = ({ windowDimensions }) => {
       process.env.PUBLIC_URL + '/images/explore/mini-games/mutichoice.png',
     fillBlank:
       process.env.PUBLIC_URL + '/images/explore/mini-games/fill-blank.png',
+    fillInBlankPic: `${url}/img/lp-explore-tour/mini-games/fill-in-blank.png`,
+    scrambleWordPic: `${url}/img/lp-explore-tour/mini-games/scramble-word.png`,
+    multipleChoicePic: `${url}/img/lp-explore-tour/mini-games/multiple-choice.png`,
   };
 
   return (
@@ -28,6 +32,10 @@ const MiniGames = ({ windowDimensions }) => {
             className='mini-games-item'
             data-aos={windowDimensions.width > 576.5 ? '' : 'fade-up'}
           >
+            <div
+              className='overlay'
+              style={{ backgroundImage: `url(${images.fillInBlankPic})` }}
+            ></div>
             <img src={images.fillBlank} alt='fillBlank' />
             <span className='title'>{t('miniGames.blank')}</span>
           </div>
@@ -36,6 +44,10 @@ const MiniGames = ({ windowDimensions }) => {
             className='mini-games-item center'
             data-aos={windowDimensions.width > 576.5 ? '' : 'fade-up'}
           >
+            <div
+              className='overlay'
+              style={{ backgroundImage: `url(${images.multipleChoicePic})` }}
+            ></div>
             <img src={images.mutichoice} alt='mutichoice' />
             <span className='title'>{t('miniGames.choice')}</span>
           </div>
@@ -44,6 +56,10 @@ const MiniGames = ({ windowDimensions }) => {
             className='mini-games-item'
             data-aos={windowDimensions.width > 576.5 ? '' : 'fade-up'}
           >
+            <div
+              className='overlay'
+              style={{ backgroundImage: `url(${images.scrambleWordPic})` }}
+            ></div>
             <img src={images.dice} alt='dice' />
             <span className='title'>{t('miniGames.word')}</span>
           </div>

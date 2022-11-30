@@ -14,8 +14,11 @@ const Overview = ({ windowDimensions }) => {
   return (
     <div
       className='overview'
-      style={{ backgroundImage: `url(${images.bgKeyFeatures})` }}
+      style={{
+        backgroundImage: `url(${images.bgKeyFeatures})`,
+      }}
     >
+      <div className='overview-overlay'></div>
       <Container>
         <span className='title-main' data-aos='fade-up'>
           METALISH
