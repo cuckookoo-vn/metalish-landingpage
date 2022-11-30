@@ -5,8 +5,8 @@ import { url } from '../../../../url';
 const Advertising = ({ windowDimensions }) => {
   const { t } = useTranslation();
   const images = {
-    bgAdvertising: `${url}/img/lp-explore-tour/advertising/billboard-advertising-web.png`,
-    bgAdvertisingMobile: `${url}/img/lp-explore-tour/advertising/billboard-advertising-mobile.png`,
+    bgAdvertising: `${url}/img/lp-explore-tour/advertising/billboard-advertising-web-1.png`,
+    bgAdvertisingMobile: `${url}/img/lp-explore-tour/advertising/billboard-advertising-mobile-1.png`,
   };
 
   return (

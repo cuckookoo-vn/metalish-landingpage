@@ -7,13 +7,27 @@
   @media #{$info-phone} {
     padding-bottom: 25px;
   }
+
+  .title-main {
+    margin: 65px 0 0 0;
+    @media #{$info-tablet-1399} {
+      margin: 45px 0 0 0;
+    }
+    @media #{$info-tablet-horizontal} {
+      margin: 2.7vw 0 1.4vw 0;
+    }
+    @media #{$info-phone} {
+      margin: 20px 0 0 0;
+    }
+  }
+
   .box-slide{
     position: relative;
     padding: 0 70px;
-    margin-top: 150px;
+    margin-top: 50px;
     @media #{$info-tablet-1399} {
       padding: 0 50px;
-      margin-top: 10vw;
+      margin-top: 5vw;
     }
     @media #{$info-phone} {
       padding: 0;
