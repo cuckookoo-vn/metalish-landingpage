@@ -3,13 +3,27 @@
   width: 100%;
   height: fit-content;
   overflow: hidden;
+
+  .title-main {
+    margin: 65px 0 40px 0;
+    @media #{$info-tablet-1399} {
+      margin: 62px 0 40px 0;
+    }
+    @media #{$info-tablet-horizontal} {
+      margin: 2.7vw 0 1.4vw 0;
+    }
+    @media #{$info-phone} {
+      margin: 20px 0 0 0;
+    }
+  }
+
   .mini-games-box {
-    margin-top: 150px;
+    margin-top: 100px;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
     @media #{$info-tablet-1399} {
-      margin-top: 10vw;
+      margin-top: 5vw;
     }
 
     @media #{$info-phone-576} {
@@ -50,6 +64,10 @@
 
         @media #{$info-tablet-1399} {
           width: 60%;
+        }
+
+        @media #{$info-phone} {
+          margin-top: 65px;
         }
       }
 
@@ -111,6 +129,10 @@
 
         @media #{$info-tablet-1399} {
           width: 60%;
+        }
+
+        @media #{$info-phone} {
+          margin-top: 97px;
         }
       }
 

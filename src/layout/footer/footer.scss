@@ -4,10 +4,10 @@
   overflow: hidden;
   display: flex;
   width: 100%;
-  padding: 350px 0 100px 0;
+  padding: 50px 0 100px 0;
   position: relative;
   @media #{$info-tablet-1399} {
-    padding: 35vw 0 10vw 0;
+    padding: 3vw 0 10vw 0;
   }
 
   .logo{
@@ -32,9 +32,9 @@
 
   .contract{
     width: fit-content;
-    margin: 250px auto 0 auto;
+    margin: 50px auto 0 auto;
     @media #{$info-tablet-1399} {
-      margin: 20vw auto 0 auto;
+      margin: 5vw auto 0 auto;
     }
     .title-main-footer{
       display: block;

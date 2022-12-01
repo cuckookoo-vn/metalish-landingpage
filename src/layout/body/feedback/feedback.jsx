@@ -172,14 +172,14 @@ const Feedback = ({ windowDimensions }) => {
             </div>
             <div
               ref={prevRef}
-              data-aos='fade-right'
+              // data-aos='fade-right'
               className='icon-slide icon-next hidden-mobile'
             >
               <img className='icon-next' src={images.pre} alt='pre' />
             </div>
             <div
               ref={nextRef}
-              data-aos='fade-left'
+              // data-aos='fade-left'
               className='icon-slide icon-pre hidden-mobile'
             >
               <img src={images.next} alt='next' />
