@@ -19,7 +19,7 @@ const Tour = ({ windowDimensions }) => {
     },
     {
       slide:
-        '${url}/img/lp-explore-tour/school-building.gif',
+        `${url}/img/lp-explore-tour/school-building.gif`,
     },
     {
       slide:

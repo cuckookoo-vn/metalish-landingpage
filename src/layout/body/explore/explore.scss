@@ -4,10 +4,10 @@
   position: relative;
   overflow: hidden;
   height: fit-content;
-  margin: 110px 0;
-  padding: 110px 0;
-  @media #{$info-tablet-1399} {
-    margin: 8vw 0;
+  padding: 50px 0;
+
+  @media #{$info-phone} {
+  padding: 0 0;
   }
 
   .button-explore-collapse {

@@ -8,9 +8,9 @@
   background-repeat: no-repeat;
   position: relative;
   display: block;
-  height: 1190px;
+  height: 1050px;
   @media #{$info-tablet-1399} {
-    height: 72vw;
+    height: 65vw;
   }
   @media #{$info-tablet-991} {
     height: 85vw;
@@ -18,17 +18,26 @@
   @media #{$info-phone} {
     height: 130vw;
   }
+
   .title-main {
-    margin-top: 110px;
+    margin: 65px 0 40px 0;
     @media #{$info-tablet-1399} {
-      margin-top: 8vw;
+      margin: 62px 0 40px 0;
+    }
+    @media #{$info-tablet-horizontal} {
+      margin: 2.7vw 0 1.4vw 0;
+    }
+    @media #{$info-phone} {
+      margin: 25px 0 0 0;
     }
   }
 
   .roadmap-box {
-    margin-top: 470px;
+    // padding: 20px 0;
+    margin-top: 20vw;
     position: relative;
     width: 100%;
+    height: auto;
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
