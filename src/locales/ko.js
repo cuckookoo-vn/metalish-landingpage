@@ -159,7 +159,7 @@ const translationKO = {
     titleMain: 'Metalish를 탐구하러 갑시다!',
   },
   tour: {
-    titleMain: 'METALISH의 순화',
+    titleMain: 'METALISH 순회',
   },
   miniGames: {
     titleMain: '미니 게임',
@@ -174,7 +174,7 @@ const translationKO = {
   },
   orderService: {
     titleMain: '주문 서비스',
-    titleDes: '실주문하기 위하여 광고물과 상호 작용할 수 있습니다',
+    titleDes: '실제로 주문하기 위해서 광고물과 상호 작용할 수 있습니다',
   },
   roadmap: {
     titleMain: '로드맵',
