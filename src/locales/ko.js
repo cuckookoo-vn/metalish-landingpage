@@ -64,11 +64,11 @@ const translationKO = {
 
     'mini-games_title.lbl': '미니 게임',
     'mini-games_content.txt':
-      '빈칸 채우기, 객관식 등의 미니 게임을 통해서 영어 연습이 가능합니다..',
+      '빈칸 채우기, 객관식 등의 미니 게임을 통해서 영어 연습이 가능합니다.',
 
     'rewards_title.lbl': '보상',
     'rewards_content.txt':
-      '새로운 코스를 구매 시 할인, 상품권을 증정 또는 앱에서 광고되는책/물건을 구매 시 쿠폰을 증정합니다.',
+      '새로운 코스를 구매 시 할인, 상품권을 증정하거나 앱에 광고로 뜨는 책/물건을 구매하면 쿠폰을 증정합니다.',
 
     'best-choice_title.lbl': '학생을 위한 최고의 선택',
     'best-choice_content.txt':
