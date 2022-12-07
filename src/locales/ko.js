@@ -64,7 +64,7 @@ const translationKO = {
 
     'mini-games_title.lbl': '미니 게임',
     'mini-games_content.txt':
-      '빈칸 채우기, 객관식 등의 미니 게임을 통해 영어 연습합니다.',
+      '빈칸 채우기, 객관식 등의 미니 게임을 통해서 영어 연습이 가능합니다..',
 
     'rewards_title.lbl': '보상',
     'rewards_content.txt':
