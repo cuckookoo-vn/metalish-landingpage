@@ -8,10 +8,7 @@
   .title-main {
     margin: 65px 0 0 0;
     @media #{$info-tablet-1399} {
-      margin: 62px 0 0 0;
-    }
-    @media #{$info-tablet-horizontal} {
-      margin: 2.7vw 0 1.4vw 0;
+      margin: 62px 0 -20px 0;
     }
     @media #{$info-phone} {
       margin: 20px 0 0 0;
@@ -27,6 +24,10 @@
     height: 60vw;
     @media #{$info-tablet-1399} {
       margin-top: -5vw;
+    }
+
+    @media #{$info-phone} {
+      margin-top: -10vw;
     }
 
     .title {

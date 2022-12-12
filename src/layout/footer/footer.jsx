@@ -12,7 +12,7 @@ import { useTranslation } from 'react-i18next';
 const Footer = () => {
   const images = {
     chainos: process.env.PUBLIC_URL + '/images/footer/chainos.png',
-    cuckookoo: process.env.PUBLIC_URL + '/images/footer/cuckookoo.png',
+    cuckookoo: 'https://d2lonqwqrbh3kq.cloudfront.net/header/ckksite-logo-header.png',
   };
   const { t } = useTranslation();
 
