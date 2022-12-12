@@ -16,10 +16,10 @@ const OurMethods = ({ windowDimensions }) => {
     next: process.env.PUBLIC_URL + '/images/our-methods/right-button.png',
     pre: process.env.PUBLIC_URL + '/images/our-methods/left-button.png',
 
-    cooperationPic: `${url}/img/lp-our-methods/cooperation.png`,
-    curriculumPic: `${url}/img/lp-our-methods/curriculum.png`,
-    privateRoomPic: `${url}/img/lp-our-methods/private-room.png`,
-    talkingRoomPic: `${url}/img/lp-our-methods/talking-room.gif`,
+    cooperationPic: `${url}/img/lp-our-methods/cooperation-1.png`,
+    curriculumPic: `${url}/img/lp-our-methods/curriculum-1.png`,
+    privateRoomPic: `${url}/img/lp-our-methods/private-room-1.png`,
+    talkingRoomPic: `${url}/img/lp-our-methods/talking-room-1.gif`,
   };
 
   const methods = [

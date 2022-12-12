@@ -9,6 +9,8 @@
   position: relative;
   display: block;
   height: 1050px;
+  // height: fit-content;
+  
   @media #{$info-tablet-1399} {
     height: 65vw;
   }
@@ -16,7 +18,7 @@
     height: 85vw;
   }
   @media #{$info-phone} {
-    height: 130vw;
+    height: 150vw;
   }
 
   .title-main {
@@ -34,7 +36,7 @@
 
   .roadmap-box {
     // padding: 20px 0;
-    margin-top: 20vw;
+    margin-top: 400px;
     position: relative;
     width: 100%;
     height: auto;
@@ -50,8 +52,8 @@
     @media #{$info-phone} {
       flex-wrap: wrap;
       flex-direction: column;
-      margin-top: 8vw;
-      height: 110vw;
+      margin-top: 15%;
+      height: fit-content;
     }
 
     .box-month-wrapper {
@@ -73,9 +75,10 @@
 
       @media #{$info-phone} {
         background-position: center;
-        height: 19vw;
-        width: 100%;
+        height: 22vw;
+        width: 95vw;
         top: -50px;
+        left: -5%;
       }
     }
 
@@ -269,7 +272,7 @@
             left: 50%;
           }
           @media #{$info-phone} {
-            left: -40vw;
+            left: -35vw;
             bottom: 0.5vw;
             transform: none;
           }
@@ -280,7 +283,7 @@
             top: -95px;
           }
           @media #{$info-phone} {
-            left: 35vw;
+            left: 27vw;
             top: -0.5vw;
             transform: none;
           }
@@ -291,7 +294,7 @@
             bottom: -95px;
           }
           @media #{$info-phone} {
-            left: -40vw;
+            left: -35vw;
             bottom: 0.5vw;
             transform: none;
           }
@@ -302,7 +305,7 @@
             top: -95px;
           }
           @media #{$info-phone} {
-            left: 35vw;
+            left: 27vw;
             top: -0.5vw;
             transform: none;
           }
@@ -354,7 +357,7 @@
           }
 
           @media #{$info-phone} {
-            left: -38vw;
+            left: -30vw;
             top: -4.5vw;
           }
         }
@@ -381,7 +384,7 @@
             bottom: -110px;
           }
           @media #{$info-phone} {
-            left: -38vw;
+            left: -30vw;
             top: 1vw;
           }
         }
@@ -429,7 +432,7 @@
       @media #{$info-phone} {
         height: 30px;
         width: 30px;
-        top: -7.5vw;
+        top: -50px;
         left: 48%;
         margin: 3% 0;
       }

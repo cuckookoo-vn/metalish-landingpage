@@ -14,9 +14,9 @@ const OrderService = ({ windowDimensions }) => {
     food2: process.env.PUBLIC_URL + '/images/explore/order-service/food-2.png',
     food3: process.env.PUBLIC_URL + '/images/explore/order-service/food-3.png',
     frame: process.env.PUBLIC_URL + '/images/explore/order-service/frame.png',
-    orderEn: `${url}/img/lp-explore-tour/order-service/order-frame-en.png`,
-    orderKo: `${url}/img/lp-explore-tour/order-service/order-frame-ko.png`,
-    orderVi: `${url}/img/lp-explore-tour/order-service/order-frame-vi.png`,
+    orderEn: `${url}/img/lp-explore-tour/order-service/order-frame-en-1.png`,
+    orderKo: `${url}/img/lp-explore-tour/order-service/order-frame-ko-1.png`,
+    orderVi: `${url}/img/lp-explore-tour/order-service/order-frame-vi-1.png`,
   };
 
   const [orderFrame, setOrderFrame] = useState('');
