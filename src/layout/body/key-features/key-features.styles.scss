@@ -73,6 +73,7 @@
     @media #{$info-phone} {
       height: 100vw;
       width: 100%;
+      margin-bottom: 0;
     }
 
     .content-wrapper {
@@ -105,7 +106,7 @@
 
     .circle-container {
       @include on-circle($item-count: 11, $circle-size: 72vw, $item-size: 11vw);
-      margin: 10em auto 0;
+      margin: 5em auto 0;
       text-align: center;
 
       img {
@@ -162,6 +163,8 @@
 
       span {
         font-size: 1.5vw;
+        white-space: nowrap;
+        letter-spacing: 0;
       }
     }
 

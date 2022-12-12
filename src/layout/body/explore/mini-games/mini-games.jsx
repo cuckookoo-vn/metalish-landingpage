@@ -12,9 +12,9 @@ const MiniGames = ({ windowDimensions }) => {
       process.env.PUBLIC_URL + '/images/explore/mini-games/mutichoice.png',
     fillBlank:
       process.env.PUBLIC_URL + '/images/explore/mini-games/fill-blank.png',
-    fillInBlankPic: `${url}/img/lp-explore-tour/mini-games/fill-in-blank.png`,
-    scrambleWordPic: `${url}/img/lp-explore-tour/mini-games/scramble-word.png`,
-    multipleChoicePic: `${url}/img/lp-explore-tour/mini-games/multiple-choice.png`,
+    fillInBlankPic: `${url}/img/lp-explore-tour/mini-games/fill-in-blank-1.png`,
+    scrambleWordPic: `${url}/img/lp-explore-tour/mini-games/scramble-word-1.png`,
+    multipleChoicePic: `${url}/img/lp-explore-tour/mini-games/multiple-choice-1.png`,
   };
 
   return (
