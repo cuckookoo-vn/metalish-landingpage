@@ -68,7 +68,6 @@
 
         @media #{$info-tablet-1399} {
           padding: 0 5px;
-          top: 20%;
         }
 
         .button {
@@ -293,9 +292,10 @@
   .header-box-lang {
     padding: 15px 0;
     width: 100%;
+    height: 55px;
     margin: 0 auto 0 auto;
     position: relative;
-    max-width: 980px;
+    // max-width: 980px;
     display: none;
     flex-direction: row;
     justify-content: space-between;

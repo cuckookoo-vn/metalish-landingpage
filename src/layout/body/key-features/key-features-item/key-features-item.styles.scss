@@ -42,7 +42,7 @@
 
     @media #{$info-tablet-1399} {
       top: 50%;
-      min-width: 20vw;
+      width: 20vw;
       height: 20vw;
     }
 
@@ -91,6 +91,7 @@
     transform: translate(-50%, 0);
 
     @media #{$info-tablet-1399} {
+      font-size: 1vw;
       bottom: 0vw;
       left: 50%;
       transform: translate(-50%, 0);

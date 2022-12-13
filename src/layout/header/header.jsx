@@ -85,17 +85,6 @@ const Header = ({ windowDimensions }) => {
   const clickStatusLang = (lang) => {
     i18n.changeLanguage(lang);
 
-    let textLang = t(`header.option_${lang}.lbl`);
-
-    setTextLang(textLang);
-    if (lang === 'ko') {
-      setFlag(images.flagKorean);
-    } else if (lang === 'vi') {
-      setFlag(images.flagVietnam);
-    } else {
-      setFlag(images.flagEngland);
-    }
-
     if (windowDimensions.width < 1199.5) {
       clickStatusMenuMobile();
 
@@ -272,7 +261,7 @@ const Header = ({ windowDimensions }) => {
 
       setTimeout(() => {
         headerBox.classList.remove('close');
-      }, 600);
+      }, 450);
 
       setTimeout(() => {
         showMenuMobile();
@@ -315,7 +304,6 @@ const Header = ({ windowDimensions }) => {
     } else {
       animationMenuMobile('close');
     }
-
     scrollCLick(id);
   };
 
@@ -460,7 +448,7 @@ const Header = ({ windowDimensions }) => {
               className={'button-lang' + (statusLangButton ? '' : ' close')}
               onClick={() => clickStatusLang()}
             >
-              <img className='flag' src={flag} alt='flag-england' />
+              <img className='flag' src={flag} alt='flag' />
               <span className='title-lang'>{textLang}</span>
 
               <img
@@ -509,14 +497,14 @@ const Header = ({ windowDimensions }) => {
             {/* Menu */}
             <>
               {menus.map((item, index) => (
-                <>
+                <div className='menu' key={index}>
                   <button
                     className='button'
                     onClick={() => scrollCLick(listClassSection[item.section])}
                   >
                     {t(`header.${item.title}.btn`)}
                   </button>
-                </>
+                </div>
               ))}
             </>
             {/* Menu */}
@@ -588,7 +576,6 @@ const Header = ({ windowDimensions }) => {
                 className='link-mobile button-lang-mobile'
                 onClick={() => clickLangMobile()}
               >
-
                 <img className='flag' src={flag} alt='flag-england' />
                 <span className='title-lang-mobile'>{textLang}</span>
 
