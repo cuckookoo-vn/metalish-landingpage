@@ -90,8 +90,10 @@ const translationVI = {
 
   'our-methods': {
     'title.lbl': 'PHƯƠNG PHÁP CỦA CHÚNG TÔI',
-    'private-room_title.lbl': 'PHÒNG CÁ NHÂN',
-    'talking-room_title.lbl': 'PHÒNG LUYỆN NÓI',
+    'curriculum_title.lbl': 'CHƯƠNG TRÌNH ĐÀO TẠO',
+    'cooperation_title.lbl': 'HỢP TÁC',
+    'private-room_title.lbl': 'PHÒNG KÍN',
+    'talking-room_title.lbl': 'PHÒNG HỘI THOẠI',
     'private-room_content.txt':
       'Cung cấp lớp tự học với các video được quay từ những giáo viên tiếng Anh chất lượng.\n' +
       'Cải thiện các kỹ năng tiếng Anh: nghe, nói, đọc, viết, khẩu hình miệng.',
