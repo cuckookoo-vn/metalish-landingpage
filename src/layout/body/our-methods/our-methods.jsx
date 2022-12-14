@@ -25,22 +25,22 @@ const OurMethods = ({ windowDimensions }) => {
   const methods = [
     {
       type: 'private-room',
-      title: 'PRIVATE ROOM',
+      title: t('our-methods.private-room_title.lbl'),
       src: images.privateRoomPic,
     },
     {
       type: 'talking-room',
-      title: 'TALKING ROOM',
+      title: t('our-methods.talking-room_title.lbl'),
       src: images.talkingRoomPic,
     },
     {
       type: 'cooperation',
-      title: 'COOPERATION',
+      title: t('our-methods.cooperation_title.lbl'),
       src: images.cooperationPic,
     },
     {
       type: 'curriculum',
-      title: 'CURRICULUM',
+      title: t('our-methods.curriculum_title.lbl'),
       src: images.curriculumPic,
     },
   ];

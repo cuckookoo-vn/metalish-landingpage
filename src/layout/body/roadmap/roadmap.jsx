@@ -47,26 +47,28 @@ const Roadmap = ({ windowDimensions }) => {
               })`,
             }}
             data-aos={windowDimensions.width > 767.5 ? 'fade-left' : 'fade-up'}
-            data-aos-delay={windowDimensions.width > 767.5 ? '500' : '400'}
+            // data-aos-delay={windowDimensions.width > 767.5 ? '500' : '400'}
           >
             <div
               className='box-month'
               data-aos={
                 windowDimensions.width > 767.5 ? 'fade-left' : 'fade-up'
               }
-              data-aos-delay={windowDimensions.width > 767.5 ? '200' : '100'}
+              // data-aos-delay={windowDimensions.width > 767.5 ? '200' : '100'}
             >
               <div className='bg-month green'></div>
 
               <span className='text green'>{t('roadmap.title2022.month')}</span>
 
               <div className='content-year content-year-2022'>
-                <li>{t('roadmap.title2022.title1')}</li>
-                <li>{t('roadmap.title2022.title2')}</li>
-                <li>{t('roadmap.title2022.title3')}</li>
-                <li>{t('roadmap.title2022.title4')}</li>
-                <li>{t('roadmap.title2022.title5')}</li>
-                <li>{t('roadmap.title2022.title6')}</li>
+                {/* <ul> */}
+                  <li>{t('roadmap.title2022.title1')}</li>
+                  <li>{t('roadmap.title2022.title2')}</li>
+                  <li>{t('roadmap.title2022.title3')}</li>
+                  <li>{t('roadmap.title2022.title4')}</li>
+                  <li>{t('roadmap.title2022.title5')}</li>
+                  <li>{t('roadmap.title2022.title6')}</li>
+                {/* </ul> */}
               </div>
 
               <span className='title-year title-year-2022'>2022</span>
@@ -75,7 +77,7 @@ const Roadmap = ({ windowDimensions }) => {
 
           <img
             data-aos='zoom-in'
-            data-aos-delay='700'
+            // data-aos-delay='700'
             className='roadmap-arrow'
             alt='roadmap-arrow'
             src={
@@ -95,14 +97,14 @@ const Roadmap = ({ windowDimensions }) => {
               })`,
             }}
             data-aos={windowDimensions.width > 767.5 ? 'fade-left' : 'fade-up'}
-            data-aos-delay={windowDimensions.width > 767.5 ? '600' : '500'}
+            // data-aos-delay={windowDimensions.width > 767.5 ? '600' : '500'}
           >
             <div
               className='box-month'
               data-aos={
                 windowDimensions.width > 767.5 ? 'fade-left' : 'fade-up'
               }
-              data-aos-delay={windowDimensions.width > 767.5 ? '400' : '200'}
+              // data-aos-delay={windowDimensions.width > 767.5 ? '400' : '200'}
             >
               <div className='bg-month blue'></div>
               <span className='text blue'>{t('roadmap.title2023.month')}</span>
@@ -121,7 +123,7 @@ const Roadmap = ({ windowDimensions }) => {
 
           <img
             data-aos='zoom-in'
-            data-aos-delay='700'
+            // data-aos-delay='700'
             className='roadmap-arrow'
             alt='roadmap-arrow'
             src={
@@ -141,14 +143,14 @@ const Roadmap = ({ windowDimensions }) => {
               })`,
             }}
             data-aos={windowDimensions.width > 767.5 ? 'fade-left' : 'fade-up'}
-            data-aos-delay={windowDimensions.width > 767.5 ? '700' : '600'}
+            // data-aos-delay={windowDimensions.width > 767.5 ? '700' : '600'}
           >
             <div
               className='box-month'
               data-aos={
                 windowDimensions.width > 767.5 ? 'fade-left' : 'fade-up'
               }
-              data-aos-delay={windowDimensions.width > 767.5 ? '600' : '300'}
+              // data-aos-delay={windowDimensions.width > 767.5 ? '600' : '300'}
             >
               <div className='bg-month yellow'></div>
               <span className='text yellow'>
@@ -166,7 +168,7 @@ const Roadmap = ({ windowDimensions }) => {
 
           <img
             data-aos='zoom-in'
-            data-aos-delay='700'
+            // data-aos-delay='700'
             className='roadmap-arrow'
             alt='roadmap-arrow'
             src={
@@ -186,14 +188,14 @@ const Roadmap = ({ windowDimensions }) => {
               })`,
             }}
             data-aos={windowDimensions.width > 767.5 ? 'fade-left' : 'fade-up'}
-            data-aos-delay={windowDimensions.width > 767.5 ? '800' : '700'}
+            // data-aos-delay={windowDimensions.width > 767.5 ? '800' : '700'}
           >
             <div
               className='box-month'
               data-aos={
                 windowDimensions.width > 767.5 ? 'fade-left' : 'fade-up'
               }
-              data-aos-delay={windowDimensions.width > 767.5 ? '900' : '400'}
+              // data-aos-delay={windowDimensions.width > 767.5 ? '900' : '400'}
             >
               <div className='bg-month purple'></div>
               <span className='text purple'>
@@ -206,12 +208,6 @@ const Roadmap = ({ windowDimensions }) => {
               </div>
             </div>
           </div>
-
-          {/* <span
-            data-aos='zoom-in'
-            data-aos-delay='700'
-            className='vertical-light'
-          ></span> */}
         </div>
       </>
     </div>

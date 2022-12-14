@@ -89,6 +89,8 @@ const translationEN = {
 
   'our-methods': {
     'title.lbl': 'OUR METHODS',
+    'curriculum_title.lbl': 'CURRICULUM',
+    'cooperation_title.lbl': 'COOPERATION',
     'private-room_title.lbl': 'PRIVATE ROOM',
     'talking-room_title.lbl': 'TALKING ROOM',
     'private-room_content.txt':

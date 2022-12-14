@@ -13,6 +13,7 @@ const CoreSkills = ({ windowDimensions }) => {
     speaking: `${url}/img/lp-core-skills/speaking-1.png`,
     vocabulary: `${url}/img/lp-core-skills/vocabulary-1.png`,
     mouthShape: `${url}/img/lp-core-skills/mouthshape.png`,
+    exitButton: process.env.PUBLIC_URL + '/images/core-skills/exit-button.png',
   };
 
   const [isViewSkillInfo, setIsViewSkillInfo] = useState(false);
@@ -66,7 +67,9 @@ const CoreSkills = ({ windowDimensions }) => {
             style={{ backgroundImage: `url(${images.frame})` }}
             onClick={() => handleActiveSkill('mouthShape')}
           >
-            <span onClick={() => handleActiveSkill('mouthShape')}>{t('core-skills.mouth-shape.lbl')}</span>
+            <span onClick={() => handleActiveSkill('mouthShape')}>
+              {t('core-skills.mouth-shape.lbl')}
+            </span>
           </div>
         </div>
       ) : (
@@ -117,7 +120,12 @@ const CoreSkills = ({ windowDimensions }) => {
             <span>{t('core-skills.mouth-shape.lbl')}</span>
           </div>
           <div className='overlay'>
-            <img src={images[activeSkill]} onClick={handleCloseSkill} />
+            <img src={images[activeSkill]} alt={activeSkill} />
+            <div
+              className='exit-btn'
+              style={{ backgroundImage: `url(${images.exitButton})` }}
+              onClick={handleCloseSkill}
+            ></div>
           </div>
         </div>
       )}

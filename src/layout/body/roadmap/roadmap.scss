@@ -10,7 +10,7 @@
   display: block;
   height: 1050px;
   // height: fit-content;
-  
+
   @media #{$info-tablet-1399} {
     height: 65vw;
   }
@@ -357,7 +357,7 @@
           }
 
           @media #{$info-phone} {
-            left: -30vw;
+            left: -35vw;
             top: -4.5vw;
           }
         }
@@ -413,6 +413,16 @@
             left: -15px;
             top: 50%;
             transform: translate(0, -50%);
+
+            @media #{$info-tablet-1399} {
+              top: 0;
+              transform: translate(0, 0.75vw);
+            }
+
+            @media #{$info-phone} {
+              top: 50%;
+              transform: translate(0, -50%);
+            }
           }
         }
       }

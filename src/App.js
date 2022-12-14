@@ -88,7 +88,7 @@ export default function App() {
   return (
     <>
       <Suspense fallback={<div>Loading...</div>}>
-        <Header />
+        <Header windowDimensions={windowDimensions} />
         <VideoProposal />
         <Overview windowDimensions={windowDimensions} />
         <KeyFeatures windowDimensions={windowDimensions} />
