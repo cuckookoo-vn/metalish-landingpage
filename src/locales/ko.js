@@ -89,8 +89,10 @@ const translationKO = {
 
   'our-methods': {
     'title.lbl': '학습 방식',
-    'private-room_title.lbl': '비공개 룸',
-    'talking-room_title.lbl': '대화룸',
+    'curriculum_title.lbl': '커리큘럼',
+    'cooperation_title.lbl': '협조',
+    'private-room_title.lbl': '개인방',
+    'talking-room_title.lbl': '대화방',
     'private-room_content.txt':
       '영어 강사들이 녹화한 비디오를 통해서 자유로운 수업을 제공합니다.\n' +
       '듣기, 말하기, 어휘, 발음의 영어실력을 개선합니다.',

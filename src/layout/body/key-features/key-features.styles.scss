@@ -38,7 +38,7 @@
   height: 900px;
 
   @media #{$info-tablet-1399} {
-    height: 55vw;
+    height: 58vw;
   }
 
   @media #{$info-phone} {
@@ -138,6 +138,7 @@
           transform: translate(-50%, -50%);
           text-align: center;
           font-size: 2vw;
+          word-break: keep-all;
         }
 
         .title {
@@ -158,13 +159,18 @@
           position: relative;
           left: 0;
           white-space: nowrap;
+          word-break: keep-all;
         }
       }
 
       span {
+        position: absolute;
         font-size: 1.5vw;
-        white-space: nowrap;
+        left: 0.5vw;
+        top: 12.5vw;
         letter-spacing: 0;
+        width: 100%;
+        word-break: keep-all;
       }
     }
 

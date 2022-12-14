@@ -415,6 +415,33 @@
         width: 80vw;
         height: 80vw;
       }
+
+      .exit-btn {
+        position: absolute;
+        z-index: 10;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        height: 9%;
+        width: 4%;
+        left: 85%;
+        top: 3%;
+        cursor: pointer;
+
+        @media #{$info-tablet-1399} {
+          top: -0.5vw;
+          left: 85.5vw;
+          height: 7.5vw;
+          width: 3.5vw;
+        }
+
+        @media #{$info-phone} {
+          top: 24vw;
+          left: 86vw;
+          height: 8vw;
+          width: 4vw;
+        }
+      }
     }
   }
 }
