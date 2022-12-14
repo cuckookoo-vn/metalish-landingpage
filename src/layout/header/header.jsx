@@ -84,8 +84,9 @@ const Header = ({ windowDimensions }) => {
 
   const clickStatusLang = (lang) => {
     i18n.changeLanguage(lang);
-
     if (windowDimensions.width < 1199.5) {
+      changeLang(lang);
+
       clickStatusMenuMobile();
 
       setStatusLangMobile(!statusMenuMobile);
@@ -173,7 +174,7 @@ const Header = ({ windowDimensions }) => {
     setTimeout(() => {
       menuMobileContent.style.display = 'none';
       menuMobileSearch.style.display = 'none';
-    }, 1000);
+    }, 100);
   };
 
   const showLangMobile = () => {
@@ -185,25 +186,25 @@ const Header = ({ windowDimensions }) => {
 
     setTimeout(() => {
       boxLang.style.display = 'block';
-    }, 750);
+    }, 100);
 
     setTimeout(() => {
       boxLang.classList.add('open');
-    }, 750);
+    }, 100);
 
     setTimeout(() => {
       LangEN.classList.add('open');
-    }, 800);
+    }, 150);
 
     setTimeout(() => {
       LangKO.classList.add('open');
       headerLang.style.display = 'block';
-    }, 850);
+    }, 200);
 
     setTimeout(() => {
       LangVI.classList.add('open');
       headerLang.classList.add('open');
-    }, 900);
+    }, 250);
   };
 
   const hiddenLangMobile = () => {
@@ -253,7 +254,7 @@ const Header = ({ windowDimensions }) => {
       headerBox.classList.add('close');
       setTimeout(() => {
         headerBox.style.display = 'none';
-      }, 1000);
+      }, 0);
     } else {
       setTimeout(() => {
         headerBox.style.display = 'flex';
@@ -284,7 +285,9 @@ const Header = ({ windowDimensions }) => {
 
   const scrollCLick = (className) => {
     let getClass = document.getElementsByClassName(className)[0];
-    window.scrollTo(0, getClass.offsetTop);
+    if (getClass) {
+      window.scrollTo(0, getClass.offsetTop);
+    }
   };
 
   const removeActive = () => {
@@ -523,13 +526,6 @@ const Header = ({ windowDimensions }) => {
             />
             <div className='box-menu'>
               <div
-                className='download'
-                onClick={() => setShowModal()}
-                style={{ backgroundImage: `url(${images.downloadButton}` }}
-              >
-                <span>{t('header.download.btn')}</span>
-              </div>
-              <div
                 className={
                   'icon-menu-mobile' + (statusMenuMobile ? ' open' : '')
                 }
@@ -538,6 +534,13 @@ const Header = ({ windowDimensions }) => {
                 <span></span>
                 <span></span>
                 <span></span>
+              </div>
+              <div
+                className='download'
+                onClick={() => setShowModal()}
+                style={{ backgroundImage: `url(${images.downloadButton}` }}
+              >
+                <span>{t('header.download.btn')}</span>
               </div>
             </div>
           </div>
@@ -573,7 +576,7 @@ const Header = ({ windowDimensions }) => {
               ))}
 
               <div
-                className='link-mobile button-lang-mobile'
+                className='button-lang-mobile'
                 onClick={() => clickLangMobile()}
               >
                 <img className='flag' src={flag} alt='flag-england' />
