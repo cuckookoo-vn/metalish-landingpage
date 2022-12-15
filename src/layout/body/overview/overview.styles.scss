@@ -9,6 +9,10 @@
   color: #ffffff;
   opacity: 1;
 
+  @media #{$info-phone} {
+    height: 130vw;
+  }
+
   .overview-overlay {
     width: 100%;
     height: 100%;
@@ -88,9 +92,9 @@
     }
 
     @media #{$info-phone} {
-      position: absolute;
-      top: 65%;
-      left: 5%;
+      position: relative;
+      top: 6vw;
+      left: -5%;
       height: 40vw;
       width: 90%;
     }
