@@ -338,7 +338,7 @@
           }
 
           @media #{$info-phone} {
-            left: 25vw;
+            left: 22vw;
             top: -3.5vw;
           }
         }
@@ -358,7 +358,8 @@
 
           @media #{$info-phone} {
             left: -35vw;
-            top: -4.5vw;
+            top: -2.5vw;
+            font-size: 1.328vw;
           }
         }
         &.content-year-2023-second {
