@@ -3,11 +3,11 @@ import './feedback-item.styles.scss';
 function _1Star() {
   return (
     <>
-      <span class='fa fa-star'></span>
-      <span class='fa fa-star unchecked'></span>
-      <span class='fa fa-star unchecked'></span>
-      <span class='fa fa-star unchecked'></span>
-      <span class='fa fa-star unchecked'></span>
+      <span className='fa fa-star'></span>
+      <span className='fa fa-star unchecked'></span>
+      <span className='fa fa-star unchecked'></span>
+      <span className='fa fa-star unchecked'></span>
+      <span className='fa fa-star unchecked'></span>
     </>
   );
 }
@@ -15,11 +15,11 @@ function _1Star() {
 function _2Star() {
   return (
     <>
-      <span class='fa fa-star'></span>
-      <span class='fa fa-star'></span>
-      <span class='fa fa-star unchecked'></span>
-      <span class='fa fa-star unchecked'></span>
-      <span class='fa fa-star unchecked'></span>
+      <span className='fa fa-star'></span>
+      <span className='fa fa-star'></span>
+      <span className='fa fa-star unchecked'></span>
+      <span className='fa fa-star unchecked'></span>
+      <span className='fa fa-star unchecked'></span>
     </>
   );
 }
@@ -27,11 +27,11 @@ function _2Star() {
 function _3Star() {
   return (
     <>
-      <span class='fa fa-star'></span>
-      <span class='fa fa-star'></span>
-      <span class='fa fa-star'></span>
-      <span class='fa fa-star unchecked'></span>
-      <span class='fa fa-star unchecked'></span>
+      <span className='fa fa-star'></span>
+      <span className='fa fa-star'></span>
+      <span className='fa fa-star'></span>
+      <span className='fa fa-star unchecked'></span>
+      <span className='fa fa-star unchecked'></span>
     </>
   );
 }
@@ -39,11 +39,11 @@ function _3Star() {
 function _4Star() {
   return (
     <>
-      <span class='fa fa-star'></span>
-      <span class='fa fa-star'></span>
-      <span class='fa fa-star'></span>
-      <span class='fa fa-star'></span>
-      <span class='fa fa-star unchecked'></span>
+      <span className='fa fa-star'></span>
+      <span className='fa fa-star'></span>
+      <span className='fa fa-star'></span>
+      <span className='fa fa-star'></span>
+      <span className='fa fa-star unchecked'></span>
     </>
   );
 }
@@ -51,11 +51,11 @@ function _4Star() {
 function _5Star() {
   return (
     <>
-      <span class='fa fa-star'></span>
-      <span class='fa fa-star'></span>
-      <span class='fa fa-star'></span>
-      <span class='fa fa-star'></span>
-      <span class='fa fa-star'></span>
+      <span className='fa fa-star'></span>
+      <span className='fa fa-star'></span>
+      <span className='fa fa-star'></span>
+      <span className='fa fa-star'></span>
+      <span className='fa fa-star'></span>
     </>
   );
 }

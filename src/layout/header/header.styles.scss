@@ -156,6 +156,9 @@
         margin-top: 21px;
 
         align-items: center;
+        @media #{$info-table-1068} {
+          margin-right: 22px;
+        }
         &.close {
           cursor: not-allowed;
           pointer-events: none;
@@ -468,61 +471,6 @@
           width: fit-content;
           height: 40px;
           background-color: transparent;
-        }
-
-        .button-lang-mobile {
-          width: 100%;
-          cursor: pointer;
-          display: flex;
-          flex-direction: row;
-          height: 40px;
-          padding-left: 5px;
-          align-items: center;
-
-          .flag {
-            height: 50%;
-            // width: auto;
-            margin-right: 1%;
-          }
-
-          .title-lang-mobile {
-            color: #ffffff;
-            font-size: 17px;
-          }
-
-          .icon-left-mobile {
-            width: 14px;
-            margin: 4px 0 0 10px;
-            transform: rotate(-90deg);
-          }
-        }
-      }
-
-      .menu-lang-mobile {
-        position: relative;
-        margin-top: 35px;
-        z-index: 15;
-        .lang-mobile {
-          width: 100%;
-          display: flex;
-          margin-bottom: 10px;
-          align-items: center;
-          padding-left: 5px;
-          transform: translateX(130%);
-          opacity: 0;
-          transition: all 600ms ease-in-out;
-          &.open {
-            transform: translateX(0);
-            opacity: 1;
-          }
-          img {
-            width: 70px;
-          }
-          .flag-title-mobile {
-            font-size: 17px;
-            color: #ffffff;
-            margin-left: 10px;
-          }
         }
       }
     }
