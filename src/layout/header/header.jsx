@@ -558,43 +558,43 @@ const Header = ({ windowDimensions }) => {
               {/*  />*/}
               {/*</div>*/}
             </div>
-            <div className='menu-lang-mobile' id='menu-lang-mobile'>
-              <div
-                className='lang-mobile'
-                id='langEN-mobile'
-                onClick={() => clickStatusLang('en')}
-              >
-                <img src={images.flagEngland} alt='flag-en' />
+            {/*<div className='menu-lang-mobile' id='menu-lang-mobile'>*/}
+            {/*  <div*/}
+            {/*    className='lang-mobile'*/}
+            {/*    id='langEN-mobile'*/}
+            {/*    onClick={() => clickStatusLang('en')}*/}
+            {/*  >*/}
+            {/*    <img src={images.flagEngland} alt='flag-en' />*/}
 
-                <span className='flag-title-mobile'>
-                  {t('header.option_en.lbl')}
-                </span>
-              </div>
+            {/*    <span className='flag-title-mobile'>*/}
+            {/*      {t('header.option_en.lbl')}*/}
+            {/*    </span>*/}
+            {/*  </div>*/}
 
-              <div
-                className='lang-mobile'
-                id='langKO-mobile'
-                onClick={() => clickStatusLang('ko')}
-              >
-                <img src={images.flagKorean} alt='flag-ko' />
+            {/*  <div*/}
+            {/*    className='lang-mobile'*/}
+            {/*    id='langKO-mobile'*/}
+            {/*    onClick={() => clickStatusLang('ko')}*/}
+            {/*  >*/}
+            {/*    <img src={images.flagKorean} alt='flag-ko' />*/}
 
-                <span className='flag-title-mobile'>
-                  {t('header.option_ko.lbl')}
-                </span>
-              </div>
+            {/*    <span className='flag-title-mobile'>*/}
+            {/*      {t('header.option_ko.lbl')}*/}
+            {/*    </span>*/}
+            {/*  </div>*/}
 
-              <div
-                className='lang-mobile'
-                id='langVI-mobile'
-                onClick={() => clickStatusLang('vi')}
-              >
-                <img src={images.flagVietnam} alt='flag-vi' />
+            {/*  <div*/}
+            {/*    className='lang-mobile'*/}
+            {/*    id='langVI-mobile'*/}
+            {/*    onClick={() => clickStatusLang('vi')}*/}
+            {/*  >*/}
+            {/*    <img src={images.flagVietnam} alt='flag-vi' />*/}
 
-                <span className='flag-title-mobile'>
-                  {t('header.option_vi.lbl')}
-                </span>
-              </div>
-            </div>
+            {/*    <span className='flag-title-mobile'>*/}
+            {/*      {t('header.option_vi.lbl')}*/}
+            {/*    </span>*/}
+            {/*  </div>*/}
+            {/*</div>*/}
           </div>
         </div>
       )}
