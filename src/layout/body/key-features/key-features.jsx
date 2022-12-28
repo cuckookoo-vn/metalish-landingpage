@@ -148,7 +148,7 @@ const KeyFeatures = ({ windowDimensions }) => {
             <div className='content-wrapper' data-aos='zoom-in-up'>
               <div className='content1'>
                 {keyFeatures.map((element, index) => (
-                  <>
+                  <div key={index}>
                     {index < 4 ? (
                       <>
                         <KeyFeaturesItem
@@ -160,12 +160,12 @@ const KeyFeatures = ({ windowDimensions }) => {
                         />
                       </>
                     ) : null}
-                  </>
+                  </div>
                 ))}
               </div>
               <div className='content2'>
                 {keyFeatures.map((element, index) => (
-                  <>
+                  <div key={index}>
                     {index < 7 && index >= 4 ? (
                       <>
                         <KeyFeaturesItem
@@ -177,12 +177,12 @@ const KeyFeatures = ({ windowDimensions }) => {
                         />
                       </>
                     ) : null}
-                  </>
+                  </div>
                 ))}
               </div>
               <div className='content3'>
                 {keyFeatures.map((element, index) => (
-                  <>
+                  <div key={index}>
                     {index >= 7 && index < 11 ? (
                       <>
                         <KeyFeaturesItem
@@ -194,7 +194,7 @@ const KeyFeatures = ({ windowDimensions }) => {
                         />
                       </>
                     ) : null}
-                  </>
+                  </div>
                 ))}
               </div>
             </div>

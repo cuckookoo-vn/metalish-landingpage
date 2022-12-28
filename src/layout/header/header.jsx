@@ -29,7 +29,12 @@ const Header = ({ windowDimensions }) => {
     let LangEN = document.getElementById('langEN');
     let LangKO = document.getElementById('langKO');
     let LangVI = document.getElementById('langVI');
-
+    if(windowDimensions.width < 1199.5){
+      dropLang = document.getElementById('drop-lang-mobile');
+      LangEN = document.getElementById('langEN-mobile');
+      LangKO = document.getElementById('langKO-mobile');
+      LangVI = document.getElementById('langVI-mobile');
+    }
     dropLang.classList.add('open');
     setTimeout(() => {
       LangEN.classList.add('open');
@@ -52,6 +57,12 @@ const Header = ({ windowDimensions }) => {
     let LangEN = document.getElementById('langEN');
     let LangKO = document.getElementById('langKO');
     let LangVI = document.getElementById('langVI');
+    if(windowDimensions.width < 1199.5){
+      dropLang = document.getElementById('drop-lang-mobile');
+      LangEN = document.getElementById('langEN-mobile');
+      LangKO = document.getElementById('langKO-mobile');
+      LangVI = document.getElementById('langVI-mobile');
+    }
 
     setTimeout(() => {
       LangVI.classList.remove('open');
@@ -84,27 +95,23 @@ const Header = ({ windowDimensions }) => {
 
   const clickStatusLang = (lang) => {
     i18n.changeLanguage(lang);
-    if (windowDimensions.width < 1199.5) {
-      changeLang(lang);
-
-      clickStatusMenuMobile();
-
-      setStatusLangMobile(!statusMenuMobile);
-
-      hiddenLangMobile();
-
-      let headerBox = document.getElementById('header-box');
-      let headerMenuMobile = document.getElementById('header-menu-mobile');
-
-      setTimeout(() => {
-        headerMenuMobile.classList.remove('open');
-        headerBox.style.display = 'flex';
-      }, 450);
-
-      setTimeout(() => {
-        headerBox.classList.remove('close');
-      }, 500);
-    } else {
+    // if (windowDimensions.width < 1199.5) {
+    //   changeLang(lang);
+    //
+    //   clickStatusMenuMobile();
+    //
+    //   let headerBox = document.getElementById('header-box');
+    //   let headerMenuMobile = document.getElementById('header-menu-mobile');
+    //
+    //   setTimeout(() => {
+    //     headerMenuMobile.classList.remove('open');
+    //     headerBox.style.display = 'flex';
+    //   }, 450);
+    //
+    //   setTimeout(() => {
+    //     headerBox.classList.remove('close');
+    //   }, 500);
+    // } else {
       let statusTemp = !statusLang;
       setStatusLang(statusTemp);
 
@@ -113,7 +120,7 @@ const Header = ({ windowDimensions }) => {
       } else {
         setLangFalse();
       }
-    }
+    // }
   };
 
   window.onclick = (event) => {
@@ -133,16 +140,12 @@ const Header = ({ windowDimensions }) => {
   // menu mobile
   const [statusMenuMobile, setStatusMenuMobile] = useState(false);
 
-  const [statusLangMobile, setStatusLangMobile] = useState(false);
-
   const showMenuMobile = () => {
     let headerMenuMobile = document.getElementById('header-menu-mobile');
     let arrayLink = headerMenuMobile.getElementsByClassName('link-mobile');
     let menuMobileContent = document.getElementById('menu-mobile-content');
-    let menuMobileSearch = document.getElementById('search-mobile-box');
 
     menuMobileContent.style.display = 'block';
-    menuMobileSearch.style.display = 'flex';
 
     setTimeout(() => {
       for (let i = 0; i < arrayLink.length; i++) {
@@ -151,7 +154,6 @@ const Header = ({ windowDimensions }) => {
         }, i * 50);
       }
       menuMobileContent.classList.add('open');
-      menuMobileSearch.classList.add('open');
     }, 50);
   };
 
@@ -159,7 +161,6 @@ const Header = ({ windowDimensions }) => {
     let headerMenuMobile = document.getElementById('header-menu-mobile');
     let arrayLink = headerMenuMobile.getElementsByClassName('link-mobile');
     let menuMobileContent = document.getElementById('menu-mobile-content');
-    let menuMobileSearch = document.getElementById('search-mobile-box');
 
     setTimeout(() => {
       for (let i = 0; i < arrayLink.length; i++) {
@@ -168,73 +169,11 @@ const Header = ({ windowDimensions }) => {
         }, i * 50);
       }
       menuMobileContent.classList.remove('open');
-      menuMobileSearch.classList.remove('open');
     }, 50);
 
     setTimeout(() => {
       menuMobileContent.style.display = 'none';
-      menuMobileSearch.style.display = 'none';
     }, 100);
-  };
-
-  const showLangMobile = () => {
-    let boxLang = document.getElementById('menu-lang-mobile');
-    let LangEN = document.getElementById('langEN-mobile');
-    let LangKO = document.getElementById('langKO-mobile');
-    let LangVI = document.getElementById('langVI-mobile');
-    let headerLang = document.getElementById('header-box-lang');
-
-    setTimeout(() => {
-      boxLang.style.display = 'block';
-    }, 100);
-
-    setTimeout(() => {
-      boxLang.classList.add('open');
-    }, 100);
-
-    setTimeout(() => {
-      LangEN.classList.add('open');
-    }, 150);
-
-    setTimeout(() => {
-      LangKO.classList.add('open');
-      headerLang.style.display = 'block';
-    }, 200);
-
-    setTimeout(() => {
-      LangVI.classList.add('open');
-      headerLang.classList.add('open');
-    }, 250);
-  };
-
-  const hiddenLangMobile = () => {
-    let boxLang = document.getElementById('menu-lang-mobile');
-    let LangEN = document.getElementById('langEN-mobile');
-    let LangKO = document.getElementById('langKO-mobile');
-    let LangVI = document.getElementById('langVI-mobile');
-    let headerLang = document.getElementById('header-box-lang');
-
-    headerLang.classList.remove('open');
-    setTimeout(() => {
-      LangEN.classList.remove('open');
-    }, 100);
-
-    setTimeout(() => {
-      LangKO.classList.remove('open');
-    }, 50);
-
-    setTimeout(() => {
-      LangVI.classList.remove('open');
-    }, 0);
-
-    setTimeout(() => {
-      boxLang.classList.remove('open');
-      headerLang.style.display = 'none';
-    }, 550);
-
-    setTimeout(() => {
-      boxLang.style.display = 'none';
-    }, 650);
   };
 
   const animationMenuMobile = (statusMenu) => {
@@ -270,18 +209,6 @@ const Header = ({ windowDimensions }) => {
     }
   };
 
-  const clickLangMobile = () => {
-    let tempStatus = !statusLangMobile;
-    setStatusLangMobile(tempStatus);
-
-    if (tempStatus) {
-      animationMenuMobile('showLang');
-      showLangMobile();
-    } else {
-      hiddenLangMobile();
-      animationMenuMobile('hiddenLang');
-    }
-  };
 
   const scrollCLick = (className) => {
     let getClass = document.getElementsByClassName(className)[0];
@@ -535,6 +462,7 @@ const Header = ({ windowDimensions }) => {
                 <span></span>
                 <span></span>
               </div>
+
               <div
                 className='download'
                 onClick={() => setShowModal()}
@@ -542,17 +470,58 @@ const Header = ({ windowDimensions }) => {
               >
                 <span>{t('header.download.btn')}</span>
               </div>
-            </div>
-          </div>
 
-          <div className='header-box-lang' id='header-box-lang'>
-            <div className='box-menu-lang' onClick={() => clickLangMobile()}>
-              <img
-                className='icon-right-mobile'
-                src={images.iconSelect}
-                alt='logo-chevron-down'
-              />
-              {/* Language */}
+              <div
+                  className={'button-lang' + (statusLangButton ? '' : ' close')}
+                  onClick={() => clickStatusLang()}
+              >
+                <img className='flag' src={flag} alt='flag' />
+                <span className='title-lang'>{textLang}</span>
+
+                <img
+                    className={'icon-down' + (statusLang ? ' open' : '')}
+                    src={images.iconSelect}
+                    alt='logo-chevron-down'
+                />
+
+                <div className='drop-lang' id='drop-lang-mobile'>
+                  <div
+                      className='lang'
+                      id='langEN-mobile'
+                      onClick={() => changeLang('en')}
+                  >
+                    <img src={images.flagEngland} alt='flag-english' />
+
+                    <span className='flag-title'>
+                        {t('header.option_en.lbl')}
+                      </span>
+                  </div>
+
+                  <div
+                      className='lang'
+                      id='langKO-mobile'
+                      onClick={() => changeLang('ko')}
+                  >
+                    <img src={images.flagKorean} alt='flag-korean' />
+
+                    <span className='flag-title'>
+                        {t('header.option_ko.lbl')}
+                      </span>
+                  </div>
+
+                  <div
+                      className='lang'
+                      id='langVI-mobile'
+                      onClick={() => changeLang('vi')}
+                  >
+                    <img src={images.flagVietnam} alt='flag-vietnam' />
+
+                    <span className='flag-title'>
+                        {t('header.option_vi.lbl')}
+                      </span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -575,19 +544,19 @@ const Header = ({ windowDimensions }) => {
                 </div>
               ))}
 
-              <div
-                className='button-lang-mobile'
-                onClick={() => clickLangMobile()}
-              >
-                <img className='flag' src={flag} alt='flag-england' />
-                <span className='title-lang-mobile'>{textLang}</span>
+              {/*<div*/}
+              {/*  className='button-lang-mobile'*/}
+              {/*  onClick={() => clickLangMobile()}*/}
+              {/*>*/}
+              {/*  <img className='flag' src={flag} alt='flag-england' />*/}
+              {/*  <span className='title-lang-mobile'>{textLang}</span>*/}
 
-                <img
-                  className='icon-left-mobile'
-                  src={images.iconSelect}
-                  alt='logo-chevron-down'
-                />
-              </div>
+              {/*  <img*/}
+              {/*    className='icon-left-mobile'*/}
+              {/*    src={images.iconSelect}*/}
+              {/*    alt='logo-chevron-down'*/}
+              {/*  />*/}
+              {/*</div>*/}
             </div>
             <div className='menu-lang-mobile' id='menu-lang-mobile'>
               <div

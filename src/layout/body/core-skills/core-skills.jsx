@@ -20,7 +20,6 @@ const CoreSkills = ({ windowDimensions }) => {
   const [activeSkill, setActiveSkill] = useState(false);
 
   const handleActiveSkill = (skill) => {
-    console.log(skill);
     setIsViewSkillInfo(true);
     setActiveSkill(skill);
   };
