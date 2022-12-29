@@ -476,7 +476,7 @@ const Header = ({ windowDimensions }) => {
                   onClick={() => clickStatusLang()}
               >
                 <img className='flag' src={flag} alt='flag' />
-                <span className='title-lang'>{textLang}</span>
+                {/*<span className='title-lang'>{textLang}</span>*/}
 
                 <img
                     className={'icon-down' + (statusLang ? ' open' : '')}

@@ -148,9 +148,9 @@ const KeyFeatures = ({ windowDimensions }) => {
             <div className='content-wrapper' data-aos='zoom-in-up'>
               <div className='content1'>
                 {keyFeatures.map((element, index) => (
-                  <div key={index}>
+                  <>
                     {index < 4 ? (
-                      <>
+                      <div key={index}>
                         <KeyFeaturesItem
                           alt={element.alt}
                           src={element.src}
@@ -158,16 +158,16 @@ const KeyFeatures = ({ windowDimensions }) => {
                           content={element.content}
                           last={element.last}
                         />
-                      </>
+                      </div>
                     ) : null}
-                  </div>
+                  </>
                 ))}
               </div>
               <div className='content2'>
                 {keyFeatures.map((element, index) => (
-                  <div key={index}>
+                  <>
                     {index < 7 && index >= 4 ? (
-                      <>
+                      <div key={index}>
                         <KeyFeaturesItem
                           alt={element.alt}
                           src={element.src}
@@ -175,16 +175,16 @@ const KeyFeatures = ({ windowDimensions }) => {
                           content={element.content}
                           last={element.last}
                         />
-                      </>
+                      </div>
                     ) : null}
-                  </div>
+                  </>
                 ))}
               </div>
               <div className='content3'>
                 {keyFeatures.map((element, index) => (
-                  <div key={index}>
+                  <>
                     {index >= 7 && index < 11 ? (
-                      <>
+                      <div key={index}>
                         <KeyFeaturesItem
                           alt={element.alt}
                           src={element.src}
@@ -192,9 +192,9 @@ const KeyFeatures = ({ windowDimensions }) => {
                           content={element.content}
                           last={element.last}
                         />
-                      </>
+                      </div>
                     ) : null}
-                  </div>
+                  </>
                 ))}
               </div>
             </div>
