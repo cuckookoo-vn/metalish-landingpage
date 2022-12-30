@@ -1,11 +1,12 @@
 import './explore.scss';
 import { useTranslation } from 'react-i18next';
+import {url} from "../../../url";
 
 const Explore = ({ windowDimensions, statusExplore, changeStatusExplore }) => {
   const images = {
-    bgExplore: process.env.PUBLIC_URL + '/images/explore/explore-button.gif',
+    bgExplore: url + '/images/explore/explore-button.gif',
     bgExploreCollapse:
-      process.env.PUBLIC_URL + '/images/explore/collapse-button.png',
+      url + '/images/explore/collapse-button.png',
   };
 
   const { t } = useTranslation();
@@ -18,7 +19,7 @@ const Explore = ({ windowDimensions, statusExplore, changeStatusExplore }) => {
           data-aos='fade-up'
           onClick={() => changeStatusExplore(!statusExplore)}
         >
-          <img src={images.bgExploreCollapse} alt='bg-explore' />
+          <img className="lazyload" data-src={images.bgExploreCollapse} alt='bg-explore' />
 
           {/* <span className="title-explore">{t("explore.titleMain")}</span> */}
         </div>
@@ -28,7 +29,7 @@ const Explore = ({ windowDimensions, statusExplore, changeStatusExplore }) => {
           data-aos='fade-up'
           onClick={() => changeStatusExplore(!statusExplore)}
         >
-          <img src={images.bgExplore} alt='bg-explore' />
+          <img className="lazyload" data-src={images.bgExplore} alt='bg-explore' />
 
           <span className='title-explore'>{t('explore.titleMain')}</span>
         </div>

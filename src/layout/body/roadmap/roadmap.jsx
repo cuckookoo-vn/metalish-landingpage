@@ -1,30 +1,31 @@
 import './roadmap.scss';
 import { Container } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
+import {url} from "../../../url";
 
 const Roadmap = ({ windowDimensions }) => {
   const { t } = useTranslation();
 
   const images = {
-    bgRoadmap: process.env.PUBLIC_URL + '/images/roadmap/bg-roadmap.png',
-    pcArrow: process.env.PUBLIC_URL + '/images/roadmap/pc/arrow.png',
-    mobileArrow: process.env.PUBLIC_URL + '/images/roadmap/mobile/arrow.png',
+    bgRoadmap: url + '/images/roadmap/bg-roadmap.png',
+    pcArrow: url + '/images/roadmap/pc/arrow.png',
+    mobileArrow: url + '/images/roadmap/mobile/arrow.png',
     pcTimeBoxAug2022:
-      process.env.PUBLIC_URL + '/images/roadmap/pc/time-box-aug-2022.png',
+      url + '/images/roadmap/pc/time-box-aug-2022.png',
     pcTimeBoxFeb2023:
-      process.env.PUBLIC_URL + '/images/roadmap/pc/time-box-feb-2023.png',
+      url + '/images/roadmap/pc/time-box-feb-2023.png',
     pcTimeBoxAug2023:
-      process.env.PUBLIC_URL + '/images/roadmap/pc/time-box-aug-2023.png',
+      url + '/images/roadmap/pc/time-box-aug-2023.png',
     pcTimeBoxFeb2024:
-      process.env.PUBLIC_URL + '/images/roadmap/pc/time-box-feb-2024.png',
+      url + '/images/roadmap/pc/time-box-feb-2024.png',
     mobileTimeBoxAug2022:
-      process.env.PUBLIC_URL + '/images/roadmap/mobile/time-box-aug-2022.png',
+      url + '/images/roadmap/mobile/time-box-aug-2022.png',
     mobileTimeBoxFeb2023:
-      process.env.PUBLIC_URL + '/images/roadmap/mobile/time-box-feb-2023.png',
+      url + '/images/roadmap/mobile/time-box-feb-2023.png',
     mobileTimeBoxAug2023:
-      process.env.PUBLIC_URL + '/images/roadmap/mobile/time-box-aug-2023.png',
+      url + '/images/roadmap/mobile/time-box-aug-2023.png',
     mobileTimeBoxFeb2024:
-      process.env.PUBLIC_URL + '/images/roadmap/mobile/time-box-feb-2024.png',
+      url + '/images/roadmap/mobile/time-box-feb-2024.png',
   };
 
   return (
@@ -78,9 +79,9 @@ const Roadmap = ({ windowDimensions }) => {
           <img
             data-aos='zoom-in'
             // data-aos-delay='700'
-            className='roadmap-arrow'
+            className='lazyload roadmap-arrow'
             alt='roadmap-arrow'
-            src={
+            data-src={
               windowDimensions.width > 767.5
                 ? images.pcArrow
                 : images.mobileArrow
@@ -124,9 +125,9 @@ const Roadmap = ({ windowDimensions }) => {
           <img
             data-aos='zoom-in'
             // data-aos-delay='700'
-            className='roadmap-arrow'
+            className='lazyload roadmap-arrow'
             alt='roadmap-arrow'
-            src={
+            data-src={
               windowDimensions.width > 767.5
                 ? images.pcArrow
                 : images.mobileArrow
@@ -169,9 +170,9 @@ const Roadmap = ({ windowDimensions }) => {
           <img
             data-aos='zoom-in'
             // data-aos-delay='700'
-            className='roadmap-arrow'
+            className='lazyload roadmap-arrow'
             alt='roadmap-arrow'
-            src={
+            data-src={
               windowDimensions.width > 767.5
                 ? images.pcArrow
                 : images.mobileArrow

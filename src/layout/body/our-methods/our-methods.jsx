@@ -13,8 +13,8 @@ const OurMethods = ({ windowDimensions }) => {
   const { t } = useTranslation();
 
   const images = {
-    next: process.env.PUBLIC_URL + '/images/our-methods/right-button.png',
-    pre: process.env.PUBLIC_URL + '/images/our-methods/left-button.png',
+    next: url + '/images/our-methods/right-button.png',
+    pre: url + '/images/our-methods/left-button.png',
 
     cooperationPic: `${url}/img/lp-our-methods/cooperation-1.png`,
     curriculumPic: `${url}/img/lp-our-methods/curriculum-1.png`,

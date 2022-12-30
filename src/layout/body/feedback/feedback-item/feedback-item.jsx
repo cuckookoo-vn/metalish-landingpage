@@ -1,4 +1,5 @@
 import './feedback-item.styles.scss';
+import {url} from "../../../../url";
 
 function _1Star() {
   return (
@@ -62,7 +63,7 @@ function _5Star() {
 
 const FeedbackItem = ({ src, grade, name, summary, rated, comment }) => {
   const images = {
-    commentBox: process.env.PUBLIC_URL + '/images/feedback/comment-box.png',
+    commentBox: url + '/images/feedback/comment-box.png',
   };
 
   return (

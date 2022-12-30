@@ -1,17 +1,19 @@
 import './key-features-item.styles.scss';
+import {url} from "../../../../url";
 
 const KeyFeaturesItem = ({ src, alt, title, content }) => {
   const images = {
-    frame: process.env.PUBLIC_URL + '/images/key-features/frame.png',
+    frame: url + '/images/key-features/frame.png',
   };
 
   return (
     <div className='key-features-item'>
-      <img alt={alt} src={src} />
+      <img className="lazyload" alt={alt} data-src={src} />
       <span>{title}</span>
       <div
-        className='overlay'
-        style={{ backgroundImage: `url(${images.frame})` }}
+        className='lazyload overlay'
+        data-bgset={images.frame}
+        // style={{ backgroundImage: `url(${images.frame})` }}
       >
         <div className='title'>{title}</div>
         <div className='content'>{content}</div>

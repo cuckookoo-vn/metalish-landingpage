@@ -8,10 +8,11 @@ import {
   faPhone,
 } from '@fortawesome/free-solid-svg-icons';
 import { useTranslation } from 'react-i18next';
+import {url} from "../../url";
 
 const Footer = () => {
   const images = {
-    chainos: process.env.PUBLIC_URL + '/images/footer/chainos.png',
+    chainos: url + '/images/footer/chainos.png',
     cuckookoo: 'https://d2lonqwqrbh3kq.cloudfront.net/header/ckksite-logo-header.png',
   };
   const { t } = useTranslation();
@@ -22,13 +23,13 @@ const Footer = () => {
         <div data-aos='fade-right' className='logo'>
           <div className='logo-cuckookoo'>
             <a href=''>
-              <img src={images.cuckookoo} alt='logo-cuckookoo' />
+              <img className="lazyload" data-src={images.cuckookoo} alt='logo-cuckookoo' />
             </a>
           </div>
 
           <div data-aos='fade-left' className='logo-chainos'>
             <a href=''>
-              <img src={images.chainos} alt='logo-chainos' />
+              <img className="lazyload" data-src={images.chainos} alt='logo-chainos' />
             </a>
           </div>
         </div>

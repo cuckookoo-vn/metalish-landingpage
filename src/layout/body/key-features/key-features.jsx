@@ -2,27 +2,28 @@ import './key-features.styles.scss';
 import { useTranslation } from 'react-i18next';
 import KeyFeaturesItem from './key-features-item/key-features-item';
 import { useState } from 'react';
+import {url} from "../../../url";
 
 const KeyFeatures = ({ windowDimensions }) => {
   const { t } = useTranslation();
 
   const images = {
     studyingEnglishIcon:
-      process.env.PUBLIC_URL + '/images/key-features/studying-english.png',
-    graphics: process.env.PUBLIC_URL + '/images/key-features/graphics.png',
-    connect: process.env.PUBLIC_URL + '/images/key-features/connect.png',
+      url + '/images/key-features/studying-english.png',
+    graphics: url + '/images/key-features/graphics.png',
+    connect: url + '/images/key-features/connect.png',
     customizedClassroom:
-      process.env.PUBLIC_URL + '/images/key-features/customized-classroom.png',
+      url + '/images/key-features/customized-classroom.png',
     practicalEnglish:
-      process.env.PUBLIC_URL + '/images/key-features/practical-english.png',
-    ai: process.env.PUBLIC_URL + '/images/key-features/ai.png',
+      url + '/images/key-features/practical-english.png',
+    ai: url + '/images/key-features/ai.png',
     aiInAdvertising:
-      process.env.PUBLIC_URL + '/images/key-features/ai-in-advertising.png',
-    miniGames: process.env.PUBLIC_URL + '/images/key-features/mini-games.png',
-    rewards: process.env.PUBLIC_URL + '/images/key-features/rewards.png',
-    bestChoice: process.env.PUBLIC_URL + '/images/key-features/best-choice.png',
-    review: process.env.PUBLIC_URL + '/images/key-features/review.png',
-    frame: process.env.PUBLIC_URL + '/images/key-features/frame.png',
+      url + '/images/key-features/ai-in-advertising.png',
+    miniGames: url + '/images/key-features/mini-games.png',
+    rewards: url + '/images/key-features/rewards.png',
+    bestChoice: url + '/images/key-features/best-choice.png',
+    review: url + '/images/key-features/review.png',
+    frame: url + '/images/key-features/frame.png',
   };
 
   const keyFeatures = [
@@ -130,7 +131,7 @@ const KeyFeatures = ({ windowDimensions }) => {
                     handleHover(element.title, element.content)
                   }
                 >
-                  <img alt={element.alt} src={element.src} />
+                  <img className="lazyload" alt={element.alt} data-src={element.src} />
                   <span>{element.title}</span>
                 </li>
               </>
@@ -148,9 +149,9 @@ const KeyFeatures = ({ windowDimensions }) => {
             <div className='content-wrapper' data-aos='zoom-in-up'>
               <div className='content1'>
                 {keyFeatures.map((element, index) => (
-                  <div key={index}>
+                  <>
                     {index < 4 ? (
-                      <>
+                      <div key={index}>
                         <KeyFeaturesItem
                           alt={element.alt}
                           src={element.src}
@@ -158,16 +159,16 @@ const KeyFeatures = ({ windowDimensions }) => {
                           content={element.content}
                           last={element.last}
                         />
-                      </>
+                      </div>
                     ) : null}
-                  </div>
+                  </>
                 ))}
               </div>
               <div className='content2'>
                 {keyFeatures.map((element, index) => (
-                  <div key={index}>
+                  <>
                     {index < 7 && index >= 4 ? (
-                      <>
+                      <div key={index}>
                         <KeyFeaturesItem
                           alt={element.alt}
                           src={element.src}
@@ -175,16 +176,16 @@ const KeyFeatures = ({ windowDimensions }) => {
                           content={element.content}
                           last={element.last}
                         />
-                      </>
+                      </div>
                     ) : null}
-                  </div>
+                  </>
                 ))}
               </div>
               <div className='content3'>
                 {keyFeatures.map((element, index) => (
-                  <div key={index}>
+                  <>
                     {index >= 7 && index < 11 ? (
-                      <>
+                      <div key={index}>
                         <KeyFeaturesItem
                           alt={element.alt}
                           src={element.src}
@@ -192,9 +193,9 @@ const KeyFeatures = ({ windowDimensions }) => {
                           content={element.content}
                           last={element.last}
                         />
-                      </>
+                      </div>
                     ) : null}
-                  </div>
+                  </>
                 ))}
               </div>
             </div>
