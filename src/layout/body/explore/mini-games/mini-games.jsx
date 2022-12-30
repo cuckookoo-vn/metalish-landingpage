@@ -7,11 +7,11 @@ const MiniGames = ({ windowDimensions }) => {
   const { t } = useTranslation();
 
   const images = {
-    dice: process.env.PUBLIC_URL + '/images/explore/mini-games/dice.png',
+    dice: url + '/images/explore/mini-games/dice.png',
     mutichoice:
-      process.env.PUBLIC_URL + '/images/explore/mini-games/mutichoice.png',
+      url + '/images/explore/mini-games/mutichoice.png',
     fillBlank:
-      process.env.PUBLIC_URL + '/images/explore/mini-games/fill-blank.png',
+      url + '/images/explore/mini-games/fill-blank.png',
     fillInBlankPic: `${url}/img/lp-explore-tour/mini-games/fill-in-blank-1.png`,
     scrambleWordPic: `${url}/img/lp-explore-tour/mini-games/scramble-word-1.png`,
     multipleChoicePic: `${url}/img/lp-explore-tour/mini-games/multiple-choice-1.png`,
@@ -36,7 +36,7 @@ const MiniGames = ({ windowDimensions }) => {
               className='overlay'
               style={{ backgroundImage: `url(${images.fillInBlankPic})` }}
             ></div>
-            <img src={images.fillBlank} alt='fillBlank' />
+            <img className="lazyload" data-src={images.fillBlank} alt='fillBlank' />
             <span className='title'>{t('miniGames.blank')}</span>
           </div>
 
@@ -48,7 +48,7 @@ const MiniGames = ({ windowDimensions }) => {
               className='overlay'
               style={{ backgroundImage: `url(${images.multipleChoicePic})` }}
             ></div>
-            <img src={images.mutichoice} alt='mutichoice' />
+            <img className="lazyload" data-src={images.mutichoice} alt='mutichoice' />
             <span className='title'>{t('miniGames.choice')}</span>
           </div>
 
@@ -60,7 +60,7 @@ const MiniGames = ({ windowDimensions }) => {
               className='overlay'
               style={{ backgroundImage: `url(${images.scrambleWordPic})` }}
             ></div>
-            <img src={images.dice} alt='dice' />
+            <img className="lazyload" data-src={images.dice} alt='dice' />
             <span className='title'>{t('miniGames.word')}</span>
           </div>
         </div>

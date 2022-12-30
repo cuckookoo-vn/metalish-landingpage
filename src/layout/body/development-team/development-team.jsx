@@ -15,8 +15,8 @@ const DevelopmentTeam = ({ windowDimensions }) => {
     `${url}/img/lp-core-member/lp-core-member-`;
 
   const images = {
-    next: process.env.PUBLIC_URL + '/images/development-team/right-button.png',
-    pre: process.env.PUBLIC_URL + '/images/development-team/left-button.png',
+    next: url + '/images/development-team/right-button.png',
+    pre: url + '/images/development-team/left-button.png',
   };
 
   const memberTeam = [
@@ -198,7 +198,7 @@ const DevelopmentTeam = ({ windowDimensions }) => {
               data-aos='fade-right'
               className='icon-slide icon-next hidden-mobile'
             >
-              <img className='icon-next' src={images.pre} alt='pre' />
+              <img className='lazyload icon-next' data-src={images.pre} alt='pre' />
             </div>
 
             <div
@@ -206,7 +206,7 @@ const DevelopmentTeam = ({ windowDimensions }) => {
               data-aos='fade-left'
               className='icon-slide icon-pre hidden-mobile'
             >
-              <img src={images.next} alt='next' />
+              <img className="lazyload" data-src={images.next} alt='next' />
             </div>
           </Swiper>
         </div>

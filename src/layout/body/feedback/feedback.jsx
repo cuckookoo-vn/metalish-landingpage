@@ -6,25 +6,26 @@ import { useTranslation } from 'react-i18next';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation } from 'swiper';
 import FeedbackItem from './feedback-item/feedback-item';
+import {url} from "../../../url";
 
 const Feedback = ({ windowDimensions }) => {
   // translation
   const { t } = useTranslation();
 
   const images = {
-    next: process.env.PUBLIC_URL + '/images/development-team/right-button.png',
-    pre: process.env.PUBLIC_URL + '/images/development-team/left-button.png',
-    commentBox: process.env.PUBLIC_URL + '/images/feedback/comment-box.png',
+    next: url + '/images/development-team/right-button.png',
+    pre: url + '/images/development-team/left-button.png',
+    commentBox: url + '/images/feedback/comment-box.png',
     commentAvatar:
-      process.env.PUBLIC_URL + '/images/feedback/comment-avatar.png',
-    avatar1: process.env.PUBLIC_URL + '/images/feedback/avatar-01.png',
-    avatar2: process.env.PUBLIC_URL + '/images/feedback/avatar-02.png',
-    avatar3: process.env.PUBLIC_URL + '/images/feedback/avatar-03.png',
-    avatar4: process.env.PUBLIC_URL + '/images/feedback/avatar-04.png',
-    avatar5: process.env.PUBLIC_URL + '/images/feedback/avatar-05.png',
-    avatar6: process.env.PUBLIC_URL + '/images/feedback/avatar-06.png',
-    avatar7: process.env.PUBLIC_URL + '/images/feedback/avatar-07.png',
-    avatar8: process.env.PUBLIC_URL + '/images/feedback/avatar-08.png',
+      url + '/images/feedback/comment-avatar.png',
+    avatar1: url + '/images/feedback/avatar-01.png',
+    avatar2: url + '/images/feedback/avatar-02.png',
+    avatar3: url + '/images/feedback/avatar-03.png',
+    avatar4: url + '/images/feedback/avatar-04.png',
+    avatar5: url + '/images/feedback/avatar-05.png',
+    avatar6: url + '/images/feedback/avatar-06.png',
+    avatar7: url + '/images/feedback/avatar-07.png',
+    avatar8: url + '/images/feedback/avatar-08.png',
   };
 
   const comments = [
@@ -175,14 +176,14 @@ const Feedback = ({ windowDimensions }) => {
               // data-aos='fade-right'
               className='icon-slide icon-next hidden-mobile'
             >
-              <img className='icon-next' src={images.pre} alt='pre' />
+              <img className='lazyload icon-next' data-src={images.pre} alt='pre' />
             </div>
             <div
               ref={nextRef}
               // data-aos='fade-left'
               className='icon-slide icon-pre hidden-mobile'
             >
-              <img src={images.next} alt='next' />
+              <img className="lazyload" data-src={images.next} alt='next' />
             </div>
           </Swiper>
         </div>

@@ -4,6 +4,7 @@ import Modal from 'react-bootstrap/Modal';
 import { BsXCircle } from "react-icons/bs";
 import AlertNotification from "../alert-notification/alert-notification";
 import {useTranslation} from "react-i18next";
+import {url} from "../../url";
 
 let timeOut = null;
 let timeIn = null;
@@ -13,7 +14,7 @@ const ModalDownload = ({show,setShow,setStatusButton}) =>{
     const {t} = useTranslation();
 
     const  images = {
-        pc: process.env.PUBLIC_URL + '/images/modal-download/pc.png',
+        pc: url + '/images/modal-download/pc.png',
     }
 
     const handleDownload = () => {
@@ -49,17 +50,17 @@ const ModalDownload = ({show,setShow,setStatusButton}) =>{
                                    onClick={()=>handleClose()} />
 
                         <div className="button-download" onClick={handleDownload}>
-                            <img className="icon" src="https://metagear.game/img/appstore.webp" alt="app-store" />
+                            <img className="lazyload icon" data-src="https://metagear.game/img/appstore.webp" alt="app-store" />
                             <span>Coming soon...</span>
                         </div>
 
                         <div className="button-download" onClick={handleDownload}>
-                            <img className="icon" src="https://metagear.game/img/googleplay.webp" alt="google-play" />
+                            <img className="lazyload icon" data-src="https://metagear.game/img/googleplay.webp" alt="google-play" />
                             <span>Coming soon...</span>
                         </div>
 
                         <div className="button-download" onClick={handleDownload}>
-                            <img className="icon" src={images.pc} alt="pc" />
+                            <img className="lazyload icon" data-src={images.pc} alt="pc" />
                             <span>Coming soon...</span>
                         </div>
                     </div>

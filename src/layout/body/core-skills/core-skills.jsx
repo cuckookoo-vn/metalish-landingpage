@@ -7,13 +7,13 @@ const CoreSkills = ({ windowDimensions }) => {
   const { t } = useTranslation();
 
   const images = {
-    bgKeyFeatures: process.env.PUBLIC_URL + '/images/overview/bg-overview.jpg',
-    frame: process.env.PUBLIC_URL + '/images/explore/order-service/frame.png',
+    bgKeyFeatures: url + '/images/overview/bg-overview.jpg',
+    frame: url + '/images/explore/order-service/frame.png',
     listening: `${url}/img/lp-core-skills/listening.png`,
     speaking: `${url}/img/lp-core-skills/speaking-1.png`,
     vocabulary: `${url}/img/lp-core-skills/vocabulary-1.png`,
     mouthShape: `${url}/img/lp-core-skills/mouthshape.png`,
-    exitButton: process.env.PUBLIC_URL + '/images/core-skills/exit-button.png',
+    exitButton: url + '/images/core-skills/exit-button.png',
   };
 
   const [isViewSkillInfo, setIsViewSkillInfo] = useState(false);
@@ -119,7 +119,7 @@ const CoreSkills = ({ windowDimensions }) => {
             <span>{t('core-skills.mouth-shape.lbl')}</span>
           </div>
           <div className='overlay'>
-            <img src={images[activeSkill]} alt={activeSkill} />
+            <img data-src={images[activeSkill]} alt={activeSkill} className="lazyload" />
             <div
               className='exit-btn'
               style={{ backgroundImage: `url(${images.exitButton})` }}

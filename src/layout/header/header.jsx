@@ -3,17 +3,18 @@ import '../../i18n';
 import { useTranslation } from 'react-i18next';
 import { useEffect, useState } from 'react';
 import ModalDownload from '../../components/modal-download/modal-download';
+import {url} from "../../url";
 
 const Header = ({ windowDimensions }) => {
   // list images
   const images = {
-    logoHeader: process.env.PUBLIC_URL + '/images/header/logo.png',
-    downloadButton: process.env.PUBLIC_URL + '/images/header/download.png',
+    logoHeader: url + '/images/header/logo.png',
+    downloadButton: url + '/images/header/download.png',
     iconSelect:
-      process.env.PUBLIC_URL + '/images/header/icon-select-header.png',
-    flagEngland: process.env.PUBLIC_URL + '/images/header/england-flag.jpg',
-    flagVietnam: process.env.PUBLIC_URL + '/images/header/vietnam-flag.jpg',
-    flagKorean: process.env.PUBLIC_URL + '/images/header/korea-flag.jpg',
+      url + '/images/header/icon-select-header.png',
+    flagEngland: url + '/images/header/england-flag.jpg',
+    flagVietnam: url + '/images/header/vietnam-flag.jpg',
+    flagKorean: url + '/images/header/korea-flag.jpg',
   };
 
   // translation
@@ -358,8 +359,8 @@ const Header = ({ windowDimensions }) => {
           id='header-box'
           style={{ backgroundColor: bgColor }}
         >
-          <img
-            src={`${process.env.PUBLIC_URL}/images/logo.png`}
+          <img className="lazyload"
+            data-src={images.logoHeader}
             alt='logo-header'
           />
           <div className='box-menu'>
@@ -378,12 +379,12 @@ const Header = ({ windowDimensions }) => {
               className={'button-lang' + (statusLangButton ? '' : ' close')}
               onClick={() => clickStatusLang()}
             >
-              <img className='flag' src={flag} alt='flag' />
+              <img className='lazyload flag' data-src={flag} alt='flag' />
               <span className='title-lang'>{textLang}</span>
 
               <img
-                className={'icon-down' + (statusLang ? ' open' : '')}
-                src={images.iconSelect}
+                className={'lazyload icon-down' + (statusLang ? ' open' : '')}
+                data-src={images.iconSelect}
                 alt='logo-chevron-down'
               />
 
@@ -393,7 +394,7 @@ const Header = ({ windowDimensions }) => {
                   id='langEN'
                   onClick={() => changeLang('en')}
                 >
-                  <img src={images.flagEngland} alt='flag-english' />
+                  <img className="lazyload" data-src={images.flagEngland} alt='flag-english' />
                   <span className='flag-title'>
                     {t('header.option_en.lbl')}
                   </span>
@@ -404,7 +405,7 @@ const Header = ({ windowDimensions }) => {
                   id='langKO'
                   onClick={() => changeLang('ko')}
                 >
-                  <img src={images.flagKorean} alt='flag-korean' />
+                  <img className="lazyload" data-src={images.flagKorean} alt='flag-korean' />
                   <span className='flag-title'>
                     {t('header.option_ko.lbl')}
                   </span>
@@ -415,7 +416,7 @@ const Header = ({ windowDimensions }) => {
                   id='langVI'
                   onClick={() => changeLang('vi')}
                 >
-                  <img src={images.flagVietnam} alt='flag-vietnam' />
+                  <img className="lazyload" data-src={images.flagVietnam} alt='flag-vietnam' />
                   <span className='flag-title'>
                     {t('header.option_vi.lbl')}
                   </span>
@@ -448,7 +449,8 @@ const Header = ({ windowDimensions }) => {
             style={{ backgroundColor: bgColor }}
           >
             <img
-              src={`${process.env.PUBLIC_URL}/images/logo.png`}
+                className="lazyload"
+              data-src={`${process.env.PUBLIC_URL}/images/logo.png`}
               alt='logo-header'
             />
             <div className='box-menu'>
@@ -475,12 +477,12 @@ const Header = ({ windowDimensions }) => {
                   className={'button-lang' + (statusLangButton ? '' : ' close')}
                   onClick={() => clickStatusLang()}
               >
-                <img className='flag' src={flag} alt='flag' />
+                <img className='lazyload flag' data-src={flag} alt='flag' />
                 {/*<span className='title-lang'>{textLang}</span>*/}
 
                 <img
-                    className={'icon-down' + (statusLang ? ' open' : '')}
-                    src={images.iconSelect}
+                    className={'lazyload icon-down' + (statusLang ? ' open' : '')}
+                    data-src={images.iconSelect}
                     alt='logo-chevron-down'
                 />
 
@@ -490,7 +492,7 @@ const Header = ({ windowDimensions }) => {
                       id='langEN-mobile'
                       onClick={() => changeLang('en')}
                   >
-                    <img src={images.flagEngland} alt='flag-english' />
+                    <img className="lazyload" data-src={images.flagEngland} alt='flag-english' />
 
                     <span className='flag-title'>
                         {t('header.option_en.lbl')}
@@ -502,7 +504,7 @@ const Header = ({ windowDimensions }) => {
                       id='langKO-mobile'
                       onClick={() => changeLang('ko')}
                   >
-                    <img src={images.flagKorean} alt='flag-korean' />
+                    <img className="lazyload" data-src={images.flagKorean} alt='flag-korean' />
 
                     <span className='flag-title'>
                         {t('header.option_ko.lbl')}
@@ -514,7 +516,7 @@ const Header = ({ windowDimensions }) => {
                       id='langVI-mobile'
                       onClick={() => changeLang('vi')}
                   >
-                    <img src={images.flagVietnam} alt='flag-vietnam' />
+                    <img className="lazyload" data-src={images.flagVietnam} alt='flag-vietnam' />
 
                     <span className='flag-title'>
                         {t('header.option_vi.lbl')}

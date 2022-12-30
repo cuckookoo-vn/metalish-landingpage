@@ -32,9 +32,9 @@ const Tour = ({ windowDimensions }) => {
   ];
 
   const imageFrames = {
-    next: process.env.PUBLIC_URL + '/images/development-team/right-button.png',
-    pre: process.env.PUBLIC_URL + '/images/development-team/left-button.png',
-    bgSlide: process.env.PUBLIC_URL + '/images/explore/tour/mockup.png',
+    next: url + '/images/development-team/right-button.png',
+    pre: url + '/images/development-team/left-button.png',
+    bgSlide: url + '/images/explore/tour/mockup.png',
   };
 
   const slideCase = images.length === 5 ? Carousel5Enum : Carousel7Enum;
@@ -231,13 +231,14 @@ const Tour = ({ windowDimensions }) => {
           {images.map((elements, index) => (
             <div className='slide' key={index}>
               <img
+                  className="lazyload"
                 style={{ width: '95%', height: '90%' }}
-                src={elements.slide}
+                data-src={elements.slide}
                 alt='Photo'
               />
             </div>
           ))}
-          <img className='bg-phone' src={imageFrames.bgSlide} alt='bg-phone' />
+          <img className='lazyload bg-phone' data-src={imageFrames.bgSlide} alt='bg-phone' />
         </div>
 
         <div className='pagination' id='pagination'></div>
@@ -245,16 +246,16 @@ const Tour = ({ windowDimensions }) => {
         <img
           id='tour-slide-left'
           data-aos='fade-right'
-          className='prev button-slide'
-          src={imageFrames.pre}
+          className='lazyload prev button-slide'
+          data-src={imageFrames.pre}
           alt='pre'
         />
 
         <img
           data-aos='fade-left'
           id='tour-slide-right'
-          className='next button-slide'
-          src={imageFrames.next}
+          className='lazyload next button-slide'
+          data-src={imageFrames.next}
           alt='next'
         />
       </div>

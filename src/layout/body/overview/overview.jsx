@@ -2,13 +2,14 @@ import './overview.styles.scss';
 import { useTranslation } from 'react-i18next';
 import { Container } from 'react-bootstrap';
 import OverviewModel from './model/overview-model';
+import {url} from "../../../url";
 
 const Overview = ({ windowDimensions }) => {
   const { t } = useTranslation();
 
   const images = {
-    bgKeyFeatures: process.env.PUBLIC_URL + '/images/overview/bg-overview.jpg',
-    viewButton: process.env.PUBLIC_URL + '/images/overview/fish-eye-button.png',
+    bgKeyFeatures: url + '/images/overview/bg-overview.jpg',
+    viewButton: url + '/images/overview/fish-eye-button.png',
   };
 
   return (

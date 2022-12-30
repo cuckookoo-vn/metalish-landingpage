@@ -1,14 +1,15 @@
 import { useTranslation } from 'react-i18next';
 import './our-methods-item.styles.scss';
+import {url} from "../../../../url";
 
 const OurMethodsItem = ({ type, title, src }) => {
   const { t } = useTranslation();
 
   const images = {
-    commentBox: process.env.PUBLIC_URL + '/images/feedback/comment-box.png',
+    commentBox: url + '/images/feedback/comment-box.png',
     commentAvatar:
-      process.env.PUBLIC_URL + '/images/feedback/comment-avatar.png',
-    frame: process.env.PUBLIC_URL + '/images/our-methods/method-frame.png',
+      url + '/images/feedback/comment-avatar.png',
+    frame: url + '/images/our-methods/method-frame.png',
   };
 
   return (
@@ -21,7 +22,7 @@ const OurMethodsItem = ({ type, title, src }) => {
         <span className='item-content'>
           {t(`our-methods.${type}_content.txt`)}
         </span>
-        <img alt={type} src={src} />
+        <img className="lazyload" alt={type} data-src={src} />
       </div>
     </div>
   );
