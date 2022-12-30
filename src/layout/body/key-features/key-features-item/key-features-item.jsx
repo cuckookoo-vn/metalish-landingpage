@@ -12,8 +12,7 @@ const KeyFeaturesItem = ({ src, alt, title, content }) => {
       <span>{title}</span>
       <div
         className='lazyload overlay'
-        data-bgset={images.frame}
-        // style={{ backgroundImage: `url(${images.frame})` }}
+        style={{ backgroundImage: `url(${images.frame})` }}
       >
         <div className='title'>{title}</div>
         <div className='content'>{content}</div>

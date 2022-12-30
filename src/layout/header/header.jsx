@@ -450,7 +450,7 @@ const Header = ({ windowDimensions }) => {
           >
             <img
                 className="lazyload"
-              data-src={`${process.env.PUBLIC_URL}/images/logo.png`}
+              data-src={images.logoHeader}
               alt='logo-header'
             />
             <div className='box-menu'>
