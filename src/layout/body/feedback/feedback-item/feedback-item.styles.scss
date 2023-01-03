@@ -12,11 +12,10 @@
     width: 450px;
     min-width: 450px;
     height: 500px;
-    left: -10%;
 
     @media #{$info-tablet-1399} {
-      width: 400px;
-      min-width: 400px;
+      width: 385px;
+      min-width: 385px;
       left: 1%;
     }
 
