@@ -11,7 +11,7 @@ const VideoProposal = () => {
             autoPlay
             muted
             loop
-            data-src="https://d2qh7rlng6g9al.cloudfront.net/video/Video_Proposal.mp4"
+            data-src={srcDefault}
             className="lazyload video"
           ></video>
     </div>
